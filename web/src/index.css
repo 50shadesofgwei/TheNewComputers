@@ -1,0 +1,72 @@
+:root {
+  --bg: #f7f4ef;
+  --bg-black: #0c0d10;
+  --bg-a: #1a1c22;
+  --bg-b: #2c3038;
+  --bg-c: #c4a574;
+  --bg-paper: #f7f4ef;
+  --text: #0c0d10;
+  --text-inv: #f7f4ef;
+  --accent: #c4894a;
+  --font-display: 'Familjen Grotesk', Helvetica, sans-serif;
+  --font-meta: 'IBM Plex Mono', ui-monospace, monospace;
+  --measure: 46rem;
+  --page-pad: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* Prevent 100vw full-bleeds from creating a horizontal scrollbar (scroll jank) */
+  overflow-x: clip;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  overflow-x: clip;
+}
+
+button,
+a {
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}

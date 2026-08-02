@@ -1,0 +1,15 @@
+# Dependencies & build
+node_modules/
+dist/
+*.local
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Source assets kept out of git (optimized copies live in web/public)
+*.pdf
+5A68B14A-*.JPG
+814F15A7-*.JPG
+Screenshot*.png

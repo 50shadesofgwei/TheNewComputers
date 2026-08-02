@@ -1,0 +1,577 @@
+.mission {
+  min-height: 100vh;
+}
+
+.meta {
+  font-family: var(--font-meta);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem var(--page-pad);
+  pointer-events: none;
+  color: var(--text);
+}
+
+.chapter-rail {
+  position: fixed;
+  top: 50%;
+  right: var(--page-pad);
+  z-index: 15;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg) translateY(50%);
+  opacity: 0.45;
+  color: var(--text);
+  pointer-events: none;
+}
+
+/* ——— Hero ——— */
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: calc(4rem + env(safe-area-inset-top)) var(--page-pad) 2.5rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.hero-part {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.hero-part span {
+  display: block;
+  opacity: 0.35;
+}
+
+.hero-main {
+  display: grid;
+  align-content: end;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding-bottom: 2rem;
+}
+
+.hero h1 {
+  max-width: 12ch;
+  font-size: clamp(3.8rem, 11vw, 9.5rem);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+}
+
+.hero-lede {
+  max-width: 22rem;
+  justify-self: end;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.3;
+}
+
+.hero-lede p + p {
+  margin-top: 1rem;
+}
+
+.scroll-cue {
+  justify-self: center;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.scroll-cue::after {
+  content: '';
+  display: block;
+  width: 0.65rem;
+  height: 0.65rem;
+  margin: 0 auto;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg);
+}
+
+/* ——— Chapter splashes ——— */
+
+.chapter {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding: 2.5rem var(--page-pad);
+  align-items: end;
+}
+
+.chapter.sand {
+  background: var(--bg-c);
+  color: var(--text);
+}
+
+.chapter.black {
+  background: var(--bg-black);
+  color: var(--text-inv);
+}
+
+.chapter.steel {
+  background: var(--bg-b);
+  color: var(--text-inv);
+}
+
+.chapter.ink {
+  background: var(--bg-a);
+  color: var(--text-inv);
+}
+
+.chapter-copy {
+  display: grid;
+  gap: 1.5rem;
+  align-content: end;
+  min-height: 70vh;
+}
+
+.chapter-kicker {
+  max-width: 24rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid currentColor;
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.chapter-title {
+  max-width: 11ch;
+  font-size: clamp(3.2rem, 9vw, 7.5rem);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+
+.chapter-media {
+  position: relative;
+  min-height: 55vh;
+  align-self: stretch;
+}
+
+.chapter-media picture {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.chapter-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chapter-media .part-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.85rem 0.6rem;
+  background: var(--bg-black);
+  color: var(--text-inv);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+/* Wide illustrations: show full image, wrap copy around it */
+.chapter.chapter-fit {
+  display: block;
+  overflow: auto;
+  padding-top: clamp(4rem, 8vh, 6rem);
+  padding-bottom: clamp(2.5rem, 6vh, 4rem);
+}
+
+.chapter.chapter-fit::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.chapter.chapter-fit .chapter-media {
+  float: right;
+  width: min(64%, 46rem);
+  min-height: 0;
+  margin: 0 0 1.25rem clamp(1.25rem, 3vw, 2.5rem);
+  background: var(--bg-paper);
+}
+
+.chapter.chapter-fit .chapter-media picture {
+  position: static;
+  width: 100%;
+  height: auto;
+}
+
+.chapter.chapter-fit .chapter-media img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.chapter.chapter-fit .chapter-copy {
+  min-height: min(70vh, 40rem);
+  align-content: end;
+  /* grid already forms a BFC, so this column sits in the space beside the float */
+}
+
+.chapter.chapter-fit .chapter-title {
+  max-width: 12ch;
+}
+
+/* ——— Prose: Anduril-like stage, not article column ——— */
+
+.prose {
+  background: var(--bg);
+  color: var(--text);
+  padding: clamp(4rem, 12vw, 9rem) var(--page-pad) clamp(5rem, 14vw, 11rem);
+}
+
+.prose-inner {
+  max-width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
+}
+
+/* Giant section title — breaks the “blog post” feel */
+.prose-display {
+  margin: 0 0 clamp(3rem, 9vw, 6.5rem);
+  max-width: 12ch;
+  font-size: clamp(3.4rem, 11vw, 8.5rem);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+}
+
+.prose p {
+  max-width: 36rem;
+  width: 100%;
+  margin: 0 0 1.35rem;
+  font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+/* First body beat after the display title — a touch larger */
+.prose-inner > .prose-display + p,
+.prose-inner > .prose-display + .pull + p {
+  font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+  line-height: 1.3;
+}
+
+/* Breakout lines — the main size change */
+.prose .pull {
+  max-width: min(48rem, 94%);
+  width: 100%;
+  margin: clamp(3rem, 9vw, 6rem) 0;
+  font-size: clamp(1.85rem, 4.2vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.prose .pull.pull-xl {
+  max-width: min(64rem, 98%);
+  margin: clamp(3rem, 9vw, 6rem) 0;
+  font-size: clamp(1.85rem, 5.1vw, 3.9rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+.prose .note {
+  max-width: 26rem;
+  margin: 2rem 0 2.5rem;
+  padding-left: 1rem;
+  border-left: 1px solid color-mix(in srgb, var(--text) 35%, transparent);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  opacity: 0.58;
+  font-style: italic;
+}
+
+.prose .quote-block {
+  max-width: 22ch;
+  width: 100%;
+  margin: clamp(2.75rem, 7vw, 5rem) 0;
+  padding: 0;
+  border: 0;
+  font-size: clamp(1.55rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.prose .quote-block p {
+  max-width: none;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+.prose .quote-block p + p {
+  margin-top: 0.85rem;
+}
+
+.prose h3 {
+  max-width: 16ch;
+  width: 100%;
+  margin: clamp(4rem, 10vw, 7rem) 0 1.5rem;
+  font-size: clamp(2.2rem, 5vw, 3.75rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.figure {
+  width: 100%;
+  max-width: min(960px, 100%);
+  margin: clamp(3rem, 8vw, 5.5rem) 0;
+  justify-self: stretch;
+}
+
+.figure.full {
+  max-width: none;
+  width: 100%;
+  padding: 0;
+  background: var(--bg);
+  justify-self: stretch;
+}
+
+.figure picture {
+  display: block;
+  width: 100%;
+}
+
+.figure img {
+  width: 100%;
+  height: auto;
+}
+
+.figure-pair {
+  width: 100%;
+  max-width: none;
+  margin: clamp(3rem, 8vw, 5.5rem) 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  justify-self: stretch;
+}
+
+.figure-pair .figure {
+  margin: 0;
+  max-width: none;
+}
+
+.figure-pair picture {
+  display: block;
+  width: 100%;
+}
+
+.figure-pair img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .figure-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
+.figure figcaption {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.85rem;
+  font-family: var(--font-meta);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.figure figcaption strong {
+  font-weight: 500;
+}
+
+/* Layout variants — shift the reading column around the page */
+
+.prose-layout-center .prose-inner {
+  justify-items: center;
+  text-align: left;
+}
+
+.prose-layout-center .prose-display {
+  max-width: 18ch;
+  text-align: center;
+}
+
+.prose-layout-center .pull {
+  text-align: left;
+  justify-self: center;
+}
+
+.prose-layout-center .quote-block,
+.prose-layout-center h3 {
+  text-align: center;
+  justify-self: center;
+}
+
+.prose-layout-center p,
+.prose-layout-center .note {
+  justify-self: center;
+}
+
+.prose-layout-end .prose-inner {
+  justify-items: end;
+}
+
+.prose-layout-end .prose-display {
+  max-width: 12ch;
+  text-align: right;
+}
+
+.prose-layout-end .pull {
+  text-align: left;
+  justify-self: stretch;
+}
+
+.prose-layout-end .quote-block {
+  text-align: right;
+}
+
+.prose-layout-end p,
+.prose-layout-end .note,
+.prose-layout-end h3 {
+  justify-self: end;
+}
+
+.prose-layout-start .prose-inner {
+  justify-items: start;
+}
+
+.prose-layout-start .prose-display {
+  max-width: 13ch;
+}
+
+/* Wide breakouts — span most of the stage, not a skinny stack */
+.prose-layout-end .pull:not(.pull-xl),
+.prose-layout-start .pull:not(.pull-xl),
+.prose-layout-center .pull:not(.pull-xl) {
+  max-width: min(52rem, 96%);
+}
+
+.prose-layout-end .quote-block,
+.prose-layout-start .quote-block {
+  max-width: min(40rem, 90%);
+}
+
+/* ——— CTA ——— */
+
+.cta {
+  min-height: 80vh;
+  display: grid;
+  align-content: center;
+  gap: 1.75rem;
+  padding: 5rem var(--page-pad);
+  background: var(--bg-black);
+  color: var(--text-inv);
+}
+
+.cta h2 {
+  max-width: 14ch;
+  font-size: clamp(3rem, 9vw, 7rem);
+  font-weight: 600;
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+}
+
+.cta p {
+  max-width: 28rem;
+  font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .chapter {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 4rem;
+  }
+
+  .chapter-copy {
+    min-height: auto;
+  }
+
+  .chapter-media {
+    min-height: 45vh;
+    order: -1;
+  }
+
+  .chapter.chapter-fit .chapter-media {
+    float: none;
+    width: 100%;
+    min-height: 0;
+    margin: 0 0 1.75rem;
+    order: 0;
+  }
+
+  .chapter-rail {
+    display: none;
+  }
+
+  .hero-lede {
+    justify-self: start;
+  }
+
+  .prose-layout-center .prose-display,
+  .prose-layout-end .prose-display,
+  .prose-layout-start .prose-display,
+  .prose-layout-end .pull,
+  .prose-layout-center .pull,
+  .prose-layout-end .quote-block,
+  .prose-layout-center .quote-block {
+    text-align: left;
+  }
+
+  .prose-layout-center .prose-inner,
+  .prose-layout-end .prose-inner {
+    justify-items: start;
+  }
+
+  .prose-layout-center p,
+  .prose-layout-center .note,
+  .prose-layout-center .pull,
+  .prose-layout-center .quote-block,
+  .prose-layout-center h3,
+  .prose-layout-end p,
+  .prose-layout-end .note,
+  .prose-layout-end .pull,
+  .prose-layout-end .quote-block,
+  .prose-layout-end h3 {
+    justify-self: start;
+    text-align: left;
+  }
+}
