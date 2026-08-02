@@ -690,12 +690,6 @@ function App() {
             4. The Industry Today
           </h2>
 
-          <p className="pull">
-            High unit cost and long lead times are the predictable result of
-            producing highly specialised equipment in small volumes, for
-            customers whose requirements frequently differ.
-          </p>
-
           <p>
             Now, more than 30 years later, the technology attracts industrial
             quantities of money. In 2025 alone, companies across quantum
