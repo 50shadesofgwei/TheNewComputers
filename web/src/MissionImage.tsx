@@ -36,6 +36,7 @@ export const IMAGE = {
   fig001: { name: 'fig-001', width: 962, height: 1200 },
   fig002: { name: 'fig-002', width: 1400, height: 1104 },
   fig003: { name: 'fig-003', width: 1600, height: 1067 },
+  figLaser: { name: 'fig-laser', width: 1600, height: 1205 },
   uva01: { name: 'uva-atomic-01', width: 900, height: 1600 },
   uva02: { name: 'uva-atomic-02', width: 900, height: 1600 },
 } as const

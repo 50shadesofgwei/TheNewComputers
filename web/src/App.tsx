@@ -82,24 +82,12 @@ function App() {
           <h1>Out of the Lab and Into the Factory</h1>
           <div className="hero-lede">
             <p>The New Computers, and the Mission for Quantum Hardware</p>
-            <p>
-              Quantum computing is at risk of becoming an embarrassing footnote
-              in the history of technology.
-            </p>
           </div>
         </div>
         <a className="scroll-cue" href="#pt-01" aria-label="Scroll down" />
       </section>
 
-      <section className="chapter sand" id="pt-01" data-chapter-index="0">
-        <div className="chapter-copy">
-          <p className="meta">PT—01/ 07</p>
-          <p className="chapter-kicker">
-            It is time to move quantum computing from demonstration to
-            manufacture.
-          </p>
-          <h2 className="chapter-title">Introduction</h2>
-        </div>
+      <section className="chapter sand chapter-fit" id="pt-01" data-chapter-index="0">
         <div className="chapter-media">
           <MissionImage
             {...IMAGE.fig000}
@@ -107,6 +95,15 @@ function App() {
             alt="Fifth Solvay Conference on Physics, 1927"
           />
           <span className="part-tag">PT—1</span>
+          <p className="chapter-caption">
+            <strong>[FIG.1]</strong>
+            <span>Solvay Conference — 1927</span>
+            <span>The founders of quantum theory</span>
+          </p>
+        </div>
+        <div className="chapter-copy">
+          <p className="meta">PT—01/ 07</p>
+          <h2 className="chapter-title">Introduction</h2>
         </div>
       </section>
 
@@ -116,150 +113,154 @@ function App() {
             1. Introduction
           </h2>
 
-          <p>
+          <p className="emph">
             Quantum computing is at risk of becoming an embarrassing footnote in
             the history of technology.
           </p>
 
           <p>
-            If you've spent time around the field, you have felt the disconnect
-            between the high-tech future promised by photographs of computers
-            buried in room-sized golden chandeliers on one hand, and [the fuzzy
-            explanations and unclear value propositions] on the other. Shor's
-            algorithm, the algorithm famous for the threat it poses to modern day
-            encryption systems, has been known since 1995, yet nearly 3 decades
-            later the largest prime number ever factored using Shor's method is
-            35. And that was 14 years ago.
+            If you've spent time around the field, you know the elephant in the
+            room; futuristic looking computers buried inside room-sized golden
+            chandeliers on one hand, and on the other, fuzzy and opaque
+            explanations of their supposed practical utility. Shor's algorithm
+            (famous for the threat it poses to modern day encryption systems) has
+            been known since 1994, yet nearly 3 decades later the largest number
+            ever factored using Shor's method is 21. And that was 14 years ago.
           </p>
 
           <p>
-            Since that time, $[X]b has been invested into the field, either
-            through government initiative or venture capital. And yet if one were
-            to try and plug in to a quantum computer online, there are only [I
-            think 3?] available options. In the same timeframe, we got
-            self-driving cars, affordable spaceflight, artificial intelligence and
-            [brain-computer interfaces]. It is by no means obvious that these
-            fields are any less technically demanding than quantum computing.
+            Since that time, governments worldwide have announced more than $65.9
+            billion for quantum science and technology, while quantum-technology
+            startups raised $12.6 billion in 2025 alone, more than 90% of it for
+            quantum computing. By then, two dozen manufacturers were commercially
+            offering more than 40 quantum processors, yet none met the
+            requirements for large-scale applications such as chemical simulation
+            or cryptanalysis.
           </p>
 
           <p>
-            New technologically advanced industries have been birthed and carried
-            forward by this entrepreneurial tide, and yet quantum computing has,
-            like a rock on the ocean floor, sat unmoved. Why?
-          </p>
-
-          <p className="pull">
-            The absence of oversight made the industry complacent.
+            In that same timeframe, the world was introduced to reusable rockets,
+            self-driving cars, mass-market artificial intelligence and implantable
+            brain–computer interfaces. It is by no means obvious that these fields
+            are any less technically demanding than quantum computing.
           </p>
 
           <p>
-            The party line is that the industry is moving as fast as it can, and
-            in any narrow field, this would appear to be true. Some of the
-            smartest scientists in the world have produced impressive results
-            controlling individual atoms, photons, electrons and superconducting
-            circuits.
+            Progress in other fields has been exponential, while quantum
+            processing power has barely changed. Why?
+          </p>
+
+          <p className="pull pull-sm">
+            The lack of external accountability made the industry complacent.
           </p>
 
           <p>
-            [X] papers have been published since 2014, totalling [Y] citations.
-            And yet, the...
-          </p>
-          <p className="note">
-            [What i'm trying to go for here is the fact that the field is so
-            specialised that no one is really in any position to call anyone else
-            out for not going fast enough. I'm not sure how to word this in a way
-            that isn't glib, but I do think there is a tinge of 'you cant call us
-            out because what do you know about quantum mechanics, peasant.'
-            That's the most negative version, the reality is probably closer to
-            lack of organisation.]
+            To say that quantum computing has made <em>no</em> progress would be
+            too harsh; some of the world's most gifted scientists have produced
+            extraordinary results controlling individual atoms, photons,
+            electrons and superconducting circuits. But the field is so
+            specialised, and knowledge so hopelessly siloed across sub-fields,
+            that almost nobody can practically judge the aggregate progress.
           </p>
 
-          <p>
-            Time and again we are told of 'the breathtaking rate of progress',
-            that true fault tolerance 'is only 5 years away', and that there has
-            never been a better time than right now. We are like the protagonist
-            in Kafka's "Before the Law", who requests to pass through a great
-            wooden door, only to be told that that they would be more than glad
-            to let him in, only, not at the moment. For years the man dutifully
-            the man sits there, occasionally asking the gatekeeper again whether
-            he may be allowed in. "Not at the moment", comes the response, and
-            the man sits there until he dies. [Note, this probably goes best at
-            the start.]
-          </p>
-
-          <p>
-            All too quickly we have reached the point where, in the words of
-            [Someone], [Some indictment to action].
+          <p className="emph">
+            Those allocating capital are left with no choice but to let companies
+            mark their own homework.
           </p>
 
           <figure className="figure">
             <MissionImage
-              {...IMAGE.fig000}
-              alt="Fifth Solvay Conference on Physics, 1927"
+              {...IMAGE.figLaser}
+              alt="Theodore Maiman with the first working laser"
             />
             <figcaption>
-              <strong>[FIG.1]</strong>
-              <span>Solvay Conference — 1927</span>
-              <span>The founders of quantum theory</span>
+              <strong>[FIG.2]</strong>
+              <span>Theodore Maiman</span>
+              <span>First working laser — 1960</span>
             </figcaption>
           </figure>
 
           <p className="pull">There is a better way.</p>
 
           <p>
-            The march of innovation does not have to be laborious and slow. In
-            the [some time period], [some group of people, maybe Bell Labs?] made
-            [some scientific discoveries] at a rate that would shock anyone. The
-            SR-71 Blackbird, a miracle of engineering and still the fastest
-            manned plane of all time, went from idea to test flight in just 4
-            years. [Something something something I'm losing the thread on this
-            bit here.]
+            Consider the Laser Race. In 1958, researchers at Bell Labs proposed a
+            machine that could amplify light into a narrow, high-powered beam; two
+            years later in 1960, an American physicist named Theodore Maiman
+            turned the idea into the first working laser. By 1962, lasers had been
+            built from ruby crystals, gases and semiconductors - a single proposal
+            had turned into a proliferation of working machines in just four
+            years.
           </p>
 
           <p>
-            Why can't the existing companies do better? Industry leaders are
-            packed with some of the world's brightest minds and are extremely
-            well funded, yet employees are denied the end-to-end control that is
-            necessary for meaningful change. Inheriting the academic operating
-            principles of demonstrating a breakthrough scientific discovery,
-            [there are many teams working on the one silver bullet that will
-            change everything]. Incumbent companies are extremely diligent in
-            their planning, and tend to build their machines successfully without
-            too many start-overs. How could this not be so, when the cost of
-            developing one such machine is estimated to cost $[X]m.
+            Fairchild Semiconductor moved at a similar pace. Founded in 1957, it
+            developed the planar process, placed several electronic components and
+            their connections onto a single piece of silicon - the integrated
+            circuit - and began selling the resulting chips within four years.
           </p>
 
           <p>
-            The downside is that the development of any machine is hopelessly
-            dependent upon a fractured supply chain of laser manufacturers,
-            semiconductor fabs, and epitaxy reactors, many of which live in
-            different jurisdictions where the traversal between them is slowed by
-            various dual-use regulations. This caution has created a slow,
-            too-costly-to-fail approach, where [forward planning is of highest
-            importance]. Much in the way a student only gets one shot at a PhD
-            project, a company only gets one shot at a new machine; failure is a
-            catastrophe.
-          </p>
-
-          <p className="pull">
-            At Pathfinder we reject this silver-bullet approach.
+            Why can’t the incumbent computer manufacturers simply do the same?
+            Leading QC companies are home to some of the world’s most brilliant
+            scientists and engineers, but their industrial infrastructure and
+            manufacturing supply chains were conceived of and constructed in a
+            different century.
           </p>
 
           <p>
-            We believe that the obstacle between current systems and true fault
-            tolerance is not any one specific breakthrough or eureka moment, but
-            instead a relentless pursuit to lower the component cost and shorten
-            development timelines of the new machines. But we are just one
-            company. If quantum computing is to be taken seriously as a frontier
-            technological industry and break free from the bureaucratic overhang
-            of academia, the excessive development costs and lead times, and the
+            Physically speaking, the supply chain that a quantum computer depends
+            upon consists of semiconductor fabs, lasers, chemical epitaxy,
+            packaging, control electronics and either cryogenics or ultra-high
+            vacuum systems.
+          </p>
+
+          <p>
+            Someone has to be responsible for physically making these components,
+            and the capability to do so is scattered across a small number of
+            specialist suppliers and often between jurisdictions. Even the largest
+            companies control only a small part of this chain, and any new part or
+            process incurs lead times measured in months or even years.
+          </p>
+
+          <p>This traps companies in a simple loop:</p>
+
+          <blockquote>
+            Long lead times mean few builds, having few builds forces years' worth
+            of upgrades into each machine, more improvements per build demands yet
+            more planning and de-risking, and the next build takes even longer.
+          </blockquote>
+
+          <p>
+            The leading companies do iterate, and it would be unfair to say
+            otherwise. They fabricate new chips, improve gate fidelities and
+            upgrade their systems constantly, and several have begun bringing
+            fabrication in-house. These investments will shorten the chip cycle;
+            the complete computer still passes through epitaxial growth,
+            packaging, lasers, control electronics, cryogenics/vacuum, assembly
+            and testing, and the pace of the whole machine remains governed by
+            whichever stage moves slowest.
+          </p>
+
+          <p>
+            We at Pathfinder are developing quantum computers in a new way, but we
+            are only one company. If quantum computing is to be taken seriously as
+            a frontier technology and break free from the bureaucratic overhang of
+            academia, the excessive development costs and lead times, and the
             claustrophobically narrow specialisation that has so neutered the
-            previous generation's brightest and best, we need an industry-wide
-            upheaval. Tens of thousands of PhDs will have to decide that there is
-            more to a career than chasing citations and ill-paid postdoc
-            positions. The effort needs true ingenuity across nanofabrication,
-            photonics, specialised hardware manufacturing, and hundreds of other
-            foundational areas.
+            previous generation's brightest and best, the change must be
+            industry-wide.
+          </p>
+
+          <p>
+            Tens of thousands of PhDs will have to decide that there is more to a
+            career than chasing citations and ill-paid postdoc positions. The
+            effort needs true ingenuity across nanofabrication, photonics,
+            specialised hardware manufacturing, and hundreds of other foundational
+            areas.{' '}
+            <strong>
+              The new generation must part with the assumption that the imminent
+              arrival of fault-tolerant computers is a foregone conclusion.
+            </strong>
           </p>
         </div>
       </article>
@@ -279,6 +280,11 @@ function App() {
             alt="Richard Feynman at a blackboard"
           />
           <span className="part-tag">PT—2</span>
+          <p className="chapter-caption chapter-caption-inv">
+            <strong>[FIG.3]</strong>
+            <span>Richard Feynman</span>
+            <span>Simulating physics with computers — 1981</span>
+          </p>
         </div>
       </section>
 
@@ -288,31 +294,12 @@ function App() {
             2. What Are Quantum Computers Good For, Anyway?
           </h2>
 
-          <p className="pull">
-            The New Computers had, out of the blue, solved what was previously
-            thought to be an intractable problem; the classical world was again
-            proven to contain patterns only visible through the lens of quantum
-            mechanics.
-          </p>
-
           <p>
             In 1981, Richard Feynman - frustrated at the difficulty that classical
             computers faced in trying to simulate quantum mechanical problems -
             hypothesised a computer that was directly suited to the task at hand.
             One that had quantum mechanics built right into the machine.
           </p>
-
-          <figure className="figure">
-            <MissionImage
-              {...IMAGE.fig001}
-              alt="Richard Feynman at a blackboard"
-            />
-            <figcaption>
-              <strong>[FIG.2]</strong>
-              <span>Richard Feynman</span>
-              <span>Simulating physics with computers — 1981</span>
-            </figcaption>
-          </figure>
 
           <p>
             This was the nucleus of the idea; that in order to simulate quantum
@@ -864,7 +851,7 @@ function App() {
               alt="Engineers examining hardware wreckage"
             />
             <figcaption>
-              <strong>[FIG.3]</strong>
+              <strong>[FIG.4]</strong>
               <span>Hardware-rich iteration</span>
               <span>Fail visibly, learn quickly</span>
             </figcaption>
@@ -1097,7 +1084,7 @@ function App() {
               alt="Evolution of the Raptor engine from version 1 to 3"
             />
             <figcaption>
-              <strong>[FIG.4]</strong>
+              <strong>[FIG.5]</strong>
               <span>Evolution of the Raptor engine, from version 1 to 3</span>
               <span>Simplify, simplify, simplify!</span>
             </figcaption>
