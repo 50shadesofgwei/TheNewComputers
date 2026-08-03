@@ -150,7 +150,7 @@ function App() {
             processing power has barely changed. Why?
           </p>
 
-          <p className="pull pull-sm">
+          <p className="pull pull-sm pull-inline">
             The lack of external accountability made the industry complacent.
           </p>
 
@@ -183,7 +183,8 @@ function App() {
           <p className="pull">There is a better way.</p>
 
           <p>
-            Consider the Laser Race. In 1958, researchers at Bell Labs proposed a
+            Consider the Laser Race between American laboratories in the late
+            50s. In 1958, researchers at Bell Labs proposed a
             machine that could amplify light into a narrow, high-powered beam; two
             years later in 1960, an American physicist named Theodore Maiman
             turned the idea into the first working laser. By 1962, lasers had been
@@ -200,7 +201,7 @@ function App() {
           </p>
 
           <p>
-            Why can’t the incumbent computer manufacturers simply do the same?
+            Why can’t incumbent computer manufacturers simply do the same?
             Leading QC companies are home to some of the world’s most brilliant
             scientists and engineers, but their industrial infrastructure and
             manufacturing supply chains were conceived of and constructed in a
@@ -297,8 +298,8 @@ function App() {
           <p>
             In 1981, Richard Feynman - frustrated at the difficulty that classical
             computers faced in trying to simulate quantum mechanical problems -
-            hypothesised a computer that was directly suited to the task at hand.
-            One that had quantum mechanics built right into the machine.
+            hypothesised a computer that had quantum mechanics built directly into
+            the machine.
           </p>
 
           <p>
@@ -309,16 +310,15 @@ function App() {
           <p>
             Fast-forward 40 years and some unexpected results popped up along the
             way. In 1994 an American computer scientist named Peter Shor
-            discovered that prime factorisation, a problem considered classically
-            intractable, was solvable [in polynomial time] by an algorithm unique
-            to the new computers. This was somewhat unexpected, as far as
-            Feynman's original hypothesis was concerned; the new computer had
-            broken out of its original box and was solving problems in the
-            classical world, too.
+            discovered that integer factorisation, a problem considered classically
+            intractable, was in fact solvable by an algorithm that could only be
+            run on a quantum computer. This was somewhat unexpected, as far as
+            Feynman's original hypothesis was concerned; a machine for simulating
+            physics had suddenly cracked a mathematical problem.
           </p>
 
           <p className="pull">
-            The classical world was proven to contain patterns only visible
+            The classical world was again proven to contain patterns only visible
             through the lens of quantum mechanics.
           </p>
 
@@ -329,20 +329,14 @@ function App() {
           </p>
 
           <p>
-            Take something as ordinary as steel. Whether a bridge bends or holds
-            depends on the arrangement of its atoms, the defects between its
-            crystals and, ultimately, the electrons binding it together. The
-            macroscopic properties emerge from microscopic behaviour.
-          </p>
-
-          <p>
-            Everything we build is ultimately limited by materials. The
-            efficiency of a solar cell, the capacity of a battery, the strength of
-            a magnet and the temperature at which a superconductor works all
-            emerge from the behaviour of the arrangement of the atoms, the nuclei
-            and the electrons inside matter. Where we can predict that behaviour
-            accurately, we can design new materials around the properties we want
-            them to possess.
+            The efficiency of a solar cell, the capacity of a battery, the
+            strength of a magnet and the temperature at which a superconductor
+            works are all downstream of the behaviour of the particles that make
+            them up.{' '}
+            <strong>
+              Where we can predict that behaviour accurately, we can design new
+              materials around the properties we want them to possess.
+            </strong>
           </p>
 
           <p>
@@ -351,31 +345,54 @@ function App() {
             Kohn was awarded half of the 1998 Nobel Prize in Chemistry for such
             work. But in complex materials, so called "strongly correlated"
             systems where many electrons all become entangled, these
-            approximations begin to fail. The number of possible states that the
-            material could be in increases exponentially with the number of
-            electrons.
+            approximations begin to fail.
           </p>
 
           <p className="pull">A Quantum Computer can encode this problem natively.</p>
 
-          <p>
-            [A classical computer has to simulate quantum properties with
-            algorithms and clever code], while a quantum computer has these
-            properties baked in. The data stored in the entanglement, phase, and
-            [something else] of a single atom, a single qubit, [would take many
-            orders of magnitude more bits to replicate].
-          </p>
-
           <p>So what's the difference?</p>
 
           <p>
-            In the Quantum Computing circuit, we can prepare our qubits in a
-            state that mimics that of the material we want to investigate, then
-            sit back and watch how they behave. The exponential web of
-            possibilities is encoded in the qubits themselves, not in the
-            [something else]. [Now we just let the system evolve and take
-            measurements, and see whether we see the patterns we're looking for.]
+            Normally, classical methods make the calculation manageable by
+            replacing the full web of electron interactions with a simpler, less
+            computationally demanding approximation of how each electron
+            behaves.
           </p>
+
+          <p>
+            In strongly correlated materials, however, those interactions are
+            what produce the material’s unusual properties, so simplifying them
+            away also removes the phenomenon we are trying to explain.
+          </p>
+
+          <aside className="exposit">
+            <div className="exposit-inner">
+              <p>
+                Say we have 100 electron spins, each of which can be measured as
+                up or down. Together, they have 2<sup>100</sup> possible
+                configurations. Their collective quantum state can extend across
+                many of these configurations at once.
+              </p>
+
+              <p>
+                To reproduce this exactly, a classical computer must keep a
+                separate record of every configuration and how it contributes to
+                the whole. As the electrons interact, it must continually
+                recalculate this exponentially large record.{' '}
+                <strong>
+                  The choice becomes: approximate it badly, or track an
+                  exponentially growing amount of information.
+                </strong>
+              </p>
+
+              <p>
+                If we have 100 qubits, and every one of them is entangled with
+                every other one, then the total number of possible configurations
+                that this system can be in is, again, 2<sup>100</sup>.{' '}
+                <strong>But notice here that it only took 100 qubits</strong>.
+              </p>
+            </div>
+          </aside>
 
           <p>
             This is the general class of problem for which these machines were
@@ -389,33 +406,87 @@ function App() {
             classical models alone cannot uncover.
           </p>
 
-          <p>
-            Equally important as knowing what a QC does is to know what it does
-            not do. Much talk is heard surrounding quantum improvements to
-            financial portfolio planning and general optimisation problems; claims
-            around quantum impact in machine learning remain speculative at best.
-          </p>
+          <figure className="figure figure-tall figure-center">
+            <MissionImage
+              {...IMAGE.figIbm}
+              alt="IBM quantum computer dilution refrigerator"
+            />
+            <figcaption>
+              <strong>[FIG.4]</strong>
+              <span>IBM Quantum System</span>
+              <span>Cryogenic dilution refrigerator</span>
+            </figcaption>
+          </figure>
 
-          <p>
-            And to give the critics their due, they're absolutely justified in
-            calling this out. There are a lot of exaggerations, half-truths, and
-            hype that is totally ungrounded in reality.
-          </p>
+          <div className="prose-band prose-band-start">
+            <p>
+              Equally important as knowing what a QC does is to know what it does{' '}
+              <em>not</em> do. Much talk is heard surrounding supposed quantum improvements to
+              financial portfolio planning and general optimisation problems;
+              claims around quantum impact in machine learning remain speculative
+              at best.
+            </p>
 
-          <p>
-            Some of the more uniquely egregious bullshit levied by the industry's
-            less scrupulous commentators includes Michio Kaku's claim that
-            "quantum computers will make cancer as harmless as the common
-            cold"[source], the Google announcement that "quantum computers lend
-            credence to the existence of parallel universes"[source], and that "As
-            quantum AI technology advances, life expectancy will increase faster,
-            eventually reaching a point where we gain a year of life expectancy
-            each year."[source].
-          </p>
+            <p>
+              And to give the critics their due, they're absolutely justified in
+              calling this out. There are a lot of exaggerations, half-truths, and
+              hype that is totally ungrounded in reality.
+            </p>
 
-          <p>All this, yet the largest number factored by a quantum computer remains 35.</p>
+            <p>
+              Some of the more uniquely egregious bullshit levied by the
+              industry's less scrupulous commentators includes Michio Kaku's claim
+              that "quantum computers will make cancer as harmless as the common
+              cold"
+              <sup className="cite">
+                <a href="https://www.businesswire.com/news/home/20221014005367/en/Cancer-to-Be-Treated-as-Easily-as-Common-Cold-When-Humans-Crack-Quantum-Computing">
+                  1
+                </a>
+              </sup>
+              , the Google announcement that "quantum computers lend credence to
+              the existence of parallel universes"
+              <sup className="cite">
+                <a href="https://blog.google/technology/research/google-willow-quantum-chip/">
+                  2
+                </a>
+              </sup>
+              , and that "As quantum AI technology advances, life expectancy will
+              increase faster, eventually reaching a point where we gain a year of
+              life expectancy each year."
+              <sup className="cite">
+                <a href="https://millenniumprize.org/news-articles/news/mtp-forum-speaker-interview-quantum-computing-will-enable-us-to-live-longer-healthier-lives-free-from-the-limitations-humans-have-always-faced/">
+                  3
+                </a>
+              </sup>
+            </p>
 
-          <p>So what might they actually be good for? High-temperature superconductors are one relevant case.</p>
+            <p>
+              All this, yet the largest number factored by a quantum computer
+              remains 21.
+            </p>
+
+            <p>So what might they actually be good for?</p>
+          </div>
+
+          <figure className="figure">
+            <MissionImage
+              {...IMAGE.figCondensed}
+              alt="Nematic quantum Hall liquid — Condensed Matter Simulations, University of Princeton"
+            />
+            <figcaption>
+              <strong>[FIG.5]</strong>
+              <span>Condensed Matter Simulations, University of Princeton</span>
+              <span>
+                Electron wavefunctions on Bismuth (
+                <span className="nuclide" aria-label="Bismuth, atomic number 83">
+                  <sub className="nuclide-z">83</sub>Bi
+                </span>
+                )
+              </span>
+            </figcaption>
+          </figure>
+
+          <p>High-temperature superconductors are one relevant case.</p>
 
           <p>
             Those in tech circles may recall the stir caused in 2023 when a group
@@ -426,14 +497,25 @@ function App() {
           </p>
 
           <p>
-            Superconductors can carry current for long distances without any
-            resistive loss, but as they exist today, the need for extreme-low
-            temperatures and high pressures keeps them expensive, bulky or
-            impractical. A high-temperature superconductor would enable smaller
-            fusion magnets, more compact motors and generators, higher-capacity
-            power cables, cheaper medical scanners and new forms of transport -
-            all the things that currently use superconductors today. [Note: check
-            this]
+            Superconductors already make MRI scanners, particle accelerators and
+            the strongest research magnets possible; newer high-temperature
+            materials are being developed for compact fusion reactors,
+            higher-capacity power cables and lighter, more powerful motors. The
+            problem is that even “high-temperature” superconductors must be kept
+            cryogenic. A material that worked at ordinary temperatures and
+            pressures would remove one of the main barriers to their widespread
+            use.
+          </p>
+
+          <p>
+            Finding one is partly a many-body electron problem. In cuprates, the
+            best-known high-temperature superconductors, the behaviour of each
+            electron depends upon that of many others, and the number of
+            collective states a classical computer must track grows exponentially
+            with the size of the simulation. A quantum computer can encode those
+            correlations directly in qubits, offering a possible route to
+            understanding why these materials superconduct and how to design
+            better ones.
           </p>
 
           <p>
@@ -496,7 +578,7 @@ function App() {
           <p>
             Not long after Peter Shor's discovery of his eponymous prime
             factorisation algorithm, researchers at NIST demonstrated the first
-            quantum logic gate using a beryllium ion suspended in a magnetic
+            quantum logic gate using a beryllium ion suspended in an electric
             field; in 1998, researchers at Oxford used the nuclear spins of
             molecules [inside an NMR spectrometer] to execute one of the first
             complete quantum algorithms on a two-qubit system.
@@ -677,12 +759,6 @@ function App() {
             4. The Industry Today
           </h2>
 
-          <p className="pull">
-            High unit cost and long lead times are the predictable result of
-            producing highly specialised equipment in small volumes, for
-            customers whose requirements frequently differ.
-          </p>
-
           <p>
             Now, more than 30 years later, the technology attracts industrial
             quantities of money. In 2025 alone, companies across quantum
@@ -745,12 +821,6 @@ function App() {
 
           <p>Why so much? Why so slow? [Let's not be too quick to judge].</p>
 
-          <p className="pull">
-            High unit cost and long lead times are the predictable result of
-            producing highly specialised equipment in small volumes, for
-            customers whose requirements frequently differ.
-          </p>
-
           <p>
             A manufacturer serving several dozen laboratories cannot amortise an
             automated production line across millions of units, while a quantum
@@ -781,9 +851,16 @@ function App() {
         </div>
         <div className="chapter-copy">
           <p className="meta">PT—05/ 07</p>
-          <p className="chapter-kicker">
-            Henry Ford is remembered for the Model T, but perhaps his more
-            important innovation was the production line behind it.
+          <p className="chapter-kicker chapter-kicker-list">
+            1. The Idiot Index
+            <br />
+            2. Question Every Requirement
+            <br />
+            3. Standardisation of Components
+            <br />
+            4. Vertical Integration
+            <br />
+            5. Increase Iteration Speed
           </p>
           <h2 className="chapter-title">Cutting the Gordian Knot</h2>
         </div>
@@ -794,13 +871,6 @@ function App() {
           <h2 className="prose-display">
             5. Cutting the Gordian Knot
           </h2>
-
-          <p className="pull">
-            Henry Ford is remembered for the Model T, but perhaps his more
-            important innovation was the production line behind it. There are many
-            contenders for the industry's Model T, many less for the production
-            line.
-          </p>
 
           <p>Is there any historical precedent for having solved these problems?</p>
 
@@ -851,7 +921,7 @@ function App() {
               alt="Engineers examining hardware wreckage"
             />
             <figcaption>
-              <strong>[FIG.4]</strong>
+              <strong>[FIG.6]</strong>
               <span>Hardware-rich iteration</span>
               <span>Fail visibly, learn quickly</span>
             </figcaption>
@@ -859,13 +929,11 @@ function App() {
 
           <h3>1. The Idiot Index</h3>
 
-          <div className="quote-block">
-            <p>
-              Musk eventually named this the "idiot index": the ratio of the
-              actual cost of a part to the cost of its raw materials. “If the
-              ratio is high,” he says, “you’re an idiot.”
-            </p>
-          </div>
+          <blockquote>
+            Musk eventually named this the "idiot index": the ratio of the actual
+            cost of a part to the cost of its raw materials. “If the ratio is
+            high,” he says, “you’re an idiot.”
+          </blockquote>
 
           <p>
             A classical computer is made from a laundry list of component parts.
@@ -874,13 +942,11 @@ function App() {
             and more.
           </p>
 
-          <div className="quote-block">
-            <p>
-              Consider the Falcon 1 actuator. A vendor quoted $120,000 and
-              eighteen months of development. SpaceX’s engineers built it for
-              $3,900 by summer. [Source Needed]
-            </p>
-          </div>
+          <blockquote>
+            Consider the Falcon 1 actuator. A vendor quoted $120,000 and eighteen
+            months of development. SpaceX’s engineers built it for $3,900 by
+            summer. [Source Needed]
+          </blockquote>
 
           <p>
             Each of these component parts can be assigned it's own idiot index; a
@@ -891,13 +957,11 @@ function App() {
             only guarantees that none will be found.
           </p>
 
-          <div className="quote-block">
-            <p>
-              "The avionics example is instructive. Rather than buy
-              radiation-hardened processors at $200,000 each, SpaceX used
-              triple-redundant commercial processors totalling $2,000."
-            </p>
-          </div>
+          <blockquote>
+            The avionics example is instructive. Rather than buy
+            radiation-hardened processors at $200,000 each, SpaceX used
+            triple-redundant commercial processors totalling $2,000.
+          </blockquote>
 
           <p>
             Knowing where the manufacturing inefficiencies are hiding is only half
@@ -907,13 +971,11 @@ function App() {
 
           <h3>2. Question Every Requirement</h3>
 
-          <div className="quote-block">
-            <p>
-              "Junior engineers are explicitly told that requirements from "smart
-              people" are the most dangerous, because nobody thinks to question
-              them."
-            </p>
-          </div>
+          <blockquote>
+            Junior engineers are explicitly told that requirements from "smart
+            people" are the most dangerous, because nobody thinks to question
+            them.
+          </blockquote>
 
           <p>
             A high idiot index identifies an expensive component; the knee-jerk
@@ -922,16 +984,14 @@ function App() {
             all. Get rid of the part entirely and the idiot index falls to 0.
           </p>
 
-          <div className="quote-block">
-            <p>
-              "Falcon 9’s grid fins were originally designed to fold, like
-              traditional aerospace grid fins. The folding mechanism reduced drag
-              during ascent, which seemed obviously necessary. SpaceX questioned
-              whether it was worth the mass and complexity. Simulations showed
-              fixed fins were acceptable, so they deleted the mechanism entirely.
-              Delete, delete, delete... the best part is no part."
-            </p>
-          </div>
+          <blockquote>
+            Falcon 9’s grid fins were originally designed to fold, like
+            traditional aerospace grid fins. The folding mechanism reduced drag
+            during ascent, which seemed obviously necessary. SpaceX questioned
+            whether it was worth the mass and complexity. Simulations showed fixed
+            fins were acceptable, so they deleted the mechanism entirely. Delete,
+            delete, delete... the best part is no part.
+          </blockquote>
 
           <p className="note">
             [Something here about MOCVD Epitaxy, its my understanding that the
@@ -945,9 +1005,7 @@ function App() {
 
           <h3>3. Standardisation of Components</h3>
 
-          <div className="quote-block">
-            <p>"The only way to get volume is to standardise."</p>
-          </div>
+          <blockquote>The only way to get volume is to standardise.</blockquote>
 
           <p>
             Go to any quantum hardware supplier right now, be it lasers, vacuum
@@ -956,17 +1014,15 @@ function App() {
             suppliers being secretive, or do they genuinely not know?
           </p>
 
-          <div className="quote-block">
-            <p>
-              "The existing approach was bespoke vehicles per mission. Custom
-              adapters, mission-specific modifications, multiple vehicle families.
-              This optimises each mission at the expense of manufacturing scale.
-              SpaceX bet the opposite: that cost savings from standardisation
-              would exceed the value of customisation. Yes, customers wanted
-              custom solutions. But they wanted low prices even more. Force them
-              to choose, and they’d adapt."
-            </p>
-          </div>
+          <blockquote>
+            The existing approach was bespoke vehicles per mission. Custom
+            adapters, mission-specific modifications, multiple vehicle families.
+            This optimises each mission at the expense of manufacturing scale.
+            SpaceX bet the opposite: that cost savings from standardisation would
+            exceed the value of customisation. Yes, customers wanted custom
+            solutions. But they wanted low prices even more. Force them to choose,
+            and they’d adapt.
+          </blockquote>
 
           <p>
             It's the latter, of course, but let's not be too hasty in [explanation
@@ -986,18 +1042,16 @@ function App() {
 
           <h3>4. Vertical Integration</h3>
 
-          <div className="quote-block">
-            <p>
-              "If materials are cheap and the tax is all process and overhead, you
-              need to control the process to capture the savings. You can’t
-              negotiate your way to 10x cost reduction with suppliers who have
-              profits baked in at every tier. So SpaceX became its own supplier.
-              By building 80% of its hardware internally - engines, structures,
-              avionics, software, and key ground systems - SpaceX collapsed the
-              traditional aerospace stack. They outsource raw materials and
-              commodity parts, and make everything else themselves."
-            </p>
-          </div>
+          <blockquote>
+            If materials are cheap and the tax is all process and overhead, you
+            need to control the process to capture the savings. You can’t
+            negotiate your way to 10x cost reduction with suppliers who have
+            profits baked in at every tier. So SpaceX became its own supplier. By
+            building 80% of its hardware internally - engines, structures,
+            avionics, software, and key ground systems - SpaceX collapsed the
+            traditional aerospace stack. They outsource raw materials and
+            commodity parts, and make everything else themselves.
+          </blockquote>
 
           <p className="note">
             [Why is vertical integration important here? Reduction of margin,
@@ -1043,15 +1097,12 @@ function App() {
 
           <p className="note">[Anddddd what the fuck for this, then.]</p>
 
-          <div className="quote-block">
-            <p>
-              "Traditional aerospace builds few prototypes, each one expensive and
-              near-flight-ready. SpaceX builds many cheaper prototypes:
-              hardware-rich fleets of test articles. They’d rather have ten rough
-              versions to blow up than one polished version they’re afraid to
-              break."
-            </p>
-          </div>
+          <blockquote>
+            Traditional aerospace builds few prototypes, each one expensive and
+            near-flight-ready. SpaceX builds many cheaper prototypes:
+            hardware-rich fleets of test articles. They’d rather have ten rough
+            versions to blow up than one polished version they’re afraid to break.
+          </blockquote>
 
           <p>
             The total number of computers produced by the 5 largest quantum
@@ -1059,24 +1110,22 @@ function App() {
             of 1 new machine every [X.Y] years.
           </p>
 
-          <div className="quote-block">
-            <p>
-              "A high production rate solves many ills. Any given technology
-              development is “How many iterations do you have? And what’s your
-              time and progress between iterations?” So if you have a high
-              production rate, you can have a lot of iterations. You can try lots
-              of different things... If you have a small number of engines, then
-              you have to be much more conservative because you can’t risk blowing
-              them up."
-            </p>
-            <p>
-              "Vertical integration really helps enable this. When you own the
-              factory, you can build fast without waiting on vendors. When you own
-              3D printing capability, you can produce parts on an ad-hoc basis.
-              When you can manufacture Raptor engines at high volume, losing one
-              to a test failure doesn’t set you back months."
-            </p>
-          </div>
+          <blockquote>
+            A high production rate solves many ills. Any given technology
+            development is “How many iterations do you have? And what’s your time
+            and progress between iterations?” So if you have a high production
+            rate, you can have a lot of iterations. You can try lots of different
+            things... If you have a small number of engines, then you have to be
+            much more conservative because you can’t risk blowing them up.
+          </blockquote>
+
+          <blockquote>
+            Vertical integration really helps enable this. When you own the
+            factory, you can build fast without waiting on vendors. When you own
+            3D printing capability, you can produce parts on an ad-hoc basis. When
+            you can manufacture Raptor engines at high volume, losing one to a
+            test failure doesn’t set you back months.
+          </blockquote>
 
           <figure className="figure">
             <MissionImage
@@ -1084,7 +1133,7 @@ function App() {
               alt="Evolution of the Raptor engine from version 1 to 3"
             />
             <figcaption>
-              <strong>[FIG.5]</strong>
+              <strong>[FIG.7]</strong>
               <span>Evolution of the Raptor engine, from version 1 to 3</span>
               <span>Simplify, simplify, simplify!</span>
             </figcaption>
@@ -1095,6 +1144,18 @@ function App() {
             first-principles engineering identified manufacturing optimisations,
             vertical integration let those optimisations happen, and
             standardisation allowed the volume to make that control profitable.
+          </p>
+
+          <p className="pull pull-sm">
+            1. The Idiot Index
+            <br />
+            2. Question Every Requirement
+            <br />
+            3. Standardisation of Components
+            <br />
+            4. Vertical Integration
+            <br />
+            5. Increase Iteration Speed
           </p>
         </div>
       </article>

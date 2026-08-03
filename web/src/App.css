@@ -151,6 +151,11 @@
   letter-spacing: -0.02em;
 }
 
+.chapter-kicker-list {
+  max-width: 22rem;
+  line-height: 1.45;
+}
+
 .chapter-title {
   max-width: 11ch;
   font-size: clamp(3.2rem, 9vw, 7.5rem);
@@ -337,6 +342,34 @@
   letter-spacing: -0.03em;
 }
 
+.prose .pull.pull-inline {
+  width: 100%;
+  max-width: 44rem; /* room for one line at the larger size */
+  white-space: nowrap;
+  margin-top: clamp(1.68rem, 5.04vw, 3.36rem);
+  margin-bottom: clamp(1.68rem, 5.04vw, 3.36rem);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-self: center;
+  font-size: clamp(1.26rem, 2.52vw, 1.8rem);
+  letter-spacing: -0.025em;
+}
+
+.prose-layout-center .pull.pull-inline,
+.prose-layout-start .pull.pull-inline,
+.prose-layout-end .pull.pull-inline {
+  max-width: 44rem;
+  text-align: center;
+  justify-self: center;
+}
+
+@media (max-width: 700px) {
+  .prose .pull.pull-inline {
+    white-space: normal;
+  }
+}
+
 /* Equal air above/below a pull that sits between a figure and body copy */
 .prose .figure:has(+ .pull) {
   margin-bottom: 0;
@@ -354,6 +387,55 @@
   font-size: clamp(1.85rem, 5.1vw, 3.9rem);
   line-height: 1.02;
   letter-spacing: -0.045em;
+}
+
+/* Full-bleed teaching band — breaks the paper plane for the 2^n walkthrough */
+.prose .exposit {
+  justify-self: stretch;
+  width: 100vw;
+  max-width: 100vw;
+  margin: clamp(2.5rem, 7vw, 4.5rem) 0;
+  margin-left: calc(50% - 50vw);
+  padding: clamp(2.75rem, 8vw, 5rem) var(--page-pad);
+  background:
+    radial-gradient(
+      ellipse 90% 70% at 85% 10%,
+      color-mix(in srgb, var(--bg-c) 14%, transparent),
+      transparent 55%
+    ),
+    linear-gradient(165deg, var(--bg-a) 0%, var(--bg-black) 55%, #08090c 100%);
+  color: var(--text-inv);
+}
+
+.prose .exposit-inner {
+  max-width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
+}
+
+.prose .exposit p {
+  max-width: 36rem;
+  width: 100%;
+  margin: 0 0 1.35rem;
+  color: inherit;
+}
+
+.prose .exposit p:last-child {
+  margin-bottom: 0;
+}
+
+.prose .exposit strong {
+  color: #fff;
+}
+
+.prose-layout-end .exposit-inner {
+  justify-items: end;
+}
+
+.prose-layout-center .exposit-inner {
+  justify-items: center;
 }
 
 .prose .note {
@@ -392,17 +474,43 @@
 }
 
 .prose blockquote {
+  position: relative;
   max-width: 36rem;
   width: 100%;
   margin: 2rem 0 2.5rem;
-  padding: 0 0 0 1.1rem;
+  padding: 0.15rem 0 0.15rem 1.65rem;
   border: 0;
   border-left: 2px solid color-mix(in srgb, var(--text) 45%, transparent);
-  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+  font-size: clamp(1.1rem, 1.45vw, 1.3rem);
   font-weight: 600;
   font-style: italic;
-  line-height: 1.35;
+  line-height: 1.4;
   letter-spacing: -0.02em;
+}
+
+.prose blockquote::before {
+  content: '>';
+  position: absolute;
+  left: 0.35rem;
+  top: 0.15rem;
+  font-style: normal;
+  font-weight: 700;
+  opacity: 0.45;
+  letter-spacing: 0;
+}
+
+.prose blockquote p {
+  max-width: none;
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+.prose blockquote p + p {
+  margin-top: 0.85rem;
 }
 
 .prose em {
@@ -469,6 +577,55 @@
   height: auto;
 }
 
+/* Local alignment bands — flip the reading column mid-article */
+.prose-band {
+  justify-self: stretch;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.prose-band-start {
+  justify-items: start;
+}
+
+.prose-layout-end .prose-band-start p,
+.prose-layout-end .prose-band-start .figure,
+.prose-layout-center .prose-band-start p,
+.prose-layout-center .prose-band-start .figure {
+  justify-self: start;
+  text-align: left;
+}
+
+/* Portrait hardware shots — keep them from dominating the viewport */
+.figure.figure-tall {
+  max-width: min(22rem, 72vw);
+}
+
+.figure.figure-tall picture {
+  width: auto;
+  max-width: 100%;
+}
+
+.figure.figure-tall img {
+  max-height: min(70vh, 36rem);
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.figure.figure-center {
+  justify-self: center;
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  .figure.figure-tall {
+    max-width: min(18rem, 85vw);
+  }
+}
+
 .figure-pair {
   width: 100%;
   max-width: none;
@@ -514,6 +671,24 @@
 
 .figure figcaption strong {
   font-weight: 500;
+}
+
+.nuclide {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.nuclide-z {
+  font-size: 0.65em;
+  font-weight: 500;
+  vertical-align: baseline;
+  position: relative;
+  bottom: -0.15em;
+  margin-right: 0.05em;
 }
 
 /* Layout variants — shift the reading column around the page */
@@ -584,9 +759,11 @@
   max-width: min(52rem, 96%);
 }
 
-.prose-layout-end .quote-block,
-.prose-layout-start .quote-block {
+.prose-layout-end blockquote,
+.prose-layout-start blockquote {
   max-width: min(40rem, 90%);
+  justify-self: start;
+  text-align: left;
 }
 
 /* ——— CTA ——— */
@@ -674,5 +851,10 @@
   .prose-layout-end h3 {
     justify-self: start;
     text-align: left;
+  }
+
+  .prose-layout-end .exposit-inner,
+  .prose-layout-center .exposit-inner {
+    justify-items: start;
   }
 }
