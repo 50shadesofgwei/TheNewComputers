@@ -917,6 +917,12 @@ function App() {
 
           <p>Why so much? Why so slow? [Let's not be too quick to judge].</p>
 
+          <p className="pull">
+            High unit cost and long lead times are the predictable result of
+            producing highly specialised equipment in small volumes, for
+            customers whose requirements frequently differ.
+          </p>
+
           <p>
             A manufacturer serving several dozen laboratories cannot amortise an
             automated production line across millions of units, while a quantum
