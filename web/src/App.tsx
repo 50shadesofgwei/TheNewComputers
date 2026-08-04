@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import Lenis from 'lenis'
 import { CHAPTER_IMAGES, IMAGE, MissionImage } from './MissionImage'
+import { OmitList } from './OmitList'
+import { TermPeek } from './TermPeek'
 import './App.css'
 
 function App() {
@@ -348,8 +350,6 @@ function App() {
             approximations begin to fail.
           </p>
 
-          <p className="pull">A Quantum Computer can encode this problem natively.</p>
-
           <p>So what's the difference?</p>
 
           <p>
@@ -388,7 +388,10 @@ function App() {
               <p>
                 If we have 100 qubits, and every one of them is entangled with
                 every other one, then the total number of possible configurations
-                that this system can be in is, again, 2<sup>100</sup>.{' '}
+                that this system can be in is, again, 2<sup>100</sup>.
+              </p>
+
+              <p>
                 <strong>But notice here that it only took 100 qubits</strong>.
               </p>
             </div>
@@ -396,10 +399,8 @@ function App() {
 
           <p>
             This is the general class of problem for which these machines were
-            originally conceived; quantum-mechanical systems whose exact evolution
-            requires a classical computer to manipulate an exponentially growing
-            wavefunction, but whose relevant properties may be extracted more
-            efficiently from a controlled quantum simulation. Of course scientists
+            originally conceived; highly entangled systems that classical computers
+            cannot efficiently simulate. Of course scientists
             will still have to test the results in the lab, but the direction of
             physical experimentation is made less blind by eliminating bad
             candidates before they are synthesised, using the patterns that
@@ -420,7 +421,7 @@ function App() {
 
           <div className="prose-band prose-band-start">
             <p>
-              Equally important as knowing what a QC does is to know what it does{' '}
+              Equally important as knowing what a quantum computer does is to know what it does{' '}
               <em>not</em> do. Much talk is heard surrounding supposed quantum improvements to
               financial portfolio planning and general optimisation problems;
               claims around quantum impact in machine learning remain speculative
@@ -502,20 +503,32 @@ function App() {
             materials are being developed for compact fusion reactors,
             higher-capacity power cables and lighter, more powerful motors. The
             problem is that even “high-temperature” superconductors must be kept
-            cryogenic. A material that worked at ordinary temperatures and
-            pressures would remove one of the main barriers to their widespread
-            use.
+            cryogenic;{' '}
+            <strong>
+              a material that worked at ordinary temperatures and pressures would
+              remove one of the main barriers to their widespread use.
+            </strong>
           </p>
 
           <p>
-            Finding one is partly a many-body electron problem. In cuprates, the
-            best-known high-temperature superconductors, the behaviour of each
-            electron depends upon that of many others, and the number of
-            collective states a classical computer must track grows exponentially
-            with the size of the simulation. A quantum computer can encode those
-            correlations directly in qubits, offering a possible route to
-            understanding why these materials superconduct and how to design
-            better ones.
+            The best candidates we have for high-temperature superconductors
+            today —{' '}
+            <TermPeek
+              term="cuprates"
+              imageName={IMAGE.figCuprate.name}
+              imageWidth={IMAGE.figCuprate.width}
+              imageHeight={IMAGE.figCuprate.height}
+              imageAlt="Crystal structure of the cuprate superconductor YBa2Cu3O7"
+              title="Cuprates"
+            >
+              Copper-oxide ceramics whose layered planes host the highest-temperature
+              superconductivity yet found at ambient pressure. Pictured: the crystal
+              structure of YBa₂Cu₃O₇.
+            </TermPeek>
+            {' '}
+            — just so happen to have this same strongly-correlated electron
+            structure. This is exactly the kind of simulation problem that quantum
+            computers are made for.
           </p>
 
           <p>
@@ -524,8 +537,9 @@ function App() {
             far larger and more reliable than those available today. Quantum
             computers will, in all likelihood, be useless for almost everything we
             currently use computers for. They do not need to replace classical
-            computation, any more than aeroplanes needed to replace bicycles: a
-            747 is transformative for getting across an ocean and useless for a
+            computation, any more than aeroplanes needed to replace bicycles: an
+            aeroplane is transformative for getting across an ocean and useless
+            for a
             trip to the shops. A small number of calculations currently beyond our
             reach will transform cryptography, energy, materials science and
             industrial chemistry.
@@ -559,7 +573,7 @@ function App() {
         </div>
       </section>
 
-      <article className="prose prose-layout-start">
+      <article className="prose prose-layout-start prose-close-bridge">
         <div className="prose-inner">
           <h2 className="prose-display">
             3. How Did We Get Here?
@@ -570,8 +584,20 @@ function App() {
             produce demonstrations over products.
           </p>
 
+          <figure className="figure figure-sm figure-center">
+            <MissionImage
+              {...IMAGE.figOpticalBench}
+              alt="Crowded optical bench with lasers, mirrors, and cabling"
+            />
+            <figcaption>
+              <strong>[FIG.6]</strong>
+              <span>Ultracold-atom optical table — UQUAM / MPQ</span>
+              <span>© Immanuel Bloch — European Commission</span>
+            </figcaption>
+          </figure>
+
           <p>
-            Quantum computing began as a sequence of experiments conducted in
+            The journey began as a sequence of experiments conducted in
             University physics departments all over the world.
           </p>
 
@@ -579,9 +605,9 @@ function App() {
             Not long after Peter Shor's discovery of his eponymous prime
             factorisation algorithm, researchers at NIST demonstrated the first
             quantum logic gate using a beryllium ion suspended in an electric
-            field; in 1998, researchers at Oxford used the nuclear spins of
-            molecules [inside an NMR spectrometer] to execute one of the first
-            complete quantum algorithms on a two-qubit system.
+            field; in 1998, researchers at Oxford used the magnetic properties of
+            atoms to execute one of the first complete quantum algorithms on a
+            two-qubit system.
           </p>
 
           <p>
@@ -589,18 +615,39 @@ function App() {
             an iPhone or a Tesla - that is, mass-produced factory-line items -
             rather they were one-off experimental setups assembled by hand. Many
             of these experiments were built as PhD projects and postdoctoral
-            research, and with that comes the incentive structures, timelines,
-            and hardware supplier choices of the academic system.
+            research, and with that came academic incentive structures,
+            timelines, and purchasing habits.
           </p>
 
           <p>
             Take the NIST experiment described above. The first quantum logic
-            gate was reported in a four-page paper containing the atomic states
-            used, the laser-pulse sequence, the measured result and the sources
-            of error. It contained no bill of materials, assembly time, supplier
-            list, maintenance procedure or account of the earlier versions which
-            failed. None of this was required to substantiate the scientific
-            claim. (1)
+            gate was reported in a{' '}
+            <TermPeek
+              term="four-page paper"
+              imageName={IMAGE.figNistPaper.name}
+              imageWidth={IMAGE.figNistPaper.width}
+              imageHeight={IMAGE.figNistPaper.height}
+              imageAlt="First page of Monroe et al., Demonstration of a Fundamental Quantum Logic Gate, Physical Review Letters, 1995"
+              title="Monroe et al., 1995"
+              wide
+            >
+              Phys. Rev. Lett. 75, 4714 — the NIST demonstration of a controlled-NOT
+              gate on a single trapped beryllium ion. Four pages of states, pulses,
+              results and error sources.
+            </TermPeek>{' '}
+            containing the atomic states used, the laser-pulse sequence, the
+            measured result and the sources of error.
+          </p>
+
+          <p className="pull pull-sm">
+            Notice, however, what was left out.
+          </p>
+
+          <OmitList />
+
+          <p>
+            And it's no surprise; none of this was required to substantiate the
+            scientific claim.
           </p>
 
           <p>
@@ -611,22 +658,54 @@ function App() {
             consisted principally of publications, grants and invitations to
             speak, while the Research Excellence Framework assessed published
             work according to its “originality, significance and rigour.”
+          </p>
+
+          <p className="pull pull-sm pull-end">
             Assembly time, fabrication yield, supplier qualification, maintenance
-            hours and unit cost appear nowhere in the scorecard. A physicist may
-            halve any of them without having produced an original scientific
-            result, even though they determine whether the apparatus can be built
-            once or a thousand times. (2)
+            hours and unit cost appear nowhere in the scorecard.
           </p>
 
           <p>
-            And in all fairness, it is hard to imagine this having come about any
-            other way. Before the question of mass-manufacturing a quantum
-            computer made any sense to ask, Wolfgang Paul first had to discover
-            that oscillating electric fields could confine ions in free space.
-            David Wineland’s 1978 group in Colorado had to prove that trapped ions
-            could be cooled using laser light. Only after another seventeen years
-            of work did the first quantum logic gate follow. (Wolfgang Paul, NIST
-            history)
+            <strong>
+              And in all fairness, it's hard to imagine this having come about
+              any other way.
+            </strong>
+          </p>
+
+          <p>
+            Before the question of mass-manufacturing a quantum computer made any
+            sense to ask,{' '}
+            <TermPeek
+              term="Wolfgang Paul"
+              imageName={IMAGE.figWolfgangPaul.name}
+              imageWidth={IMAGE.figWolfgangPaul.width}
+              imageHeight={IMAGE.figWolfgangPaul.height}
+              imageAlt="Portrait of Wolfgang Paul"
+              title="Wolfgang Paul, 1913–1993"
+            >
+              German physicist who invented the Paul trap — using oscillating
+              electric fields to confine charged particles in free space. Shared
+              the 1989 Nobel Prize in Physics for this work, which became the
+              foundation of trapped-ion quantum computing.
+            </TermPeek>{' '}
+            first had to discover that oscillating electric fields could confine
+            ions in free space.{' '}
+            <TermPeek
+              term="David Wineland"
+              imageName={IMAGE.figDavidWineland.name}
+              imageWidth={IMAGE.figDavidWineland.width}
+              imageHeight={IMAGE.figDavidWineland.height}
+              imageAlt="Portrait of David Wineland"
+              title="David Wineland, b. 1944"
+            >
+              American physicist at NIST whose group showed that trapped ions
+              could be laser-cooled nearly to rest. Shared the 2012 Nobel Prize
+              in Physics; his laboratory later demonstrated the first quantum
+              logic gate on a single ion.
+            </TermPeek>
+            ’s 1978 group in Colorado had to prove that trapped ions could be
+            cooled using laser light. Only after another seventeen years of work
+            did the first quantum logic gate follow.
           </p>
 
           <p>
@@ -637,101 +716,118 @@ function App() {
           </p>
 
           <p>
-            The doubts surrounding them were considerable. In 1995, the IBM
-            physicist Rolf Landauer argued that imperfect machinery and
-            environmental noise would cause the probability of a reliable result
-            to fall exponentially as a computation became longer. He was
-            particularly sceptical that error correction would help, since the
-            machinery performing the correction would itself contain errors.
-            (Wired, 1995)
+            Thirty years of experiments later and many of these early doubts have
+            been allayed: quantum logic gates are now routine, processors with
+            more than a thousand physical qubits have been built, and
+            error-corrected logical qubits have begun to improve as more physical
+            qubits are added.
           </p>
 
-          <p>
-            Thirty years of experiments have answered at least part of this
-            objection. Quantum logic gates are now routine; processors containing
-            more than a thousand physical qubits have been constructed; and in
-            2024 Google demonstrated a logical quantum memory whose error rate
-            fell as more physical qubits were added. (IBM Condor, Google’s
-            error-correction result)
+          <p className="pull pull-sm">
+            ...But what makes a good prototype isn't always what makes a good product.
           </p>
 
-          <p>
-            The criticism has consequently changed in emphasis. When Jensen Huang
-            was asked in 2025 when “very useful quantum computers” might arrive,
-            he placed the likely date somewhere between fifteen and thirty years
-            away. The machine was no longer dismissed as physically impossible; it
-            was merely assigned to the indefinite technological future. (Huang’s
-            remarks)
-          </p>
+          <p>We can here look to the past for historical examples.</p>
 
-          <p>
-            There is, however, another remark from Landauer’s 1995 interview
-            which has aged rather better. “When you try to take something out of
-            a laboratory and into mass production, the vast majority of
-            prototechnologies turn out not to work.”
-          </p>
+          <div className="history-cases">
+            <div className="history-cases-col history-cases-col--start">
+              <article className="history-case">
+                <div className="history-case-banner">
+                  <MissionImage
+                    {...IMAGE.figHaberBosch}
+                    alt="BASF Oppau works, 1914 — Otto Bollhagen"
+                  />
+                </div>
+                <div className="history-case-body">
+                  <p className="meta">Haber–Bosch</p>
+                  <p>
+                    In 1909, Fritz Haber demonstrated a laboratory apparatus
+                    which produced around 100 cubic centimetres of ammonia. Carl
+                    Bosch was then assigned the considerably larger task of
+                    turning it into an industrial process. Doing so required new
+                    catalysts, new methods of producing pure gases and
+                    high-pressure reactors made from steels which would not
+                    split apart after hydrogen penetrated them. The first plant
+                    opened four years later with an annual capacity of 8,700
+                    tonnes. Haber had established the chemistry, Bosch and his
+                    team invented the industrial machinery surrounding it.
+                  </p>
+                </div>
+              </article>
 
-          <p>
-            This transition has appeared throughout industrial history. In 1909,
-            Fritz Haber demonstrated a laboratory apparatus which produced around
-            100 cubic centimetres of ammonia. Carl Bosch was then assigned the
-            considerably larger task of turning it into an industrial process.
-            Doing so required new catalysts, new methods of producing pure gases
-            and high-pressure reactors made from steels which would not split
-            apart after hydrogen penetrated them. The first plant opened four
-            years later with an annual capacity of 8,700 tonnes. Haber had
-            established the chemistry; Bosch and his team had to invent much of
-            the industrial machinery surrounding it. (American Chemical Society,
-            BASF history)
-          </p>
+              <article className="history-case">
+                <div className="history-case-banner">
+                  <MissionImage
+                    {...IMAGE.figPlanar}
+                    alt="Silicon wafer patterned with integrated circuits"
+                  />
+                </div>
+                <div className="history-case-body">
+                  <p className="meta">Planar process</p>
+                  <p>
+                    The same distinction appears in computing itself. The
+                    transistor was demonstrated at Bell Labs in 1947, but early
+                    devices remained difficult to manufacture reliably. Twelve
+                    years later, Fairchild found a way to make them the same way
+                    every time, and at scale. Fairchild commercialised the first
+                    planar transistor in 1960, and the process became the
+                    manufacturing basis of what we now know as the microchip.
+                  </p>
+                </div>
+              </article>
+            </div>
 
-          <p>
-            Penicillin followed much the same pattern. Fleming discovered it in
-            1928, and the Oxford team established its therapeutic value in 1941,
-            but the drug was still being produced in one-litre flasks at yields
-            below one per cent. American chemists and engineers developed better
-            mould strains, culture media, purification methods and submerged
-            fermentation tanks. Between 1943 and 1945, American production rose
-            from 21 billion units to more than 6.8 trillion, while yields
-            increased to between 80 and 90 per cent. The scientific discovery had
-            existed for more than a decade; the production process made it
-            medicine. (American Chemical Society)
-          </p>
-
-          <p>
-            The same distinction appears in computing itself. The transistor was
-            demonstrated at Bell Labs in 1947, but early devices remained
-            difficult to manufacture reliably. The planar process, developed at
-            Fairchild twelve years later, protected the transistor junction
-            beneath silicon dioxide and allowed components to be fabricated
-            photographically from one side of a wafer. Fairchild commercialised
-            the first planar transistor in 1960, and the process became the
-            manufacturing basis of what we now know as the microchip. (Computer
-            History Museum)
-          </p>
+            <div className="history-cases-col history-cases-col--end">
+              <article className="history-case">
+                <div className="history-case-banner">
+                  <MissionImage
+                    {...IMAGE.figPenicillin}
+                    alt="Penicillin production flasks, England, 1943"
+                  />
+                </div>
+                <div className="history-case-body">
+                  <p className="meta">Penicillin</p>
+                  <p>
+                    Penicillin followed much the same pattern. Fleming
+                    discovered it in 1928, and the Oxford team established its
+                    therapeutic value in 1941, but the drug was still being
+                    produced in one-litre flasks at yields below one per cent.
+                    American chemists and engineers developed better mould
+                    strains, culture media, purification methods and submerged
+                    fermentation tanks. Between 1943 and 1945, American
+                    production rose from 21 billion units to more than 6.8
+                    trillion, while yields increased to between 80 and 90 per
+                    cent.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
 
           <p className="pull">
-            The pattern is the same in all cases; scientific innovation [lays the
-            groundwork] and mass manufacture brings it to market.
+            The pattern is the same in all cases; scientific innovation is
+            followed by mass manufacture.
           </p>
 
-          <p>
-            Quantum computing is now entering its version of this transition. The
-            National Academies described the field’s greatest challenge in 2019
-            as moving “from an understanding of the basic science to the creation
-            of useful devices.” At this stage, industrialisation begins with the
-            experimental process itself: reducing the cost and time required to
-            build each generation, documenting what was previously tacit,
-            increasing component yield, removing hand-alignment steps and
-            developing equipment which allows designs to be tested repeatedly
-            rather than reconstructed from scratch. (National Academies)
-          </p>
+          <div className="pattern-coda">
+            <p>
+              Quantum computing is now entering its version of this transition.
+              The National Academies described the field’s greatest challenge in
+              2019 as moving “from an understanding of the basic science to the
+              creation of useful devices.” At this stage, industrialisation
+              begins with the experimental process itself: reducing the cost and
+              time required to build each generation, documenting what was
+              previously tacit, increasing component yield, removing
+              hand-alignment steps and developing equipment which allows designs
+              to be tested repeatedly rather than reconstructed from scratch.
+            </p>
+          </div>
 
-          <p className="note">
-            [We do not yet know which quantum architecture will ultimately be
-            manufactured in volume. The rate at which competing architectures can
-            be built, tested and improved will help determine the answer.]
-          </p>
+          <div className="pattern-bridge">
+            <p className="pull pull-sm pull-echo">
+              Innovation is followed by manufacture.
+            </p>
+          </div>
         </div>
       </article>
 
@@ -921,7 +1017,7 @@ function App() {
               alt="Engineers examining hardware wreckage"
             />
             <figcaption>
-              <strong>[FIG.6]</strong>
+              <strong>[FIG.7]</strong>
               <span>Hardware-rich iteration</span>
               <span>Fail visibly, learn quickly</span>
             </figcaption>
@@ -1133,7 +1229,7 @@ function App() {
               alt="Evolution of the Raptor engine from version 1 to 3"
             />
             <figcaption>
-              <strong>[FIG.7]</strong>
+              <strong>[FIG.8]</strong>
               <span>Evolution of the Raptor engine, from version 1 to 3</span>
               <span>Simplify, simplify, simplify!</span>
             </figcaption>
