@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import Lenis from 'lenis'
 import { CHAPTER_IMAGES, IMAGE, MissionImage } from './MissionImage'
+import { OmitList } from './OmitList'
+import { TermPeek } from './TermPeek'
 import './App.css'
 
 function App() {
@@ -82,24 +84,12 @@ function App() {
           <h1>Out of the Lab and Into the Factory</h1>
           <div className="hero-lede">
             <p>The New Computers, and the Mission for Quantum Hardware</p>
-            <p>
-              Quantum computing is at risk of becoming an embarrassing footnote
-              in the history of technology.
-            </p>
           </div>
         </div>
         <a className="scroll-cue" href="#pt-01" aria-label="Scroll down" />
       </section>
 
-      <section className="chapter sand" id="pt-01" data-chapter-index="0">
-        <div className="chapter-copy">
-          <p className="meta">PT—01/ 07</p>
-          <p className="chapter-kicker">
-            It is time to move quantum computing from demonstration to
-            manufacture.
-          </p>
-          <h2 className="chapter-title">Introduction</h2>
-        </div>
+      <section className="chapter sand chapter-fit" id="pt-01" data-chapter-index="0">
         <div className="chapter-media">
           <MissionImage
             {...IMAGE.fig000}
@@ -107,6 +97,15 @@ function App() {
             alt="Fifth Solvay Conference on Physics, 1927"
           />
           <span className="part-tag">PT—1</span>
+          <p className="chapter-caption">
+            <strong>[FIG.1]</strong>
+            <span>Solvay Conference — 1927</span>
+            <span>The founders of quantum theory</span>
+          </p>
+        </div>
+        <div className="chapter-copy">
+          <p className="meta">PT—01/ 07</p>
+          <h2 className="chapter-title">Introduction</h2>
         </div>
       </section>
 
@@ -116,150 +115,155 @@ function App() {
             1. Introduction
           </h2>
 
-          <p>
+          <p className="emph">
             Quantum computing is at risk of becoming an embarrassing footnote in
             the history of technology.
           </p>
 
           <p>
-            If you've spent time around the field, you have felt the disconnect
-            between the high-tech future promised by photographs of computers
-            buried in room-sized golden chandeliers on one hand, and [the fuzzy
-            explanations and unclear value propositions] on the other. Shor's
-            algorithm, the algorithm famous for the threat it poses to modern day
-            encryption systems, has been known since 1995, yet nearly 3 decades
-            later the largest prime number ever factored using Shor's method is
-            35. And that was 14 years ago.
+            If you've spent time around the field, you know the elephant in the
+            room; futuristic looking computers buried inside room-sized golden
+            chandeliers on one hand, and on the other, fuzzy and opaque
+            explanations of their supposed practical utility. Shor's algorithm
+            (famous for the threat it poses to modern day encryption systems) has
+            been known since 1994, yet nearly 3 decades later the largest number
+            ever factored using Shor's method is 21. And that was 14 years ago.
           </p>
 
           <p>
-            Since that time, $[X]b has been invested into the field, either
-            through government initiative or venture capital. And yet if one were
-            to try and plug in to a quantum computer online, there are only [I
-            think 3?] available options. In the same timeframe, we got
-            self-driving cars, affordable spaceflight, artificial intelligence and
-            [brain-computer interfaces]. It is by no means obvious that these
-            fields are any less technically demanding than quantum computing.
+            Since that time, governments worldwide have announced more than $65.9
+            billion for quantum science and technology, while quantum-technology
+            startups raised $12.6 billion in 2025 alone, more than 90% of it for
+            quantum computing. By then, two dozen manufacturers were commercially
+            offering more than 40 quantum processors, yet none met the
+            requirements for large-scale applications such as chemical simulation
+            or cryptanalysis.
           </p>
 
           <p>
-            New technologically advanced industries have been birthed and carried
-            forward by this entrepreneurial tide, and yet quantum computing has,
-            like a rock on the ocean floor, sat unmoved. Why?
-          </p>
-
-          <p className="pull">
-            The absence of oversight made the industry complacent.
+            In that same timeframe, the world was introduced to reusable rockets,
+            self-driving cars, mass-market artificial intelligence and implantable
+            brain–computer interfaces. It is by no means obvious that these fields
+            are any less technically demanding than quantum computing.
           </p>
 
           <p>
-            The party line is that the industry is moving as fast as it can, and
-            in any narrow field, this would appear to be true. Some of the
-            smartest scientists in the world have produced impressive results
-            controlling individual atoms, photons, electrons and superconducting
-            circuits.
+            Progress in other fields has been exponential, while quantum
+            processing power has barely changed. Why?
+          </p>
+
+          <p className="pull pull-sm pull-inline">
+            The lack of external accountability made the industry complacent.
           </p>
 
           <p>
-            [X] papers have been published since 2014, totalling [Y] citations.
-            And yet, the...
-          </p>
-          <p className="note">
-            [What i'm trying to go for here is the fact that the field is so
-            specialised that no one is really in any position to call anyone else
-            out for not going fast enough. I'm not sure how to word this in a way
-            that isn't glib, but I do think there is a tinge of 'you cant call us
-            out because what do you know about quantum mechanics, peasant.'
-            That's the most negative version, the reality is probably closer to
-            lack of organisation.]
+            To say that quantum computing has made <em>no</em> progress would be
+            too harsh; some of the world's most gifted scientists have produced
+            extraordinary results controlling individual atoms, photons,
+            electrons and superconducting circuits. But the field is so
+            specialised, and knowledge so hopelessly siloed across sub-fields,
+            that almost nobody can practically judge the aggregate progress.
           </p>
 
-          <p>
-            Time and again we are told of 'the breathtaking rate of progress',
-            that true fault tolerance 'is only 5 years away', and that there has
-            never been a better time than right now. We are like the protagonist
-            in Kafka's "Before the Law", who requests to pass through a great
-            wooden door, only to be told that that they would be more than glad
-            to let him in, only, not at the moment. For years the man dutifully
-            the man sits there, occasionally asking the gatekeeper again whether
-            he may be allowed in. "Not at the moment", comes the response, and
-            the man sits there until he dies. [Note, this probably goes best at
-            the start.]
-          </p>
-
-          <p>
-            All too quickly we have reached the point where, in the words of
-            [Someone], [Some indictment to action].
+          <p className="emph">
+            Those allocating capital are left with no choice but to let companies
+            mark their own homework.
           </p>
 
           <figure className="figure">
             <MissionImage
-              {...IMAGE.fig000}
-              alt="Fifth Solvay Conference on Physics, 1927"
+              {...IMAGE.figLaser}
+              alt="Theodore Maiman with the first working laser"
             />
             <figcaption>
-              <strong>[FIG.1]</strong>
-              <span>Solvay Conference — 1927</span>
-              <span>The founders of quantum theory</span>
+              <strong>[FIG.2]</strong>
+              <span>Theodore Maiman</span>
+              <span>First working laser — 1960</span>
             </figcaption>
           </figure>
 
           <p className="pull">There is a better way.</p>
 
           <p>
-            The march of innovation does not have to be laborious and slow. In
-            the [some time period], [some group of people, maybe Bell Labs?] made
-            [some scientific discoveries] at a rate that would shock anyone. The
-            SR-71 Blackbird, a miracle of engineering and still the fastest
-            manned plane of all time, went from idea to test flight in just 4
-            years. [Something something something I'm losing the thread on this
-            bit here.]
+            Consider the Laser Race between American laboratories in the late
+            50s. In 1958, researchers at Bell Labs proposed a
+            machine that could amplify light into a narrow, high-powered beam; two
+            years later in 1960, an American physicist named Theodore Maiman
+            turned the idea into the first working laser. By 1962, lasers had been
+            built from ruby crystals, gases and semiconductors - a single proposal
+            had turned into a proliferation of working machines in just four
+            years.
           </p>
 
           <p>
-            Why can't the existing companies do better? Industry leaders are
-            packed with some of the world's brightest minds and are extremely
-            well funded, yet employees are denied the end-to-end control that is
-            necessary for meaningful change. Inheriting the academic operating
-            principles of demonstrating a breakthrough scientific discovery,
-            [there are many teams working on the one silver bullet that will
-            change everything]. Incumbent companies are extremely diligent in
-            their planning, and tend to build their machines successfully without
-            too many start-overs. How could this not be so, when the cost of
-            developing one such machine is estimated to cost $[X]m.
+            Fairchild Semiconductor moved at a similar pace. Founded in 1957, it
+            developed the planar process, placed several electronic components and
+            their connections onto a single piece of silicon - the integrated
+            circuit - and began selling the resulting chips within four years.
           </p>
 
           <p>
-            The downside is that the development of any machine is hopelessly
-            dependent upon a fractured supply chain of laser manufacturers,
-            semiconductor fabs, and epitaxy reactors, many of which live in
-            different jurisdictions where the traversal between them is slowed by
-            various dual-use regulations. This caution has created a slow,
-            too-costly-to-fail approach, where [forward planning is of highest
-            importance]. Much in the way a student only gets one shot at a PhD
-            project, a company only gets one shot at a new machine; failure is a
-            catastrophe.
-          </p>
-
-          <p className="pull">
-            At Pathfinder we reject this silver-bullet approach.
+            Why can’t incumbent computer manufacturers simply do the same?
+            Leading QC companies are home to some of the world’s most brilliant
+            scientists and engineers, but their industrial infrastructure and
+            manufacturing supply chains were conceived of and constructed in a
+            different century.
           </p>
 
           <p>
-            We believe that the obstacle between current systems and true fault
-            tolerance is not any one specific breakthrough or eureka moment, but
-            instead a relentless pursuit to lower the component cost and shorten
-            development timelines of the new machines. But we are just one
-            company. If quantum computing is to be taken seriously as a frontier
-            technological industry and break free from the bureaucratic overhang
-            of academia, the excessive development costs and lead times, and the
+            Physically speaking, the supply chain that a quantum computer depends
+            upon consists of semiconductor fabs, lasers, chemical epitaxy,
+            packaging, control electronics and either cryogenics or ultra-high
+            vacuum systems.
+          </p>
+
+          <p>
+            Someone has to be responsible for physically making these components,
+            and the capability to do so is scattered across a small number of
+            specialist suppliers and often between jurisdictions. Even the largest
+            companies control only a small part of this chain, and any new part or
+            process incurs lead times measured in months or even years.
+          </p>
+
+          <p>This traps companies in a simple loop:</p>
+
+          <blockquote>
+            Long lead times mean few builds, having few builds forces years' worth
+            of upgrades into each machine, more improvements per build demands yet
+            more planning and de-risking, and the next build takes even longer.
+          </blockquote>
+
+          <p>
+            The leading companies do iterate, and it would be unfair to say
+            otherwise. They fabricate new chips, improve gate fidelities and
+            upgrade their systems constantly, and several have begun bringing
+            fabrication in-house. These investments will shorten the chip cycle;
+            the complete computer still passes through epitaxial growth,
+            packaging, lasers, control electronics, cryogenics/vacuum, assembly
+            and testing, and the pace of the whole machine remains governed by
+            whichever stage moves slowest.
+          </p>
+
+          <p>
+            We at Pathfinder are developing quantum computers in a new way, but we
+            are only one company. If quantum computing is to be taken seriously as
+            a frontier technology and break free from the bureaucratic overhang of
+            academia, the excessive development costs and lead times, and the
             claustrophobically narrow specialisation that has so neutered the
-            previous generation's brightest and best, we need an industry-wide
-            upheaval. Tens of thousands of PhDs will have to decide that there is
-            more to a career than chasing citations and ill-paid postdoc
-            positions. The effort needs true ingenuity across nanofabrication,
-            photonics, specialised hardware manufacturing, and hundreds of other
-            foundational areas.
+            previous generation's brightest and best, the change must be
+            industry-wide.
+          </p>
+
+          <p>
+            Tens of thousands of PhDs will have to decide that there is more to a
+            career than chasing citations and ill-paid postdoc positions. The
+            effort needs true ingenuity across nanofabrication, photonics,
+            specialised hardware manufacturing, and hundreds of other foundational
+            areas.{' '}
+            <strong>
+              The new generation must part with the assumption that the imminent
+              arrival of fault-tolerant computers is a foregone conclusion.
+            </strong>
           </p>
         </div>
       </article>
@@ -279,6 +283,11 @@ function App() {
             alt="Richard Feynman at a blackboard"
           />
           <span className="part-tag">PT—2</span>
+          <p className="chapter-caption chapter-caption-inv">
+            <strong>[FIG.3]</strong>
+            <span>Richard Feynman</span>
+            <span>Simulating physics with computers — 1981</span>
+          </p>
         </div>
       </section>
 
@@ -288,31 +297,12 @@ function App() {
             2. What Are Quantum Computers Good For, Anyway?
           </h2>
 
-          <p className="pull">
-            The New Computers had, out of the blue, solved what was previously
-            thought to be an intractable problem; the classical world was again
-            proven to contain patterns only visible through the lens of quantum
-            mechanics.
-          </p>
-
           <p>
             In 1981, Richard Feynman - frustrated at the difficulty that classical
             computers faced in trying to simulate quantum mechanical problems -
-            hypothesised a computer that was directly suited to the task at hand.
-            One that had quantum mechanics built right into the machine.
+            hypothesised a computer that had quantum mechanics built directly into
+            the machine.
           </p>
-
-          <figure className="figure">
-            <MissionImage
-              {...IMAGE.fig001}
-              alt="Richard Feynman at a blackboard"
-            />
-            <figcaption>
-              <strong>[FIG.2]</strong>
-              <span>Richard Feynman</span>
-              <span>Simulating physics with computers — 1981</span>
-            </figcaption>
-          </figure>
 
           <p>
             This was the nucleus of the idea; that in order to simulate quantum
@@ -322,16 +312,15 @@ function App() {
           <p>
             Fast-forward 40 years and some unexpected results popped up along the
             way. In 1994 an American computer scientist named Peter Shor
-            discovered that prime factorisation, a problem considered classically
-            intractable, was solvable [in polynomial time] by an algorithm unique
-            to the new computers. This was somewhat unexpected, as far as
-            Feynman's original hypothesis was concerned; the new computer had
-            broken out of its original box and was solving problems in the
-            classical world, too.
+            discovered that integer factorisation, a problem considered classically
+            intractable, was in fact solvable by an algorithm that could only be
+            run on a quantum computer. This was somewhat unexpected, as far as
+            Feynman's original hypothesis was concerned; a machine for simulating
+            physics had suddenly cracked a mathematical problem.
           </p>
 
           <p className="pull">
-            The classical world was proven to contain patterns only visible
+            The classical world was again proven to contain patterns only visible
             through the lens of quantum mechanics.
           </p>
 
@@ -342,20 +331,14 @@ function App() {
           </p>
 
           <p>
-            Take something as ordinary as steel. Whether a bridge bends or holds
-            depends on the arrangement of its atoms, the defects between its
-            crystals and, ultimately, the electrons binding it together. The
-            macroscopic properties emerge from microscopic behaviour.
-          </p>
-
-          <p>
-            Everything we build is ultimately limited by materials. The
-            efficiency of a solar cell, the capacity of a battery, the strength of
-            a magnet and the temperature at which a superconductor works all
-            emerge from the behaviour of the arrangement of the atoms, the nuclei
-            and the electrons inside matter. Where we can predict that behaviour
-            accurately, we can design new materials around the properties we want
-            them to possess.
+            The efficiency of a solar cell, the capacity of a battery, the
+            strength of a magnet and the temperature at which a superconductor
+            works are all downstream of the behaviour of the particles that make
+            them up.{' '}
+            <strong>
+              Where we can predict that behaviour accurately, we can design new
+              materials around the properties we want them to possess.
+            </strong>
           </p>
 
           <p>
@@ -364,71 +347,147 @@ function App() {
             Kohn was awarded half of the 1998 Nobel Prize in Chemistry for such
             work. But in complex materials, so called "strongly correlated"
             systems where many electrons all become entangled, these
-            approximations begin to fail. The number of possible states that the
-            material could be in increases exponentially with the number of
-            electrons.
-          </p>
-
-          <p className="pull">A Quantum Computer can encode this problem natively.</p>
-
-          <p>
-            [A classical computer has to simulate quantum properties with
-            algorithms and clever code], while a quantum computer has these
-            properties baked in. The data stored in the entanglement, phase, and
-            [something else] of a single atom, a single qubit, [would take many
-            orders of magnitude more bits to replicate].
+            approximations begin to fail.
           </p>
 
           <p>So what's the difference?</p>
 
           <p>
-            In the Quantum Computing circuit, we can prepare our qubits in a
-            state that mimics that of the material we want to investigate, then
-            sit back and watch how they behave. The exponential web of
-            possibilities is encoded in the qubits themselves, not in the
-            [something else]. [Now we just let the system evolve and take
-            measurements, and see whether we see the patterns we're looking for.]
+            Normally, classical methods make the calculation manageable by
+            replacing the full web of electron interactions with a simpler, less
+            computationally demanding approximation of how each electron
+            behaves.
           </p>
 
           <p>
+            In strongly correlated materials, however, those interactions are
+            what produce the material’s unusual properties, so simplifying them
+            away also removes the phenomenon we are trying to explain.
+          </p>
+
+          <aside className="exposit">
+            <div className="exposit-inner">
+              <p>
+                Say we have 100 electron spins, each of which can be measured as
+                up or down. Together, they have 2<sup>100</sup> possible
+                configurations. Their collective quantum state can extend across
+                many of these configurations at once.
+              </p>
+
+              <p>
+                To reproduce this exactly, a classical computer must keep a
+                separate record of every configuration and how it contributes to
+                the whole. As the electrons interact, it must continually
+                recalculate this exponentially large record.{' '}
+                <strong>
+                  The choice becomes: approximate it badly, or track an
+                  exponentially growing amount of information.
+                </strong>
+              </p>
+
+              <p>
+                If we have 100 qubits, and every one of them is entangled with
+                every other one, then the total number of possible configurations
+                that this system can be in is, again, 2<sup>100</sup>.
+              </p>
+
+              <p>
+                <strong>But notice here that it only took 100 qubits</strong>.
+              </p>
+            </div>
+          </aside>
+
+          <p>
             This is the general class of problem for which these machines were
-            originally conceived; quantum-mechanical systems whose exact evolution
-            requires a classical computer to manipulate an exponentially growing
-            wavefunction, but whose relevant properties may be extracted more
-            efficiently from a controlled quantum simulation. Of course scientists
+            originally conceived; highly entangled systems that classical computers
+            cannot efficiently simulate. Of course scientists
             will still have to test the results in the lab, but the direction of
             physical experimentation is made less blind by eliminating bad
             candidates before they are synthesised, using the patterns that
             classical models alone cannot uncover.
           </p>
 
-          <p>
-            Equally important as knowing what a QC does is to know what it does
-            not do. Much talk is heard surrounding quantum improvements to
-            financial portfolio planning and general optimisation problems; claims
-            around quantum impact in machine learning remain speculative at best.
-          </p>
+          <figure className="figure figure-tall figure-center">
+            <MissionImage
+              {...IMAGE.figIbm}
+              alt="IBM quantum computer dilution refrigerator"
+            />
+            <figcaption>
+              <strong>[FIG.4]</strong>
+              <span>IBM Quantum System</span>
+              <span>Cryogenic dilution refrigerator</span>
+            </figcaption>
+          </figure>
 
-          <p>
-            And to give the critics their due, they're absolutely justified in
-            calling this out. There are a lot of exaggerations, half-truths, and
-            hype that is totally ungrounded in reality.
-          </p>
+          <div className="prose-band prose-band-start">
+            <p>
+              Equally important as knowing what a quantum computer does is to know what it does{' '}
+              <em>not</em> do. Much talk is heard surrounding supposed quantum improvements to
+              financial portfolio planning and general optimisation problems;
+              claims around quantum impact in machine learning remain speculative
+              at best.
+            </p>
 
-          <p>
-            Some of the more uniquely egregious bullshit levied by the industry's
-            less scrupulous commentators includes Michio Kaku's claim that
-            "quantum computers will make cancer as harmless as the common
-            cold"[source], the Google announcement that "quantum computers lend
-            credence to the existence of parallel universes"[source], and that "As
-            quantum AI technology advances, life expectancy will increase faster,
-            eventually reaching a point where we gain a year of life expectancy
-            each year."[source].
-          </p>
+            <p>
+              And to give the critics their due, they're absolutely justified in
+              calling this out. There are a lot of exaggerations, half-truths, and
+              hype that is totally ungrounded in reality.
+            </p>
 
-          <p>All this, yet the largest number factored by a quantum computer remains 35.</p>
+            <p>
+              Some of the more uniquely egregious bullshit levied by the
+              industry's less scrupulous commentators includes Michio Kaku's claim
+              that "quantum computers will make cancer as harmless as the common
+              cold"
+              <sup className="cite">
+                <a href="https://www.businesswire.com/news/home/20221014005367/en/Cancer-to-Be-Treated-as-Easily-as-Common-Cold-When-Humans-Crack-Quantum-Computing">
+                  1
+                </a>
+              </sup>
+              , the Google announcement that "quantum computers lend credence to
+              the existence of parallel universes"
+              <sup className="cite">
+                <a href="https://blog.google/technology/research/google-willow-quantum-chip/">
+                  2
+                </a>
+              </sup>
+              , and that "As quantum AI technology advances, life expectancy will
+              increase faster, eventually reaching a point where we gain a year of
+              life expectancy each year."
+              <sup className="cite">
+                <a href="https://millenniumprize.org/news-articles/news/mtp-forum-speaker-interview-quantum-computing-will-enable-us-to-live-longer-healthier-lives-free-from-the-limitations-humans-have-always-faced/">
+                  3
+                </a>
+              </sup>
+            </p>
 
-          <p>So what might they actually be good for? High-temperature superconductors are one relevant case.</p>
+            <p>
+              All this, yet the largest number factored by a quantum computer
+              remains 21.
+            </p>
+
+            <p>So what might they actually be good for?</p>
+          </div>
+
+          <figure className="figure">
+            <MissionImage
+              {...IMAGE.figCondensed}
+              alt="Nematic quantum Hall liquid — Condensed Matter Simulations, University of Princeton"
+            />
+            <figcaption>
+              <strong>[FIG.5]</strong>
+              <span>Condensed Matter Simulations, University of Princeton</span>
+              <span>
+                Electron wavefunctions on Bismuth (
+                <span className="nuclide" aria-label="Bismuth, atomic number 83">
+                  <sub className="nuclide-z">83</sub>Bi
+                </span>
+                )
+              </span>
+            </figcaption>
+          </figure>
+
+          <p>High-temperature superconductors are one relevant case.</p>
 
           <p>
             Those in tech circles may recall the stir caused in 2023 when a group
@@ -439,14 +498,37 @@ function App() {
           </p>
 
           <p>
-            Superconductors can carry current for long distances without any
-            resistive loss, but as they exist today, the need for extreme-low
-            temperatures and high pressures keeps them expensive, bulky or
-            impractical. A high-temperature superconductor would enable smaller
-            fusion magnets, more compact motors and generators, higher-capacity
-            power cables, cheaper medical scanners and new forms of transport -
-            all the things that currently use superconductors today. [Note: check
-            this]
+            Superconductors already make MRI scanners, particle accelerators and
+            the strongest research magnets possible; newer high-temperature
+            materials are being developed for compact fusion reactors,
+            higher-capacity power cables and lighter, more powerful motors. The
+            problem is that even “high-temperature” superconductors must be kept
+            cryogenic;{' '}
+            <strong>
+              a material that worked at ordinary temperatures and pressures would
+              remove one of the main barriers to their widespread use.
+            </strong>
+          </p>
+
+          <p>
+            The best candidates we have for high-temperature superconductors
+            today —{' '}
+            <TermPeek
+              term="cuprates"
+              imageName={IMAGE.figCuprate.name}
+              imageWidth={IMAGE.figCuprate.width}
+              imageHeight={IMAGE.figCuprate.height}
+              imageAlt="Crystal structure of the cuprate superconductor YBa2Cu3O7"
+              title="Cuprates"
+            >
+              Copper-oxide ceramics whose layered planes host the highest-temperature
+              superconductivity yet found at ambient pressure. Pictured: the crystal
+              structure of YBa₂Cu₃O₇.
+            </TermPeek>
+            {' '}
+            — just so happen to have this same strongly-correlated electron
+            structure. This is exactly the kind of simulation problem that quantum
+            computers are made for.
           </p>
 
           <p>
@@ -455,8 +537,9 @@ function App() {
             far larger and more reliable than those available today. Quantum
             computers will, in all likelihood, be useless for almost everything we
             currently use computers for. They do not need to replace classical
-            computation, any more than aeroplanes needed to replace bicycles: a
-            747 is transformative for getting across an ocean and useless for a
+            computation, any more than aeroplanes needed to replace bicycles: an
+            aeroplane is transformative for getting across an ocean and useless
+            for a
             trip to the shops. A small number of calculations currently beyond our
             reach will transform cryptography, energy, materials science and
             industrial chemistry.
@@ -490,7 +573,7 @@ function App() {
         </div>
       </section>
 
-      <article className="prose prose-layout-start">
+      <article className="prose prose-layout-start prose-close-bridge">
         <div className="prose-inner">
           <h2 className="prose-display">
             3. How Did We Get Here?
@@ -501,18 +584,30 @@ function App() {
             produce demonstrations over products.
           </p>
 
+          <figure className="figure figure-sm figure-center">
+            <MissionImage
+              {...IMAGE.figOpticalBench}
+              alt="Crowded optical bench with lasers, mirrors, and cabling"
+            />
+            <figcaption>
+              <strong>[FIG.6]</strong>
+              <span>Ultracold-atom optical table — UQUAM / MPQ</span>
+              <span>© Immanuel Bloch — European Commission</span>
+            </figcaption>
+          </figure>
+
           <p>
-            Quantum computing began as a sequence of experiments conducted in
+            The journey began as a sequence of experiments conducted in
             University physics departments all over the world.
           </p>
 
           <p>
             Not long after Peter Shor's discovery of his eponymous prime
             factorisation algorithm, researchers at NIST demonstrated the first
-            quantum logic gate using a beryllium ion suspended in a magnetic
-            field; in 1998, researchers at Oxford used the nuclear spins of
-            molecules [inside an NMR spectrometer] to execute one of the first
-            complete quantum algorithms on a two-qubit system.
+            quantum logic gate using a beryllium ion suspended in an electric
+            field; in 1998, researchers at Oxford used the magnetic properties of
+            atoms to execute one of the first complete quantum algorithms on a
+            two-qubit system.
           </p>
 
           <p>
@@ -520,18 +615,39 @@ function App() {
             an iPhone or a Tesla - that is, mass-produced factory-line items -
             rather they were one-off experimental setups assembled by hand. Many
             of these experiments were built as PhD projects and postdoctoral
-            research, and with that comes the incentive structures, timelines,
-            and hardware supplier choices of the academic system.
+            research, and with that came academic incentive structures,
+            timelines, and purchasing habits.
           </p>
 
           <p>
             Take the NIST experiment described above. The first quantum logic
-            gate was reported in a four-page paper containing the atomic states
-            used, the laser-pulse sequence, the measured result and the sources
-            of error. It contained no bill of materials, assembly time, supplier
-            list, maintenance procedure or account of the earlier versions which
-            failed. None of this was required to substantiate the scientific
-            claim. (1)
+            gate was reported in a{' '}
+            <TermPeek
+              term="four-page paper"
+              imageName={IMAGE.figNistPaper.name}
+              imageWidth={IMAGE.figNistPaper.width}
+              imageHeight={IMAGE.figNistPaper.height}
+              imageAlt="First page of Monroe et al., Demonstration of a Fundamental Quantum Logic Gate, Physical Review Letters, 1995"
+              title="Monroe et al., 1995"
+              wide
+            >
+              Phys. Rev. Lett. 75, 4714 — the NIST demonstration of a controlled-NOT
+              gate on a single trapped beryllium ion. Four pages of states, pulses,
+              results and error sources.
+            </TermPeek>{' '}
+            containing the atomic states used, the laser-pulse sequence, the
+            measured result and the sources of error.
+          </p>
+
+          <p className="pull pull-sm">
+            Notice, however, what was left out.
+          </p>
+
+          <OmitList />
+
+          <p>
+            And it's no surprise; none of this was required to substantiate the
+            scientific claim.
           </p>
 
           <p>
@@ -542,22 +658,54 @@ function App() {
             consisted principally of publications, grants and invitations to
             speak, while the Research Excellence Framework assessed published
             work according to its “originality, significance and rigour.”
+          </p>
+
+          <p className="pull pull-sm pull-end">
             Assembly time, fabrication yield, supplier qualification, maintenance
-            hours and unit cost appear nowhere in the scorecard. A physicist may
-            halve any of them without having produced an original scientific
-            result, even though they determine whether the apparatus can be built
-            once or a thousand times. (2)
+            hours and unit cost appear nowhere in the scorecard.
           </p>
 
           <p>
-            And in all fairness, it is hard to imagine this having come about any
-            other way. Before the question of mass-manufacturing a quantum
-            computer made any sense to ask, Wolfgang Paul first had to discover
-            that oscillating electric fields could confine ions in free space.
-            David Wineland’s 1978 group in Colorado had to prove that trapped ions
-            could be cooled using laser light. Only after another seventeen years
-            of work did the first quantum logic gate follow. (Wolfgang Paul, NIST
-            history)
+            <strong>
+              And in all fairness, it's hard to imagine this having come about
+              any other way.
+            </strong>
+          </p>
+
+          <p>
+            Before the question of mass-manufacturing a quantum computer made any
+            sense to ask,{' '}
+            <TermPeek
+              term="Wolfgang Paul"
+              imageName={IMAGE.figWolfgangPaul.name}
+              imageWidth={IMAGE.figWolfgangPaul.width}
+              imageHeight={IMAGE.figWolfgangPaul.height}
+              imageAlt="Portrait of Wolfgang Paul"
+              title="Wolfgang Paul, 1913–1993"
+            >
+              German physicist who invented the Paul trap — using oscillating
+              electric fields to confine charged particles in free space. Shared
+              the 1989 Nobel Prize in Physics for this work, which became the
+              foundation of trapped-ion quantum computing.
+            </TermPeek>{' '}
+            first had to discover that oscillating electric fields could confine
+            ions in free space.{' '}
+            <TermPeek
+              term="David Wineland"
+              imageName={IMAGE.figDavidWineland.name}
+              imageWidth={IMAGE.figDavidWineland.width}
+              imageHeight={IMAGE.figDavidWineland.height}
+              imageAlt="Portrait of David Wineland"
+              title="David Wineland, b. 1944"
+            >
+              American physicist at NIST whose group showed that trapped ions
+              could be laser-cooled nearly to rest. Shared the 2012 Nobel Prize
+              in Physics; his laboratory later demonstrated the first quantum
+              logic gate on a single ion.
+            </TermPeek>
+            ’s 1978 group in Colorado had to prove that trapped ions could be
+            cooled using laser light. Only after another seventeen years of work
+            did the first quantum logic gate follow.
           </p>
 
           <p>
@@ -568,101 +716,118 @@ function App() {
           </p>
 
           <p>
-            The doubts surrounding them were considerable. In 1995, the IBM
-            physicist Rolf Landauer argued that imperfect machinery and
-            environmental noise would cause the probability of a reliable result
-            to fall exponentially as a computation became longer. He was
-            particularly sceptical that error correction would help, since the
-            machinery performing the correction would itself contain errors.
-            (Wired, 1995)
+            Thirty years of experiments later and many of these early doubts have
+            been allayed: quantum logic gates are now routine, processors with
+            more than a thousand physical qubits have been built, and
+            error-corrected logical qubits have begun to improve as more physical
+            qubits are added.
           </p>
 
-          <p>
-            Thirty years of experiments have answered at least part of this
-            objection. Quantum logic gates are now routine; processors containing
-            more than a thousand physical qubits have been constructed; and in
-            2024 Google demonstrated a logical quantum memory whose error rate
-            fell as more physical qubits were added. (IBM Condor, Google’s
-            error-correction result)
+          <p className="pull pull-sm">
+            ...But what makes a good prototype isn't always what makes a good product.
           </p>
 
-          <p>
-            The criticism has consequently changed in emphasis. When Jensen Huang
-            was asked in 2025 when “very useful quantum computers” might arrive,
-            he placed the likely date somewhere between fifteen and thirty years
-            away. The machine was no longer dismissed as physically impossible; it
-            was merely assigned to the indefinite technological future. (Huang’s
-            remarks)
-          </p>
+          <p>We can here look to the past for historical examples.</p>
 
-          <p>
-            There is, however, another remark from Landauer’s 1995 interview
-            which has aged rather better. “When you try to take something out of
-            a laboratory and into mass production, the vast majority of
-            prototechnologies turn out not to work.”
-          </p>
+          <div className="history-cases">
+            <div className="history-cases-col history-cases-col--start">
+              <article className="history-case">
+                <div className="history-case-banner">
+                  <MissionImage
+                    {...IMAGE.figHaberBosch}
+                    alt="BASF Oppau works, 1914 — Otto Bollhagen"
+                  />
+                </div>
+                <div className="history-case-body">
+                  <p className="meta">Haber–Bosch</p>
+                  <p>
+                    In 1909, Fritz Haber demonstrated a laboratory apparatus
+                    which produced around 100 cubic centimetres of ammonia. Carl
+                    Bosch was then assigned the considerably larger task of
+                    turning it into an industrial process. Doing so required new
+                    catalysts, new methods of producing pure gases and
+                    high-pressure reactors made from steels which would not
+                    split apart after hydrogen penetrated them. The first plant
+                    opened four years later with an annual capacity of 8,700
+                    tonnes. Haber had established the chemistry, Bosch and his
+                    team invented the industrial machinery surrounding it.
+                  </p>
+                </div>
+              </article>
 
-          <p>
-            This transition has appeared throughout industrial history. In 1909,
-            Fritz Haber demonstrated a laboratory apparatus which produced around
-            100 cubic centimetres of ammonia. Carl Bosch was then assigned the
-            considerably larger task of turning it into an industrial process.
-            Doing so required new catalysts, new methods of producing pure gases
-            and high-pressure reactors made from steels which would not split
-            apart after hydrogen penetrated them. The first plant opened four
-            years later with an annual capacity of 8,700 tonnes. Haber had
-            established the chemistry; Bosch and his team had to invent much of
-            the industrial machinery surrounding it. (American Chemical Society,
-            BASF history)
-          </p>
+              <article className="history-case">
+                <div className="history-case-banner">
+                  <MissionImage
+                    {...IMAGE.figPlanar}
+                    alt="Silicon wafer patterned with integrated circuits"
+                  />
+                </div>
+                <div className="history-case-body">
+                  <p className="meta">Planar process</p>
+                  <p>
+                    The same distinction appears in computing itself. The
+                    transistor was demonstrated at Bell Labs in 1947, but early
+                    devices remained difficult to manufacture reliably. Twelve
+                    years later, Fairchild found a way to make them the same way
+                    every time, and at scale. Fairchild commercialised the first
+                    planar transistor in 1960, and the process became the
+                    manufacturing basis of what we now know as the microchip.
+                  </p>
+                </div>
+              </article>
+            </div>
 
-          <p>
-            Penicillin followed much the same pattern. Fleming discovered it in
-            1928, and the Oxford team established its therapeutic value in 1941,
-            but the drug was still being produced in one-litre flasks at yields
-            below one per cent. American chemists and engineers developed better
-            mould strains, culture media, purification methods and submerged
-            fermentation tanks. Between 1943 and 1945, American production rose
-            from 21 billion units to more than 6.8 trillion, while yields
-            increased to between 80 and 90 per cent. The scientific discovery had
-            existed for more than a decade; the production process made it
-            medicine. (American Chemical Society)
-          </p>
-
-          <p>
-            The same distinction appears in computing itself. The transistor was
-            demonstrated at Bell Labs in 1947, but early devices remained
-            difficult to manufacture reliably. The planar process, developed at
-            Fairchild twelve years later, protected the transistor junction
-            beneath silicon dioxide and allowed components to be fabricated
-            photographically from one side of a wafer. Fairchild commercialised
-            the first planar transistor in 1960, and the process became the
-            manufacturing basis of what we now know as the microchip. (Computer
-            History Museum)
-          </p>
+            <div className="history-cases-col history-cases-col--end">
+              <article className="history-case">
+                <div className="history-case-banner">
+                  <MissionImage
+                    {...IMAGE.figPenicillin}
+                    alt="Penicillin production flasks, England, 1943"
+                  />
+                </div>
+                <div className="history-case-body">
+                  <p className="meta">Penicillin</p>
+                  <p>
+                    Penicillin followed much the same pattern. Fleming
+                    discovered it in 1928, and the Oxford team established its
+                    therapeutic value in 1941, but the drug was still being
+                    produced in one-litre flasks at yields below one per cent.
+                    American chemists and engineers developed better mould
+                    strains, culture media, purification methods and submerged
+                    fermentation tanks. Between 1943 and 1945, American
+                    production rose from 21 billion units to more than 6.8
+                    trillion, while yields increased to between 80 and 90 per
+                    cent.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
 
           <p className="pull">
-            The pattern is the same in all cases; scientific innovation [lays the
-            groundwork] and mass manufacture brings it to market.
+            The pattern is the same in all cases; scientific innovation is
+            followed by mass manufacture.
           </p>
 
-          <p>
-            Quantum computing is now entering its version of this transition. The
-            National Academies described the field’s greatest challenge in 2019
-            as moving “from an understanding of the basic science to the creation
-            of useful devices.” At this stage, industrialisation begins with the
-            experimental process itself: reducing the cost and time required to
-            build each generation, documenting what was previously tacit,
-            increasing component yield, removing hand-alignment steps and
-            developing equipment which allows designs to be tested repeatedly
-            rather than reconstructed from scratch. (National Academies)
-          </p>
+          <div className="pattern-coda">
+            <p>
+              Quantum computing is now entering its version of this transition.
+              The National Academies described the field’s greatest challenge in
+              2019 as moving “from an understanding of the basic science to the
+              creation of useful devices.” At this stage, industrialisation
+              begins with the experimental process itself: reducing the cost and
+              time required to build each generation, documenting what was
+              previously tacit, increasing component yield, removing
+              hand-alignment steps and developing equipment which allows designs
+              to be tested repeatedly rather than reconstructed from scratch.
+            </p>
+          </div>
 
-          <p className="note">
-            [We do not yet know which quantum architecture will ultimately be
-            manufactured in volume. The rate at which competing architectures can
-            be built, tested and improved will help determine the answer.]
-          </p>
+          <div className="pattern-bridge">
+            <p className="pull pull-sm pull-echo">
+              Innovation is followed by manufacture.
+            </p>
+          </div>
         </div>
       </article>
 
@@ -752,12 +917,6 @@ function App() {
 
           <p>Why so much? Why so slow? [Let's not be too quick to judge].</p>
 
-          <p className="pull">
-            High unit cost and long lead times are the predictable result of
-            producing highly specialised equipment in small volumes, for
-            customers whose requirements frequently differ.
-          </p>
-
           <p>
             A manufacturer serving several dozen laboratories cannot amortise an
             automated production line across millions of units, while a quantum
@@ -788,9 +947,16 @@ function App() {
         </div>
         <div className="chapter-copy">
           <p className="meta">PT—05/ 07</p>
-          <p className="chapter-kicker">
-            Henry Ford is remembered for the Model T, but perhaps his more
-            important innovation was the production line behind it.
+          <p className="chapter-kicker chapter-kicker-list">
+            1. The Idiot Index
+            <br />
+            2. Question Every Requirement
+            <br />
+            3. Standardisation of Components
+            <br />
+            4. Vertical Integration
+            <br />
+            5. Increase Iteration Speed
           </p>
           <h2 className="chapter-title">Cutting the Gordian Knot</h2>
         </div>
@@ -801,13 +967,6 @@ function App() {
           <h2 className="prose-display">
             5. Cutting the Gordian Knot
           </h2>
-
-          <p className="pull">
-            Henry Ford is remembered for the Model T, but perhaps his more
-            important innovation was the production line behind it. There are many
-            contenders for the industry's Model T, many less for the production
-            line.
-          </p>
 
           <p>Is there any historical precedent for having solved these problems?</p>
 
@@ -858,7 +1017,7 @@ function App() {
               alt="Engineers examining hardware wreckage"
             />
             <figcaption>
-              <strong>[FIG.3]</strong>
+              <strong>[FIG.7]</strong>
               <span>Hardware-rich iteration</span>
               <span>Fail visibly, learn quickly</span>
             </figcaption>
@@ -866,13 +1025,11 @@ function App() {
 
           <h3>1. The Idiot Index</h3>
 
-          <div className="quote-block">
-            <p>
-              Musk eventually named this the "idiot index": the ratio of the
-              actual cost of a part to the cost of its raw materials. “If the
-              ratio is high,” he says, “you’re an idiot.”
-            </p>
-          </div>
+          <blockquote>
+            Musk eventually named this the "idiot index": the ratio of the actual
+            cost of a part to the cost of its raw materials. “If the ratio is
+            high,” he says, “you’re an idiot.”
+          </blockquote>
 
           <p>
             A classical computer is made from a laundry list of component parts.
@@ -881,13 +1038,11 @@ function App() {
             and more.
           </p>
 
-          <div className="quote-block">
-            <p>
-              Consider the Falcon 1 actuator. A vendor quoted $120,000 and
-              eighteen months of development. SpaceX’s engineers built it for
-              $3,900 by summer. [Source Needed]
-            </p>
-          </div>
+          <blockquote>
+            Consider the Falcon 1 actuator. A vendor quoted $120,000 and eighteen
+            months of development. SpaceX’s engineers built it for $3,900 by
+            summer. [Source Needed]
+          </blockquote>
 
           <p>
             Each of these component parts can be assigned it's own idiot index; a
@@ -898,13 +1053,11 @@ function App() {
             only guarantees that none will be found.
           </p>
 
-          <div className="quote-block">
-            <p>
-              "The avionics example is instructive. Rather than buy
-              radiation-hardened processors at $200,000 each, SpaceX used
-              triple-redundant commercial processors totalling $2,000."
-            </p>
-          </div>
+          <blockquote>
+            The avionics example is instructive. Rather than buy
+            radiation-hardened processors at $200,000 each, SpaceX used
+            triple-redundant commercial processors totalling $2,000.
+          </blockquote>
 
           <p>
             Knowing where the manufacturing inefficiencies are hiding is only half
@@ -914,13 +1067,11 @@ function App() {
 
           <h3>2. Question Every Requirement</h3>
 
-          <div className="quote-block">
-            <p>
-              "Junior engineers are explicitly told that requirements from "smart
-              people" are the most dangerous, because nobody thinks to question
-              them."
-            </p>
-          </div>
+          <blockquote>
+            Junior engineers are explicitly told that requirements from "smart
+            people" are the most dangerous, because nobody thinks to question
+            them.
+          </blockquote>
 
           <p>
             A high idiot index identifies an expensive component; the knee-jerk
@@ -929,16 +1080,14 @@ function App() {
             all. Get rid of the part entirely and the idiot index falls to 0.
           </p>
 
-          <div className="quote-block">
-            <p>
-              "Falcon 9’s grid fins were originally designed to fold, like
-              traditional aerospace grid fins. The folding mechanism reduced drag
-              during ascent, which seemed obviously necessary. SpaceX questioned
-              whether it was worth the mass and complexity. Simulations showed
-              fixed fins were acceptable, so they deleted the mechanism entirely.
-              Delete, delete, delete... the best part is no part."
-            </p>
-          </div>
+          <blockquote>
+            Falcon 9’s grid fins were originally designed to fold, like
+            traditional aerospace grid fins. The folding mechanism reduced drag
+            during ascent, which seemed obviously necessary. SpaceX questioned
+            whether it was worth the mass and complexity. Simulations showed fixed
+            fins were acceptable, so they deleted the mechanism entirely. Delete,
+            delete, delete... the best part is no part.
+          </blockquote>
 
           <p className="note">
             [Something here about MOCVD Epitaxy, its my understanding that the
@@ -952,9 +1101,7 @@ function App() {
 
           <h3>3. Standardisation of Components</h3>
 
-          <div className="quote-block">
-            <p>"The only way to get volume is to standardise."</p>
-          </div>
+          <blockquote>The only way to get volume is to standardise.</blockquote>
 
           <p>
             Go to any quantum hardware supplier right now, be it lasers, vacuum
@@ -963,17 +1110,15 @@ function App() {
             suppliers being secretive, or do they genuinely not know?
           </p>
 
-          <div className="quote-block">
-            <p>
-              "The existing approach was bespoke vehicles per mission. Custom
-              adapters, mission-specific modifications, multiple vehicle families.
-              This optimises each mission at the expense of manufacturing scale.
-              SpaceX bet the opposite: that cost savings from standardisation
-              would exceed the value of customisation. Yes, customers wanted
-              custom solutions. But they wanted low prices even more. Force them
-              to choose, and they’d adapt."
-            </p>
-          </div>
+          <blockquote>
+            The existing approach was bespoke vehicles per mission. Custom
+            adapters, mission-specific modifications, multiple vehicle families.
+            This optimises each mission at the expense of manufacturing scale.
+            SpaceX bet the opposite: that cost savings from standardisation would
+            exceed the value of customisation. Yes, customers wanted custom
+            solutions. But they wanted low prices even more. Force them to choose,
+            and they’d adapt.
+          </blockquote>
 
           <p>
             It's the latter, of course, but let's not be too hasty in [explanation
@@ -993,18 +1138,16 @@ function App() {
 
           <h3>4. Vertical Integration</h3>
 
-          <div className="quote-block">
-            <p>
-              "If materials are cheap and the tax is all process and overhead, you
-              need to control the process to capture the savings. You can’t
-              negotiate your way to 10x cost reduction with suppliers who have
-              profits baked in at every tier. So SpaceX became its own supplier.
-              By building 80% of its hardware internally - engines, structures,
-              avionics, software, and key ground systems - SpaceX collapsed the
-              traditional aerospace stack. They outsource raw materials and
-              commodity parts, and make everything else themselves."
-            </p>
-          </div>
+          <blockquote>
+            If materials are cheap and the tax is all process and overhead, you
+            need to control the process to capture the savings. You can’t
+            negotiate your way to 10x cost reduction with suppliers who have
+            profits baked in at every tier. So SpaceX became its own supplier. By
+            building 80% of its hardware internally - engines, structures,
+            avionics, software, and key ground systems - SpaceX collapsed the
+            traditional aerospace stack. They outsource raw materials and
+            commodity parts, and make everything else themselves.
+          </blockquote>
 
           <p className="note">
             [Why is vertical integration important here? Reduction of margin,
@@ -1050,15 +1193,12 @@ function App() {
 
           <p className="note">[Anddddd what the fuck for this, then.]</p>
 
-          <div className="quote-block">
-            <p>
-              "Traditional aerospace builds few prototypes, each one expensive and
-              near-flight-ready. SpaceX builds many cheaper prototypes:
-              hardware-rich fleets of test articles. They’d rather have ten rough
-              versions to blow up than one polished version they’re afraid to
-              break."
-            </p>
-          </div>
+          <blockquote>
+            Traditional aerospace builds few prototypes, each one expensive and
+            near-flight-ready. SpaceX builds many cheaper prototypes:
+            hardware-rich fleets of test articles. They’d rather have ten rough
+            versions to blow up than one polished version they’re afraid to break.
+          </blockquote>
 
           <p>
             The total number of computers produced by the 5 largest quantum
@@ -1066,24 +1206,22 @@ function App() {
             of 1 new machine every [X.Y] years.
           </p>
 
-          <div className="quote-block">
-            <p>
-              "A high production rate solves many ills. Any given technology
-              development is “How many iterations do you have? And what’s your
-              time and progress between iterations?” So if you have a high
-              production rate, you can have a lot of iterations. You can try lots
-              of different things... If you have a small number of engines, then
-              you have to be much more conservative because you can’t risk blowing
-              them up."
-            </p>
-            <p>
-              "Vertical integration really helps enable this. When you own the
-              factory, you can build fast without waiting on vendors. When you own
-              3D printing capability, you can produce parts on an ad-hoc basis.
-              When you can manufacture Raptor engines at high volume, losing one
-              to a test failure doesn’t set you back months."
-            </p>
-          </div>
+          <blockquote>
+            A high production rate solves many ills. Any given technology
+            development is “How many iterations do you have? And what’s your time
+            and progress between iterations?” So if you have a high production
+            rate, you can have a lot of iterations. You can try lots of different
+            things... If you have a small number of engines, then you have to be
+            much more conservative because you can’t risk blowing them up.
+          </blockquote>
+
+          <blockquote>
+            Vertical integration really helps enable this. When you own the
+            factory, you can build fast without waiting on vendors. When you own
+            3D printing capability, you can produce parts on an ad-hoc basis. When
+            you can manufacture Raptor engines at high volume, losing one to a
+            test failure doesn’t set you back months.
+          </blockquote>
 
           <figure className="figure">
             <MissionImage
@@ -1091,7 +1229,7 @@ function App() {
               alt="Evolution of the Raptor engine from version 1 to 3"
             />
             <figcaption>
-              <strong>[FIG.4]</strong>
+              <strong>[FIG.8]</strong>
               <span>Evolution of the Raptor engine, from version 1 to 3</span>
               <span>Simplify, simplify, simplify!</span>
             </figcaption>
@@ -1102,6 +1240,18 @@ function App() {
             first-principles engineering identified manufacturing optimisations,
             vertical integration let those optimisations happen, and
             standardisation allowed the volume to make that control profitable.
+          </p>
+
+          <p className="pull pull-sm">
+            1. The Idiot Index
+            <br />
+            2. Question Every Requirement
+            <br />
+            3. Standardisation of Components
+            <br />
+            4. Vertical Integration
+            <br />
+            5. Increase Iteration Speed
           </p>
         </div>
       </article>
