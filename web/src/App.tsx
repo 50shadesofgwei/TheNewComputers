@@ -255,11 +255,6 @@ function App() {
           </p>
 
           <p>
-            Tens of thousands of PhDs will have to decide that there is more to a
-            career than chasing citations and ill-paid postdoc positions. The
-            effort needs true ingenuity across nanofabrication, photonics,
-            specialised hardware manufacturing, and hundreds of other foundational
-            areas.{' '}
             <strong>
               The new generation must part with the assumption that the imminent
               arrival of fault-tolerant computers is a foregone conclusion.
@@ -1016,6 +1011,9 @@ function App() {
               value of those materials on the commodity market? It turned out that
               the materials cost of a rocket was around 2 percent of the typical
               price—which is a crazy ratio for a large mechanical product.
+              <sup className="cite">
+                <a href="https://www.wired.com/2012/10/ff-elon-musk-qa/">12</a>
+              </sup>
             </p>
             <p>
               Two percent. Your car’s raw materials are maybe 20-30% of sticker
@@ -1028,6 +1026,11 @@ function App() {
               physics. Traditional aerospace treated high costs as fixed
               constraints. But what if you treated them as variables? How do you
               actually capture that 98%?
+              <sup className="cite">
+                <a href="https://futureblind.com/p/atoms-are-cheap-process-is-pricey">
+                  13
+                </a>
+              </sup>
             </p>
           </blockquote>
 
@@ -1130,38 +1133,47 @@ function App() {
           </p>
 
           <blockquote>
-            <p>
-              Falcon 9’s grid fin folding mechanism reduced drag during ascent,
-              which seemed obviously necessary. SpaceX questioned whether it was
-              worth the mass and complexity. Simulations showed fixed fins were
-              acceptable, so they deleted the mechanism entirely.
-            </p>
-            <p>Delete, delete, delete... the best part is no part.</p>
+            <p>Delete, delete, delete... the best part is no part - the best
+            process is no process.</p>
           </blockquote>
 
           <p>
             The same exercise can be carried into the quantum supply chain.
-            Commercial As/P{' '}
-            <TermPeek term="MOCVD reactors" title="MOCVD Reactor" wide>
+            Commercial{' '}
+            <TermPeek
+              term="MOCVD reactors"
+              title="MOCVD Reactor"
+              wide
+              imageName={IMAGE.figMocvd.name}
+              imageWidth={IMAGE.figMocvd.width}
+              imageHeight={IMAGE.figMocvd.height}
+              imageAlt="Commercial MOCVD reactor used for epitaxial semiconductor growth"
+            >
               Metal-organic chemical vapour deposition — a machine that grows
               thin semiconductor layers by flowing precursor gases over a heated
               wafer. The workhorse tool for fabricating compound-semiconductor
               lasers and related devices.
             </TermPeek>{' '}
-            are designed to grow numerous GaAs- and InP-based devices, often
-            across several wafer sizes and with fully automated handling. A
-            manufacturer producing one laser design could freeze the wafer size,
-            precursor set and epitaxial recipe. Every unused chemistry eliminated
-            removes a source vessel, flow controller, valves, pipework, purge
-            logic and control channels; a fixed wafer format removes further
-            handling hardware. The remaining machine would contain the chamber,
-            heater, ultra-pure gas delivery, flow and temperature control,
-            toxic-gas interlocks and exhaust abatement. A complete refurbished
-            As/P reactor cost Glasgow University £165,000 in 2017, while
-            high-capacity commercial systems have historically cost millions. The
-            price of a purpose-built fixed-stack reactor remains unknown.
-            Designing one offers a concrete route to lower capital costs, fewer
-            failure modes and faster process development within quantum hardware.
+            are designed to grow semiconductor layers of all different chemical
+            makeups and sizes, all with fully automated handling.
+          </p>
+
+          <p>
+            How much of the cost and complexity of the machine could be reduced
+            if the requirement to fit multiple designs was removed? A
+            refurbished second-hand reactor cost Glasgow University £165,000 in
+            2017
+            <sup className="cite">
+              <a href="https://www.publiccontractsscotland.gov.uk/search/show/search_view.aspx?ID=JUL290649">
+                14
+              </a>
+            </sup>
+            , while high-capacity commercial systems have historically cost
+            millions
+            <sup className="cite">
+              <a href="https://www.digitimes.com/news/a20130416PD214.html">15</a>
+            </sup>
+            .
           </p>
 
           <h3>3. Standardisation of Components</h3>
@@ -1175,30 +1187,30 @@ function App() {
             suppliers being secretive, or do they genuinely not know?
           </p>
 
-          <blockquote>
-            The existing approach was bespoke vehicles per mission. Custom
-            adapters, mission-specific modifications, multiple vehicle families.
-            This optimises each mission at the expense of manufacturing scale.
-            SpaceX bet the opposite: that cost savings from standardisation would
-            exceed the value of customisation. Yes, customers wanted custom
-            solutions. But they wanted low prices even more. Force them to choose,
-            and they’d adapt.
+          <blockquote className="quote-plain">
+            <p>
+              The existing approach was bespoke vehicles per mission.{' '}
+              <strong>
+                SpaceX bet the opposite: that cost savings from standardisation
+                would exceed the value of customisation.
+              </strong>{' '}
+              Yes, customers wanted custom solutions. But they wanted low prices
+              even more. Force them to choose, and they’d adapt.
+            </p>
           </blockquote>
 
           <p>
-            It's the latter, of course, but let's not be too hasty in [explanation
-            of how the current model is 'let the customer tell us what they want
-            and itll be different each time'. Maybe one start up wants to use
-            Barium for their ion species. Another wants to use Calcium. Maybe one
-            more wants to use different energy levels within Barium. All of these
-            require different laser frequencies, linewidths, and powers. It's like
-            the aerospace industry was before, "tell us what you want and we'll
-            make it".]
+            It's the latter, of course, but let's not be too quick to point
+            fingers: it's the same low-volume-differing-requirements problem again.
+            One company chooses calcium ions; another chooses barium. Even two
+            barium systems might have different requirements if different isotopes
+            are used.
           </p>
 
-          <p className="note">
-            [In any manufacturing process there are economies of scale that are
-            only unlocked at production levels of 1000s of units.]
+          <p>
+            Economies of scale only come from making the same design repeatedly;
+            fragmented demand denies suppliers the opportunity to drive their
+            costs down and their production rates up.
           </p>
 
           <h3>4. Vertical Integration</h3>

@@ -47,6 +47,7 @@ export const IMAGE = {
   figHaberBosch: { name: 'fig-haber-bosch', width: 1262, height: 547 },
   figPenicillin: { name: 'fig-penicillin', width: 1226, height: 680 },
   figPlanar: { name: 'fig-planar', width: 1600, height: 721 },
+  figMocvd: { name: 'fig-mocvd', width: 521, height: 383 },
   uva01: { name: 'uva-atomic-01', width: 900, height: 1600 },
   uva02: { name: 'uva-atomic-02', width: 900, height: 1600 },
 } as const
