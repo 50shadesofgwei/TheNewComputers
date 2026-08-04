@@ -151,6 +151,11 @@
   letter-spacing: -0.02em;
 }
 
+.chapter-kicker .kicker-stress {
+  color: var(--accent);
+  font-weight: 700;
+}
+
 .chapter-kicker-list {
   max-width: 22rem;
   line-height: 1.45;
@@ -681,6 +686,17 @@
   width: min(22rem, 86vw);
 }
 
+.term-peek-panel-text {
+  width: min(28rem, 88vw);
+}
+
+.term-peek-panel-text .term-peek-body {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  max-height: min(22rem, 55vh);
+  overflow-y: auto;
+}
+
 .term-peek-panel-wide .term-peek-media img {
   max-height: 15rem;
   object-fit: cover;
@@ -772,6 +788,15 @@
 
 .prose blockquote p + p {
   margin-top: 0.85rem;
+}
+
+.prose blockquote.quote-plain {
+  max-width: 40rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.45;
+  letter-spacing: -0.015em;
 }
 
 .prose em {

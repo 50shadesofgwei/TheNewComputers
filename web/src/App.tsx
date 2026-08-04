@@ -814,12 +814,11 @@ function App() {
               Quantum computing is now entering its version of this transition.
               The National Academies described the field’s greatest challenge in
               2019 as moving “from an understanding of the basic science to the
-              creation of useful devices.” At this stage, industrialisation
-              begins with the experimental process itself: reducing the cost and
-              time required to build each generation, documenting what was
-              previously tacit, increasing component yield, removing
-              hand-alignment steps and developing equipment which allows designs
-              to be tested repeatedly rather than reconstructed from scratch.
+              creation of useful devices.” Unluckily for the budding researcher,
+              this is a significantly less glamorous process than finding the one
+              great scientific breakthrough. Luckily, however, we already
+              have a role model whom we can follow: every other technological industry in
+              existence.
             </p>
           </div>
 
@@ -835,8 +834,10 @@ function App() {
         <div className="chapter-copy">
           <p className="meta">PT—04/ 07</p>
           <p className="chapter-kicker">
-            High unit cost and long lead times are the predictable result of
-            producing highly specialised equipment in small volumes.
+            <span className="kicker-stress">High unit cost</span> and{' '}
+            <span className="kicker-stress">long lead times</span> are the
+            predictable result of producing highly specialised equipment in
+            small volumes.
           </p>
           <h2 className="chapter-title">The Industry Today</h2>
         </div>
@@ -857,21 +858,56 @@ function App() {
 
           <p>
             Now, more than 30 years later, the technology attracts industrial
-            quantities of money. In 2025 alone, companies across quantum
-            computing, sensing and communications raised $4.9 billion in venture
-            capital, while governments announced another $12.7 billion in funding
-            commitments. The Quantum Economic Development Consortium counted 556
-            specialist companies operating worldwide. (QED-C)
+            quantities of capital. In 2025 alone, companies across quantum
+            computing, sensing and communications raised $4.9 billion
+            <sup className="cite">
+              <a href="https://quantumconsortium.org/publication/2026-state-of-the-global-quantum-industry-report/">
+                4
+              </a>
+            </sup>{' '}
+            in venture capital, while governments announced another $12.7 billion
+            <sup className="cite">
+              <a href="https://quantumconsortium.org/publication/2026-state-of-the-global-quantum-industry-report/">
+                5
+              </a>
+            </sup>{' '}
+            in funding commitments. The Quantum Economic Development Consortium
+            counted 556
+            <sup className="cite">
+              <a href="https://quantumconsortium.org/publication/2026-state-of-the-global-quantum-industry-report/">
+                6
+              </a>
+            </sup>{' '}
+            specialist companies operating worldwide.
           </p>
 
           <p>
             Despite this, The MIT Quantum Index identified that the number of
             companies developing an announced, prototype or commercial quantum
-            processor in 2025 was fewer than eighty. Only around two dozen offered
-            one commercially. Hundreds of companies, billions of dollars and
-            several national programmes therefore depend upon fewer than one
-            hundred organisations attempting to build the central machine. (MIT
-            Quantum Index)
+            processor in 2025 was fewer than eighty
+            <sup className="cite">
+              <a href="https://qir.mit.edu/wp-content/uploads/2025/06/MIT-QIR-2025.pdf">
+                7
+              </a>
+            </sup>
+            . Only around two dozen
+            <sup className="cite">
+              <a href="https://qir.mit.edu/wp-content/uploads/2025/06/MIT-QIR-2025.pdf">
+                8
+              </a>
+            </sup>{' '}
+            offered one commercially. Hundreds of companies, billions of dollars
+            and several national programmes therefore depend upon{' '}
+            <strong>
+              fewer than one hundred organisations attempting to build the
+              central machine
+              <sup className="cite">
+                <a href="https://qir.mit.edu/wp-content/uploads/2025/06/MIT-QIR-2025.pdf">
+                  9
+                </a>
+              </sup>
+              .
+            </strong>
           </p>
 
           <p>
@@ -879,60 +915,52 @@ function App() {
             organised around individual scientific experiments.
           </p>
 
-          <div className="figure-pair">
-            <figure className="figure">
-              <MissionImage
-                {...IMAGE.uva01}
-                alt="Trapped-ion laboratory rack, cables and oscilloscope — University of Amsterdam"
-              />
-              <figcaption>
-                <strong>[FIG. UVA—1]</strong>
-                <span>University of Amsterdam</span>
-                <span>Atomic physics experiment</span>
-              </figcaption>
-            </figure>
-            <figure className="figure">
-              <MissionImage
-                {...IMAGE.uva02}
-                alt="Optical table with Nexus modules and laser optics — University of Amsterdam"
-              />
-              <figcaption>
-                <strong>[FIG. UVA—2]</strong>
-                <span>University of Amsterdam</span>
-                <span>Atomic physics experiment</span>
-              </figcaption>
-            </figure>
-          </div>
-
           <p>
-            In 2023, the National Quantum Computing Centre bought two
-            strontium-ion laser suites from Toptica for £640,810. Each contained
-            eight lasers, together with the control electronics, frequency-locking
-            equipment, optical fibres, software and rack required to operate them.
-            The contract allowed nine months between order and delivery. A
-            trapped-ion programme could therefore spend more than half a million
-            pounds and most of a year obtaining one optical subsystem before a
-            single ion had been trapped. (contract value, UKRI specification)
+            In 2023 the National Quantum Computing Centre bought two
+            strontium-ion laser suites from TOPTICA for £640,810
+            <sup className="cite">
+              <a href="https://www.sell2wales.gov.wales/search/show/search_view.aspx?ID=NOV457942">
+                10
+              </a>
+            </sup>
+            . Each contained eight lasers, together with the control electronics,
+            frequency-locking equipment, optical fibres, software and rack
+            required to operate them. The contract allowed nine months between
+            order and delivery.
           </p>
 
-          <p>Why so much? Why so slow? [Let's not be too quick to judge].</p>
+          <p>Why so much? Why so slow? Let's not jump to any conclusions.</p>
 
           <p>
-            A manufacturer serving several dozen laboratories cannot amortise an
-            automated production line across millions of units, while a quantum
-            company working against the available catalogue gives the supplier
-            little reason to redesign it. Long lead times, high prices and by-hand
-            integration then appear to be intrinsic properties of the technology
-            rather than consequences of the volumes and production methods being
-            used.
+            Laser companies are stuck between a rock and a hard place. All orders
+            are bespoke; the laser system for a Strontium-based quantum computer
+            might have little in common with the laser system for a Calcium-based
+            atom physics experiment, and who's to say what the next order will be?
+          </p>
+
+          <p className="pull pull-sm">
+            High unit cost and long lead times are the predictable result of
+            producing highly specialised equipment in small volumes.
           </p>
 
           <p>
-            More money thrown around in grants and undifferentiated companies is
-            unlikely to solve the problem; the problem is not that we are
-            insufficiently smart to use the toolkit we have, the problem is that
-            the toolkit itself is not up to the task.
+            Fragment the demand that way and economies of scale never appear. A
+            manufacturer serving several dozen laboratories, split across several
+            dozen incompatible wavelengths, cannot amortise an automated
+            production line, while a quantum company working against the available
+            catalogue gives the supplier little reason to redesign it. Long lead
+            times, high prices and by-hand integration then appear to be intrinsic
+            properties of the technology rather than consequences of the volumes
+            and production methods being used.
           </p>
+
+          <p>
+            More money thrown around in grants is unlikely to solve the problem.
+            It would be foolish to assume that the difficulty is one of being
+            insufficiently clever to use the toolkit we have; the sharper question
+            is whether the toolkit itself is up to the task.
+          </p>
+
         </div>
       </article>
 
@@ -968,6 +996,11 @@ function App() {
             5. Cutting the Gordian Knot
           </h2>
 
+          <p className="pull pull-sm">
+            Junior engineers are explicitly told that requirements from "smart
+            people" are the most dangerous, because nobody thinks to question them.
+          </p>
+
           <p>Is there any historical precedent for having solved these problems?</p>
 
           <p>
@@ -976,40 +1009,50 @@ function App() {
             at first glance.
           </p>
 
-          <p>
-            What is a rocket made of? Aerospace-grade aluminum alloys, plus some
-            titanium, copper, and carbon fiber. And then I asked, what is the
-            value of those materials on the commodity market? It turned out that
-            the materials cost of a rocket was around 2 percent of the typical
-            price—which is a crazy ratio for a large mechanical product.
-          </p>
+          <blockquote className="quote-plain">
+            <p>
+              What is a rocket made of? Aerospace-grade aluminum alloys, plus some
+              titanium, copper, and carbon fiber. And then I asked, what is the
+              value of those materials on the commodity market? It turned out that
+              the materials cost of a rocket was around 2 percent of the typical
+              price—which is a crazy ratio for a large mechanical product.
+            </p>
+            <p>
+              Two percent. Your car’s raw materials are maybe 20-30% of sticker
+              price. Consumer electronics are similar. But rockets? Ninety-eight
+              cents of every dollar was going somewhere other than what it was
+              made of. Where? Three places, it seems. Supplier markups stacking
+              through contract layers, each tier adding 15-30% margin. Custom
+              designs that couldn’t achieve manufacturing scale. Expendable
+              hardware thrown away after every flight. None of these are laws of
+              physics. Traditional aerospace treated high costs as fixed
+              constraints. But what if you treated them as variables? How do you
+              actually capture that 98%?
+            </p>
+          </blockquote>
 
           <p>
-            Two percent. Your car’s raw materials are maybe 20-30% of sticker
-            price. Consumer electronics are similar. But rockets? Ninety-eight
-            cents of every dollar was going somewhere other than what it was
-            made of. Where? Three places, it seems. Supplier markups stacking
-            through contract layers, each tier adding 15-30% margin. Custom
-            designs that couldn’t achieve manufacturing scale. Expendable
-            hardware thrown away after every flight. None of these are laws of
-            physics. Traditional aerospace treated high costs as fixed
-            constraints. But what if you treated them as variables? How do you
-            actually capture that 98%?
-          </p>
-
-          <p>
-            The similarities are striking - the parts themselves may be different
-            but the negative feedback loop of few launches -&gt; bespoke components
-            -&gt; no profit incentive for production overhaul -&gt; high prices and long
-            lead times -&gt; few launches is the same in both cases. Replace
-            'launches' with 'computers' and the line still holds.
+            The similarities are striking. The negative feedback loop is identical in both
+            cases: low volumes keep components bespoke; bespoke
+            production offers little incentive for suppliers to overhaul their
+            methods; prices remain high and lead times long; and low volumes
+            persist. In one case, the scarce unit is a launch. In the other, it is
+            a quantum computer.
           </p>
 
           <p className="pull pull-xl">
             It's the same problem, and it has been solved before.
           </p>
 
-          <p>But how?</p>
+          <p>
+            Quantum hardware comes with its own constraints: unsettled
+            architectures, extreme tolerances and components produced in tiny
+            volumes. So is the resemblance merely superficial, or does quantum
+            computing face the same underlying supply-chain problem that SpaceX
+            confronted? If it does, what were the specific practices,
+            manufacturing strategy and organisational principles that allowed
+            SpaceX to break the cycle,and which of them could work here?
+          </p>
 
           <figure className="figure">
             <MissionImage
@@ -1039,18 +1082,24 @@ function App() {
           </p>
 
           <blockquote>
-            Consider the Falcon 1 actuator. A vendor quoted $120,000 and eighteen
-            months of development. SpaceX’s engineers built it for $3,900 by
-            summer. [Source Needed]
+            Consider the Falcon 1 actuator. A vendor quoted $120,000 and eighteen months of development
+            time. SpaceX
+            engineer Steve Davis built it in-house in nine months for $3,900
+            <sup className="cite">
+              <a href="https://www.vice.com/en/article/how-elon-musk-willed-spacex-into-making-the-cheapest-rockets-ever-created/">
+                11
+              </a>
+            </sup>
+            .
           </blockquote>
 
           <p>
             Each of these component parts can be assigned it's own idiot index; a
             high value is a flashing light pointing to a poorly optimised
-            manufacturing process. Values for nanofabricated parts will be
-            necessarily be higher than those for macro-level parts, but defaulting
-            to the assumption that there are no 10x, 100x cost reductions possible
-            only guarantees that none will be found.
+            manufacturing process. Values for ultra-precision components will of
+            course be higher than those for parts with lower precision
+            requirements, but this only indicates a higher cost floor; it says
+            nothing about how far the current machinery is above it.
           </p>
 
           <blockquote>
@@ -1081,22 +1130,38 @@ function App() {
           </p>
 
           <blockquote>
-            Falcon 9’s grid fins were originally designed to fold, like
-            traditional aerospace grid fins. The folding mechanism reduced drag
-            during ascent, which seemed obviously necessary. SpaceX questioned
-            whether it was worth the mass and complexity. Simulations showed fixed
-            fins were acceptable, so they deleted the mechanism entirely. Delete,
-            delete, delete... the best part is no part.
+            <p>
+              Falcon 9’s grid fin folding mechanism reduced drag during ascent,
+              which seemed obviously necessary. SpaceX questioned whether it was
+              worth the mass and complexity. Simulations showed fixed fins were
+              acceptable, so they deleted the mechanism entirely.
+            </p>
+            <p>Delete, delete, delete... the best part is no part.</p>
           </blockquote>
 
-          <p className="note">
-            [Something here about MOCVD Epitaxy, its my understanding that the
-            machines that fabricate III-V semiconductors are designed to
-            accommodate orders for many different kinds of III-V materials. How
-            many additional component parts are required to accommodate the
-            additional materials? How much system complexity does this add? How
-            much would it cost to build a single-material reactor MOCVD reactor
-            in-house?]
+          <p>
+            The same exercise can be carried into the quantum supply chain.
+            Commercial As/P{' '}
+            <TermPeek term="MOCVD reactors" title="MOCVD Reactor" wide>
+              Metal-organic chemical vapour deposition — a machine that grows
+              thin semiconductor layers by flowing precursor gases over a heated
+              wafer. The workhorse tool for fabricating compound-semiconductor
+              lasers and related devices.
+            </TermPeek>{' '}
+            are designed to grow numerous GaAs- and InP-based devices, often
+            across several wafer sizes and with fully automated handling. A
+            manufacturer producing one laser design could freeze the wafer size,
+            precursor set and epitaxial recipe. Every unused chemistry eliminated
+            removes a source vessel, flow controller, valves, pipework, purge
+            logic and control channels; a fixed wafer format removes further
+            handling hardware. The remaining machine would contain the chamber,
+            heater, ultra-pure gas delivery, flow and temperature control,
+            toxic-gas interlocks and exhaust abatement. A complete refurbished
+            As/P reactor cost Glasgow University £165,000 in 2017, while
+            high-capacity commercial systems have historically cost millions. The
+            price of a purpose-built fixed-stack reactor remains unknown.
+            Designing one offers a concrete route to lower capital costs, fewer
+            failure modes and faster process development within quantum hardware.
           </p>
 
           <h3>3. Standardisation of Components</h3>
