@@ -256,7 +256,7 @@ function App() {
 
           <p>
             <strong>
-              The new generation must part with the assumption that the imminent
+              We reject the assumption that the imminent
               arrival of fault-tolerant computers is a foregone conclusion.
             </strong>
           </p>
