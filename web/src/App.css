@@ -403,34 +403,26 @@
   text-align: left;
 }
 
-.prose .pull.pull-reveal {
+.prose .pull.pull-typewriter {
   display: grid;
   justify-items: start;
   gap: 0.12em;
+  width: max-content;
   max-width: min(28rem, 92%);
+  margin-left: auto;
+  margin-right: 0;
 }
 
-.pull-reveal-line {
+.pull-typewriter-line {
   display: block;
-  opacity: 0;
-  transform: translateX(1.5rem);
-  transition:
-    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  min-height: 1.1em;
 }
 
-.pull-reveal.is-active .pull-reveal-line,
-.pull-reveal.is-instant .pull-reveal-line {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .pull-reveal-line {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
+.prose-layout-start .pull.pull-typewriter,
+.prose-layout-end .pull.pull-typewriter,
+.prose-layout-center .pull.pull-typewriter {
+  justify-self: end;
+  width: max-content;
 }
 
 /* Numbered omission list — ruled rows; × toggles with scroll position */

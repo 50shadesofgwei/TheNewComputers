@@ -2,8 +2,8 @@ import { useEffect } from 'react'
 import Lenis from 'lenis'
 import { CHAPTER_IMAGES, IMAGE, MissionImage } from './MissionImage'
 import { OmitList } from './OmitList'
-import { RevealLines } from './RevealLines'
 import { TermPeek } from './TermPeek'
+import { TypewriterLines } from './TypewriterLines'
 import { TypewriterQuote } from './TypewriterQuote'
 import './App.css'
 
@@ -1288,7 +1288,7 @@ function App() {
             standardisation allowed the volume to make that control profitable.
           </p>
 
-          <RevealLines
+          <TypewriterLines
             lines={[
               '1. The Idiot Index',
               '2. Question Every Requirement',
