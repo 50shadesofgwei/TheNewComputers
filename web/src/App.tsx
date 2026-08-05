@@ -1256,6 +1256,19 @@ function App() {
             to make them cheap.
           </p>
 
+          <p>
+            But internalising all these manufacturing processes internalises the
+            maintenance costs, not to mention the price of the machines themselves.
+            The factory loses money every second that these machines aren't
+            producing something valuable. Iteration speed is what makes the whole
+            process profitable - new ideas can be tested cheaply, quickly, and the
+            manufacturers needn't be precious about whether an idea is likely to
+            work or not. The whole design process gets flipped on its head; instead
+            of having to meticulously plan out what ideas get to go in the new
+            design before starting manufacture, ideas can be tried cheaply and
+            quickly. If they don't work, the time and financial loss is minimal.
+          </p>
+
           <blockquote>
             Traditional aerospace builds few prototypes, each one expensive and
             near-flight-ready. SpaceX builds many cheaper prototypes. They’d
