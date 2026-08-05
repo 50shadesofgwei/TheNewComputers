@@ -1377,7 +1377,7 @@ function App() {
             <sup className="cite">
               <a href="https://chicagoquantum.org/degreereports">13</a>
             </sup>
-            . Clearly, then, intelligence is not the differentiating factor
+            . Clearly, then, intelligence alone is not the differentiating factor
             between a successful enterprise and an unsuccessful one. So what
             is?
           </p>
