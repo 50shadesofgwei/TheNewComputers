@@ -1344,8 +1344,8 @@ function App() {
         </div>
         <div className="chapter-media">
           <MissionImage
-            {...IMAGE.fig002}
-            alt="Hardware failure analysis in an industrial hangar"
+            {...IMAGE.figPeople}
+            alt="Engineers huddled around a mission-control console"
           />
           <span className="part-tag">PT—6</span>
         </div>
