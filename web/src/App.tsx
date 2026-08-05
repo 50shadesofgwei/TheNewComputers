@@ -1348,6 +1348,11 @@ function App() {
             alt="Engineers huddled around a mission-control console"
           />
           <span className="part-tag">PT—6</span>
+          <p className="chapter-caption chapter-caption-inv">
+            <strong>[FIG.9]</strong>
+            <span>Apollo 13 Mission Control</span>
+            <span>Flight controllers around Glynn Lunney’s console — 1970</span>
+          </p>
         </div>
       </section>
 
