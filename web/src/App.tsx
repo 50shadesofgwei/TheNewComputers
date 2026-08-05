@@ -1251,9 +1251,9 @@ function App() {
 
           <blockquote>
             Traditional aerospace builds few prototypes, each one expensive and
-            near-flight-ready. SpaceX builds many cheaper prototypes:
-            hardware-rich fleets of test articles. They’d rather have ten rough
-            versions to blow up than one polished version they’re afraid to break.
+            near-flight-ready. SpaceX builds many cheaper prototypes. They’d
+            rather have ten rough versions to blow up than one polished version
+            they’re afraid to break.
           </blockquote>
 
           <p>
