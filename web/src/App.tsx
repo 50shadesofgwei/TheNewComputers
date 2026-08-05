@@ -1357,6 +1357,18 @@ function App() {
             6. The People
           </h2>
 
+          <p>
+            Quantum computing is already home to some of the brightest and
+            hardest-working individuals in the industry today; about a third of
+            roles in the field still ask for a PhD
+            <sup className="cite">
+              <a href="https://chicagoquantum.org/degreereports">13</a>
+            </sup>
+            . Clearly, then, intelligence is not the differentiating factor
+            between a successful enterprise and an unsuccessful one. So what
+            is?
+          </p>
+
           <p className="note">
             [I like the meme idea. It's a lot less 'we want the hardest working
             people' and a lot more specific. What are my memes?]
