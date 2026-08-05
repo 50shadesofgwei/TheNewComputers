@@ -1369,11 +1369,6 @@ function App() {
             is?
           </p>
 
-          <p className="note">
-            [I like the meme idea. It's a lot less 'we want the hardest working
-            people' and a lot more specific. What are my memes?]
-          </p>
-
           <p>
             <strong>Declare War on Complexity</strong>
             <br />
