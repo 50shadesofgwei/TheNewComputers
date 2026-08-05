@@ -398,8 +398,7 @@ function App() {
             cannot efficiently simulate. Of course scientists
             will still have to test the results in the lab, but the direction of
             physical experimentation is made less blind by eliminating bad
-            candidates before they are synthesised, using the patterns that
-            classical models alone cannot uncover.
+            candidates before they are synthesised.
           </p>
 
           <figure className="figure figure-tall figure-center">
