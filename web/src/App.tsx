@@ -1246,7 +1246,7 @@ function App() {
                     text: 'If materials are cheap and the tax is all process and overhead, you need to control the process to capture the savings. ',
                   },
                   {
-                    text: 'You can’t negotiate your way to 10x cost reduction with suppliers who have profits baked in at every tier.',
+                    text: 'You can’t negotiate your way to a 10x cost reduction with suppliers who have profits baked in at every tier.',
                     strong: true,
                   },
                   {
