@@ -822,15 +822,29 @@
 }
 
 .prose blockquote.quote-typewriter {
+  display: grid;
   justify-self: end;
+  width: max-content;
   max-width: min(34rem, 92%);
-  min-height: 18rem;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .prose-layout-start blockquote.quote-typewriter,
 .prose-layout-end blockquote.quote-typewriter,
 .prose-layout-center blockquote.quote-typewriter {
   justify-self: end;
+  width: max-content;
+}
+
+.quote-typewriter-sizer,
+.quote-typewriter-live {
+  grid-area: 1 / 1;
+}
+
+.quote-typewriter-sizer {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .quote-typewriter-caret {

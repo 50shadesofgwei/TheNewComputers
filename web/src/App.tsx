@@ -1018,6 +1018,7 @@ function App() {
           </p>
 
           <TypewriterQuote
+            plain
             paragraphs={[
               {
                 text: 'What is a rocket made of? Aerospace-grade aluminum alloys, plus some titanium, copper, and carbon fiber. And then I asked, what is the value of those materials on the commodity market? It turned out that the materials cost of a rocket was around 2 percent of the typical price—which is a crazy ratio for a large mechanical product.',
@@ -1070,11 +1071,13 @@ function App() {
 
           <h3>1. The Idiot Index</h3>
 
-          <blockquote>
-            Musk eventually named this the "idiot index": the ratio of the actual
-            cost of a part to the cost of its raw materials. “If the ratio is
-            high,” he says, “you’re an idiot.”
-          </blockquote>
+          <TypewriterQuote
+            paragraphs={[
+              {
+                text: 'Musk eventually named this the "idiot index": the ratio of the actual cost of a part to the cost of its raw materials. “If the ratio is high,” he says, “you’re an idiot.”',
+              },
+            ]}
+          />
 
           <p>
             A classical computer is made from a laundry list of component parts.
@@ -1083,22 +1086,26 @@ function App() {
             and more.
           </p>
 
-          <blockquote className="quote-plain">
-            <p>
-              Consider the Falcon 1 actuator. A vendor quoted $120,000 and eighteen
-              months of development time.{' '}
-              <strong>
-                SpaceX engineer Steve Davis built it in-house in nine months for
-                $3,900
-                <sup className="cite">
-                  <a href="https://www.vice.com/en/article/how-elon-musk-willed-spacex-into-making-the-cheapest-rockets-ever-created/">
-                    10
-                  </a>
-                </sup>
-                .
-              </strong>
-            </p>
-          </blockquote>
+          <TypewriterQuote
+            plain
+            paragraphs={[
+              {
+                parts: [
+                  {
+                    text: 'Consider the Falcon 1 actuator. A vendor quoted $120,000 and eighteen months of development time. ',
+                  },
+                  {
+                    text: 'SpaceX engineer Steve Davis built it in-house in nine months for $3,900',
+                    strong: true,
+                    citeHref:
+                      'https://www.vice.com/en/article/how-elon-musk-willed-spacex-into-making-the-cheapest-rockets-ever-created/',
+                    citeN: '10',
+                  },
+                  { text: '.', strong: true },
+                ],
+              },
+            ]}
+          />
 
           <p>
             Each of these component parts can be assigned it's own idiot index; a
@@ -1117,11 +1124,13 @@ function App() {
 
           <h3>2. Question Every Requirement</h3>
 
-          <blockquote>
-            Junior engineers are explicitly told that requirements from "smart
-            people" are the most dangerous, because nobody thinks to question
-            them.
-          </blockquote>
+          <TypewriterQuote
+            paragraphs={[
+              {
+                text: 'Junior engineers are explicitly told that requirements from "smart people" are the most dangerous, because nobody thinks to question them.',
+              },
+            ]}
+          />
 
           <p>
             A high idiot index identifies an expensive component; the knee-jerk
@@ -1130,10 +1139,13 @@ function App() {
             all. Get rid of the part entirely and the idiot index falls to 0.
           </p>
 
-          <blockquote>
-            <p>Delete, delete, delete... the best part is no part - the best
-            process is no process.</p>
-          </blockquote>
+          <TypewriterQuote
+            paragraphs={[
+              {
+                text: 'Delete, delete, delete... the best part is no part - the best process is no process.',
+              },
+            ]}
+          />
 
           <p>
             The same exercise can be carried into the quantum supply chain.
@@ -1176,7 +1188,11 @@ function App() {
 
           <h3>3. Standardisation of Components</h3>
 
-          <blockquote>The only way to get volume is to standardise.</blockquote>
+          <TypewriterQuote
+            paragraphs={[
+              { text: 'The only way to get volume is to standardise.' },
+            ]}
+          />
 
           <p>
             Go to any quantum hardware supplier right now, be it lasers, vacuum
@@ -1185,17 +1201,25 @@ function App() {
             suppliers being secretive, or do they genuinely not know?
           </p>
 
-          <blockquote className="quote-plain">
-            <p>
-              The existing approach was bespoke vehicles per mission.{' '}
-              <strong>
-                SpaceX bet the opposite: that cost savings from standardisation
-                would exceed the value of customisation.
-              </strong>{' '}
-              Yes, customers wanted custom solutions. But they wanted low prices
-              even more. Force them to choose, and they’d adapt.
-            </p>
-          </blockquote>
+          <TypewriterQuote
+            plain
+            paragraphs={[
+              {
+                parts: [
+                  {
+                    text: 'The existing approach was bespoke vehicles per mission. ',
+                  },
+                  {
+                    text: 'SpaceX bet the opposite: that cost savings from standardisation would exceed the value of customisation.',
+                    strong: true,
+                  },
+                  {
+                    text: ' Yes, customers wanted custom solutions. But they wanted low prices even more. Force them to choose, and they’d adapt.',
+                  },
+                ],
+              },
+            ]}
+          />
 
           <p>
             It's the latter, of course, but let's not be too quick to point
@@ -1213,18 +1237,25 @@ function App() {
 
           <h3>4. Vertical Integration</h3>
 
-          <blockquote className="quote-plain">
-            <p>
-              If materials are cheap and the tax is all process and overhead, you
-              need to control the process to capture the savings.{' '}
-              <strong>
-                You can’t negotiate your way to 10x cost reduction with suppliers
-                who have profits baked in at every tier.
-              </strong>{' '}
-              By building 80% of its hardware internally, SpaceX collapsed the
-              traditional aerospace stack.
-            </p>
-          </blockquote>
+          <TypewriterQuote
+            plain
+            paragraphs={[
+              {
+                parts: [
+                  {
+                    text: 'If materials are cheap and the tax is all process and overhead, you need to control the process to capture the savings. ',
+                  },
+                  {
+                    text: 'You can’t negotiate your way to 10x cost reduction with suppliers who have profits baked in at every tier.',
+                    strong: true,
+                  },
+                  {
+                    text: ' By building 80% of its hardware internally, SpaceX collapsed the traditional aerospace stack.',
+                  },
+                ],
+              },
+            ]}
+          />
 
           <p className="pull">
             Vertical integration gives manufacturers the freedom to cut everything
@@ -1262,12 +1293,13 @@ function App() {
             quickly. If they don't work, the time and financial loss is minimal.
           </p>
 
-          <blockquote>
-            Traditional aerospace builds few prototypes, each one expensive and
-            near-flight-ready. SpaceX builds many cheaper prototypes. They’d
-            rather have ten rough versions to blow up than one polished version
-            they’re afraid to break.
-          </blockquote>
+          <TypewriterQuote
+            paragraphs={[
+              {
+                text: 'Traditional aerospace builds few prototypes, each one expensive and near-flight-ready. SpaceX builds many cheaper prototypes. They’d rather have ten rough versions to blow up than one polished version they’re afraid to break.',
+              },
+            ]}
+          />
 
           <figure className="figure">
             <MissionImage
