@@ -1249,6 +1249,13 @@ function App() {
 
           <h3>5. Increase Iteration Speed</h3>
 
+          <p>
+            The idiot index identifies where manufacturing optimisations can be
+            made, vertical integration gives the control needed to implement them,
+            and standardising the components unlocks the economies of scale needed
+            to make them cheap.
+          </p>
+
           <blockquote>
             Traditional aerospace builds few prototypes, each one expensive and
             near-flight-ready. SpaceX builds many cheaper prototypes. They’d
