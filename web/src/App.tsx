@@ -1215,44 +1215,18 @@ function App() {
 
           <h3>4. Vertical Integration</h3>
 
-          <blockquote>
-            If materials are cheap and the tax is all process and overhead, you
-            need to control the process to capture the savings. You can’t
-            negotiate your way to 10x cost reduction with suppliers who have
-            profits baked in at every tier. So SpaceX became its own supplier. By
-            building 80% of its hardware internally - engines, structures,
-            avionics, software, and key ground systems - SpaceX collapsed the
-            traditional aerospace stack. They outsource raw materials and
-            commodity parts, and make everything else themselves.
+          <blockquote className="quote-plain">
+            <p>
+              If materials are cheap and the tax is all process and overhead, you
+              need to control the process to capture the savings.{' '}
+              <strong>
+                You can’t negotiate your way to 10x cost reduction with suppliers
+                who have profits baked in at every tier.
+              </strong>{' '}
+              By building 80% of its hardware internally, SpaceX collapsed the
+              traditional aerospace stack.
+            </p>
           </blockquote>
-
-          <p className="note">
-            [Why is vertical integration important here? Reduction of margin,
-            reduction of lead times. Vertical integration provides the control to
-            eliminate the waste that the first-principles analysis uncovers. I see
-            the idea in my head, current machines are dependent on stringing many
-            small parts of other businesses together. Vertical integration here is
-            taking all of those small parts together and moving them into a single
-            process. Let's make the examples concrete though, which specific parts
-            are dependent upon external manufacturing? PIC, for sure. Semiconductor
-            fab. The lasers themselves, too. These are the ones I have a handle
-            on, so we can start there. How do I link it up? The ]
-          </p>
-
-          <p>
-            Today, the industry leans heavily towards horizontal integration for
-            manufacturing. [Insert some statistics to back this up.] Recent
-            efforts towards putting quantum computation on-chip [source] has
-            helped eliminate [some specific bad thing about the old integration
-            process], but has introduced a whole new set of dependencies [I'm on
-            about semiconductor manufacturing here].
-          </p>
-
-          <p>
-            The manufacturing processes and supply chain used to build today's
-            QPUs were designed in a different century, by engineers who had
-            likely never heard of quantum computing.
-          </p>
 
           <p className="pull">
             Vertical integration gives manufacturers the freedom to cut everything
@@ -1356,15 +1330,6 @@ function App() {
           <h2 className="prose-display">
             6. The People
           </h2>
-
-          <p className="note">
-            [I think I have a real advantage here, because anyone who's been
-            through the academic wringer will have had more than their fair share
-            of DEI meetings and wokeness thrust upon them. The largest failing of
-            the woke ideology is that it suppresses the rough-around-the-edges
-            hero type. It doesn't do well with breaking rules. Obviously I can't
-            say any of this directly, so this is gonna take some manoeuvring.]
-          </p>
 
           <p className="note">
             [I like the meme idea. It's a lot less 'we want the hardest working
