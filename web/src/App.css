@@ -925,7 +925,7 @@
 }
 
 .figure.figure-xs {
-  max-width: min(17rem, 42%);
+  max-width: min(22rem, 55%);
   margin: clamp(1.75rem, 4vw, 2.75rem) 0;
 }
 
