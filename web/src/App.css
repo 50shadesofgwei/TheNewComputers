@@ -799,6 +799,45 @@
   letter-spacing: -0.015em;
 }
 
+.prose blockquote.quote-typewriter {
+  justify-self: end;
+  max-width: min(34rem, 92%);
+  min-height: 18rem;
+}
+
+.prose-layout-start blockquote.quote-typewriter,
+.prose-layout-end blockquote.quote-typewriter,
+.prose-layout-center blockquote.quote-typewriter {
+  justify-self: end;
+}
+
+.quote-typewriter-caret {
+  display: inline-block;
+  width: 0.08em;
+  height: 1.05em;
+  margin-left: 0.08em;
+  vertical-align: -0.12em;
+  background: color-mix(in srgb, var(--text) 75%, transparent);
+  animation: quote-caret-blink 0.9s steps(1, end) infinite;
+}
+
+@keyframes quote-caret-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quote-typewriter-caret {
+    display: none;
+  }
+}
+
 .prose em {
   font-style: italic;
 }

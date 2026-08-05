@@ -3,6 +3,7 @@ import Lenis from 'lenis'
 import { CHAPTER_IMAGES, IMAGE, MissionImage } from './MissionImage'
 import { OmitList } from './OmitList'
 import { TermPeek } from './TermPeek'
+import { TypewriterQuote } from './TypewriterQuote'
 import './App.css'
 
 function App() {
@@ -1015,35 +1016,21 @@ function App() {
             at first glance.
           </p>
 
-          <blockquote className="quote-plain">
-            <p>
-              What is a rocket made of? Aerospace-grade aluminum alloys, plus some
-              titanium, copper, and carbon fiber. And then I asked, what is the
-              value of those materials on the commodity market? It turned out that
-              the materials cost of a rocket was around 2 percent of the typical
-              price—which is a crazy ratio for a large mechanical product.
-              <sup className="cite">
-                <a href="https://www.wired.com/2012/10/ff-elon-musk-qa/">8</a>
-              </sup>
-            </p>
-            <p>
-              Two percent. Your car’s raw materials are maybe 20-30% of sticker
-              price. Consumer electronics are similar. But rockets? Ninety-eight
-              cents of every dollar was going somewhere other than what it was
-              made of. Where? Three places, it seems. Supplier markups stacking
-              through contract layers, each tier adding 15-30% margin. Custom
-              designs that couldn’t achieve manufacturing scale. Expendable
-              hardware thrown away after every flight. None of these are laws of
-              physics. Traditional aerospace treated high costs as fixed
-              constraints. But what if you treated them as variables? How do you
-              actually capture that 98%?
-              <sup className="cite">
-                <a href="https://futureblind.com/p/atoms-are-cheap-process-is-pricey">
-                9
-              </a>
-              </sup>
-            </p>
-          </blockquote>
+          <TypewriterQuote
+            paragraphs={[
+              {
+                text: 'What is a rocket made of? Aerospace-grade aluminum alloys, plus some titanium, copper, and carbon fiber. And then I asked, what is the value of those materials on the commodity market? It turned out that the materials cost of a rocket was around 2 percent of the typical price—which is a crazy ratio for a large mechanical product.',
+                citeHref: 'https://www.wired.com/2012/10/ff-elon-musk-qa/',
+                citeN: '8',
+              },
+              {
+                text: "Two percent. Your car’s raw materials are maybe 20-30% of sticker price. Consumer electronics are similar. But rockets? Ninety-eight cents of every dollar was going somewhere other than what it was made of. Where? Three places, it seems. Supplier markups stacking through contract layers, each tier adding 15-30% margin. Custom designs that couldn’t achieve manufacturing scale. Expendable hardware thrown away after every flight. None of these are laws of physics. Traditional aerospace treated high costs as fixed constraints. But what if you treated them as variables? How do you actually capture that 98%?",
+                citeHref:
+                  'https://futureblind.com/p/atoms-are-cheap-process-is-pricey',
+                citeN: '9',
+              },
+            ]}
+          />
 
           <p>
             The similarities are striking. The negative feedback loop is identical in both
