@@ -1296,7 +1296,15 @@ function App() {
           <TypewriterQuote
             paragraphs={[
               {
-                text: 'Traditional aerospace builds few prototypes, each one expensive and near-flight-ready. SpaceX builds many cheaper prototypes. They’d rather have ten rough versions to blow up than one polished version they’re afraid to break.',
+                parts: [
+                  {
+                    text: 'Traditional aerospace builds few prototypes, each one expensive and near-flight-ready. SpaceX builds many cheaper prototypes. ',
+                  },
+                  {
+                    text: 'They’d rather have ten rough versions to blow up than one polished version they’re afraid to break.',
+                    strong: true,
+                  },
+                ],
               },
             ]}
           />
