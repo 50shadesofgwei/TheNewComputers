@@ -1197,6 +1197,26 @@
   font-weight: 500;
 }
 
+.figure figcaption.figure-caption-quote {
+  max-width: 36rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.35vw, 1.2rem);
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+.figure figcaption.figure-caption-quote strong {
+  font-family: var(--font-meta);
+  font-size: 0.72rem;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .nuclide {
   font-family: var(--font-display);
   font-weight: 600;

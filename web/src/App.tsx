@@ -1386,15 +1386,24 @@ function App() {
             <strong>Declare War on Complexity</strong>
           </p>
 
-          <blockquote>
-            The cardinal sin of the computing industry is the creation of
-            complexity.
-            <sup className="cite">
-              <a href="https://www.forbes.com/sites/oracle/2014/10/09/complex-business-challenges-require-simple-tech-solutions/">
-                14
-              </a>
-            </sup>
-          </blockquote>
+          <figure className="figure">
+            <MissionImage
+              {...IMAGE.figTeleportation}
+              alt="A densely cabled quantum optics teleportation experiment on an optical table"
+            />
+            <figcaption className="figure-caption-quote">
+              <strong>[FIG.10]</strong>
+              <span>
+                “The cardinal sin of the computing industry is the creation of
+                complexity.” — Larry Ellison
+                <sup className="cite">
+                  <a href="https://www.forbes.com/sites/oracle/2014/10/09/complex-business-challenges-require-simple-tech-solutions/">
+                    14
+                  </a>
+                </sup>
+              </span>
+            </figcaption>
+          </figure>
 
           <p>
             [They Muddy the Waters, to Make Them Look Deep] Far too much
