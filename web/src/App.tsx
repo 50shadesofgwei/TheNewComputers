@@ -1386,16 +1386,15 @@ function App() {
             <strong>Declare War on Complexity</strong>
           </p>
 
-          <TypewriterQuote
-            paragraphs={[
-              {
-                text: 'The cardinal sin of the computing industry is the creation of complexity.',
-                citeHref:
-                  'https://www.forbes.com/sites/oracle/2014/10/09/complex-business-challenges-require-simple-tech-solutions/',
-                citeN: '14',
-              },
-            ]}
-          />
+          <blockquote>
+            The cardinal sin of the computing industry is the creation of
+            complexity.
+            <sup className="cite">
+              <a href="https://www.forbes.com/sites/oracle/2014/10/09/complex-business-challenges-require-simple-tech-solutions/">
+                14
+              </a>
+            </sup>
+          </blockquote>
 
           <p>
             [They Muddy the Waters, to Make Them Look Deep] Far too much
