@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import Lenis from 'lenis'
 import { CHAPTER_IMAGES, IMAGE, MissionImage } from './MissionImage'
 import { OmitList } from './OmitList'
+import { RevealLines } from './RevealLines'
 import { TermPeek } from './TermPeek'
 import { TypewriterQuote } from './TypewriterQuote'
 import './App.css'
@@ -1287,17 +1288,15 @@ function App() {
             standardisation allowed the volume to make that control profitable.
           </p>
 
-          <p className="pull pull-sm">
-            1. The Idiot Index
-            <br />
-            2. Question Every Requirement
-            <br />
-            3. Standardisation of Components
-            <br />
-            4. Vertical Integration
-            <br />
-            5. Increase Iteration Speed
-          </p>
+          <RevealLines
+            lines={[
+              '1. The Idiot Index',
+              '2. Question Every Requirement',
+              '3. Standardisation of Components',
+              '4. Vertical Integration',
+              '5. Increase Iteration Speed',
+            ]}
+          />
         </div>
       </article>
 
