@@ -1095,16 +1095,21 @@ function App() {
             and more.
           </p>
 
-          <blockquote>
-            Consider the Falcon 1 actuator. A vendor quoted $120,000 and eighteen months of development
-            time. SpaceX
-            engineer Steve Davis built it in-house in nine months for $3,900
-            <sup className="cite">
-              <a href="https://www.vice.com/en/article/how-elon-musk-willed-spacex-into-making-the-cheapest-rockets-ever-created/">
-                10
-              </a>
-            </sup>
-            .
+          <blockquote className="quote-plain">
+            <p>
+              Consider the Falcon 1 actuator. A vendor quoted $120,000 and eighteen
+              months of development time.{' '}
+              <strong>
+                SpaceX engineer Steve Davis built it in-house in nine months for
+                $3,900
+                <sup className="cite">
+                  <a href="https://www.vice.com/en/article/how-elon-musk-willed-spacex-into-making-the-cheapest-rockets-ever-created/">
+                    10
+                  </a>
+                </sup>
+                .
+              </strong>
+            </p>
           </blockquote>
 
           <p>
