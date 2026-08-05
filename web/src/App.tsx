@@ -127,7 +127,7 @@ function App() {
             explanations of their supposed practical utility. Shor's algorithm
             (famous for the threat it poses to modern day encryption systems) has
             been known since 1994, yet nearly 3 decades later the largest number
-            ever factored using Shor's method is 21. And that was 14 years ago.
+            ever factored using Shor's method is 35. And that was 14 years ago.
           </p>
 
           <p>
@@ -457,7 +457,7 @@ function App() {
 
             <p>
               All this, yet the largest number factored by a quantum computer
-              remains 21.
+              remains 35.
             </p>
 
             <p>So what might they actually be good for?</p>
