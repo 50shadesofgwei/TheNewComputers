@@ -1358,7 +1358,7 @@ function App() {
           <span className="part-tag">PT—6</span>
           <p className="chapter-caption chapter-caption-inv">
             <strong>[FIG.9]</strong>
-            <span>Apollo 13 Mission Control</span>
+            <span>Mission Control, Houston</span>
             <span>Flight controllers around Glynn Lunney’s console — 1970</span>
           </p>
         </div>
