@@ -1370,6 +1370,8 @@ function App() {
             6. The People
           </h2>
 
+          <p className="note">Work in progress</p>
+
           <p>
             Quantum computing is already home to some of the brightest and
             hardest-working individuals in the industry today; about a third of
