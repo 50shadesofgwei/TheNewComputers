@@ -1062,8 +1062,8 @@ function App() {
             />
             <figcaption>
               <strong>[FIG.7]</strong>
-              <span>Hardware-rich iteration</span>
               <span>Fail visibly, learn quickly</span>
+              <span>Debris of the Falcon 1 launch</span>
             </figcaption>
           </figure>
 
