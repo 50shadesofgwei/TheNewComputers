@@ -1285,14 +1285,6 @@ function App() {
             much more conservative because you can’t risk blowing them up.
           </blockquote>
 
-          <blockquote>
-            Vertical integration really helps enable this. When you own the
-            factory, you can build fast without waiting on vendors. When you own
-            3D printing capability, you can produce parts on an ad-hoc basis. When
-            you can manufacture Raptor engines at high volume, losing one to a
-            test failure doesn’t set you back months.
-          </blockquote>
-
           <figure className="figure">
             <MissionImage
               {...IMAGE.fig003}
