@@ -1276,15 +1276,6 @@ function App() {
             they’re afraid to break.
           </blockquote>
 
-          <blockquote>
-            A high production rate solves many ills. Any given technology
-            development is “How many iterations do you have? And what’s your time
-            and progress between iterations?” So if you have a high production
-            rate, you can have a lot of iterations. You can try lots of different
-            things... If you have a small number of engines, then you have to be
-            much more conservative because you can’t risk blowing them up.
-          </blockquote>
-
           <figure className="figure">
             <MissionImage
               {...IMAGE.fig003}
