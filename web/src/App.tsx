@@ -130,7 +130,7 @@ function App() {
             ever factored using Shor's method is 35. And that was 7 years ago
             <sup className="cite">
               <a href="https://juser.fz-juelich.de/record/1042431/files/NIC_2025_Willsch.pdf">
-                16
+                1
               </a>
             </sup>
             .
@@ -441,23 +441,23 @@ function App() {
               cold"
               <sup className="cite">
                 <a href="https://www.businesswire.com/news/home/20221014005367/en/Cancer-to-Be-Treated-as-Easily-as-Common-Cold-When-Humans-Crack-Quantum-Computing">
-                  1
-                </a>
+                2
+              </a>
               </sup>
               , the Google announcement that "quantum computers lend credence to
               the existence of parallel universes"
               <sup className="cite">
                 <a href="https://blog.google/technology/research/google-willow-quantum-chip/">
-                  2
-                </a>
+                3
+              </a>
               </sup>
               , and that "As quantum AI technology advances, life expectancy will
               increase faster, eventually reaching a point where we gain a year of
               life expectancy each year."
               <sup className="cite">
                 <a href="https://millenniumprize.org/news-articles/news/mtp-forum-speaker-interview-quantum-computing-will-enable-us-to-live-longer-healthier-lives-free-from-the-limitations-humans-have-always-faced/">
-                  3
-                </a>
+                4
+              </a>
               </sup>
             </p>
 
@@ -466,8 +466,8 @@ function App() {
               remains 35
               <sup className="cite">
                 <a href="https://juser.fz-juelich.de/record/1042431/files/NIC_2025_Willsch.pdf">
-                  16
-                </a>
+                1
+              </a>
               </sup>
               .
             </p>
@@ -868,7 +868,7 @@ function App() {
             computing, sensing and communications raised $4.9 billion
             <sup className="cite">
               <a href="https://quantumconsortium.org/publication/2026-state-of-the-global-quantum-industry-report/">
-                4
+                5
               </a>
             </sup>{' '}
             in venture capital, while governments announced another $12.7 billion
@@ -881,7 +881,7 @@ function App() {
             counted 556
             <sup className="cite">
               <a href="https://quantumconsortium.org/publication/2026-state-of-the-global-quantum-industry-report/">
-                6
+                5
               </a>
             </sup>{' '}
             specialist companies operating worldwide.
@@ -893,13 +893,13 @@ function App() {
             processor in 2025 was fewer than eighty
             <sup className="cite">
               <a href="https://qir.mit.edu/wp-content/uploads/2025/06/MIT-QIR-2025.pdf">
-                7
+                6
               </a>
             </sup>
             . Only around two dozen
             <sup className="cite">
               <a href="https://qir.mit.edu/wp-content/uploads/2025/06/MIT-QIR-2025.pdf">
-                8
+                6
               </a>
             </sup>{' '}
             offered one commercially. Hundreds of companies, billions of dollars
@@ -909,8 +909,8 @@ function App() {
               central machine
               <sup className="cite">
                 <a href="https://qir.mit.edu/wp-content/uploads/2025/06/MIT-QIR-2025.pdf">
-                  9
-                </a>
+                6
+              </a>
               </sup>
               .
             </strong>
@@ -926,7 +926,7 @@ function App() {
             strontium-ion laser suites from TOPTICA for £640,810
             <sup className="cite">
               <a href="https://www.sell2wales.gov.wales/search/show/search_view.aspx?ID=NOV457942">
-                10
+                7
               </a>
             </sup>
             . Each contained eight lasers, together with the control electronics,
@@ -1023,7 +1023,7 @@ function App() {
               the materials cost of a rocket was around 2 percent of the typical
               price—which is a crazy ratio for a large mechanical product.
               <sup className="cite">
-                <a href="https://www.wired.com/2012/10/ff-elon-musk-qa/">12</a>
+                <a href="https://www.wired.com/2012/10/ff-elon-musk-qa/">8</a>
               </sup>
             </p>
             <p>
@@ -1039,8 +1039,8 @@ function App() {
               actually capture that 98%?
               <sup className="cite">
                 <a href="https://futureblind.com/p/atoms-are-cheap-process-is-pricey">
-                  13
-                </a>
+                9
+              </a>
               </sup>
             </p>
           </blockquote>
@@ -1101,7 +1101,7 @@ function App() {
             engineer Steve Davis built it in-house in nine months for $3,900
             <sup className="cite">
               <a href="https://www.vice.com/en/article/how-elon-musk-willed-spacex-into-making-the-cheapest-rockets-ever-created/">
-                11
+                10
               </a>
             </sup>
             .
@@ -1176,13 +1176,13 @@ function App() {
             2017
             <sup className="cite">
               <a href="https://www.publiccontractsscotland.gov.uk/search/show/search_view.aspx?ID=JUL290649">
-                14
+                11
               </a>
             </sup>
             , while high-capacity commercial systems have historically cost
             millions
             <sup className="cite">
-              <a href="https://www.digitimes.com/news/a20130416PD214.html">15</a>
+              <a href="https://www.digitimes.com/news/a20130416PD214.html">12</a>
             </sup>
             .
           </p>
