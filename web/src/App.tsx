@@ -1384,7 +1384,20 @@ function App() {
 
           <p>
             <strong>Declare War on Complexity</strong>
-            <br />
+          </p>
+
+          <TypewriterQuote
+            paragraphs={[
+              {
+                text: 'The cardinal sin of the computing industry is the creation of complexity.',
+                citeHref:
+                  'https://www.forbes.com/sites/oracle/2014/10/09/complex-business-challenges-require-simple-tech-solutions/',
+                citeN: '14',
+              },
+            ]}
+          />
+
+          <p>
             [They Muddy the Waters, to Make Them Look Deep] Far too much
             complexity theatre, make things easier not harder. Getting stuff done
             has to be more important than looking clever.
