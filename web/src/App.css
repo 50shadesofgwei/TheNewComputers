@@ -924,6 +924,16 @@
   max-width: min(672px, 70%);
 }
 
+.figure.figure-xs {
+  max-width: min(17rem, 42%);
+  margin: clamp(1.75rem, 4vw, 2.75rem) 0;
+}
+
+.figure.figure-xs .figure-caption-quote {
+  max-width: none;
+  font-size: clamp(0.92rem, 1.1vw, 1.05rem);
+}
+
 .figure.full {
   max-width: none;
   width: 100%;

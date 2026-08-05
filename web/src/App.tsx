@@ -1386,7 +1386,7 @@ function App() {
             <strong>Declare War on Complexity</strong>
           </p>
 
-          <figure className="figure">
+          <figure className="figure figure-xs figure-center">
             <MissionImage
               {...IMAGE.figTeleportation}
               alt="A densely cabled quantum optics teleportation experiment on an optical table"
