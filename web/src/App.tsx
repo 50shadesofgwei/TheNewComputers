@@ -1284,8 +1284,9 @@ function App() {
           <p>
             All these parts came together in a way that was mutually reinforcing;
             first-principles engineering identified manufacturing optimisations,
-            vertical integration let those optimisations happen, and
-            standardisation allowed the volume to make that control profitable.
+            vertical integration let those optimisations happen, standardisation
+            facilitated the high production rate that led to so many test
+            flights.
           </p>
 
           <TypewriterLines
