@@ -1249,8 +1249,6 @@ function App() {
 
           <h3>5. Increase Iteration Speed</h3>
 
-          <p className="note">[Anddddd what the fuck for this, then.]</p>
-
           <blockquote>
             Traditional aerospace builds few prototypes, each one expensive and
             near-flight-ready. SpaceX builds many cheaper prototypes:
