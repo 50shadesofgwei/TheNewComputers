@@ -1276,12 +1276,6 @@ function App() {
             they’re afraid to break.
           </blockquote>
 
-          <p>
-            The total number of computers produced by the 5 largest quantum
-            computing companies over the past 10 years is [X]. That's an average
-            of 1 new machine every [X.Y] years.
-          </p>
-
           <blockquote>
             A high production rate solves many ills. Any given technology
             development is “How many iterations do you have? And what’s your time
