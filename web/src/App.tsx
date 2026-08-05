@@ -1065,7 +1065,7 @@ function App() {
             computing face the same underlying supply-chain problem that SpaceX
             confronted? If it does, what were the specific practices,
             manufacturing strategy and organisational principles that allowed
-            SpaceX to break the cycle,and which of them could work here?
+            SpaceX to break the cycle, and which of them could work here?
           </p>
 
           <figure className="figure">
@@ -1115,12 +1115,6 @@ function App() {
             requirements, but this only indicates a higher cost floor; it says
             nothing about how far the current machinery is above it.
           </p>
-
-          <blockquote>
-            The avionics example is instructive. Rather than buy
-            radiation-hardened processors at $200,000 each, SpaceX used
-            triple-redundant commercial processors totalling $2,000.
-          </blockquote>
 
           <p>
             Knowing where the manufacturing inefficiencies are hiding is only half
@@ -1245,10 +1239,12 @@ function App() {
           </p>
 
           <p>
-            But it comes with a cost. Fixed costs, specifically. Bringing the
-            machines in-house isn't cheap, and incurs a lot of complexity in the
-            short term. In fact, if the goal is to build a single computer, it
-            doesn't make much sense to bring the manufacturing in-house at all.
+            In practical terms, vertical integration means avoiding the time cost
+            and incurred margins of outsourcing components. But it comes with a
+            cost. Fixed costs, specifically. Bringing the machines in-house isn't
+            cheap, and incurs a lot of complexity in the short term. In fact, if
+            the goal is to build a single computer, it doesn't make much sense to
+            bring the manufacturing in-house at all.
           </p>
 
           <h3>5. Increase Iteration Speed</h3>
