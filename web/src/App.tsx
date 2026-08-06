@@ -1440,10 +1440,8 @@ function App() {
             work gets done. Johnson wrote fourteen rules; what actually spread
             through the hangar was the six-word compression of them. Every
             organisation runs on memes whether it picks them deliberately or
-            not.
+            not. These are ours.
           </p>
-
-          <p className="pull pull-sm">These are ours.</p>
 
           <p>
             <strong>Declare War on Complexity</strong>
