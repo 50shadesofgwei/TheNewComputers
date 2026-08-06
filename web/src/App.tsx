@@ -1405,9 +1405,22 @@ function App() {
           </p>
 
           <p>
-            Lockheed’s Skunk Works designed the U-2 and the SR-71 with a few
-            dozen engineers, and Kelly Johnson compressed the whole operating
-            philosophy into six words:
+            Lockheed’s{' '}
+            <TermPeek
+              term="Skunk Works"
+              title="Skunk Works"
+              wide
+              imageName={IMAGE.figSkunkworks.name}
+              imageWidth={IMAGE.figSkunkworks.width}
+              imageHeight={IMAGE.figSkunkworks.height}
+              imageAlt="Lockheed SR-71 Blackbird in flight over high desert"
+            >
+              Lockheed’s advanced projects division, founded by Kelly Johnson in
+              1943. Small teams, minimal oversight and fourteen rules of its own
+              produced the U-2, the SR-71 Blackbird and the F-117.
+            </TermPeek>{' '}
+            designed the U-2 and the SR-71 with a few dozen engineers, and Kelly
+            Johnson compressed the whole operating philosophy into six words:
           </p>
 
           <blockquote>
