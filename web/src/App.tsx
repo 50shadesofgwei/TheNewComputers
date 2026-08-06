@@ -1400,7 +1400,7 @@ function App() {
           <p>
             And not cultural values in the dry, overly corporate, “diversity is our
             greatest strength” sense; but rather who shows up, what is their
-            outlook on the world, and what behaviours do they accept from one
+            outlook on the world, and what behaviours are they willing to accept from one
             another?
           </p>
 
