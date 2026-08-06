@@ -1440,8 +1440,10 @@ function App() {
 
           <p>
             Every organisation runs on memes, whether it chooses them
-            consciously or not. These are ours.
+            consciously or not.
           </p>
+
+          <p>These are ours.</p>
 
           <p>
             <strong>Declare War on Complexity</strong>
