@@ -1417,9 +1417,9 @@ function App() {
             >
               Lockheed Martin’s advanced projects division, founded by Kelly
               Johnson in 1943. Small teams, minimal oversight and fourteen rules
-              of its own took the SR-71 Blackbird from contract to first flight
-              in two years. Sixty years later, it is still the fastest manned
-              plane ever built.
+              of its own took the SR-71 Blackbird from idea to rollout in four
+              years. Sixty years later, it is still the fastest manned plane
+              ever built.
             </TermPeek>{' '}
             designed the U-2 and the SR-71 with a few dozen engineers, and Kelly
             Johnson compressed the whole operating philosophy into six words:
