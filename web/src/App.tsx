@@ -1421,26 +1421,22 @@ function App() {
               years. Sixty years later, it is still the fastest manned plane
               ever built.
             </TermPeek>{' '}
-            designed the U-2 and the SR-71 with a few dozen engineers, and Kelly
-            Johnson compressed the whole operating philosophy into six words:
-          </p>
-
-          <blockquote>
-            Be quick, be quiet, be on time.
+            designed the U-2 and the SR-71 with a few dozen engineers. Kelly
+            Johnson wrote the operating philosophy down as fourteen rules
             <sup className="cite">
-              <a href="https://www.nationalacademies.org/read/4894/chapter/12">
+              <a href="https://lockheedmartin.com/content/dam/lockheed-martin/aero/photo/skunkworks/kellys-14-rules.pdf">
                 16
               </a>
             </sup>
-          </blockquote>
+            : small teams, almost no outsiders, authority to test your own
+            hardware, pay for performance rather than headcount.
+          </p>
 
           <p>
-            That is a meme in the original sense: a small, sticky unit of culture
-            that copies itself from person to person and quietly decides how the
-            work gets done. Johnson wrote fourteen rules; what actually spread
-            through the hangar was the six-word compression of them. Every
-            organisation runs on memes whether it picks them deliberately or
-            not. These are ours.
+            Those rules are memes in the original sense: small, sticky units of
+            culture that copy themselves from person to person and quietly decide
+            how the work gets done. Every organisation runs on memes whether it
+            chooses them consciously or not. These are ours.
           </p>
 
           <p>
