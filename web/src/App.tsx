@@ -1375,9 +1375,16 @@ function App() {
           <p>
             Quantum computing is already home to some of the brightest and
             hardest-working individuals in the industry today; about a third of
-            roles in the field still ask for a PhD
+            roles in the field require a PhD
             <sup className="cite">
               <a href="https://chicagoquantum.org/degreereports">13</a>
+            </sup>
+            {' '}
+            — compared to about 6% of roles in artificial intelligence
+            <sup className="cite">
+              <a href="https://cset.georgetown.edu/wp-content/uploads/CSET-US-Demand-for-AI-Related-Talent.pdf">
+                15
+              </a>
             </sup>
             . Clearly then, intelligence alone is not the differentiating factor
             between a successful enterprise and an unsuccessful one. So what
