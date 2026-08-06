@@ -1398,7 +1398,7 @@ function App() {
           </p>
 
           <p>
-            And not cultural values in the bland, corporate, “diversity is our
+            And not cultural values in the dry, overly corporate, “diversity is our
             greatest strength” sense; but rather who shows up, what is their
             outlook on the world, and what behaviours do they accept from one
             another?
