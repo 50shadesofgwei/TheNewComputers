@@ -1433,7 +1433,7 @@ function App() {
           </p>
 
           <p>
-            Those rules are memes in the original sense: small, sticky units of
+            Those rules are <em>memes</em> in the original sense: small, sticky units of
             culture that copy themselves from person to person and quietly decide
             how the work gets done.
           </p>
