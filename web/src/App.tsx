@@ -1439,7 +1439,7 @@ function App() {
           </p>
 
           <p>
-            Every organisation runs on memes, whether they choose them
+            Every organisation runs on memes, whether they decide them
             consciously or not.
           </p>
 
