@@ -523,7 +523,7 @@ Declare War on Complexity
 Far too much complexity theatre, make things easier not harder. Getting stuff done has to be
 more important than looking clever.
 
-Flash Mob the Bottleneck
+Flash-Mob the Bottleneck
 [Does this get us closer to Mars? If not, let's skip for now.]
 
 Question Every Requirement

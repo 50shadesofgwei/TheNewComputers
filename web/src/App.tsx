@@ -1345,7 +1345,7 @@ function App() {
         <div className="chapter-copy">
           <p className="meta">PT—06/ 07</p>
           <p className="chapter-kicker">
-            Declare War on Complexity. Flash Mob the Bottleneck. Question Every
+            Declare War on Complexity. Flash-Mob the Bottleneck. Question Every
             Requirement. Scrappiness. Fail Visibly and Fail Often.
           </p>
           <h2 className="chapter-title">The People</h2>
@@ -1475,7 +1475,7 @@ function App() {
           </p>
 
           <p>
-            <strong>Flash Mob the Bottleneck</strong>
+            <strong>Flash-Mob the Bottleneck</strong>
             <br />
             [Am I cleaning my room when I should be doing my homework? Find the
             single constraint choking the build — then disproportionate
