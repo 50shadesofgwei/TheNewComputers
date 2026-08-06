@@ -1391,6 +1391,20 @@ function App() {
           </p>
 
           <p>
+            If we assume everyone to be smart and hard-working, and everyone has
+            the same 24 hours in a day, what is it exactly that differentiates
+            those who go on to revolutionise industries? What precise behaviour
+            patterns, what specific cultural values facilitate innovation?
+          </p>
+
+          <p>
+            And not cultural values in the bland, corporate, “diversity is our
+            greatest strength” sense; but rather who shows up, what is their
+            outlook on the world, and what behaviours do they accept from one
+            another?
+          </p>
+
+          <p>
             <strong>Declare War on Complexity</strong>
           </p>
 
