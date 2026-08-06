@@ -1405,6 +1405,30 @@ function App() {
           </p>
 
           <p>
+            Lockheed’s Skunk Works designed the U-2 and the SR-71 with a few
+            dozen engineers, and Kelly Johnson compressed the whole operating
+            philosophy into six words:
+          </p>
+
+          <blockquote>
+            Be quick, be quiet, be on time.
+            <sup className="cite">
+              <a href="https://www.nationalacademies.org/read/4894/chapter/12">
+                16
+              </a>
+            </sup>
+          </blockquote>
+
+          <p>
+            That is a meme in the original sense: a small, sticky unit of culture
+            that copies itself from person to person and quietly decides how the
+            work gets done. Johnson wrote fourteen rules; what actually spread
+            through the hangar was the six-word compression of them. Every
+            organisation runs on memes whether it picks them deliberately or
+            not. These are ours.
+          </p>
+
+          <p>
             <strong>Declare War on Complexity</strong>
           </p>
 
