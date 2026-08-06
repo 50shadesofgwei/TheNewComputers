@@ -1386,9 +1386,9 @@ function App() {
                 15
               </a>
             </sup>
-            . Clearly then, intelligence alone is not the differentiating factor
-            between a successful enterprise and an unsuccessful one. So what
-            is?
+            . Clearly then, intelligence and hard work alone are not the
+            differentiating factor between a successful enterprise and an
+            unsuccessful one. So what is?
           </p>
 
           <p>
