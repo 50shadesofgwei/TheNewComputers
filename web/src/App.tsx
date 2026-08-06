@@ -1435,8 +1435,12 @@ function App() {
           <p>
             Those rules are memes in the original sense: small, sticky units of
             culture that copy themselves from person to person and quietly decide
-            how the work gets done. Every organisation runs on memes whether it
-            chooses them consciously or not. These are ours.
+            how the work gets done.
+          </p>
+
+          <p>
+            Every organisation runs on memes whether it chooses them
+            consciously or not. These are ours.
           </p>
 
           <p>
