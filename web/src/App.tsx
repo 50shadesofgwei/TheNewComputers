@@ -1345,7 +1345,7 @@ function App() {
         <div className="chapter-copy">
           <p className="meta">PT—06/ 07</p>
           <p className="chapter-kicker">
-            Declare War on Complexity. Tip-of-the-Spear Focus. Question Every
+            Declare War on Complexity. Flash Mob the Bottleneck. Question Every
             Requirement. Scrappiness. Fail Visibly and Fail Often.
           </p>
           <h2 className="chapter-title">The People</h2>
@@ -1475,9 +1475,11 @@ function App() {
           </p>
 
           <p>
-            <strong>Tip-of-the-Spear Focus</strong>
+            <strong>Flash Mob the Bottleneck</strong>
             <br />
-            [Does this get us closer to Mars? If not, let's skip for now.]
+            [Am I cleaning my room when I should be doing my homework? Find the
+            single constraint choking the build — then disproportionate
+            resources until it breaks. Raptors, not heat shields.]
           </p>
 
           <p>
