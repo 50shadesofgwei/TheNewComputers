@@ -1526,6 +1526,18 @@ function App() {
             </sup>
           </p>
 
+          <p>
+            Publishing papers about potential quantum impact in chemistry,
+            mathematical proofs of niche optimisation problems, or even
+            error-correcting codes are intellectually commendable,{' '}
+            <em>but are not the bottleneck</em>.
+          </p>
+
+          <p>
+            The question must always be: does this get us closer to a million
+            qubits? If not, let’s skip it for now.
+          </p>
+
           <h3>Question Every Requirement</h3>
           <p className="meme-subhead">
             Requirements from smart people are the most dangerous, because
