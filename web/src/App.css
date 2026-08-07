@@ -124,10 +124,6 @@
   color: var(--text-inv);
 }
 
-.chapter.chapter-pt02 {
-  background: var(--bg-violet);
-}
-
 .chapter.steel {
   background: var(--bg-b);
   color: var(--text-inv);

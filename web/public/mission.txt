@@ -85,119 +85,7 @@ Tens of thousands of PhDs will have to decide that there is more to a career tha
 citations and ill-paid postdoc positions. The effort needs true ingenuity across nanofabrication,
 photonics, specialised hardware manufacturing, and hundreds of other foundational areas.
 
-2. What Are Quantum Computers Good For, Anyway?
-The New Computers had, out of the blue, solved what was previously thought to be an
-intractable problem; the classical world was again proven to contain patterns only
-visible through the lens of quantum mechanics.
-
-In 1981, Richard Feynman - frustrated at the difficulty that classical computers faced in trying to
-simulate quantum mechanical problems - hypothesised a computer that was directly suited to
-the task at hand. One that had quantum mechanics built right into the machine.
-
-
-
-
-This was the nucleus of the idea; that in order to simulate quantum mechanics, one would need
-a quantum-mechanical calculator.
-
-Fast-forward 40 years and some unexpected results popped up along the way. In 1994 an
-American computer scientist named Peter Shor discovered that prime factorisation, a problem
-considered classically intractable, was solvable [in polynomial time] by an algorithm unique to
-the new computers. This was somewhat unexpected, as far as Feynman's original hypothesis
-was concerned; the new computer had broken out of its original box and was solving problems
-in the classical world, too.
-
-The classical world was proven to contain patterns only visible through the lens of
-quantum mechanics.
-
-For all the attention paid to codebreaking, however, the most consequential application may still
-be the one Feynman first imagined: simulating matter.
-
-Take something as ordinary as steel. Whether a bridge bends or holds depends on the
-arrangement of its atoms, the defects between its crystals and, ultimately, the electrons binding
-it together. The macroscopic properties emerge from microscopic behaviour.
-
-Everything we build is ultimately limited by materials. The efficiency of a solar cell, the capacity
-of a battery, the strength of a magnet and the temperature at which a superconductor works all
-emerge from the behaviour of the arrangement of the atoms, the nuclei and the electrons inside
-matter. Where we can predict that behaviour accurately, we can design new materials
-around the properties we want them to possess.
-
-For many types of materials, classical algorithms can compute simulations very effectively
-using approximation algorithms; Walter Kohn was awarded half of the 1998 Nobel Prize in
-Chemistry for such work. But in complex materials, so called "strongly correlated" systems
-where many electrons all become entangled, these approximations begin to fail. The number of
-possible states that the material could be in increases exponentially with the number of
-electrons.
-
-A Quantum Computer can encode this problem natively.
-
-[A classical computer has to simulate quantum properties with algorithms and clever code],
-while a quantum computer has these properties baked in. The data stored in the entanglement,
-phase, and [something else] of a single atom, a single qubit, [would take many orders of
-magnitude more bits to replicate].
-
-So what's the difference?
-
-In the Quantum Computing circuit, we can prepare our qubits in a state that mimics that of the
-material we want to investigate, then sit back and watch how they behave. The exponential web
-of possibilities is encoded in the qubits themselves, not in the [something else]. [Now we just let
-the system evolve and take measurements, and see whether we see the patterns we're looking
-for.]
-
-This is the general class of problem for which these machines were originally conceived;
-quantum-mechanical systems whose exact evolution requires a classical computer to
-manipulate an exponentially growing wavefunction, but whose relevant properties may be
-extracted more efficiently from a controlled quantum simulation. Of course scientists will still
-have to test the results in the lab, but the direction of physical experimentation is made less
-blind by eliminating bad candidates before they are synthesised, using the patterns that
-classical models alone cannot uncover.
-
-Equally important as knowing what a QC does is to know what it does not do. Much talk is
-heard surrounding quantum improvements to financial portfolio planning and general
-optimisation problems; claims around quantum impact in machine learning remain speculative
-at best.
-
-And to give the critics their due, they're absolutely justified in calling this out. There are a lot of
-exaggerations, half-truths, and hype that is totally ungrounded in reality.
-
-Some of the more uniquely egregious bullshit levied by the industry's less scrupulous
-commentators includes Michio Kaku's claim that "quantum computers will make cancer as
-harmless as the common cold"[source], the Google announcement that "quantum computers
-lend credence to the existence of parallel universes"[source], and that "As quantum AI
-technology advances, life expectancy will increase faster, eventually reaching a point where we
-gain a year of life expectancy each year."[source].
-
-All this, yet the largest number factored by a quantum computer remains 35.
-
-So what might they actually be good for?
-High-temperature superconductors are one relevant case.
-
-Those in tech circles may recall the stir caused in 2023 when a group of South Korean
-scientists went viral over their claim to have discovered a room-temperature superconductor.
-Independent replication later proved that this was not the case, but for a brief moment, their
-Nobel Prize and place in the annals of history seemed secured.
-
-Superconductors can carry current for long distances without any resistive loss, but as they
-exist today, the need for extreme-low temperatures and high pressures keeps them expensive,
-bulky or impractical. A high-temperature superconductor would enable smaller fusion magnets,
-more compact motors and generators, higher-capacity power cables, cheaper medical
-scanners and new forms of transport - all the things that currently use superconductors today.
-[Note: check this]
-
-Of course, none of this is guaranteed. Classical simulation will continue to improve. Useful
-quantum algorithms will demand machines far larger and more reliable than those available
-today. Quantum computers will, in all likelihood, be useless for almost everything we currently
-use computers for. They do not need to replace classical computation, any more than
-aeroplanes needed to replace bicycles: a 747 is transformative for getting across an ocean and
-useless for a trip to the shops. A small number of calculations currently beyond our reach will
-transform cryptography, energy, materials science and industrial chemistry.
-
-The prize, then, is not to replace all silicon computers, nor is it to 'access parallel universes',
-whatever that means. As the first man to discover fire, the first man in space and the first man
-to split the atom all knew, the ultimate prize is to understand and control matter itself.
-
-3. How Did We Get Here?
+2. How Did We Get Here?
 Quantum Computing inherited an institutional model designed to produce
 demonstrations over products.
 
@@ -301,7 +189,7 @@ reconstructed from scratch. (National Academies)
 rate at which competing architectures can be built, tested and improved will help determine the
 answer.]
 
-4. The Industry Today
+3. The Industry Today
 High unit cost and long lead times are the predictable result of producing highly
 specialised equipment in small volumes, for customers whose requirements frequently
 differ.
@@ -344,7 +232,7 @@ More money thrown around in grants and undifferentiated companies is unlikely to
 problem; the problem is not that we are insufficiently smart to use the toolkit we have, the
 problem is that the toolkit itself is not up to the task.
 
-5. Cutting the Gordian Knot
+4. Cutting the Gordian Knot
 Henry Ford is remembered for the Model T, but perhaps his more important innovation
 was the production line behind it. There are many contenders for the industry's Model T,
 many less for the production line.
@@ -508,6 +396,6 @@ All these parts came together in a way that was mutually reinforcing; first-prin
 engineering identified manufacturing optimisations, vertical integration let those optimisations
 happen, and standardisation allowed the volume to make that control profitable.
 
-6. Join Us
+5. Join Us
 [Some call to action]
 
