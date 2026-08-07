@@ -1546,7 +1546,7 @@ function App() {
           </p>
 
           <h3>When? Now!</h3>
-          <p className="meme-subhead">[Subheading TBD]</p>
+          <p className="meme-subhead">Speed Kills</p>
 
           <h3>Optimise for Boldness</h3>
           <p className="meme-subhead">The Mission Attracts Missionaries</p>
