@@ -1514,28 +1514,17 @@ function App() {
             himself… then he fails the exam.
           </p>
 
-          <TypewriterQuote
-            plain
-            paragraphs={[
-              {
-                parts: [
-                  {
-                    text: 'Always identify and go all-in on the biggest limiter. ',
-                  },
-                  {
-                    text: 'Don’t spread effort across secondary problems.',
-                    strong: true,
-                  },
-                  {
-                    text: ' Laser in on the single constraint that, if removed, would unlock everything downstream.',
-                    citeHref:
-                      'https://futureblind.com/p/atoms-are-cheap-process-is-pricey',
-                    citeN: '9',
-                  },
-                ],
-              },
-            ]}
-          />
+          <p className="quote-italic">
+            Always identify and go all-in on the biggest limiter.{' '}
+            <strong>Don’t spread effort across secondary problems.</strong>{' '}
+            Laser in on the single constraint that, if removed, would unlock
+            everything downstream.
+            <sup className="cite">
+              <a href="https://futureblind.com/p/atoms-are-cheap-process-is-pricey">
+                9
+              </a>
+            </sup>
+          </p>
 
           <TypewriterQuote
             plain
