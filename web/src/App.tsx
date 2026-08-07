@@ -1346,7 +1346,7 @@ function App() {
           <p className="meta">PT—06/ 07</p>
           <p className="chapter-kicker">
             Declare War on Complexity. Flash-Mob the Bottleneck. Question Every
-            Requirement. Scrappiness. Fail Visibly and Fail Often.
+            Requirement. Scrappiness. Maximise Boldness.
           </p>
           <h2 className="chapter-title">The People</h2>
         </div>
@@ -1493,7 +1493,10 @@ function App() {
           </p>
 
           <p>
-            <strong>Fail Visibly and Fail Often</strong>
+            <strong>Maximise Boldness</strong>
+            <br />
+            [Ten rough versions you’ll blow up, not one polished version you’re
+            afraid to break. Timidity dressed as prudence.]
           </p>
         </div>
       </article>
