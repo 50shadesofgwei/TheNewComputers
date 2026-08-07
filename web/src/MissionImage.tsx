@@ -48,9 +48,6 @@ export const IMAGE = {
   figPenicillin: { name: 'fig-penicillin', width: 1226, height: 680 },
   figPlanar: { name: 'fig-planar', width: 1600, height: 721 },
   figMocvd: { name: 'fig-mocvd', width: 521, height: 383 },
-  figPeople: { name: 'fig-people', width: 1600, height: 1054 },
-  figTeleportation: { name: 'fig-teleportation', width: 1448, height: 1086 },
-  figSkunkworks: { name: 'fig-skunkworks', width: 1600, height: 884 },
   uva01: { name: 'uva-atomic-01', width: 900, height: 1600 },
   uva02: { name: 'uva-atomic-02', width: 900, height: 1600 },
 } as const
@@ -62,5 +59,4 @@ export const CHAPTER_IMAGES = [
   IMAGE.uva01.name,
   IMAGE.uva02.name,
   IMAGE.fig003.name,
-  IMAGE.figPeople.name,
 ] as const
