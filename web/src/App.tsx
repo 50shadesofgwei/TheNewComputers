@@ -998,7 +998,7 @@ function App() {
         </div>
       </section>
 
-      <article className="prose prose-layout-start prose-knot">
+      <article className="prose prose-layout-start">
         <div className="prose-inner">
           <h2 className="prose-display">
             5. Cutting the Gordian Knot
@@ -1068,277 +1068,259 @@ function App() {
               <span>Debris of the Falcon 1 launch</span>
             </figcaption>
           </figure>
-        </div>
 
-        <div
-          className="knot-split"
-          aria-label="SpaceX practices alongside the quantum hardware problem"
-        >
-          <div className="knot-split-labels" aria-hidden="true">
-            <span className="knot-label knot-label--spacex">SpaceX</span>
-            <span className="knot-label knot-label--quantum">Quantum</span>
-          </div>
+          <h3>1. The Idiot Index</h3>
 
-          <section className="knot-principle">
-            <h3 className="knot-principle-title">1. The Idiot Index</h3>
-            <div className="knot-cols">
-              <div className="knot-col knot-col--spacex">
-                <blockquote>
-                  <p>
-                    Musk eventually named this the &ldquo;idiot index&rdquo;: the
-                    ratio of the actual cost of a part to the cost of its raw
-                    materials. &ldquo;If the ratio is high,&rdquo; he says,
-                    &ldquo;you&rsquo;re an idiot.&rdquo;
-                  </p>
-                </blockquote>
-                <blockquote className="quote-plain">
-                  <p>
-                    Consider the Falcon 1 actuator. A vendor quoted $120,000 and
-                    eighteen months of development time.{' '}
-                    <strong>
-                      SpaceX engineer Steve Davis built it in-house in nine months
-                      for $3,900
-                      <sup className="cite">
-                        <a href="https://www.vice.com/en/article/how-elon-musk-willed-spacex-into-making-the-cheapest-rockets-ever-created/">
-                          10
-                        </a>
-                      </sup>
-                      .
-                    </strong>
-                  </p>
-                </blockquote>
-              </div>
-              <div className="knot-col knot-col--quantum">
-                <p>
-                  A classical computer is made from a laundry list of component
-                  parts. GPUs, CPUs, cooling systems, et cetera. A quantum computer
-                  is much the same; high-precision lasers, vacuum systems,
-                  single-photon detectors, and more.
-                </p>
-                <p>
-                  Each of these component parts can be assigned it&rsquo;s own
-                  idiot index; a high value is a flashing light pointing to a
-                  poorly optimised manufacturing process. Values for
-                  ultra-precision components will of course be higher than those
-                  for parts with lower precision requirements, but this only
-                  indicates a higher cost floor; it says nothing about how far the
-                  current machinery is above it.
-                </p>
-                <p>
-                  Knowing where the manufacturing inefficiencies are hiding is
-                  only half the problem, however. Fixing them is more difficult,
-                  especially so with quantum hardware.
-                </p>
-              </div>
-            </div>
-          </section>
+          <TypewriterQuote
+            paragraphs={[
+              {
+                text: 'Musk eventually named this the "idiot index": the ratio of the actual cost of a part to the cost of its raw materials. “If the ratio is high,” he says, “you’re an idiot.”',
+              },
+            ]}
+          />
 
-          <section className="knot-principle">
-            <h3 className="knot-principle-title">2. Question Every Requirement</h3>
-            <div className="knot-cols">
-              <div className="knot-col knot-col--spacex">
-                <blockquote>
-                  <p>
-                    Junior engineers are explicitly told that requirements from
-                    &ldquo;smart people&rdquo; are the most dangerous, because
-                    nobody thinks to question them.
-                  </p>
-                </blockquote>
-                <blockquote>
-                  <p>
-                    Delete, delete, delete... the best part is no part - the best
-                    process is no process.
-                  </p>
-                </blockquote>
-              </div>
-              <div className="knot-col knot-col--quantum">
-                <p>
-                  A high idiot index identifies an expensive component; the
-                  knee-jerk response is ask how the component can be manufactured
-                  more cheaply, but the more astute question is to ask whether it
-                  needs to exist at all. Get rid of the part entirely and the
-                  idiot index falls to 0.
-                </p>
-                <p>
-                  The same exercise can be carried into the quantum supply chain.
-                  Commercial{' '}
-                  <TermPeek
-                    term="MOCVD reactors"
-                    title="MOCVD Reactor"
-                    wide
-                    imageName={IMAGE.figMocvd.name}
-                    imageWidth={IMAGE.figMocvd.width}
-                    imageHeight={IMAGE.figMocvd.height}
-                    imageAlt="Commercial MOCVD reactor used for epitaxial semiconductor growth"
-                  >
-                    Metal-organic chemical vapour deposition — a machine that grows
-                    thin semiconductor layers by flowing precursor gases over a
-                    heated wafer. The workhorse tool for fabricating
-                    compound-semiconductor lasers and related devices.
-                  </TermPeek>{' '}
-                  are designed to grow semiconductor layers of all different
-                  chemical makeups and sizes, all with fully automated handling.
-                </p>
-                <p>
-                  How much of the cost and complexity of the machine could be
-                  reduced if the requirement to fit multiple designs was removed? A
-                  refurbished second-hand reactor cost Glasgow University £165,000
-                  in 2017
-                  <sup className="cite">
-                    <a href="https://www.publiccontractsscotland.gov.uk/search/show/search_view.aspx?ID=JUL290649">
-                      11
-                    </a>
-                  </sup>
-                  , while high-capacity commercial systems have historically cost
-                  millions
-                  <sup className="cite">
-                    <a href="https://www.digitimes.com/news/a20130416PD214.html">
-                      12
-                    </a>
-                  </sup>
-                  .
-                </p>
-              </div>
-            </div>
-          </section>
+          <p>
+            A classical computer is made from a laundry list of component parts.
+            GPUs, CPUs, cooling systems, et cetera. A quantum computer is much the
+            same; high-precision lasers, vacuum systems, single-photon detectors,
+            and more.
+          </p>
 
-          <section className="knot-principle">
-            <h3 className="knot-principle-title">
-              3. Standardisation of Components
-            </h3>
-            <div className="knot-cols">
-              <div className="knot-col knot-col--spacex">
-                <blockquote>
-                  <p>The only way to get volume is to standardise.</p>
-                </blockquote>
-                <blockquote className="quote-plain">
-                  <p>
-                    The existing approach was bespoke vehicles per mission.{' '}
-                    <strong>
-                      SpaceX bet the opposite: that cost savings from
-                      standardisation would exceed the value of customisation.
-                    </strong>{' '}
-                    Yes, customers wanted custom solutions. But they wanted low
-                    prices even more. Force them to choose, and they&rsquo;d adapt.
-                  </p>
-                </blockquote>
-              </div>
-              <div className="knot-col knot-col--quantum">
-                <p>
-                  Go to any quantum hardware supplier right now, be it lasers,
-                  vacuum chambers or semiconductor fabs, and you will inevitably
-                  see the words &lsquo;request a quotation&rsquo; in place of a
-                  price tag. Why is this? Are suppliers being secretive, or do they
-                  genuinely not know?
-                </p>
-                <p>
-                  It&rsquo;s the latter, of course, but let&rsquo;s not be too
-                  quick to point fingers: it&rsquo;s the same
-                  low-volume-differing-requirements problem again. One company
-                  chooses calcium ions; another chooses barium. Even two barium
-                  systems might have different requirements if different isotopes
-                  are used.
-                </p>
-                <p>
-                  Economies of scale only come from making the same design
-                  repeatedly; fragmented demand denies suppliers the opportunity to
-                  drive their costs down and their production rates up.
-                </p>
-              </div>
-            </div>
-          </section>
+          <TypewriterQuote
+            plain
+            paragraphs={[
+              {
+                parts: [
+                  {
+                    text: 'Consider the Falcon 1 actuator. A vendor quoted $120,000 and eighteen months of development time. ',
+                  },
+                  {
+                    text: 'SpaceX engineer Steve Davis built it in-house in nine months for $3,900',
+                    strong: true,
+                    citeHref:
+                      'https://www.vice.com/en/article/how-elon-musk-willed-spacex-into-making-the-cheapest-rockets-ever-created/',
+                    citeN: '10',
+                  },
+                  { text: '.', strong: true },
+                ],
+              },
+            ]}
+          />
 
-          <section className="knot-principle">
-            <h3 className="knot-principle-title">4. Vertical Integration</h3>
-            <div className="knot-cols">
-              <div className="knot-col knot-col--spacex">
-                <blockquote className="quote-plain">
-                  <p>
-                    If materials are cheap and the tax is all process and overhead,
-                    you need to control the process to capture the savings.{' '}
-                    <strong>
-                      You can&rsquo;t negotiate your way to a 10x cost reduction
-                      with suppliers who have profits baked in at every tier.
-                    </strong>{' '}
-                    By building 80% of its hardware internally, SpaceX collapsed
-                    the traditional aerospace stack.
-                  </p>
-                </blockquote>
-              </div>
-              <div className="knot-col knot-col--quantum">
-                <p className="pull">
-                  Vertical integration gives manufacturers the freedom to cut
-                  everything that is not absolutely critical to building better
-                  computers.
-                </p>
-                <p>
-                  In practical terms, vertical integration means avoiding the time
-                  cost and incurred margins of outsourcing components. But it comes
-                  with a cost. Fixed costs, specifically. Bringing the machines
-                  in-house isn&rsquo;t cheap, and incurs a lot of complexity in the
-                  short term. In fact, if the goal is to build a single computer,
-                  it doesn&rsquo;t make much sense to bring the manufacturing
-                  in-house at all.
-                </p>
-              </div>
-            </div>
-          </section>
+          <p>
+            Each of these component parts can be assigned it's own idiot index; a
+            high value is a flashing light pointing to a poorly optimised
+            manufacturing process. Values for ultra-precision components will of
+            course be higher than those for parts with lower precision
+            requirements, but this only indicates a higher cost floor; it says
+            nothing about how far the current machinery is above it.
+          </p>
 
-          <section className="knot-principle">
-            <h3 className="knot-principle-title">5. Increase Iteration Speed</h3>
-            <div className="knot-cols">
-              <div className="knot-col knot-col--spacex">
-                <blockquote>
-                  <p>
-                    Traditional aerospace builds few prototypes, each one expensive
-                    and near-flight-ready. SpaceX builds many cheaper prototypes.{' '}
-                    <strong>
-                      They&rsquo;d rather have ten rough versions to blow up than
-                      one polished version they&rsquo;re afraid to break.
-                    </strong>
-                  </p>
-                </blockquote>
-                <figure className="figure">
-                  <MissionImage
-                    {...IMAGE.fig003}
-                    alt="Evolution of the Raptor engine from version 1 to 3"
-                  />
-                  <figcaption>
-                    <strong>[FIG.8]</strong>
-                    <span>
-                      Evolution of the Raptor engine, from version 1 to 3
-                    </span>
-                    <span>Simplify, simplify, simplify!</span>
-                  </figcaption>
-                </figure>
-              </div>
-              <div className="knot-col knot-col--quantum">
-                <p>
-                  The idiot index identifies where manufacturing optimisations can
-                  be made, vertical integration gives the control needed to
-                  implement them, and standardising the components unlocks the
-                  economies of scale needed to make them cheap.
-                </p>
-                <p>
-                  But internalising all these manufacturing processes internalises
-                  the maintenance costs, not to mention the price of the machines
-                  themselves. The factory loses money every second that these
-                  machines aren&rsquo;t producing something valuable. Iteration
-                  speed is what makes the whole process profitable - new ideas can
-                  be tested cheaply, quickly, and the manufacturers needn&rsquo;t
-                  be precious about whether an idea is likely to work or not. The
-                  whole design process gets flipped on its head; instead of having
-                  to meticulously plan out what ideas get to go in the new design
-                  before starting manufacture, ideas can be tried cheaply and
-                  quickly. If they don&rsquo;t work, the time and financial loss is
-                  minimal.
-                </p>
-              </div>
-            </div>
-          </section>
-        </div>
+          <p>
+            Knowing where the manufacturing inefficiencies are hiding is only half
+            the problem, however. Fixing them is more difficult, especially so
+            with quantum hardware.
+          </p>
 
-        <div className="prose-inner prose-inner--knot-close">
+          <h3>2. Question Every Requirement</h3>
+
+          <TypewriterQuote
+            paragraphs={[
+              {
+                text: 'Junior engineers are explicitly told that requirements from "smart people" are the most dangerous, because nobody thinks to question them.',
+              },
+            ]}
+          />
+
+          <p>
+            A high idiot index identifies an expensive component; the knee-jerk
+            response is ask how the component can be manufactured more cheaply,
+            but the more astute question is to ask whether it needs to exist at
+            all. Get rid of the part entirely and the idiot index falls to 0.
+          </p>
+
+          <TypewriterQuote
+            paragraphs={[
+              {
+                text: 'Delete, delete, delete... the best part is no part - the best process is no process.',
+              },
+            ]}
+          />
+
+          <p>
+            The same exercise can be carried into the quantum supply chain.
+            Commercial{' '}
+            <TermPeek
+              term="MOCVD reactors"
+              title="MOCVD Reactor"
+              wide
+              imageName={IMAGE.figMocvd.name}
+              imageWidth={IMAGE.figMocvd.width}
+              imageHeight={IMAGE.figMocvd.height}
+              imageAlt="Commercial MOCVD reactor used for epitaxial semiconductor growth"
+            >
+              Metal-organic chemical vapour deposition — a machine that grows
+              thin semiconductor layers by flowing precursor gases over a heated
+              wafer. The workhorse tool for fabricating compound-semiconductor
+              lasers and related devices.
+            </TermPeek>{' '}
+            are designed to grow semiconductor layers of all different chemical
+            makeups and sizes, all with fully automated handling.
+          </p>
+
+          <p>
+            How much of the cost and complexity of the machine could be reduced
+            if the requirement to fit multiple designs was removed? A
+            refurbished second-hand reactor cost Glasgow University £165,000 in
+            2017
+            <sup className="cite">
+              <a href="https://www.publiccontractsscotland.gov.uk/search/show/search_view.aspx?ID=JUL290649">
+                11
+              </a>
+            </sup>
+            , while high-capacity commercial systems have historically cost
+            millions
+            <sup className="cite">
+              <a href="https://www.digitimes.com/news/a20130416PD214.html">12</a>
+            </sup>
+            .
+          </p>
+
+          <h3>3. Standardisation of Components</h3>
+
+          <TypewriterQuote
+            paragraphs={[
+              { text: 'The only way to get volume is to standardise.' },
+            ]}
+          />
+
+          <p>
+            Go to any quantum hardware supplier right now, be it lasers, vacuum
+            chambers or semiconductor fabs, and you will inevitably see the words
+            'request a quotation' in place of a price tag. Why is this? Are
+            suppliers being secretive, or do they genuinely not know?
+          </p>
+
+          <TypewriterQuote
+            plain
+            paragraphs={[
+              {
+                parts: [
+                  {
+                    text: 'The existing approach was bespoke vehicles per mission. ',
+                  },
+                  {
+                    text: 'SpaceX bet the opposite: that cost savings from standardisation would exceed the value of customisation.',
+                    strong: true,
+                  },
+                  {
+                    text: ' Yes, customers wanted custom solutions. But they wanted low prices even more. Force them to choose, and they’d adapt.',
+                  },
+                ],
+              },
+            ]}
+          />
+
+          <p>
+            It's the latter, of course, but let's not be too quick to point
+            fingers: it's the same low-volume-differing-requirements problem again.
+            One company chooses calcium ions; another chooses barium. Even two
+            barium systems might have different requirements if different isotopes
+            are used.
+          </p>
+
+          <p>
+            Economies of scale only come from making the same design repeatedly;
+            fragmented demand denies suppliers the opportunity to drive their
+            costs down and their production rates up.
+          </p>
+
+          <h3>4. Vertical Integration</h3>
+
+          <TypewriterQuote
+            plain
+            paragraphs={[
+              {
+                parts: [
+                  {
+                    text: 'If materials are cheap and the tax is all process and overhead, you need to control the process to capture the savings. ',
+                  },
+                  {
+                    text: 'You can’t negotiate your way to a 10x cost reduction with suppliers who have profits baked in at every tier.',
+                    strong: true,
+                  },
+                  {
+                    text: ' By building 80% of its hardware internally, SpaceX collapsed the traditional aerospace stack.',
+                  },
+                ],
+              },
+            ]}
+          />
+
+          <p className="pull">
+            Vertical integration gives manufacturers the freedom to cut everything
+            that is not absolutely critical to building better computers.
+          </p>
+
+          <p>
+            In practical terms, vertical integration means avoiding the time cost
+            and incurred margins of outsourcing components. But it comes with a
+            cost. Fixed costs, specifically. Bringing the machines in-house isn't
+            cheap, and incurs a lot of complexity in the short term. In fact, if
+            the goal is to build a single computer, it doesn't make much sense to
+            bring the manufacturing in-house at all.
+          </p>
+
+          <h3>5. Increase Iteration Speed</h3>
+
+          <p>
+            The idiot index identifies where manufacturing optimisations can be
+            made, vertical integration gives the control needed to implement them,
+            and standardising the components unlocks the economies of scale needed
+            to make them cheap.
+          </p>
+
+          <p>
+            But internalising all these manufacturing processes internalises the
+            maintenance costs, not to mention the price of the machines themselves.
+            The factory loses money every second that these machines aren't
+            producing something valuable. Iteration speed is what makes the whole
+            process profitable - new ideas can be tested cheaply, quickly, and the
+            manufacturers needn't be precious about whether an idea is likely to
+            work or not. The whole design process gets flipped on its head; instead
+            of having to meticulously plan out what ideas get to go in the new
+            design before starting manufacture, ideas can be tried cheaply and
+            quickly. If they don't work, the time and financial loss is minimal.
+          </p>
+
+          <TypewriterQuote
+            paragraphs={[
+              {
+                parts: [
+                  {
+                    text: 'Traditional aerospace builds few prototypes, each one expensive and near-flight-ready. SpaceX builds many cheaper prototypes. ',
+                  },
+                  {
+                    text: 'They’d rather have ten rough versions to blow up than one polished version they’re afraid to break.',
+                    strong: true,
+                  },
+                ],
+              },
+            ]}
+          />
+
+          <figure className="figure">
+            <MissionImage
+              {...IMAGE.fig003}
+              alt="Evolution of the Raptor engine from version 1 to 3"
+            />
+            <figcaption>
+              <strong>[FIG.8]</strong>
+              <span>Evolution of the Raptor engine, from version 1 to 3</span>
+              <span>Simplify, simplify, simplify!</span>
+            </figcaption>
+          </figure>
+
           <p>
             All these parts came together in a way that was mutually reinforcing;
             first-principles engineering identified manufacturing optimisations,
