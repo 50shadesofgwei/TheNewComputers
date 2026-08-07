@@ -1533,7 +1533,9 @@ function App() {
             <em>but are not the bottleneck</em>. The question must always be:{' '}
             <strong>
               does this get us closer to a million qubits? If not, then delete.
-            </strong>
+            </strong>{' '}
+            Any time a system-wide bottleneck was identified, it immediately
+            received disproportionate resources.
           </p>
 
           <h3>Question Every Requirement</h3>
