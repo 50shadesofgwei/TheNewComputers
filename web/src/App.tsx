@@ -1345,8 +1345,7 @@ function App() {
         <div className="chapter-copy">
           <p className="meta">PT—06/ 07</p>
           <p className="chapter-kicker">
-            Declare War on Complexity. Flash-Mob the Bottleneck. Question Every
-            Requirement. Scrappiness. Maximise Boldness.
+            The mission attracts missionaries.
           </p>
           <h2 className="chapter-title">The People</h2>
         </div>
