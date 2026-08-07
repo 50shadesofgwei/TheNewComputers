@@ -1505,33 +1505,13 @@ function App() {
           </p>
 
           <p>
-            “Do the most important thing first” is so common as to be cliché. So
-            why doesn’t it happen?
-          </p>
-
-          <p>
-            A kid has an exam tomorrow. It’s for geography, or history, or maths,
-            or some other subject that he might even like — but doesn’t really
-            want to study for. He knows he should study, of course, and he feels
-            the pang of conscience about it. But he’s never studied hard before,
-            and he has no handle on the problem; maybe he’s missing his textbooks,
-            or he’s waiting on a study friend to come around. Instead, he cleans
-            his room. And he does a great job too: his shirts are neatly ironed
-            and put away, his bed is neatly made. It’s the best his room has ever
-            looked, and he’s proud of it. He feels productive. He takes pride in
-            the genuinely great job that’s completed. Somewhere along the way, he
-            forgot about the exam.
-          </p>
-
-          <p>
-            Next thing he knows, his parents are standing in his now-impeccably
-            clean room, demanding to know why he’s failed. He protests in
-            agonised cries about all the effort and genuine care he put into his
-            room — he did a beautiful job. His parents, torn, don’t know what to
-            say. As far as they can remember he had never put this much care and
-            dedication into anything, and they wouldn’t want to upset him. And
-            yet the point still stands: he’s flunked the exam, and now that ship
-            has sailed.
+            A child has an exam tomorrow. He knows he should study, but he
+            doesn’t know where to begin; maybe he is missing a textbook, or
+            waiting for a friend who said they’d come over to study, or some
+            other probably-valid reason. So instead, he cleans his room; he
+            works hard and does a beautiful job. By the end, his shirts are
+            neatly ironed, his bed is made, and he feels justifiably proud of
+            himself… then he fails the exam.
           </p>
 
           <p>
