@@ -1535,8 +1535,11 @@ function App() {
                 9
               </a>
             </sup>
-            . System-level bottlenecks are allocated disproportionate
-            resources.
+            .{' '}
+            <strong>
+              System-level bottlenecks are allocated disproportionate resources
+              until they are solved.
+            </strong>
           </p>
 
           <h3>Question Every Requirement</h3>
