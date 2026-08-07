@@ -1508,7 +1508,7 @@ function App() {
             A child has an exam tomorrow. He knows he should study, but he
             doesn’t know where to begin; maybe he is missing a textbook, or
             waiting for a friend who said they’d come over to study, or some
-            other probably-valid reason. So instead, he cleans his room; he
+            other perfectly valid reason. So instead, he cleans his room; he
             works hard and does a beautiful job. By the end, his shirts are
             neatly ironed, his bed is made, and he feels justifiably proud of
             himself… then he fails the exam.
