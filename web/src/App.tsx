@@ -1035,11 +1035,12 @@ function App() {
           />
 
           <p>
-            The negative feedback loop is identical in both cases: low volumes
-            keep components bespoke; bespoke production offers little incentive
-            for suppliers to overhaul their methods; prices remain high and lead
-            times long; and low volumes persist. In one case, the scarce unit is a
-            launch. In the other, it is a quantum computer.
+            The similarities are striking. The negative feedback loop is identical in both
+            cases: low volumes keep components bespoke; bespoke
+            production offers little incentive for suppliers to overhaul their
+            methods; prices remain high and lead times long; and low volumes
+            persist. In one case, the scarce unit is a launch. In the other, it is
+            a quantum computer.
           </p>
 
           <p className="pull pull-xl">
