@@ -1526,26 +1526,6 @@ function App() {
             </sup>
           </p>
 
-          <TypewriterQuote
-            plain
-            paragraphs={[
-              {
-                parts: [
-                  {
-                    text: 'When Starship development was bottlenecked on Raptor engine production, that became the company’s focus. Not propellant loading. Not heat shields. Not launch infrastructure. Raptors. Once engine production broke through, attention shifted to the next constraint. ',
-                  },
-                  {
-                    text: 'The limiter always gets the hammer.',
-                    strong: true,
-                    citeHref:
-                      'https://futureblind.com/p/atoms-are-cheap-process-is-pricey',
-                    citeN: '9',
-                  },
-                ],
-              },
-            ]}
-          />
-
           <h3>Question Every Requirement</h3>
           <p className="meme-subhead">
             Requirements from smart people are the most dangerous, because
