@@ -1444,26 +1444,28 @@ function App() {
 
           <p>These are ours.</p>
 
-          <div className="meme-row" aria-label="Our memes">
-            <div className="meme-card">
-              <div className="meme-card-art" aria-hidden="true" />
-              <p className="meme-card-title">Declare War on Complexity</p>
-            </div>
-            <div className="meme-card">
-              <div className="meme-card-art" aria-hidden="true" />
-              <p className="meme-card-title">Flash-Mob the Bottleneck</p>
-            </div>
-            <div className="meme-card">
-              <div className="meme-card-art" aria-hidden="true" />
-              <p className="meme-card-title">Question Every Requirement</p>
-            </div>
-            <div className="meme-card">
-              <div className="meme-card-art" aria-hidden="true" />
-              <p className="meme-card-title">When? Now!</p>
-            </div>
-            <div className="meme-card">
-              <div className="meme-card-art" aria-hidden="true" />
-              <p className="meme-card-title">Optimise for Boldness</p>
+          <div className="meme-band">
+            <div className="meme-row" aria-label="Our memes">
+              <div className="meme-card">
+                <div className="meme-card-art" aria-hidden="true" />
+                <p className="meme-card-title">Declare War on Complexity</p>
+              </div>
+              <div className="meme-card">
+                <div className="meme-card-art" aria-hidden="true" />
+                <p className="meme-card-title">Flash-Mob the Bottleneck</p>
+              </div>
+              <div className="meme-card">
+                <div className="meme-card-art" aria-hidden="true" />
+                <p className="meme-card-title">Question Every Requirement</p>
+              </div>
+              <div className="meme-card">
+                <div className="meme-card-art" aria-hidden="true" />
+                <p className="meme-card-title">When? Now!</p>
+              </div>
+              <div className="meme-card">
+                <div className="meme-card-art" aria-hidden="true" />
+                <p className="meme-card-title">Optimise for Boldness</p>
+              </div>
             </div>
           </div>
 
