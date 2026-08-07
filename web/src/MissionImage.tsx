@@ -33,19 +33,14 @@ export function MissionImage({
 
 export const IMAGE = {
   fig000: { name: 'fig-000', width: 1600, height: 806 },
-  fig001: { name: 'fig-001', width: 962, height: 1200 },
   fig002: { name: 'fig-002', width: 1400, height: 1104 },
   fig003: { name: 'fig-003', width: 1600, height: 961 },
   figGordianV2: { name: 'fig-gordian-v2', width: 1600, height: 900 },
   figLaser: { name: 'fig-laser', width: 1600, height: 1205 },
-  figIbm: { name: 'fig-ibm', width: 1047, height: 1600 },
-  figCuprate: { name: 'fig-cuprate', width: 900, height: 646 },
   figNistPaper: { name: 'fig-nist-paper', width: 900, height: 1165 },
-  figCondensed: { name: 'fig-condensed-matter', width: 1440, height: 810 },
   figOpticalBench: { name: 'fig-optical-bench', width: 1065, height: 734 },
   figWolfgangPaul: { name: 'fig-wolfgang-paul', width: 480, height: 720 },
   figDavidWineland: { name: 'fig-david-wineland', width: 478, height: 720 },
-  figWalterKohn: { name: 'fig-walter-kohn', width: 720, height: 974 },
   figMocvd: { name: 'fig-mocvd', width: 521, height: 383 },
   uva01: { name: 'uva-atomic-01', width: 900, height: 1600 },
   uva02: { name: 'uva-atomic-02', width: 900, height: 1600 },
@@ -54,7 +49,6 @@ export const IMAGE = {
 /** Chapter splash images in scroll order — used for ahead-of-time preload. */
 export const CHAPTER_IMAGES = [
   IMAGE.fig000.name,
-  IMAGE.fig001.name,
   IMAGE.uva01.name,
   IMAGE.uva02.name,
   IMAGE.figGordianV2.name,
