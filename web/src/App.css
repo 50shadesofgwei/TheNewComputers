@@ -930,6 +930,7 @@
   min-height: 100vh;
   min-height: 100dvh;
   margin: 0;
+  margin-top: calc(1.35rem * 2.5);
   margin-left: calc(50% - 50vw);
   padding: clamp(3rem, 8vw, 5.5rem) var(--page-pad);
   display: grid;
