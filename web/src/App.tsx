@@ -1106,8 +1106,10 @@ function App() {
           </p>
 
           <p>
-            Economies of scale only emerge from making the same design in bulk;
-            fragmented demand denies suppliers the opportunity to do so.
+            <strong>
+              Economies of scale only emerge from making the same design in bulk;
+              fragmented demand denies suppliers the opportunity to do so.
+            </strong>
           </p>
 
           <h3 className="knot-title">4. Vertical Integration</h3>
