@@ -1515,7 +1515,7 @@ function App() {
           </p>
 
           <p className="quote-italic">
-            Always identify and go all-in on the biggest limiter.{' '}
+            Always identify and attack the biggest limiter.{' '}
             <strong>Don’t spread effort across secondary problems.</strong>{' '}
             Laser in on the single constraint that, if removed, would unlock
             everything downstream.
