@@ -861,10 +861,15 @@ function App() {
         {/* Media first so copy can wrap around the uncropped illustration */}
         <div className="chapter-media">
           <MissionImage
-            {...IMAGE.fig003}
-            alt="Evolution of the Raptor engine from version 1 to 3"
+            {...IMAGE.figGordianV2}
+            alt="Drone photo of Intel Fab 9 under construction in Rio Rancho, New Mexico, January 2024"
           />
           <span className="part-tag">PT—5</span>
+          <p className="chapter-caption">
+            <strong>[FIG.7]</strong>
+            <span>Intel Fab 9 — Rio Rancho, New Mexico</span>
+            <span>Advanced packaging facility, January 2024</span>
+          </p>
         </div>
         <div className="chapter-copy">
           <p className="meta">PT—05/ 05</p>
@@ -948,7 +953,7 @@ function App() {
               alt="Engineers examining hardware wreckage"
             />
             <figcaption>
-              <strong>[FIG.7]</strong>
+              <strong>[FIG.8]</strong>
               <span>Fail visibly, learn quickly</span>
               <span>Debris of the Falcon 1 launch</span>
             </figcaption>
@@ -1152,12 +1157,12 @@ function App() {
             manufacturers needn&rsquo;t be precious about whether an idea is likely
             to work or not. The whole design process gets flipped on its head;
             instead of having to meticulously plan out what ideas get to go in the
-            new design before starting manufacture, ideas can be tried cheaply and
+            new design before starting manufacture, ideas can be tested cheaply and
             quickly. If they don&rsquo;t work, the time and financial loss is
             minimal.
           </p>
 
-          <blockquote className="knot-quote">
+          <blockquote className="quote-plain knot-quote">
             <p>
               Traditional aerospace builds few prototypes, each one expensive and
               near-flight-ready. SpaceX builds many cheaper prototypes.{' '}
@@ -1174,7 +1179,7 @@ function App() {
               alt="Evolution of the Raptor engine from version 1 to 3"
             />
             <figcaption>
-              <strong>[FIG.8]</strong>
+              <strong>[FIG.9]</strong>
               <span>Evolution of the Raptor engine, from version 1 to 3</span>
               <span>Simplify, simplify, simplify!</span>
             </figcaption>
@@ -1203,7 +1208,11 @@ function App() {
       <section className="cta" id="pt-06">
         <p className="meta">PT—X/ 05</p>
         <h2>Join Us</h2>
-        <p>[Some call to action]</p>
+        <p>
+          Pathfinder is looking for a technical cofounder: a physicist or
+          engineer prepared to spend the next decade hacking together the
+          quantum production line from scratch.
+        </p>
       </section>
     </div>
   )

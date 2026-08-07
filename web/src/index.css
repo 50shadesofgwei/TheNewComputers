@@ -1,5 +1,5 @@
 :root {
-  --bg: #fafafa;
+  --bg: #ffffff;
   --bg-black: #0c0d10;
   --bg-violet: #1c0520;
   --bg-a: #1a1c22;
@@ -7,7 +7,7 @@
   --bg-c: #c4a574;
   --bg-paper: #ffffff;
   --text: #0c0d10;
-  --text-inv: #fafafa;
+  --text-inv: #ffffff;
   --accent: #c4894a;
   --font-display: 'Familjen Grotesk', Helvetica, sans-serif;
   --font-meta: 'IBM Plex Mono', ui-monospace, monospace;

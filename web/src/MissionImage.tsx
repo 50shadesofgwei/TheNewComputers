@@ -36,6 +36,7 @@ export const IMAGE = {
   fig001: { name: 'fig-001', width: 962, height: 1200 },
   fig002: { name: 'fig-002', width: 1400, height: 1104 },
   fig003: { name: 'fig-003', width: 1600, height: 961 },
+  figGordianV2: { name: 'fig-gordian-v2', width: 1600, height: 900 },
   figLaser: { name: 'fig-laser', width: 1600, height: 1205 },
   figIbm: { name: 'fig-ibm', width: 1047, height: 1600 },
   figCuprate: { name: 'fig-cuprate', width: 900, height: 646 },
@@ -56,5 +57,5 @@ export const CHAPTER_IMAGES = [
   IMAGE.fig001.name,
   IMAGE.uva01.name,
   IMAGE.uva02.name,
-  IMAGE.fig003.name,
+  IMAGE.figGordianV2.name,
 ] as const
