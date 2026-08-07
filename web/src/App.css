@@ -1346,10 +1346,6 @@
   justify-self: center;
 }
 
-.prose-layout-center .meme-row {
-  justify-self: stretch;
-}
-
 .prose-layout-center .meme-subhead {
   text-align: center;
   justify-self: center;
