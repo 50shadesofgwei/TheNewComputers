@@ -821,6 +821,21 @@
   letter-spacing: -0.015em;
 }
 
+.prose .quote-italic {
+  max-width: 40rem;
+  margin: 2rem 0 2.5rem;
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+}
+
+.prose .quote-italic strong {
+  font-weight: 700;
+  font-style: italic;
+}
+
 .prose blockquote.quote-typewriter {
   display: grid;
   justify-self: end;
