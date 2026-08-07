@@ -1535,7 +1535,7 @@ function App() {
 
           <p>
             The question must always be: does this get us closer to a million
-            qubits? If not, let’s skip it for now.
+            qubits? If not, skip.
           </p>
 
           <h3>Question Every Requirement</h3>
