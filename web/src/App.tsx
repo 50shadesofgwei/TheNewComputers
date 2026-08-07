@@ -1530,12 +1530,12 @@ function App() {
             Publishing papers about potential quantum impact in chemistry,
             mathematical proofs of niche optimisation problems, or even
             error-correcting codes are intellectually commendable,{' '}
-            <em>but are not the bottleneck</em>.
-          </p>
-
-          <p>
-            The question must always be: does this get us closer to a million
-            qubits? If not, skip.
+            <em>but are not the bottleneck</em>.{' '}
+            <strong>
+              The question must always be: does this get us closer to a million
+              qubits?
+            </strong>{' '}
+            If not, then delete.
           </p>
 
           <h3>Question Every Requirement</h3>
