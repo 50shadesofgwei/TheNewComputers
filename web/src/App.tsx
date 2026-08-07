@@ -1448,7 +1448,7 @@ function App() {
             <div className="meme-row" aria-label="Our memes">
               <div className="meme-card">
                 <div className="meme-card-art" aria-hidden="true" />
-                <p className="meme-card-title">Declare War on Complexity</p>
+                <p className="meme-card-title">Whole-Board Vision</p>
               </div>
               <div className="meme-card">
                 <div className="meme-card-art" aria-hidden="true" />
@@ -1469,7 +1469,7 @@ function App() {
             </div>
           </div>
 
-          <h3>Declare War on Complexity</h3>
+          <h3>Whole-Board Vision</h3>
           <p className="meme-subhead">
             Delete, delete, delete… The best part is no part.
           </p>
