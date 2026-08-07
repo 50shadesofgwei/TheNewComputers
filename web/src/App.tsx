@@ -1444,8 +1444,32 @@ function App() {
 
           <p>These are ours.</p>
 
-          <p>
-            <strong>Declare War on Complexity</strong>
+          <div className="meme-row" aria-label="Our memes">
+            <div className="meme-card">
+              <div className="meme-card-art" aria-hidden="true" />
+              <p className="meme-card-title">Declare War on Complexity</p>
+            </div>
+            <div className="meme-card">
+              <div className="meme-card-art" aria-hidden="true" />
+              <p className="meme-card-title">Flash-Mob the Bottleneck</p>
+            </div>
+            <div className="meme-card">
+              <div className="meme-card-art" aria-hidden="true" />
+              <p className="meme-card-title">Question Every Requirement</p>
+            </div>
+            <div className="meme-card">
+              <div className="meme-card-art" aria-hidden="true" />
+              <p className="meme-card-title">When? Now!</p>
+            </div>
+            <div className="meme-card">
+              <div className="meme-card-art" aria-hidden="true" />
+              <p className="meme-card-title">Optimise for Boldness</p>
+            </div>
+          </div>
+
+          <h3>Declare War on Complexity</h3>
+          <p className="meme-subhead">
+            Delete, delete, delete… The best part is no part.
           </p>
 
           <figure className="figure figure-xs figure-center">
@@ -1473,27 +1497,30 @@ function App() {
             has to be more important than looking clever.
           </p>
 
+          <h3>Flash-Mob the Bottleneck</h3>
+          <p className="meme-subhead">
+            Are we cleaning our room when the exam is tomorrow?
+          </p>
           <p>
-            <strong>Flash-Mob the Bottleneck</strong>
-            <br />
-            [Am I cleaning my room when I should be doing my homework? Find the
-            single constraint choking the build — then disproportionate
+            [Find the single constraint choking the build — then disproportionate
             resources until it breaks. Raptors, not heat shields.]
           </p>
 
+          <h3>Question Every Requirement</h3>
+          <p className="meme-subhead">
+            Requirements from smart people are the most dangerous, because
+            nobody thinks to question them.
+          </p>
           <p>
-            <strong>Question Every Requirement</strong>
-            <br />
             [Need people who are willing to question experts]
           </p>
 
-          <p>
-            <strong>Scrappiness</strong>
-          </p>
+          <h3>When? Now!</h3>
+          <p className="meme-subhead">[Subheading TBD]</p>
 
+          <h3>Optimise for Boldness</h3>
+          <p className="meme-subhead">[Subheading TBD]</p>
           <p>
-            <strong>Maximise Boldness</strong>
-            <br />
             [Ten rough versions you’ll blow up, not one polished version you’re
             afraid to break. Timidity dressed as prudence.]
           </p>
