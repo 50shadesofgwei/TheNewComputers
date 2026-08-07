@@ -1527,15 +1527,16 @@ function App() {
           </p>
 
           <p>
-            Publishing papers about potential quantum impact in chemistry,
-            mathematical proofs of niche optimisation problems, or even
-            error-correcting codes are intellectually commendable,{' '}
-            <em>but are not the bottleneck</em>. The question must always be:{' '}
-            <strong>
-              does this get us closer to a million qubits? If not, then delete.
-            </strong>{' '}
-            Any time a system-wide bottleneck was identified, it immediately
-            received disproportionate resources.
+            When a NASA manager visited SpaceX, he observed that any time a
+            system-level bottleneck was identified, it “looked like a flash
+            mob” in the hallway
+            <sup className="cite">
+              <a href="https://futureblind.com/p/atoms-are-cheap-process-is-pricey">
+                9
+              </a>
+            </sup>
+            . System-level bottlenecks are allocated disproportionate
+            resources.
           </p>
 
           <h3>Question Every Requirement</h3>
