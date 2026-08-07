@@ -1521,7 +1521,7 @@ function App() {
           <p className="meme-subhead">[Subheading TBD]</p>
 
           <h3>Optimise for Boldness</h3>
-          <p className="meme-subhead">[Subheading TBD]</p>
+          <p className="meme-subhead">The Mission Attracts Missionaries</p>
           <p>
             [Ten rough versions you’ll blow up, not one polished version you’re
             afraid to break. Timidity dressed as prudence.]
