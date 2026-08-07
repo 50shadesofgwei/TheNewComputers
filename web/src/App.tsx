@@ -1503,10 +1503,92 @@ function App() {
           <p className="meme-subhead">
             Are we cleaning our room when the exam is tomorrow?
           </p>
+
           <p>
-            [Find the single constraint choking the build — then disproportionate
-            resources until it breaks. Raptors, not heat shields.]
+            “Do the most important thing first” is so common as to be cliché. So
+            why doesn’t it happen?
           </p>
+
+          <p>
+            A kid has an exam tomorrow. It’s for geography, or history, or maths,
+            or some other subject that he might even like — but doesn’t really
+            want to study for. He knows he should study, of course, and he feels
+            the pang of conscience about it. But he’s never studied hard before,
+            and he has no handle on the problem; maybe he’s missing his textbooks,
+            or he’s waiting on a study friend to come around. Instead, he cleans
+            his room. And he does a great job too: his shirts are neatly ironed
+            and put away, his bed is neatly made. It’s the best his room has ever
+            looked, and he’s proud of it. He feels productive. He takes pride in
+            the genuinely great job that’s completed. Somewhere along the way, he
+            forgot about the exam.
+          </p>
+
+          <p>
+            Next thing he knows, his parents are standing in his now-impeccably
+            clean room, demanding to know why he’s failed. He protests in
+            agonised cries about all the effort and genuine care he put into his
+            room — he did a beautiful job. His parents, torn, don’t know what to
+            say. As far as they can remember he had never put this much care and
+            dedication into anything, and they wouldn’t want to upset him. And
+            yet the point still stands: he’s flunked the exam, and now that ship
+            has sailed.
+          </p>
+
+          <p>
+            How often is it the case that there is a single A+ problem that is
+            continually kicked down the road in favour of smaller, more manageable
+            B− problems? Surely solving ten B− problems is good? But problem
+            importance is power-law, and an A+ problem can be 10× or 100× more
+            important than a B− problem.
+          </p>
+
+          <TypewriterQuote
+            plain
+            paragraphs={[
+              {
+                parts: [
+                  {
+                    text: 'Always identify and go all-in on the biggest limiter. ',
+                  },
+                  {
+                    text: 'Don’t spread effort across secondary problems.',
+                    strong: true,
+                  },
+                  {
+                    text: ' Laser in on the single constraint that, if removed, would unlock everything downstream.',
+                    citeHref:
+                      'https://futureblind.com/p/atoms-are-cheap-process-is-pricey',
+                    citeN: '9',
+                  },
+                ],
+              },
+            ]}
+          />
+
+          <p>
+            Problem importance is power-law, and the resources allocated to it
+            should match.
+          </p>
+
+          <TypewriterQuote
+            plain
+            paragraphs={[
+              {
+                parts: [
+                  {
+                    text: 'When Starship development was bottlenecked on Raptor engine production, that became the company’s focus. Not propellant loading. Not heat shields. Not launch infrastructure. Raptors. Once engine production broke through, attention shifted to the next constraint. ',
+                  },
+                  {
+                    text: 'The limiter always gets the hammer.',
+                    strong: true,
+                    citeHref:
+                      'https://futureblind.com/p/atoms-are-cheap-process-is-pricey',
+                    citeN: '9',
+                  },
+                ],
+              },
+            ]}
+          />
 
           <h3>Question Every Requirement</h3>
           <p className="meme-subhead">
