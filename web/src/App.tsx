@@ -1514,14 +1514,6 @@ function App() {
             himself… then he fails the exam.
           </p>
 
-          <p>
-            How often is it the case that there is a single A+ problem that is
-            continually kicked down the road in favour of smaller, more manageable
-            B− problems? Surely solving ten B− problems is good? But problem
-            importance is power-law, and an A+ problem can be 10× or 100× more
-            important than a B− problem.
-          </p>
-
           <TypewriterQuote
             plain
             paragraphs={[
@@ -1544,11 +1536,6 @@ function App() {
               },
             ]}
           />
-
-          <p>
-            Problem importance is power-law, and the resources allocated to it
-            should match.
-          </p>
 
           <TypewriterQuote
             plain
