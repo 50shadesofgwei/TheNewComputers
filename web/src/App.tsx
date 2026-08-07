@@ -939,6 +939,12 @@ function App() {
 
           <p>Why so much? Why so slow? Let's not jump to any conclusions.</p>
 
+          <p className="pull">
+            High unit cost and long lead times are the predictable result of
+            producing highly specialised equipment in small volumes, for
+            customers whose requirements frequently differ.
+          </p>
+
           <p>
             Laser companies are stuck between a rock and a hard place. All orders
             are bespoke; the laser system for a Strontium-based quantum computer
