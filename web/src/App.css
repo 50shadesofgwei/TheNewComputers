@@ -124,6 +124,10 @@
   color: var(--text-inv);
 }
 
+.chapter.chapter-pt02 {
+  background: var(--bg-violet);
+}
+
 .chapter.steel {
   background: var(--bg-b);
   color: var(--text-inv);
@@ -560,13 +564,7 @@
   margin: clamp(2.5rem, 7vw, 4.5rem) 0;
   margin-left: calc(50% - 50vw);
   padding: clamp(2.75rem, 8vw, 5rem) var(--page-pad);
-  background:
-    radial-gradient(
-      ellipse 90% 70% at 85% 10%,
-      color-mix(in srgb, var(--bg-c) 14%, transparent),
-      transparent 55%
-    ),
-    linear-gradient(165deg, var(--bg-a) 0%, var(--bg-black) 55%, #08090c 100%);
+  background: var(--bg-violet);
   color: var(--text-inv);
 }
 
@@ -594,7 +592,14 @@
 }
 
 .prose-layout-end .exposit-inner {
-  justify-items: end;
+  justify-items: start;
+}
+
+.prose-layout-end .exposit p {
+  justify-self: start;
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
 }
 
 .prose-layout-center .exposit-inner {
@@ -777,9 +782,8 @@
   max-width: 36rem;
   width: 100%;
   margin: 2rem 0 2.5rem;
-  padding: 0.15rem 0 0.15rem 1.65rem;
+  padding: 0.2rem 0 0.2rem 1.15rem;
   border: 0;
-  border-left: 2px solid color-mix(in srgb, var(--text) 45%, transparent);
   font-size: clamp(1.1rem, 1.45vw, 1.3rem);
   font-weight: 600;
   font-style: italic;
@@ -788,14 +792,35 @@
 }
 
 .prose blockquote::before {
-  content: '>';
+  content: '“';
   position: absolute;
-  left: 0.35rem;
-  top: 0.15rem;
+  left: 0;
+  top: -0.12em;
+  font-family: var(--font-display);
   font-style: normal;
-  font-weight: 700;
-  opacity: 0.45;
-  letter-spacing: 0;
+  font-weight: 600;
+  font-size: 1.55em;
+  line-height: 1;
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.prose blockquote > p:last-child::after {
+  content: '”';
+  margin-left: 0.12em;
+  font-family: var(--font-display);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.55em;
+  line-height: 1;
+  opacity: 0.28;
+  pointer-events: none;
+  vertical-align: -0.12em;
+}
+
+.prose blockquote.quote-typewriter::before,
+.prose blockquote.quote-typewriter > p:last-child::after {
+  content: none;
 }
 
 .prose blockquote p {
@@ -928,6 +953,31 @@
   letter-spacing: -0.04em;
 }
 
+/* ——— Gordian Knot: single-column flow; white title rule only ——— */
+
+.prose-knot .knot-title {
+  position: relative;
+  max-width: none;
+  width: 100vw;
+  margin: clamp(4rem, 10vw, 7rem) 0 0.85rem;
+  margin-left: calc(50% - 50vw);
+  padding: clamp(3.04rem, 6.75vw, 4.725rem)
+    max(var(--page-pad), calc((100vw - min(1180px, 100%)) / 2 + var(--page-pad)))
+    clamp(1.35rem, 2.97vw, 1.8225rem);
+  background: var(--bg-paper);
+  border-bottom: 2px solid var(--text);
+  font-size: clamp(2rem, 4.4vw, 3.25rem);
+  line-height: 0.95;
+  box-sizing: border-box;
+}
+
+.prose-knot .knot-quote {
+  justify-self: end;
+  margin-left: auto;
+  margin-right: 0;
+  max-width: min(34rem, 90%);
+}
+
 .meme-subhead {
   max-width: 36rem !important;
   margin: 0 0 clamp(1.5rem, 4vw, 2.5rem) !important;
@@ -1048,165 +1098,6 @@
 .figure img {
   width: 100%;
   height: auto;
-}
-
-/* Historical case panels — two columns, staggered so the right
-   column starts ~60% down the first banner */
-.history-cases {
-  --history-banner-ratio: 2.15;
-  width: 100%;
-  justify-self: stretch;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  column-gap: clamp(1rem, 3vw, 2.25rem);
-  align-items: start;
-  margin: clamp(1.5rem, 4vw, 2.5rem) 0 clamp(3rem, 8vw, 5rem);
-}
-
-.history-cases-col {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(1.25rem, 3vw, 2rem);
-  min-width: 0;
-}
-
-.history-cases-col--start {
-  align-items: start;
-}
-
-.history-cases-col--end {
-  align-items: end;
-  /* 60% down the first banner (banner = case width / ratio) */
-  padding-top: calc(
-    min(34rem, 100%) * 0.6 / var(--history-banner-ratio)
-  );
-}
-
-.history-case {
-  --history-frame: color-mix(in srgb, var(--text) 48%, transparent);
-  position: relative;
-  width: 100%;
-  max-width: min(34rem, 100%);
-  display: grid;
-  grid-template-rows: auto 1fr;
-  border: 1.5px solid var(--history-frame);
-  background: #fffcf7;
-  box-shadow:
-    inset 0 0 0 1px color-mix(in srgb, #fffcf7 70%, transparent),
-    0.45rem 0.45rem 0 0 color-mix(in srgb, var(--bg-c) 55%, transparent);
-}
-
-/* Registration corners — small technical ticks */
-.history-case::before,
-.history-case::after {
-  content: '';
-  position: absolute;
-  width: 0.7rem;
-  height: 0.7rem;
-  pointer-events: none;
-  z-index: 2;
-  border-color: var(--text);
-  border-style: solid;
-  border-width: 0;
-}
-
-.history-case::before {
-  top: -1.5px;
-  left: -1.5px;
-  border-top-width: 2px;
-  border-left-width: 2px;
-}
-
-.history-case::after {
-  bottom: -1.5px;
-  right: -1.5px;
-  border-bottom-width: 2px;
-  border-right-width: 2px;
-}
-
-.history-case-banner {
-  position: relative;
-  aspect-ratio: var(--history-banner-ratio) / 1;
-  overflow: hidden;
-  background: var(--bg-b);
-  border-bottom: 1.5px solid var(--history-frame);
-}
-
-.history-case-banner::after {
-  content: '';
-  position: absolute;
-  inset: auto 0 0;
-  height: 42%;
-  background: linear-gradient(
-    to top,
-    color-mix(in srgb, var(--text) 22%, transparent),
-    transparent
-  );
-  pointer-events: none;
-}
-
-.history-case-banner picture,
-.history-case-banner img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.history-case-body {
-  padding: clamp(1.1rem, 2.8vw, 1.6rem) clamp(1.15rem, 3vw, 1.7rem)
-    clamp(1.25rem, 3.2vw, 1.8rem);
-  display: grid;
-  gap: 0.75rem;
-}
-
-.history-case-body .meta {
-  margin: 0;
-  max-width: none;
-  width: fit-content;
-  padding-bottom: 0.35rem;
-  opacity: 0.85;
-  color: var(--text);
-  border-bottom: 1.5px solid color-mix(in srgb, var(--accent) 80%, transparent);
-}
-
-.history-case-body p:not(.meta) {
-  margin: 0;
-  max-width: none;
-  font-size: clamp(0.98rem, 1.15vw, 1.1rem);
-  line-height: 1.4;
-}
-
-@media (max-width: 700px) {
-  .history-cases {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1.25rem, 3vw, 2rem);
-  }
-
-  .history-cases-col {
-    display: contents;
-  }
-
-  .history-cases-col--end {
-    padding-top: 0;
-  }
-
-  .history-cases-col--start .history-case:first-child {
-    order: 1;
-  }
-
-  .history-cases-col--end .history-case {
-    order: 2;
-  }
-
-  .history-cases-col--start .history-case:last-child {
-    order: 3;
-  }
-
-  .history-case {
-    max-width: none;
-  }
 }
 
 /* Local alignment bands — flip the reading column mid-article */

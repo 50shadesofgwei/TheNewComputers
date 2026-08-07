@@ -74,13 +74,13 @@ function App() {
       </header>
 
       <aside className="chapter-rail meta" aria-hidden="true">
-        Out of the Lab — PT.00–06
+        Out of the Lab — PT.00–05
       </aside>
 
       <section className="hero" id="pt-00">
         <p className="hero-part">
           PT—00/
-          <span>06</span>
+          <span>05</span>
         </p>
         <div className="hero-main">
           <h1>Out of the Lab and Into the Factory</h1>
@@ -106,7 +106,7 @@ function App() {
           </p>
         </div>
         <div className="chapter-copy">
-          <p className="meta">PT—01/ 06</p>
+          <p className="meta">PT—01/ 05</p>
           <h2 className="chapter-title">Introduction</h2>
         </div>
       </section>
@@ -169,7 +169,7 @@ function App() {
             too harsh; some of the world's most gifted scientists have produced
             extraordinary results controlling individual atoms, photons,
             electrons and superconducting circuits. But the field is so
-            specialised, and knowledge so hopelessly siloed across sub-fields,
+            specialised, and knowledge so hopelessly siloed between sub-fields,
             that almost nobody can practically judge the aggregate progress.
           </p>
 
@@ -271,11 +271,11 @@ function App() {
         </div>
       </article>
 
-      <section className="chapter black" id="pt-02" data-chapter-index="1">
+      <section className="chapter black chapter-pt02" id="pt-02" data-chapter-index="1">
         <div className="chapter-copy">
-          <p className="meta">PT—02/ 06</p>
+          <p className="meta">PT—02/ 05</p>
           <p className="chapter-kicker">
-            The New Computers had, out of the blue, solved what was previously
+            A quantum algorithm had, out of the blue, solved what was previously
             thought to be an intractable problem.
           </p>
           <h2 className="chapter-title">What Are Quantum Computers Good For, Anyway?</h2>
@@ -323,7 +323,7 @@ function App() {
           </p>
 
           <p className="pull">
-            The classical world was again proven to contain patterns only visible
+            The classical world was shown to contain patterns only visible
             through the lens of quantum mechanics.
           </p>
 
@@ -346,8 +346,21 @@ function App() {
 
           <p>
             For many types of materials, classical algorithms can compute
-            simulations very effectively using approximation algorithms; Walter
-            Kohn was awarded half of the 1998 Nobel Prize in Chemistry for such
+            simulations very effectively using approximation algorithms;{' '}
+            <TermPeek
+              term="Walter Kohn"
+              title="Walter Kohn"
+              imageName={IMAGE.figWalterKohn.name}
+              imageWidth={IMAGE.figWalterKohn.width}
+              imageHeight={IMAGE.figWalterKohn.height}
+              imageAlt="Walter Kohn at the Lindau Nobel Laureate Meeting, 2012"
+            >
+              Austrian-American theoretical physicist (1923–2016). Shared the 1998
+              Nobel Prize in Chemistry for developing density-functional theory,
+              which made accurate electronic-structure calculations practical for
+              many materials.
+            </TermPeek>{' '}
+            was awarded half of the 1998 Nobel Prize in Chemistry for such
             work. But in complex materials, so called "strongly correlated"
             systems where many electrons all become entangled, these
             approximations begin to fail.
@@ -356,49 +369,10 @@ function App() {
           <p>So what's the difference?</p>
 
           <p>
-            Normally, classical methods make the calculation manageable by
-            replacing the full web of electron interactions with a simpler, less
-            computationally demanding approximation of how each electron
-            behaves.
+            Strongly correlated materials resist the usual classical
+            approximations because their unusual properties arise from the same
+            complex interactions that the classical approximations ignore.
           </p>
-
-          <p>
-            In strongly correlated materials, however, those interactions are
-            what produce the material’s unusual properties, so simplifying them
-            away also removes the phenomenon we are trying to explain.
-          </p>
-
-          <aside className="exposit">
-            <div className="exposit-inner">
-              <p>
-                Say we have 100 electron spins, each of which can be measured as
-                up or down. Together, they have 2<sup>100</sup> possible
-                configurations. Their collective quantum state can extend across
-                many of these configurations at once.
-              </p>
-
-              <p>
-                To reproduce this exactly, a classical computer must keep a
-                separate record of every configuration and how it contributes to
-                the whole. As the electrons interact, it must continually
-                recalculate this exponentially large record.{' '}
-                <strong>
-                  The choice becomes: approximate it badly, or track an
-                  exponentially growing amount of information.
-                </strong>
-              </p>
-
-              <p>
-                If we have 100 qubits, and every one of them is entangled with
-                every other one, then the total number of possible configurations
-                that this system can be in is, again, 2<sup>100</sup>.
-              </p>
-
-              <p>
-                <strong>But notice here that it only took 100 qubits</strong>.
-              </p>
-            </div>
-          </aside>
 
           <p>
             This is the general class of problem for which these machines were
@@ -432,8 +406,7 @@ function App() {
 
             <p>
               And to give the critics their due, they're absolutely justified in
-              calling this out. There are a lot of exaggerations, half-truths, and
-              hype that is totally ungrounded in reality.
+              calling this out.
             </p>
 
             <p>
@@ -474,7 +447,9 @@ function App() {
               .
             </p>
 
-            <p>So what might they actually be good for?</p>
+            <p>
+              So what might they <em>actually</em> be good for?
+            </p>
           </div>
 
           <figure className="figure">
@@ -507,7 +482,7 @@ function App() {
 
           <p>
             Superconductors already make MRI scanners, particle accelerators and
-            the strongest research magnets possible; newer high-temperature
+            the strongest research magnets on earth; newer high-temperature
             materials are being developed for compact fusion reactors,
             higher-capacity power cables and lighter, more powerful motors. The
             problem is that even “high-temperature” superconductors must be kept
@@ -535,27 +510,12 @@ function App() {
             </TermPeek>
             {' '}
             — just so happen to have this same strongly-correlated electron
-            structure. This is exactly the kind of simulation problem that quantum
-            computers are made for.
-          </p>
-
-          <p>
-            Of course, none of this is guaranteed. Classical simulation will
-            continue to improve. Useful quantum algorithms will demand machines
-            far larger and more reliable than those available today. Quantum
-            computers will, in all likelihood, be useless for almost everything we
-            currently use computers for. They do not need to replace classical
-            computation, any more than aeroplanes needed to replace bicycles: an
-            aeroplane is transformative for getting across an ocean and useless
-            for a
-            trip to the shops. A small number of calculations currently beyond our
-            reach will transform cryptography, energy, materials science and
-            industrial chemistry.
+            structure.
           </p>
 
           <p>
             The prize, then, is not to replace all silicon computers, nor is it to
-            'access parallel universes', whatever that means. As the first man to
+            'access parallel universes'... whatever that means. As the first man to
             discover fire, the first man in space and the first man to split the
             atom all knew, the ultimate prize is to understand and control matter
             itself.
@@ -565,7 +525,7 @@ function App() {
 
       <section className="chapter steel" id="pt-03" data-chapter-index="2">
         <div className="chapter-copy">
-          <p className="meta">PT—03/ 06</p>
+          <p className="meta">PT—03/ 05</p>
           <p className="chapter-kicker">
             Quantum Computing inherited an institutional model designed to
             produce demonstrations over products.
@@ -610,12 +570,11 @@ function App() {
           </p>
 
           <p>
-            Not long after Peter Shor's discovery of his eponymous prime
-            factorisation algorithm, researchers at NIST demonstrated the first
-            quantum logic gate using a beryllium ion suspended in an electric
-            field; in 1998, researchers at Oxford used the magnetic properties of
-            atoms to execute one of the first complete quantum algorithms on a
-            two-qubit system.
+            Not long after Peter Shor&rsquo;s discovery of his eponymous prime
+            factorisation algorithm, researchers at NIST built the first quantum
+            logic gate using a trapped beryllium ion. In 1998, a team from Oxford
+            ran one of the first complete quantum algorithms on a two-qubit
+            machine.
           </p>
 
           <p>
@@ -662,10 +621,16 @@ function App() {
             This distinction is written into the way academic research is
             assessed. In 2023, a House of Commons inquiry found that publication
             in a journal was the expected outcome of almost all academic research
-            in Britain. The standard academic CV, the committee was told,
-            consisted principally of publications, grants and invitations to
-            speak, while the Research Excellence Framework assessed published
-            work according to its “originality, significance and rigour.”
+            in Britain
+            <sup className="cite">
+              <a href="https://publications.parliament.uk/pa/cm5803/cmselect/cmsctech/101/report.html">
+                13
+              </a>
+            </sup>
+            . The standard academic CV, the committee was told, consisted
+            principally of publications, grants and invitations to speak, while
+            the Research Excellence Framework assessed published work according
+            to its &ldquo;originality, significance and rigour.&rdquo;
           </p>
 
           <p className="pull pull-sm pull-end">
@@ -735,91 +700,10 @@ function App() {
             ...But what makes a good prototype isn't always what makes a good product.
           </p>
 
-          <p>We can here look to the past for historical examples.</p>
-
-          <div className="history-cases">
-            <div className="history-cases-col history-cases-col--start">
-              <article className="history-case">
-                <div className="history-case-banner">
-                  <MissionImage
-                    {...IMAGE.figHaberBosch}
-                    alt="BASF Oppau works, 1914 — Otto Bollhagen"
-                  />
-                </div>
-                <div className="history-case-body">
-                  <p className="meta">Haber–Bosch</p>
-                  <p>
-                    In 1909, Fritz Haber demonstrated a laboratory apparatus
-                    which produced around 100 cubic centimetres of ammonia. Carl
-                    Bosch was then assigned the considerably larger task of
-                    turning it into an industrial process. Doing so required new
-                    catalysts, new methods of producing pure gases and
-                    high-pressure reactors made from steels which would not
-                    split apart after hydrogen penetrated them. The first plant
-                    opened four years later with an annual capacity of 8,700
-                    tonnes. Haber had established the chemistry, Bosch and his
-                    team invented the industrial machinery surrounding it.
-                  </p>
-                </div>
-              </article>
-
-              <article className="history-case">
-                <div className="history-case-banner">
-                  <MissionImage
-                    {...IMAGE.figPlanar}
-                    alt="Silicon wafer patterned with integrated circuits"
-                  />
-                </div>
-                <div className="history-case-body">
-                  <p className="meta">Planar process</p>
-                  <p>
-                    The same distinction appears in computing itself. The
-                    transistor was demonstrated at Bell Labs in 1947, but early
-                    devices remained difficult to manufacture reliably. Twelve
-                    years later, Fairchild found a way to make them the same way
-                    every time, and at scale. Fairchild commercialised the first
-                    planar transistor in 1960, and the process became the
-                    manufacturing basis of what we now know as the microchip.
-                  </p>
-                </div>
-              </article>
-            </div>
-
-            <div className="history-cases-col history-cases-col--end">
-              <article className="history-case">
-                <div className="history-case-banner">
-                  <MissionImage
-                    {...IMAGE.figPenicillin}
-                    alt="Penicillin production flasks, England, 1943"
-                  />
-                </div>
-                <div className="history-case-body">
-                  <p className="meta">Penicillin</p>
-                  <p>
-                    Penicillin followed much the same pattern. Fleming
-                    discovered it in 1928, and the Oxford team established its
-                    therapeutic value in 1941, but the drug was still being
-                    produced in one-litre flasks at yields below one per cent.
-                    American chemists and engineers developed better mould
-                    strains, culture media, purification methods and submerged
-                    fermentation tanks. Between 1943 and 1945, American
-                    production rose from 21 billion units to more than 6.8
-                    trillion, while yields increased to between 80 and 90 per
-                    cent.
-                  </p>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <p className="pull">
-            The pattern is the same in all cases; scientific innovation is
-            followed by mass manufacture.
-          </p>
-
           <div className="pattern-coda">
             <p>
-              Quantum computing is now entering its version of this transition.
+              Innovation is followed by manufacture, and quantum computing is
+              now beginning this transition for itself.
               The National Academies described the field’s greatest challenge in
               2019 as moving “from an understanding of the basic science to the
               creation of useful devices.” Unluckily for the budding researcher,
@@ -840,7 +724,7 @@ function App() {
 
       <section className="chapter black" id="pt-04" data-chapter-index="3">
         <div className="chapter-copy">
-          <p className="meta">PT—04/ 06</p>
+          <p className="meta">PT—04/ 05</p>
           <p className="chapter-kicker">
             <span className="kicker-stress">High unit cost</span> and{' '}
             <span className="kicker-stress">long lead times</span> are the
@@ -937,13 +821,14 @@ function App() {
             order and delivery.
           </p>
 
-          <p>Why so much? Why so slow? Let's not jump to any conclusions.</p>
+          <p>Why so much? Why so slow?</p>
 
           <p>
-            Laser companies are stuck between a rock and a hard place. All orders
-            are bespoke; the laser system for a Strontium-based quantum computer
-            might have little in common with the laser system for a Calcium-based
-            atom physics experiment, and who's to say what the next order will be?
+            Let&rsquo;s not jump to any conclusions; laser companies are stuck
+            between a rock and a hard place. All orders are bespoke; the laser
+            system for a Strontium-based quantum computer might have little in
+            common with the laser system for a Calcium-based atom physics
+            experiment, and who&rsquo;s to say what the next order will be?
           </p>
 
           <p className="pull pull-sm">
@@ -958,8 +843,8 @@ function App() {
             production line, while a quantum company working against the available
             catalogue gives the supplier little reason to redesign it. Long lead
             times, high prices and by-hand integration then appear to be intrinsic
-            properties of the technology rather than consequences of the volumes
-            and production methods being used.
+            properties of the technology rather than consequences of the
+            production methods being used.
           </p>
 
           <p>
@@ -982,7 +867,7 @@ function App() {
           <span className="part-tag">PT—5</span>
         </div>
         <div className="chapter-copy">
-          <p className="meta">PT—05/ 06</p>
+          <p className="meta">PT—05/ 05</p>
           <p className="chapter-kicker chapter-kicker-list">
             1. The Idiot Index
             <br />
@@ -998,7 +883,7 @@ function App() {
         </div>
       </section>
 
-      <article className="prose prose-layout-start">
+      <article className="prose prose-layout-start prose-knot">
         <div className="prose-inner">
           <h2 className="prose-display">
             5. Cutting the Gordian Knot
@@ -1035,12 +920,12 @@ function App() {
           />
 
           <p>
-            The similarities are striking. The negative feedback loop is identical in both
+            The negative feedback loop is the same in both
             cases: low volumes keep components bespoke; bespoke
-            production offers little incentive for suppliers to overhaul their
-            methods; prices remain high and lead times long; and low volumes
+            production offers little incentive for production overhaul; prices
+            remain high and lead times long; and low volumes
             persist. In one case, the scarce unit is a launch. In the other, it is
-            a quantum computer.
+            a computer.
           </p>
 
           <p className="pull pull-xl">
@@ -1069,15 +954,16 @@ function App() {
             </figcaption>
           </figure>
 
-          <h3>1. The Idiot Index</h3>
+          <h3 className="knot-title">1. The Idiot Index</h3>
 
-          <TypewriterQuote
-            paragraphs={[
-              {
-                text: 'Musk eventually named this the "idiot index": the ratio of the actual cost of a part to the cost of its raw materials. “If the ratio is high,” he says, “you’re an idiot.”',
-              },
-            ]}
-          />
+          <blockquote className="knot-quote">
+            <p>
+              Musk eventually named this the &ldquo;idiot index&rdquo;: the ratio
+              of the actual cost of a part to the cost of its raw materials.
+              &ldquo;If the ratio is high,&rdquo; he says, &ldquo;you&rsquo;re an
+              idiot.&rdquo;
+            </p>
+          </blockquote>
 
           <p>
             A classical computer is made from a laundry list of component parts.
@@ -1086,30 +972,26 @@ function App() {
             and more.
           </p>
 
-          <TypewriterQuote
-            plain
-            paragraphs={[
-              {
-                parts: [
-                  {
-                    text: 'Consider the Falcon 1 actuator. A vendor quoted $120,000 and eighteen months of development time. ',
-                  },
-                  {
-                    text: 'SpaceX engineer Steve Davis built it in-house in nine months for $3,900',
-                    strong: true,
-                    citeHref:
-                      'https://www.vice.com/en/article/how-elon-musk-willed-spacex-into-making-the-cheapest-rockets-ever-created/',
-                    citeN: '10',
-                  },
-                  { text: '.', strong: true },
-                ],
-              },
-            ]}
-          />
+          <blockquote className="quote-plain knot-quote">
+            <p>
+              Consider the Falcon 1 actuator. A vendor quoted $120,000 and eighteen
+              months of development time.{' '}
+              <strong>
+                SpaceX engineer Steve Davis built it in-house in nine months for
+                $3,900
+                <sup className="cite">
+                  <a href="https://www.vice.com/en/article/how-elon-musk-willed-spacex-into-making-the-cheapest-rockets-ever-created/">
+                    10
+                  </a>
+                </sup>
+                .
+              </strong>
+            </p>
+          </blockquote>
 
           <p>
-            Each of these component parts can be assigned it's own idiot index; a
-            high value is a flashing light pointing to a poorly optimised
+            Each of these component parts can be assigned it&rsquo;s own idiot
+            index; a high value is a flashing light pointing to a poorly optimised
             manufacturing process. Values for ultra-precision components will of
             course be higher than those for parts with lower precision
             requirements, but this only indicates a higher cost floor; it says
@@ -1122,15 +1004,15 @@ function App() {
             with quantum hardware.
           </p>
 
-          <h3>2. Question Every Requirement</h3>
+          <h3 className="knot-title">2. Question Every Requirement</h3>
 
-          <TypewriterQuote
-            paragraphs={[
-              {
-                text: 'Junior engineers are explicitly told that requirements from "smart people" are the most dangerous, because nobody thinks to question them.',
-              },
-            ]}
-          />
+          <blockquote className="knot-quote">
+            <p>
+              Junior engineers are explicitly told that requirements from
+              &ldquo;smart people&rdquo; are the most dangerous, because nobody
+              thinks to question them.
+            </p>
+          </blockquote>
 
           <p>
             A high idiot index identifies an expensive component; the knee-jerk
@@ -1139,13 +1021,12 @@ function App() {
             all. Get rid of the part entirely and the idiot index falls to 0.
           </p>
 
-          <TypewriterQuote
-            paragraphs={[
-              {
-                text: 'Delete, delete, delete... the best part is no part - the best process is no process.',
-              },
-            ]}
-          />
+          <blockquote className="knot-quote">
+            <p>
+              Delete, delete, delete... the best part is no part - the best process
+              is no process.
+            </p>
+          </blockquote>
 
           <p>
             The same exercise can be carried into the quantum supply chain.
@@ -1186,76 +1067,58 @@ function App() {
             .
           </p>
 
-          <h3>3. Standardisation of Components</h3>
+          <h3 className="knot-title">3. Standardisation of Components</h3>
 
-          <TypewriterQuote
-            paragraphs={[
-              { text: 'The only way to get volume is to standardise.' },
-            ]}
-          />
+          <blockquote className="knot-quote">
+            <p>The only way to get volume is to standardise.</p>
+          </blockquote>
 
           <p>
             Go to any quantum hardware supplier right now, be it lasers, vacuum
             chambers or semiconductor fabs, and you will inevitably see the words
-            'request a quotation' in place of a price tag. Why is this? Are
-            suppliers being secretive, or do they genuinely not know?
+            &lsquo;request a quotation&rsquo; in place of a price tag. Why is this?
+            Are suppliers being secretive, or do they genuinely not know?
           </p>
 
-          <TypewriterQuote
-            plain
-            paragraphs={[
-              {
-                parts: [
-                  {
-                    text: 'The existing approach was bespoke vehicles per mission. ',
-                  },
-                  {
-                    text: 'SpaceX bet the opposite: that cost savings from standardisation would exceed the value of customisation.',
-                    strong: true,
-                  },
-                  {
-                    text: ' Yes, customers wanted custom solutions. But they wanted low prices even more. Force them to choose, and they’d adapt.',
-                  },
-                ],
-              },
-            ]}
-          />
+          <blockquote className="quote-plain knot-quote">
+            <p>
+              The existing approach was bespoke vehicles per mission.{' '}
+              <strong>
+                SpaceX bet the opposite: that cost savings from standardisation
+                would exceed the value of customisation.
+              </strong>{' '}
+              Yes, customers wanted custom solutions. But they wanted low prices
+              even more. Force them to choose, and they&rsquo;d adapt.
+            </p>
+          </blockquote>
 
           <p>
-            It's the latter, of course, but let's not be too quick to point
-            fingers: it's the same low-volume-differing-requirements problem again.
-            One company chooses calcium ions; another chooses barium. Even two
-            barium systems might have different requirements if different isotopes
-            are used.
+            It&rsquo;s the latter, of course, but let&rsquo;s not be too quick to
+            point fingers: it&rsquo;s the same low-volume-differing-requirements
+            problem again. One company chooses calcium ions; another chooses
+            barium. Even two barium systems might have different requirements if
+            different isotopes are used.
           </p>
 
           <p>
-            Economies of scale only come from making the same design repeatedly;
-            fragmented demand denies suppliers the opportunity to drive their
-            costs down and their production rates up.
+            Economies of scale only emerge from making the same design in bulk;
+            fragmented demand denies suppliers the opportunity to do so.
           </p>
 
-          <h3>4. Vertical Integration</h3>
+          <h3 className="knot-title">4. Vertical Integration</h3>
 
-          <TypewriterQuote
-            plain
-            paragraphs={[
-              {
-                parts: [
-                  {
-                    text: 'If materials are cheap and the tax is all process and overhead, you need to control the process to capture the savings. ',
-                  },
-                  {
-                    text: 'You can’t negotiate your way to a 10x cost reduction with suppliers who have profits baked in at every tier.',
-                    strong: true,
-                  },
-                  {
-                    text: ' By building 80% of its hardware internally, SpaceX collapsed the traditional aerospace stack.',
-                  },
-                ],
-              },
-            ]}
-          />
+          <blockquote className="quote-plain knot-quote">
+            <p>
+              If materials are cheap and the tax is all process and overhead, you
+              need to control the process to capture the savings.{' '}
+              <strong>
+                You can&rsquo;t negotiate your way to a 10x cost reduction with
+                suppliers who have profits baked in at every tier.
+              </strong>{' '}
+              By building 80% of its hardware internally, SpaceX collapsed the
+              traditional aerospace stack.
+            </p>
+          </blockquote>
 
           <p className="pull">
             Vertical integration gives manufacturers the freedom to cut everything
@@ -1265,13 +1128,13 @@ function App() {
           <p>
             In practical terms, vertical integration means avoiding the time cost
             and incurred margins of outsourcing components. But it comes with a
-            cost. Fixed costs, specifically. Bringing the machines in-house isn't
-            cheap, and incurs a lot of complexity in the short term. In fact, if
-            the goal is to build a single computer, it doesn't make much sense to
-            bring the manufacturing in-house at all.
+            cost. Fixed costs, specifically. Bringing the machines in-house
+            isn&rsquo;t cheap, and incurs a lot of complexity in the short term.
+            In fact, if the goal is to build a single computer, it doesn&rsquo;t
+            make much sense to bring the manufacturing in-house at all.
           </p>
 
-          <h3>5. Increase Iteration Speed</h3>
+          <h3 className="knot-title">5. Increase Iteration Speed</h3>
 
           <p>
             The idiot index identifies where manufacturing optimisations can be
@@ -1283,31 +1146,27 @@ function App() {
           <p>
             But internalising all these manufacturing processes internalises the
             maintenance costs, not to mention the price of the machines themselves.
-            The factory loses money every second that these machines aren't
+            The factory loses money every second that these machines aren&rsquo;t
             producing something valuable. Iteration speed is what makes the whole
             process profitable - new ideas can be tested cheaply, quickly, and the
-            manufacturers needn't be precious about whether an idea is likely to
-            work or not. The whole design process gets flipped on its head; instead
-            of having to meticulously plan out what ideas get to go in the new
-            design before starting manufacture, ideas can be tried cheaply and
-            quickly. If they don't work, the time and financial loss is minimal.
+            manufacturers needn&rsquo;t be precious about whether an idea is likely
+            to work or not. The whole design process gets flipped on its head;
+            instead of having to meticulously plan out what ideas get to go in the
+            new design before starting manufacture, ideas can be tried cheaply and
+            quickly. If they don&rsquo;t work, the time and financial loss is
+            minimal.
           </p>
 
-          <TypewriterQuote
-            paragraphs={[
-              {
-                parts: [
-                  {
-                    text: 'Traditional aerospace builds few prototypes, each one expensive and near-flight-ready. SpaceX builds many cheaper prototypes. ',
-                  },
-                  {
-                    text: 'They’d rather have ten rough versions to blow up than one polished version they’re afraid to break.',
-                    strong: true,
-                  },
-                ],
-              },
-            ]}
-          />
+          <blockquote className="knot-quote">
+            <p>
+              Traditional aerospace builds few prototypes, each one expensive and
+              near-flight-ready. SpaceX builds many cheaper prototypes.{' '}
+              <strong>
+                They&rsquo;d rather have ten rough versions to blow up than one
+                polished version they&rsquo;re afraid to break.
+              </strong>
+            </p>
+          </blockquote>
 
           <figure className="figure">
             <MissionImage
@@ -1342,8 +1201,8 @@ function App() {
       </article>
 
       <section className="cta" id="pt-06">
-        <p className="meta">PT—06/ 06</p>
-        <h2>6. Join Us</h2>
+        <p className="meta">PT—X/ 05</p>
+        <h2>Join Us</h2>
         <p>[Some call to action]</p>
       </section>
     </div>
