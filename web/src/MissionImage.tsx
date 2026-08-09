@@ -47,6 +47,9 @@ export const IMAGE = {
   figDavidWineland: { name: 'fig-david-wineland', width: 478, height: 720 },
   figWalterKohn: { name: 'fig-walter-kohn', width: 720, height: 974 },
   figMocvd: { name: 'fig-mocvd', width: 521, height: 383 },
+  figPeople: { name: 'fig-people', width: 1600, height: 1054 },
+  figTeleportation: { name: 'fig-teleportation', width: 1448, height: 1086 },
+  figSkunkworks: { name: 'fig-skunkworks', width: 1600, height: 884 },
   uva01: { name: 'uva-atomic-01', width: 900, height: 1600 },
   uva02: { name: 'uva-atomic-02', width: 900, height: 1600 },
 } as const
@@ -54,7 +57,6 @@ export const IMAGE = {
 /** Chapter splash images in scroll order — used for ahead-of-time preload. */
 export const CHAPTER_IMAGES = [
   IMAGE.fig000.name,
-  IMAGE.fig001.name,
   IMAGE.uva01.name,
   IMAGE.uva02.name,
   IMAGE.figGordianV2.name,
