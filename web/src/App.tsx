@@ -85,7 +85,7 @@ function App() {
         <div className="hero-main">
           <h1>Out of the Lab and Into the Factory</h1>
           <div className="hero-lede">
-            <p>The Mission for Quantum Hardware</p>
+            <p>The New Computers, and the Mission for Quantum Hardware</p>
           </div>
         </div>
         <a className="scroll-cue" href="#pt-01" aria-label="Scroll down" />
