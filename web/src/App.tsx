@@ -715,7 +715,7 @@ function App() {
             SpaceX to break the cycle, and which of them could work here?
           </p>
 
-          <figure className="figure">
+          <figure className="figure figure-sm">
             <MissionImage
               {...IMAGE.fig002}
               alt="Engineers examining hardware wreckage"
@@ -729,17 +729,15 @@ function App() {
 
           <h3 className="knot-title">1. The Idiot Index</h3>
 
-          <blockquote className="knot-quote">
-            <p>
-              Musk eventually named this the &ldquo;idiot index&rdquo;: the ratio
-              of the actual cost of a part to the cost of its raw materials.
-              &ldquo;If the ratio is high,&rdquo; he says, &ldquo;you&rsquo;re an
-              idiot.&rdquo;
-            </p>
-          </blockquote>
+          <p className="meme-subhead meme-subhead-center">
+            Musk eventually named this the &ldquo;idiot index&rdquo;: the ratio
+            of the actual cost of a part to the cost of its raw materials.
+            &ldquo;If the ratio is high,&rdquo; he says, &ldquo;you&rsquo;re an
+            idiot.&rdquo;
+          </p>
 
           <p>
-            A classical computer is made from a laundry list of component parts.
+            A classical computer is constructed from specific component parts:
             GPUs, CPUs, cooling systems, et cetera. A quantum computer is much the
             same; high-precision lasers, vacuum systems, single-photon detectors,
             and more.
@@ -773,13 +771,11 @@ function App() {
 
           <h3 className="knot-title">2. Question Every Requirement</h3>
 
-          <blockquote className="knot-quote">
-            <p>
-              Junior engineers are explicitly told that requirements from
-              &ldquo;smart people&rdquo; are the most dangerous, because nobody
-              thinks to question them.
-            </p>
-          </blockquote>
+          <p className="meme-subhead meme-subhead-center">
+            Junior engineers are explicitly told that requirements from
+            &ldquo;smart people&rdquo; are the most dangerous, because nobody
+            thinks to question them.
+          </p>
 
           <p>
             A high idiot index identifies an expensive component; the knee-jerk
