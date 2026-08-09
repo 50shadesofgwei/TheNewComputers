@@ -424,7 +424,7 @@ materials. How many additional component parts are required to accommodate the a
 materials? How much system complexity does this add? How much would it cost to build a
 single-material reactor MOCVD reactor in-house?]
 
-3. Standardisation of Components
+3. Standardised Components
 
    "The only way to get volume is to standardise."
 Go to any quantum hardware supplier right now, be it lasers, vacuum chambers or

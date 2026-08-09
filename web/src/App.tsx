@@ -124,9 +124,22 @@ function App() {
 
           <p>
             If you've spent time around the field, you know the elephant in the
-            room; futuristic looking computers buried inside room-sized golden
-            chandeliers on one hand, and on the other, fuzzy and opaque
-            explanations of their supposed practical utility. Shor's algorithm
+            room; futuristic looking computers the size of entire rooms on one
+            hand, and on the other, fuzzy and opaque
+            explanations of their supposed practical utility.{' '}
+            <TermPeek
+              term="Shor's algorithm"
+              title="Shor's algorithm, 1994"
+              imageName={IMAGE.figPeterShor.name}
+              imageWidth={IMAGE.figPeterShor.width}
+              imageHeight={IMAGE.figPeterShor.height}
+              imageAlt="Peter Shor at the Dirac Medal Award Ceremony, 2017"
+            >
+              An algorithm native to quantum computers that finds the largest
+              prime factors of a given number exponentially faster than classical
+              computers. Discovered and proposed by American mathematician
+              Peter Shor.
+            </TermPeek>{' '}
             (famous for the threat it poses to modern day encryption systems) has
             been known since 1994, yet over 3 decades later the largest number
             ever factored using Shor's method is 35. And that was 7 years ago
@@ -144,8 +157,7 @@ function App() {
             startups raised $12.6 billion in 2025 alone, more than 90% of it for
             quantum computing. By then, two dozen manufacturers were commercially
             offering more than 40 quantum processors, yet none met the
-            requirements for large-scale applications such as chemical simulation
-            or cryptanalysis.
+            requirements for large-scale applications.
           </p>
 
           <p>
@@ -209,11 +221,12 @@ function App() {
               </a>
             </sup>
             .
+            <br />
+            Why can’t incumbent computer manufacturers simply do the same?
           </p>
 
           <p>
-            Why can’t incumbent computer manufacturers simply do the same?
-            Leading QC companies are home to some of the world’s most brilliant
+            Leading quantum companies are home to some of the world’s most brilliant
             scientists and engineers, but their industrial infrastructure and
             manufacturing supply chains were conceived of and constructed in a
             different century.
@@ -321,8 +334,8 @@ function App() {
 
           <p>
             Not long after Peter Shor&rsquo;s discovery of his eponymous prime
-            factorisation algorithm, researchers at NIST built the first quantum
-            logic gate using a trapped beryllium ion. In 1998, a team from Oxford
+            factorisation algorithm, researchers at NIST demonstrated the
+            world&rsquo;s first quantum logic operation. In 1998, a team from Oxford
             ran one of the first complete quantum algorithms on a two-qubit
             machine.
           </p>
@@ -390,8 +403,7 @@ function App() {
 
           <p>
             <strong>
-              And in all fairness, it's hard to imagine this having come about
-              any other way.
+              And it couldn&rsquo;t have happened any other way.
             </strong>
           </p>
 
@@ -574,7 +586,7 @@ function App() {
           <p>Why so much? Why so slow?</p>
 
           <p>
-            Let&rsquo;s not jump to any conclusions; laser companies are stuck
+            Laser companies are stuck
             between a rock and a hard place. All orders are bespoke; the laser
             system for a Strontium-based quantum computer might have little in
             common with the laser system for a Calcium-based atom physics
@@ -588,8 +600,8 @@ function App() {
 
           <p>
             Fragment the demand that way and economies of scale never appear. A
-            manufacturer serving several dozen laboratories, split across several
-            dozen incompatible wavelengths, cannot amortise an automated
+            manufacturer serving several dozen laboratories, all of whom have
+            different requirements, cannot amortise an automated
             production line, while a quantum company working against the available
             catalogue gives the supplier little reason to redesign it. Long lead
             times, high prices and by-hand integration then appear to be intrinsic
@@ -628,7 +640,7 @@ function App() {
             <br />
             2. Question Every Requirement
             <br />
-            3. Standardisation of Components
+            3. Standardised Components
             <br />
             4. Vertical Integration
             <br />
@@ -666,10 +678,15 @@ function App() {
                 citeN: '8',
               },
               {
-                text: "Two percent. Your car’s raw materials are maybe 20-30% of sticker price. Consumer electronics are similar. But rockets? Ninety-eight cents of every dollar was going somewhere other than what it was made of. Where? Three places, it seems. Supplier markups stacking through contract layers, each tier adding 15-30% margin. Custom designs that couldn’t achieve manufacturing scale. Expendable hardware thrown away after every flight. None of these are laws of physics. Traditional aerospace treated high costs as fixed constraints. But what if you treated them as variables? How do you actually capture that 98%?",
-                citeHref:
-                  'https://futureblind.com/p/atoms-are-cheap-process-is-pricey',
-                citeN: '9',
+                parts: [
+                  { text: 'Two percent', strong: true },
+                  {
+                    text: ". Your car’s raw materials are maybe 20-30% of sticker price. Consumer electronics are similar. But rockets? Ninety-eight cents of every dollar was going somewhere other than what it was made of. Where? Three places, it seems. Supplier markups stacking through contract layers, each tier adding 15-30% margin. Custom designs that couldn’t achieve manufacturing scale. Expendable hardware thrown away after every flight. None of these are the laws of physics. Traditional aerospace treated high costs as fixed constraints. But what if you treated them as variables? How do you actually capture that 98%?",
+                    citeHref:
+                      'https://futureblind.com/p/atoms-are-cheap-process-is-pricey',
+                    citeN: '9',
+                  },
+                ],
               },
             ]}
           />
@@ -704,7 +721,7 @@ function App() {
             />
             <figcaption>
               <strong>[FIG.5]</strong>
-              <span>Fail visibly, learn quickly</span>
+              <span>Early SpaceX Launch site, [INSERT YEAR HERE]</span>
               <span>Debris of the Falcon 1 launch</span>
             </figcaption>
           </figure>
@@ -747,8 +764,8 @@ function App() {
           <p>
             Each of these component parts can be assigned it&rsquo;s own idiot
             index; a high value is a flashing light pointing to a poorly optimised
-            manufacturing process. Values for ultra-precision components will of
-            course be higher than those for parts with lower precision
+            manufacturing process. Values for ultra-precision components will be
+            higher than those for parts with lower precision
             requirements, but this only indicates a higher cost floor; it says
             nothing about how far the current machinery is above it.
           </p>
@@ -822,11 +839,7 @@ function App() {
             .
           </p>
 
-          <h3 className="knot-title">3. Standardisation of Components</h3>
-
-          <blockquote className="knot-quote">
-            <p>The only way to get volume is to standardise.</p>
-          </blockquote>
+          <h3 className="knot-title">3. Standardised Components</h3>
 
           <p>
             Go to any quantum hardware supplier right now, be it lasers, vacuum
@@ -848,14 +861,8 @@ function App() {
           </blockquote>
 
           <p>
-            It&rsquo;s the latter, of course, but let&rsquo;s not be too quick to
-            point fingers: it&rsquo;s the same low-volume-differing-requirements
-            problem again. One company chooses calcium ions; another chooses
-            barium. Even two barium systems might have different requirements if
-            different isotopes are used.
-          </p>
-
-          <p>
+            It&rsquo;s the latter, of course: it&rsquo;s the same
+            low-volume-differing-requirements problem again.{' '}
             <strong>
               Economies of scale only emerge from making the same design in bulk;
               fragmented demand denies suppliers the opportunity to do so.
@@ -863,6 +870,21 @@ function App() {
           </p>
 
           <h3 className="knot-title">4. Vertical Integration</h3>
+
+          <p className="pull">
+            Vertical integration gives manufacturers the freedom to cut everything
+            that is not absolutely critical to building better computers.
+          </p>
+
+          <p>
+            This means avoiding the time cost
+            and incurred margins of outsourcing components, but it comes with
+            costs of its own. Fixed costs, specifically. Bringing the machines
+            in-house
+            isn&rsquo;t cheap, and incurs a lot of complexity in the short term.
+            In fact, if the goal is to build a single computer, it doesn&rsquo;t
+            make much sense to bring the manufacturing in-house at all.
+          </p>
 
           <blockquote className="quote-plain knot-quote">
             <p>
@@ -876,20 +898,6 @@ function App() {
               traditional aerospace stack.
             </p>
           </blockquote>
-
-          <p className="pull">
-            Vertical integration gives manufacturers the freedom to cut everything
-            that is not absolutely critical to building better computers.
-          </p>
-
-          <p>
-            In practical terms, vertical integration means avoiding the time cost
-            and incurred margins of outsourcing components. But it comes with a
-            cost. Fixed costs, specifically. Bringing the machines in-house
-            isn&rsquo;t cheap, and incurs a lot of complexity in the short term.
-            In fact, if the goal is to build a single computer, it doesn&rsquo;t
-            make much sense to bring the manufacturing in-house at all.
-          </p>
 
           <h3 className="knot-title">5. Increase Iteration Speed</h3>
 
@@ -949,7 +957,7 @@ function App() {
             lines={[
               '1. The Idiot Index',
               '2. Question Every Requirement',
-              '3. Standardisation of Components',
+              '3. Standardised Components',
               '4. Vertical Integration',
               '5. Increase Iteration Speed',
             ]}
