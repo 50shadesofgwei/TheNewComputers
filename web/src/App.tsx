@@ -1,11 +1,83 @@
 import { useEffect } from 'react'
 import Lenis from 'lenis'
+import { CtaPitch } from './CtaPitch'
 import { CHAPTER_IMAGES, IMAGE, MissionImage } from './MissionImage'
 import { OmitList } from './OmitList'
 import { TermPeek } from './TermPeek'
 import { TypewriterLines } from './TypewriterLines'
 import { TypewriterQuote } from './TypewriterQuote'
 import './App.css'
+
+const KNOT_PRINCIPLES = [
+  '1. The Idiot Index',
+  '2. Question Every Requirement',
+  '3. Standardised Components',
+  '4. Vertical Integration',
+  '5. Increase Iteration Speed',
+] as const
+
+const SOURCES: { n: number; text: string; href: string }[] = [
+  {
+    n: 1,
+    text: 'Willsch, D., et al. “The State of Factoring on Quantum Computers.” NIC Symposium 2025.',
+    href: 'https://juser.fz-juelich.de/record/1042431/files/NIC_2025_Willsch.pdf',
+  },
+  {
+    n: 2,
+    text: '“History of the Laser.” Photonics.com.',
+    href: 'https://www.photonics.com/LinearChart.aspx?ChartID=2',
+  },
+  {
+    n: 3,
+    text: '“Fastest Plane in History: The Blackbird.” Lockheed Martin.',
+    href: 'https://www.lockheedmartin.com/en-us/news/features/history/blackbird.html',
+  },
+  {
+    n: 5,
+    text: '“2026 State of the Global Quantum Industry Report.” Quantum Economic Development Consortium.',
+    href: 'https://quantumconsortium.org/publication/2026-state-of-the-global-quantum-industry-report/',
+  },
+  {
+    n: 6,
+    text: '“Quantum Index Report 2025.” MIT Initiative on the Digital Economy.',
+    href: 'https://qir.mit.edu/wp-content/uploads/2025/06/MIT-QIR-2025.pdf',
+  },
+  {
+    n: 7,
+    text: 'National Quantum Computing Centre. TOPTICA strontium-ion laser suites contract notice. Sell2Wales, November 2023.',
+    href: 'https://www.sell2wales.gov.wales/search/show/search_view.aspx?ID=NOV457942',
+  },
+  {
+    n: 8,
+    text: '“Elon Musk’s Mission to Mars.” Wired, October 2012.',
+    href: 'https://www.wired.com/2012/10/ff-elon-musk-qa/',
+  },
+  {
+    n: 9,
+    text: '“Atoms Are Cheap, Process Is Pricey.” Future Blind.',
+    href: 'https://futureblind.com/p/atoms-are-cheap-process-is-pricey',
+  },
+  {
+    n: 10,
+    text: 'Vance, A. “How Elon Musk Willed SpaceX into Making the Cheapest Rockets Ever Created.” Vice, 2015.',
+    href: 'https://www.vice.com/en/article/how-elon-musk-willed-spacex-into-making-the-cheapest-rockets-ever-created/',
+  },
+  {
+    n: 11,
+    text: 'University of Glasgow. Refurbished MOCVD reactor contract notice. Public Contracts Scotland, July 2017.',
+    href: 'https://www.publiccontractsscotland.gov.uk/search/show/search_view.aspx?ID=JUL290649',
+  },
+  {
+    n: 12,
+    text: '“Aixtron ships MOCVD tool to Russian research institute.” DigiTimes, April 2013.',
+    href: 'https://www.digitimes.com/news/a20130416PD214.html',
+  },
+  {
+    n: 13,
+    text: 'House of Commons Science and Technology Committee. “Reproducibility and Research Integrity.” 2023.',
+    href: 'https://publications.parliament.uk/pa/cm5803/cmselect/cmsctech/101/report.html',
+  },
+]
 
 function App() {
   useEffect(() => {
@@ -657,6 +729,8 @@ function App() {
             4. Cutting the Gordian Knot
           </h2>
 
+          <TypewriterLines lines={[...KNOT_PRINCIPLES]} />
+
           <p className="pull pull-sm">
             Junior engineers are explicitly told that requirements from "smart
             people" are the most dangerous, because nobody thinks to question them.
@@ -785,7 +859,7 @@ function App() {
               the more astute question is to ask whether it needs to exist at
               all
             </strong>
-            . Get rid of the part entirely and the idiot index falls to 0.
+            . Get rid of the part entirely, and the idiot index falls to 0.
           </p>
 
           <blockquote className="knot-quote">
@@ -809,8 +883,7 @@ function App() {
             >
               Metal-organic chemical vapour deposition — a machine that grows
               thin semiconductor layers by flowing precursor gases over a heated
-              wafer. The workhorse tool for fabricating compound-semiconductor
-              lasers and related devices.
+              wafer.
             </TermPeek>{' '}
             are designed to grow semiconductor layers of all different chemical
             makeups and sizes, all with fully automated handling.
@@ -836,24 +909,22 @@ function App() {
 
           <h3 className="knot-title">3. Standardised Components</h3>
 
+          <p className="meme-subhead meme-subhead-center">
+            The existing approach was bespoke vehicles per mission.{' '}
+            <strong>
+              SpaceX bet the opposite: that cost savings from standardisation
+              would exceed the value of customisation.
+            </strong>{' '}
+            Yes, customers wanted custom solutions. But they wanted low prices
+            even more. Force them to choose, and they&rsquo;d adapt.
+          </p>
+
           <p>
             Go to any quantum hardware supplier right now, be it lasers, vacuum
             chambers or semiconductor fabs, and you will inevitably see the words
             &lsquo;request a quotation&rsquo; in place of a price tag. Why is this?
             Are suppliers being secretive, or do they genuinely not know?
           </p>
-
-          <blockquote className="quote-plain knot-quote">
-            <p>
-              The existing approach was bespoke vehicles per mission.{' '}
-              <strong>
-                SpaceX bet the opposite: that cost savings from standardisation
-                would exceed the value of customisation.
-              </strong>{' '}
-              Yes, customers wanted custom solutions. But they wanted low prices
-              even more. Force them to choose, and they&rsquo;d adapt.
-            </p>
-          </blockquote>
 
           <p>
             It&rsquo;s the latter, of course: it&rsquo;s the same
@@ -896,6 +967,15 @@ function App() {
 
           <h3 className="knot-title">5. Increase Iteration Speed</h3>
 
+          <p className="meme-subhead meme-subhead-center">
+            Traditional aerospace builds few prototypes, each one expensive and
+            near-flight-ready. SpaceX builds many cheaper prototypes.{' '}
+            <strong>
+              They&rsquo;d rather have ten rough versions to blow up than one
+              polished version they&rsquo;re afraid to break.
+            </strong>
+          </p>
+
           <p>
             The idiot index identifies where manufacturing optimisations can be
             made, vertical integration gives the control needed to implement them,
@@ -917,17 +997,6 @@ function App() {
             minimal.
           </p>
 
-          <blockquote className="quote-plain knot-quote">
-            <p>
-              Traditional aerospace builds few prototypes, each one expensive and
-              near-flight-ready. SpaceX builds many cheaper prototypes.{' '}
-              <strong>
-                They&rsquo;d rather have ten rough versions to blow up than one
-                polished version they&rsquo;re afraid to break.
-              </strong>
-            </p>
-          </blockquote>
-
           <figure className="figure">
             <MissionImage
               {...IMAGE.fig003}
@@ -948,26 +1017,42 @@ function App() {
             flights.
           </p>
 
-          <TypewriterLines
-            lines={[
-              '1. The Idiot Index',
-              '2. Question Every Requirement',
-              '3. Standardised Components',
-              '4. Vertical Integration',
-              '5. Increase Iteration Speed',
-            ]}
-          />
+          <TypewriterLines lines={[...KNOT_PRINCIPLES]} />
         </div>
       </article>
 
-      <section className="cta" id="pt-05">
-        <p className="meta">PT—05/ 05</p>
-        <h2>Join Us</h2>
-        <p>
-          Pathfinder is looking for a technical cofounder: a physicist or
-          engineer prepared to spend the next decade hacking together the
-          quantum production line from scratch.
-        </p>
+      <section className="cta cta-splash" id="pt-05">
+        <div className="cta-media">
+          <MissionImage
+            {...IMAGE.figNoyce}
+            alt="The Traitorous Eight at Fairchild Semiconductor, with Robert Noyce at right"
+          />
+        </div>
+        <div className="cta-head">
+          <p className="meta">PT—05/ 05</p>
+          <h2>Join Us</h2>
+        </div>
+      </section>
+
+      <CtaPitch
+        lines={[
+          'Pathfinder is looking for a technical cofounder.',
+          'An engineer or physicist prepared to spend the next decade hacking together the quantum production line from scratch.',
+        ]}
+      />
+
+      <section className="sources" aria-label="Sources">
+        <ol className="sources-list">
+          {SOURCES.map((source) => (
+            <li key={source.n}>
+              <span className="sources-n">{source.n}.</span>{' '}
+              {source.text}{' '}
+              <a href={source.href} target="_blank" rel="noreferrer">
+                {source.href}
+              </a>
+            </li>
+          ))}
+        </ol>
       </section>
     </div>
   )
