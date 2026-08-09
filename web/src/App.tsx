@@ -328,14 +328,11 @@ function App() {
           </blockquote>
 
           <p>
-            The leading companies do iterate, and it would be unfair to say
-            otherwise. They fabricate new chips, improve gate fidelities and
-            upgrade their systems constantly, and several have begun bringing
-            fabrication in-house. These investments will shorten the chip cycle;
-            the complete computer still passes through epitaxial growth,
-            packaging, lasers, control electronics, cryogenics/vacuum, assembly
-            and testing, and the pace of the whole machine remains governed by
-            whichever stage moves slowest.
+            Leading companies do iterate; fabricating new chips, improving gate
+            fidelities and more recently bringing fabrication in-house. But this
+            shortens only the chip cycle. The complete computer still depends on
+            many dozen bottlenecked supplies, and iteration time is ultimately
+            dependent on whichever supplier moves slowest.
           </p>
 
           <p>
@@ -703,7 +700,7 @@ function App() {
           />
           <span className="part-tag">PT—4</span>
           <p className="chapter-caption">
-            <strong>[FIG.4]</strong>
+            <strong>[FIG.5]</strong>
             <span>Intel Fab 9 — Rio Rancho, New Mexico</span>
             <span>Advanced packaging facility, January 2024</span>
           </p>
@@ -797,7 +794,7 @@ function App() {
               alt="Engineers examining hardware wreckage"
             />
             <figcaption>
-              <strong>[FIG.5]</strong>
+              <strong>[FIG.6]</strong>
               <span>Early SpaceX Launch site, 2006</span>
               <span>Debris of the Falcon 1 launch</span>
             </figcaption>
@@ -844,6 +841,13 @@ function App() {
             requirements, but this only indicates a higher cost floor; it says
             nothing about how far the current machinery is above it.
           </p>
+
+          <figure className="figure figure-center">
+            <MissionImage
+              {...IMAGE.figIdiotIndex}
+              alt="Idiot index estimates for eight quantum computing components: vacuum chamber 25×, dilution fridge 7×, ECDL 30×, optical mount 50×, SPAD module 60×, acousto-optic modulator 45×, RF control system 50×, MOCVD reactor 20×"
+            />
+          </figure>
 
           <h3 className="knot-title">2. Question Every Requirement</h3>
 
@@ -928,6 +932,13 @@ function App() {
             Are suppliers being secretive, or do they genuinely not know?
           </p>
 
+          <figure className="figure figure-narrow figure-center">
+            <MissionImage
+              {...IMAGE.figLaserQuote}
+              alt="Two ways to buy the same laser: a long request-a-quotation specification form, or a listed price with a five-day delivery and a buy button"
+            />
+          </figure>
+
           <p>
             It&rsquo;s the latter, of course: it&rsquo;s the same
             low-volume-differing-requirements problem again.{' '}
@@ -1005,7 +1016,7 @@ function App() {
               alt="Evolution of the Raptor engine from version 1 to 3"
             />
             <figcaption>
-              <strong>[FIG.6]</strong>
+              <strong>[FIG.7]</strong>
               <span>Evolution of the Raptor engine, from version 1 to 3</span>
               <span>Simplify, simplify, simplify!</span>
             </figcaption>
@@ -1030,7 +1041,7 @@ function App() {
             alt="The Traitorous Eight at Fairchild Semiconductor, 1960"
           />
           <figcaption>
-            <strong>[FIG.7]</strong>
+            <strong>[FIG.8]</strong>
             <span>The Traitorous Eight</span>
             <span>Fairchild Semiconductor, 1960</span>
           </figcaption>
@@ -1044,7 +1055,7 @@ function App() {
       <CtaPitch
         lines={[
           'Pathfinder is looking for a technical cofounder.',
-          'An engineer or physicist prepared to spend the next decade hacking together the quantum production line from scratch.',
+          'An engineer or physicist prepared to spend the next decade hacking together quantum computers from the ground up.',
         ]}
       />
 

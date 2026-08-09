@@ -119,7 +119,7 @@ export function CtaPitch({ lines, joinHref = '/join' }: CtaPitchProps) {
         </div>
       </div>
       <a className="cta-join" href={joinHref}>
-        Join
+        Learn more
       </a>
     </section>
   )

@@ -38,6 +38,8 @@ export const IMAGE = {
   fig003: { name: 'fig-003', width: 1600, height: 961 },
   figGordianV2: { name: 'fig-gordian-v2', width: 1600, height: 900 },
   figLaser: { name: 'fig-laser', width: 1600, height: 1205 },
+  figLaserQuote: { name: 'fig-laser-quote', width: 1536, height: 1024 },
+  figIdiotIndex: { name: 'fig-idiot-index', width: 1600, height: 900 },
   figIbm: { name: 'fig-ibm', width: 1047, height: 1600 },
   figCuprate: { name: 'fig-cuprate', width: 900, height: 646 },
   figNistPaper: { name: 'fig-nist-paper', width: 900, height: 1165 },
