@@ -376,8 +376,9 @@ function App() {
           <OmitList />
 
           <p>
-            And it's no surprise; none of this was required to substantiate the
-            scientific claim.
+            <strong>
+              None of this was required to substantiate the scientific claim.
+            </strong>
           </p>
 
           <p>
@@ -721,7 +722,7 @@ function App() {
             />
             <figcaption>
               <strong>[FIG.5]</strong>
-              <span>Early SpaceX Launch site, [INSERT YEAR HERE]</span>
+              <span>Early SpaceX Launch site, 2006</span>
               <span>Debris of the Falcon 1 launch</span>
             </figcaption>
           </figure>
@@ -770,12 +771,6 @@ function App() {
             nothing about how far the current machinery is above it.
           </p>
 
-          <p>
-            Knowing where the manufacturing inefficiencies are hiding is only half
-            the problem, however. Fixing them is more difficult, especially so
-            with quantum hardware.
-          </p>
-
           <h3 className="knot-title">2. Question Every Requirement</h3>
 
           <blockquote className="knot-quote">
@@ -789,8 +784,12 @@ function App() {
           <p>
             A high idiot index identifies an expensive component; the knee-jerk
             response is ask how the component can be manufactured more cheaply,
-            but the more astute question is to ask whether it needs to exist at
-            all. Get rid of the part entirely and the idiot index falls to 0.
+            but{' '}
+            <strong>
+              the more astute question is to ask whether it needs to exist at
+              all
+            </strong>
+            . Get rid of the part entirely and the idiot index falls to 0.
           </p>
 
           <blockquote className="knot-quote">
