@@ -277,7 +277,7 @@ function App() {
           <p className="pull">There is a better way.</p>
 
           <p>
-            Lasers moved from a proposal to product in 4 years
+            Lasers moved from an unproven proposal to product in 4 years
             <sup className="cite">
               <a href="https://www.photonics.com/LinearChart.aspx?ChartID=2">
                 2
@@ -476,7 +476,7 @@ function App() {
 
           <p>
             <strong>
-              And it couldn&rsquo;t have happened any other way.
+              ...But it couldn&rsquo;t have happened any other way.
             </strong>
           </p>
 
@@ -541,11 +541,13 @@ function App() {
               now beginning this transition for itself.
               The National Academies described the field’s greatest challenge in
               2019 as moving “from an understanding of the basic science to the
-              creation of useful devices.” Unluckily for the budding researcher,
-              this is a significantly less glamorous process than finding the one
-              great scientific breakthrough. Luckily, however, we already
-              have a role model whom we can follow: every other technological industry in
-              existence.
+              creation of useful devices.”
+            </p>
+            <p>
+              Unluckily for the budding researcher, this is a significantly less
+              glamorous process than finding the one great scientific
+              breakthrough. Luckily, however, we already have a role model whom
+              we can follow: every other technological industry in existence.
             </p>
           </div>
 
@@ -1022,12 +1024,17 @@ function App() {
       </article>
 
       <section className="cta cta-splash" id="pt-05">
-        <div className="cta-media">
+        <figure className="cta-media">
           <MissionImage
             {...IMAGE.figNoyce}
-            alt="The Traitorous Eight at Fairchild Semiconductor, with Robert Noyce at right"
+            alt="The Traitorous Eight at Fairchild Semiconductor, 1960"
           />
-        </div>
+          <figcaption>
+            <strong>[FIG.7]</strong>
+            <span>The Traitorous Eight</span>
+            <span>Fairchild Semiconductor, 1960</span>
+          </figcaption>
+        </figure>
         <div className="cta-head">
           <p className="meta">PT—05/ 05</p>
           <h2>Join Us</h2>
