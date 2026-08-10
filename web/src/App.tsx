@@ -1055,7 +1055,7 @@ function App() {
       <CtaPitch
         lines={[
           'Pathfinder is looking for a technical cofounder.',
-          'An engineer or physicist prepared to spend the next decade hacking together quantum computers from scratch.',
+          'An engineer with the nerve to spend the next decade hacking together quantum computers from scratch.',
         ]}
       />
 
