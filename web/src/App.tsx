@@ -328,14 +328,6 @@ function App() {
           </blockquote>
 
           <p>
-            Leading companies do iterate; fabricating new chips, improving gate
-            fidelities and more recently bringing fabrication in-house. But this
-            shortens only the chip cycle. The complete computer still depends on
-            many dozen bottlenecked supplies, and iteration time is ultimately
-            dependent on whichever supplier moves slowest.
-          </p>
-
-          <p>
             We at Pathfinder are developing quantum computers in a new way, but we
             are only one company. If quantum computing is to be taken seriously as
             a frontier technology and break free from the bureaucratic overhang of

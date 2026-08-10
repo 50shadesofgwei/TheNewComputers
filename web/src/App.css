@@ -1436,7 +1436,7 @@
   display: grid;
   align-content: start;
   justify-items: start;
-  /* Sit at the scrub start line (~62% down) when the section fills the view */
+  /* Enters low in the viewport so the scrub has room to finish mid-screen */
   padding:
     62vh
     var(--page-pad)

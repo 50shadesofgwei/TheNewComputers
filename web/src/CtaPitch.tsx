@@ -68,9 +68,10 @@ export function CtaPitch({ lines, joinHref = '/join' }: CtaPitchProps) {
     const update = () => {
       frame = 0
       const rect = stack.getBoundingClientRect()
-      // Dim until text top hits ~62% down the viewport; then white → accent
-      const start = window.innerHeight * 0.62
-      const end = window.innerHeight * 0.08
+      // Scrub as the text rises from ~85% to ~50% down the viewport, so it is
+      // fully lit by the time it settles mid-screen
+      const start = window.innerHeight * 0.85
+      const end = window.innerHeight * 0.5
       const progress = Math.max(
         0,
         Math.min(1, (start - rect.top) / Math.max(start - end, 1)),
