@@ -196,8 +196,8 @@ function App() {
 
           <p>
             If you've spent time around the field, you know the elephant in the
-            room; futuristic looking computers the size of entire rooms on one
-            hand, and on the other, fuzzy and opaque
+            room; on the one hand, futuristic looking computers the size of
+            entire rooms, and on the other, fuzzy and opaque
             explanations of their supposed practical utility.{' '}
             <TermPeek
               term="Shor's algorithm"
@@ -329,20 +329,13 @@ function App() {
 
           <p>
             We at Pathfinder are developing quantum computers in a new way, but we
-            are only one company. If quantum computing is to be taken seriously as
-            a frontier technology and break free from the bureaucratic overhang of
-            academia, the excessive development costs and lead times, and the
-            claustrophobically narrow specialisation that has so neutered the
-            previous generation's brightest and best, the change must be
-            industry-wide.
+            are only one company. If quantum computing is ever to be more than a
+            mere embarrassing technological footnote, the entire industry must
+            escape from academia’s bureaucratic overhang, slash development costs
+            and lead times, and start building complete systems instead of
+            ever-narrower pieces of them.
           </p>
 
-          <p>
-            <strong>
-              We reject the assumption that the imminent
-              arrival of fault-tolerant computers is a foregone conclusion.
-            </strong>
-          </p>
         </div>
       </article>
 
@@ -1047,7 +1040,7 @@ function App() {
       <CtaPitch
         lines={[
           'Pathfinder is looking for a technical cofounder.',
-          'An engineer with the nerve to spend the next decade hacking together quantum computers from scratch.',
+          'An engineer with the nerve to hack together quantum computers from scratch.',
         ]}
       />
 
