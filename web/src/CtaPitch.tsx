@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react'
 
 type CtaPitchProps = {
   lines: string[]
+  heading?: string
   joinHref?: string
 }
 
@@ -34,7 +35,7 @@ function splitLines(lines: string[]) {
 }
 
 /** Accent chars light up in reading order as the section crosses the viewport. */
-export function CtaPitch({ lines, joinHref = '/join' }: CtaPitchProps) {
+export function CtaPitch({ lines, heading, joinHref = '/join' }: CtaPitchProps) {
   const sectionRef = useRef<HTMLElement>(null)
   const stackRef = useRef<HTMLDivElement>(null)
   const topRef = useRef<HTMLDivElement>(null)
@@ -107,6 +108,7 @@ export function CtaPitch({ lines, joinHref = '/join' }: CtaPitchProps) {
       aria-label="Join Us pitch"
     >
       <p className="cta-pitch-sr">{lines.join(' ')}</p>
+      {heading ? <h2 className="cta-pitch-head">{heading}</h2> : null}
       <div className="cta-pitch-stack" ref={stackRef}>
         <div className="cta-pitch-bottom" aria-hidden="true">
           {parts.map(({ line, startIndex }) => (

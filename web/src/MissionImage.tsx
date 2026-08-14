@@ -50,6 +50,7 @@ export const IMAGE = {
   figWalterKohn: { name: 'fig-walter-kohn', width: 720, height: 974 },
   figPeterShor: { name: 'fig-peter-shor', width: 559, height: 720 },
   figNoyce: { name: 'fig-noyce', width: 1600, height: 857 },
+  figJobsWoz: { name: 'fig-jobs-woz', width: 1000, height: 766 },
   figMocvd: { name: 'fig-mocvd', width: 521, height: 383 },
   figPeople: { name: 'fig-people', width: 1600, height: 1054 },
   figTeleportation: { name: 'fig-teleportation', width: 1448, height: 1086 },

@@ -1033,14 +1033,57 @@ function App() {
         </figure>
         <div className="cta-head">
           <p className="meta">PT—05/ 05</p>
-          <h2>Join Us</h2>
+          <h2>The Window</h2>
         </div>
       </section>
 
+      <article className="prose prose-layout-center">
+        <div className="prose-inner">
+          <h2 className="prose-display">5. The Window</h2>
+
+          <p className="pull">
+            In every new industry, there is a short window where a small handful
+            of people decide the shape of the coming decades.
+          </p>
+
+          <figure className="figure figure-center">
+            <MissionImage
+              {...IMAGE.figJobsWoz}
+              alt="Steve Wozniak seated at an Apple II keyboard while Steve Jobs works on an open machine beside him"
+            />
+            <figcaption>
+              <strong>[FIG.9]</strong>
+              <span>Steve Wozniak and Steve Jobs</span>
+              <span>Apple Computer, Cupertino — 1977</span>
+            </figcaption>
+          </figure>
+
+          <p>
+            At the dawn of every major technology, there was a short window in
+            which the work of a few people decided how the field
+            would take shape for decades to come. Jobs and Wozniak in the
+            seventies, Bezos and Page in the nineties, OpenAI and Anthropic today.
+            Tomorrow, the window for quantum computing will close, but who closes
+            it remains to be seen.
+          </p>
+
+          <p>
+            If you came into the field looking for adventure and found only
+            committees, if you&rsquo;re willing to entertain the idea that
+            everything we know about making these machines today is wrong,{' '}
+            <strong>
+              <em>if you&rsquo;re young and you&rsquo;re mean and you want it all</em>
+            </strong>{' '}
+            &mdash; we want to talk with you.
+          </p>
+        </div>
+      </article>
+
       <CtaPitch
+        heading="Join Us"
         lines={[
           'Pathfinder is looking for a technical cofounder.',
-          'An engineer with the nerve to hack together quantum computers from scratch.',
+          'An engineer with the talent and the nerve to hack together quantum computers from scratch.',
         ]}
       />
 
