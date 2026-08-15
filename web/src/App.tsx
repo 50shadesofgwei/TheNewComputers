@@ -224,15 +224,6 @@ function App() {
           </p>
 
           <p>
-            Since that time, governments worldwide have announced more than $65.9
-            billion for quantum science and technology, while quantum-technology
-            startups raised $12.6 billion in 2025 alone, more than 90% of it for
-            quantum computing. By then, two dozen manufacturers were commercially
-            offering more than 40 quantum processors, yet none met the
-            requirements for large-scale applications.
-          </p>
-
-          <p>
             In that same timeframe, the world was introduced to reusable rockets,
             self-driving cars, mass-market artificial intelligence and implantable
             brain–computer interfaces. It is by no means obvious that these fields
