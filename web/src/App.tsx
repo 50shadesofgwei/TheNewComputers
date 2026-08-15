@@ -214,7 +214,7 @@ function App() {
             </TermPeek>{' '}
             (famous for the threat it poses to modern day encryption systems) has
             been known since 1994, yet over 3 decades later the largest number
-            ever factored using Shor's method is 35. And that was 7 years ago
+            it has ever factored is 35. And that was 7 years ago
             <sup className="cite">
               <a href="https://juser.fz-juelich.de/record/1042431/files/NIC_2025_Willsch.pdf">
                 1
