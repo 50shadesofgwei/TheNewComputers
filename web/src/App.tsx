@@ -81,6 +81,10 @@ const SOURCES: { n: number; text: string; href: string }[] = [
 
 function App() {
   useEffect(() => {
+    document.title = 'Out of the Lab and Into the Factory — The New Computers'
+  }, [])
+
+  useEffect(() => {
     // Lerp (not duration/easing): duration mode restarts a timed curve on every
     // wheel tick, which reads as hitchy / low-FPS. Lerp continuously chases.
     const lenis = new Lenis({
@@ -142,7 +146,7 @@ function App() {
     <div className="mission">
       <header className="topbar meta">
         <span>Mission Doc.</span>
-        <span>The New Computers</span>
+        <a href="/">The New Computers</a>
       </header>
 
       <aside className="chapter-rail meta" aria-hidden="true">
@@ -1077,6 +1081,12 @@ function App() {
           'An engineer with the talent and the nerve to hack together quantum computers from scratch.',
         ]}
       />
+
+      <footer className="colophon">
+        <a href="mailto:jonathan@pathfinderquantum.com">
+          jonathan@pathfinderquantum.com
+        </a>
+      </footer>
 
       <section className="sources" aria-label="Sources">
         <ol className="sources-list">

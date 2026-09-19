@@ -33,6 +33,16 @@
   flex: 0 1 auto;
 }
 
+.topbar a {
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.topbar a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .chapter-rail {
   position: fixed;
   top: 50%;
@@ -1922,6 +1932,29 @@
 
 .sources-list a:hover {
   color: var(--text);
+}
+
+.colophon {
+  background: var(--bg-black);
+  color: var(--text-inv);
+  padding: 0 var(--page-pad) clamp(3.5rem, 9vw, 5.5rem);
+  text-align: center;
+}
+
+.colophon a {
+  font-family: var(--font-meta);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  color: color-mix(in srgb, var(--text-inv) 62%, transparent);
+  text-decoration: none;
+}
+
+.colophon a:hover {
+  color: var(--text-inv);
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
 }
 
 @media (max-width: 900px) {

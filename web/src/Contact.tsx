@@ -171,8 +171,8 @@ export default function Contact() {
   return (
     <div className="contact">
       <header className="topbar meta">
-        <a href="/">Mission Doc.</a>
-        <span>The New Computers</span>
+        <a href="/mission">Mission Doc.</a>
+        <a href="/">The New Computers</a>
       </header>
 
       <main className="contact-shell">
