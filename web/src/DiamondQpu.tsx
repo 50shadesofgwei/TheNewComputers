@@ -65,6 +65,12 @@ export default function DiamondQpu() {
 
       <section>
         <h2>System architecture</h2>
+        <figure className="figure figure-center spec-figure">
+          <img
+            src="/images/diamond-qpu-architecture.png"
+            alt="Pathfinder Diamond QPU: diamond NV chiplet flip-chip bonded to a microwave and RF ASIC, optically coupled to a silicon nitride photonic circuit for 515 nm excitation and fluorescence collection."
+          />
+        </figure>
         <p>
           Qubits are housed in a 4x4x0.5&nbsp;mm ⟨111⟩ diamond plate, with an NV
           depth ~100 nanometers. An ASIC flip-chip bonded to the diamond
