@@ -163,77 +163,39 @@ a.gate-list-name:hover {
 }
 
 .team-collage {
-  position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.4rem;
+  padding:
+    calc(3.2rem + env(safe-area-inset-top, 0px))
+    0.4rem
+    0.4rem;
   background: #fff;
 }
 
 .team-p {
-  position: absolute;
-  width: auto;
+  width: 100%;
   height: auto;
-  max-width: none;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
   display: block;
   user-select: none;
   pointer-events: none;
 }
 
 .team-p-kitchener {
-  width: min(34vw, 22rem);
-  top: 38%;
-  left: 50%;
-  transform: translate(-50%, -42%) rotate(-2.5deg);
-  z-index: 6;
-}
-
-.team-p-sam {
-  width: min(26vw, 16.5rem);
-  top: 6%;
-  left: 4%;
-  transform: rotate(5deg);
-  z-index: 4;
-}
-
-.team-p-finger {
-  width: min(22vw, 14rem);
-  right: 5%;
-  bottom: 4%;
-  transform: rotate(-7deg);
-  z-index: 5;
+  grid-column: 1 / -1;
+  aspect-ratio: 2.15 / 1;
+  object-position: center 32%;
 }
 
 .team-p-navy {
-  width: min(24vw, 15rem);
-  top: 3%;
-  right: 8%;
-  transform: rotate(3.5deg);
-  z-index: 3;
+  object-position: center 38%;
 }
 
-.team-p-moor {
-  width: min(23vw, 14.5rem);
-  top: 42%;
-  left: 7%;
-  transform: rotate(-4deg);
-  z-index: 4;
-}
-
-.team-p-country {
-  width: min(22vw, 13.5rem);
-  right: 28%;
-  bottom: 6%;
-  transform: rotate(6deg);
-  z-index: 3;
-}
-
-.team-p-cover {
-  width: min(20vw, 13rem);
-  top: 8%;
-  left: 36%;
-  transform: rotate(-8deg);
-  z-index: 2;
+.team-p-finger {
+  object-position: center 12%;
 }
 
 .team-home {
@@ -253,9 +215,6 @@ a.gate-list-name:hover {
 
 @media (max-width: 720px) {
   .team-collage {
-    min-height: auto;
-    overflow: visible;
-    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.35rem;
     padding:
@@ -264,13 +223,10 @@ a.gate-list-name:hover {
       0.35rem;
   }
 
-  .team-p {
-    position: static;
-    width: 100%;
-    transform: none;
-  }
-
+  .team-p,
   .team-p-kitchener {
-    grid-column: 1 / -1;
+    aspect-ratio: auto;
+    object-fit: unset;
+    object-position: unset;
   }
 }

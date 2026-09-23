@@ -447,8 +447,7 @@ function App() {
           </p>
 
           <p className="pull pull-sm pull-end">
-            Assembly time, fabrication yield, supplier qualification, maintenance
-            hours and unit cost appear nowhere in the scorecard.
+            Assembly time and fabrication yield appear nowhere in the scorecard.
           </p>
 
           <p>
