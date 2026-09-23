@@ -5,13 +5,11 @@ const DESIGNS = [
   {
     name: 'Diamond QPU',
     note: 'v2.1',
-    href: '/blueprints/diamond-qpu',
-    links: [] as { label: string; href: string }[],
+    links: [{ label: 'Paper', href: '/blueprints/diamond-qpu' }],
   },
   {
     name: 'On-Chip Ion Trap',
     note: 'v1.3',
-    href: undefined,
     links: [
       {
         label: 'Paper',
@@ -39,28 +37,24 @@ export default function Blueprint() {
       <ol className="gate-list">
         {DESIGNS.map((design) => (
           <li key={design.name}>
-            {design.href ? (
-              <a className="gate-list-name" href={design.href}>
-                {design.name}
-              </a>
-            ) : (
-              <span className="gate-list-name">{design.name}</span>
-            )}
+            <span className="gate-list-name">{design.name}</span>
             <span className="gate-list-note">{design.note}</span>
-            {design.links.length > 0 ? (
-              <span className="gate-list-links">
-                {design.links.map((link) => (
+            <span className="gate-list-links">
+              {design.links.map((link) => {
+                const external = link.href.startsWith('http')
+                return (
                   <a
                     key={link.href}
                     href={link.href}
-                    target="_blank"
-                    rel="noreferrer"
+                    {...(external
+                      ? { target: '_blank', rel: 'noreferrer' }
+                      : {})}
                   >
                     {link.label}
                   </a>
-                ))}
-              </span>
-            ) : null}
+                )
+              })}
+            </span>
           </li>
         ))}
       </ol>
