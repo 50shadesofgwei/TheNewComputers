@@ -4,13 +4,13 @@ import './Home.css'
 const DESIGNS = [
   {
     name: 'Diamond QPU',
-    note: 'v2.1 · NV centre · tabletop',
+    note: 'v2.1',
     href: '/blueprints/diamond-qpu',
     links: [] as { label: string; href: string }[],
   },
   {
     name: 'On-Chip Ion Trap',
-    note: 'v1.3 · Ba-138 · May 2026',
+    note: 'v1.3',
     href: undefined,
     links: [
       {
