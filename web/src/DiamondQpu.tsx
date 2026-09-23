@@ -68,7 +68,7 @@ export default function DiamondQpu() {
         <p>
           Qubits are housed in a 4x4x0.5&nbsp;mm ⟨111⟩ diamond plate, with an NV
           depth ~100 nanometers. An ASIC flip-chip bonded to the diamond
-          delivers microwave and RF and carries on-chip photonics for 515&nbsp;nm
+          delivers microwave and RF and carries silicon photonics for 515&nbsp;nm
           excitation and fluorescence collection. Pauli X, Y, Z and entangling
           gates are driven by pulses applied to the various spins. The diamond
           is cooled by a triple Peltier stack.
@@ -142,7 +142,7 @@ export default function DiamondQpu() {
           that excites the NV and collects its fluorescence.
         </p>
         <p>
-          On-chip photonics is part of this design, not a later option. 515&nbsp;nm
+          Silicon photonics is fundamental to the architecture. 515&nbsp;nm
           excitation is coupled into waveguides on the ASIC; phonon-sideband
           fluorescence is collected on the same chip and routed to the detector.
         </p>
