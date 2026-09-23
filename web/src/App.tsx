@@ -1060,16 +1060,6 @@ function App() {
             Tomorrow, the window for quantum computing will close, but who closes
             it remains to be seen.
           </p>
-
-          <p>
-            If you came into the field looking for adventure and found only
-            committees, if you&rsquo;re willing to entertain the idea that
-            everything we know about making these machines today is wrong,{' '}
-            <strong>
-              <em>if you&rsquo;re young and you&rsquo;re mean and you want it all</em>
-            </strong>{' '}
-            &mdash; we want to talk with you.
-          </p>
         </div>
       </article>
 
