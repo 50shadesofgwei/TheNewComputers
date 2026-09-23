@@ -131,11 +131,6 @@ export default function DiamondQpu() {
           single-qubit Bloch rotation, corresponding to ≤10<sup>−3</sup> total
           error from crosstalk and control imperfections.
         </p>
-        <p>
-          The NV&rsquo;s physical position on the plate must be compatible with
-          the on-chip photonic circuit and flip-chip bonding to the ASIC; it
-          cannot be too far away from the centre of the plate.
-        </p>
       </section>
 
       <section>
