@@ -66,9 +66,12 @@ export default function DiamondQpu() {
       <section>
         <h2>System architecture</h2>
         <p>
-          Qubits are housed in a 4x4x0.5&nbsp;mm diamond plate, with an NV depth
-          ~100 nanometers. Pauli X, Y, Z and entangling gates are driven by
-          microwave and RF pulses applied to the various spins.
+          Qubits are housed in a 4x4x0.5&nbsp;mm ⟨111⟩ diamond plate, with an NV
+          depth ~100 nanometers. An ASIC flip-chip bonded to the diamond
+          delivers microwave and RF and carries on-chip photonics for 515&nbsp;nm
+          excitation and fluorescence collection. Pauli X, Y, Z and entangling
+          gates are driven by pulses applied to the various spins. The diamond
+          is cooled by a triple Peltier stack.
         </p>
       </section>
 
@@ -80,14 +83,14 @@ export default function DiamondQpu() {
           approximately 100&nbsp;nm below the diamond surface.
         </p>
         <p>
-          A ⟨111⟩ crystal orientation is preferred because it simplifies the
-          optical geometry for an appropriately oriented NV, but it is not a
-          hard requirement if it materially increases cost or manufacturing
-          difficulty.
+          ⟨111⟩ diamond is preferred. That orientation simplifies the optical
+          geometry for an appropriately aligned NV.
         </p>
         <p>
           The desired register contains a nitrogen vacancy surrounded by eight
-          sufficiently strongly coupled <sup>13</sup>C nuclear spins.
+          sufficiently strongly coupled <sup>13</sup>C nuclear spins. Those
+          spins are the qubits: Pauli X, Y and Z, and the entangling gates
+          between them, are microwave and RF pulses applied to that register.
         </p>
         <p>
           Increasing <sup>13</sup>C abundance increases the probability of
@@ -108,7 +111,7 @@ export default function DiamondQpu() {
         <p>
           <strong>Stable fluorescence:</strong> the NV must remain predominantly
           in the NV<sup>−</sup> charge state and produce a repeatable
-          fluorescence count rate under repeated 532&nbsp;nm excitation, without
+          fluorescence count rate under repeated 515&nbsp;nm excitation, without
           significant blinking or charge-state switching. The acceptance
           threshold will be set from measured photon-count statistics during
           characterization.
@@ -130,24 +133,31 @@ export default function DiamondQpu() {
         </p>
         <p>
           The NV&rsquo;s physical position on the plate must be compatible with
-          optical access and metallisation; it cannot be too far away from the
-          centre of the plate.
+          the on-chip photonic circuit and flip-chip bonding to the ASIC; it
+          cannot be too far away from the centre of the plate.
         </p>
       </section>
 
       <section>
-        <h2>3. MW/RF Antenna</h2>
+        <h2>3. ASIC and flip-chip</h2>
         <p>
-          Lithographically-patterned Ti/Au MW/RF rails are fabricated directly
-          onto the diamond to drive signals to the nuclear spins.
+          On-diamond metallisation is replaced by an ASIC. The ASIC is flip-chip
+          bonded onto the diamond plate. It carries microwave and RF delivery to
+          the electron and nuclear spins, and it carries the photonic circuit
+          that excites the NV and collects its fluorescence.
         </p>
         <p>
-          A thin titanium adhesion layer, initially targeting ~7–20&nbsp;nm, is
-          deposited beneath ~150–200&nbsp;nm of gold. These thicknesses are
-          chosen because they match published Ti/Au metallisation figures in
-          published NV-centre experiments; we would like to avoid reinventing
-          the wheel until final figures and geometry are fixed after simulation
-          and fabrication review are complete.
+          On-chip photonics is part of this design, not a later option. 515&nbsp;nm
+          excitation is coupled into waveguides on the ASIC; phonon-sideband
+          fluorescence is collected on the same chip and routed to the detector.
+        </p>
+        <p>
+          Flip-chip bonding places the selected NV in the microwave/RF field
+          and in the optical mode of the photonic circuit. Every Pauli rotation
+          and every entangling gate is a pulse sent through this ASIC into those
+          spins. Bump geometry, trace layout, waveguide alignment and the
+          required field at the NV are fixed after simulation and bonding
+          trials; we do not pattern Ti/Au rails directly onto the diamond.
         </p>
       </section>
 
@@ -161,9 +171,9 @@ export default function DiamondQpu() {
         </p>
         <p>
           The field is generated using a permanent neodymium magnet mounted
-          outside the cryostat on a precision translation stage. Delft uses
-          essentially this arrangement with a temperature-stabilized permanent
-          magnet on a piezo stage.
+          beside the Peltier stack on a precision translation stage. Delft uses
+          a similar arrangement with a temperature-stabilized permanent magnet
+          on a piezo stage.
         </p>
         <p>
           Alignment is performed by recording the NV&rsquo;s ODMR spectrum while
@@ -190,56 +200,28 @@ export default function DiamondQpu() {
       </section>
 
       <section>
-        <h2>5. Cryogenic and Optical Environment</h2>
+        <h2>5. Cooling and optical environment</h2>
         <p>
-          The diamond is operated inside a Montana Instruments CryoAdvance 50
-          fitted with the H05 Cryo-Optic module. Montana&rsquo;s 50&nbsp;mm
-          Cryo-Optic platform is specifically designed for high-NA microscopy at
-          cryogenic temperature and provides a 53&nbsp;mm x 63&nbsp;mm sample
-          space, 3.7–350&nbsp;K operating range, &lt;10&nbsp;mK
-          sample-temperature stability and &lt;5&nbsp;nm platform vibration.
-          Typical cooldown to 4.2&nbsp;K is approximately 3–5 hours. Pricing and
-          delivery time are quote-only from Montana.
+          The cryostat is replaced by a triple Peltier stack. Three
+          thermoelectric stages cool the diamond package; heat is dumped through
+          semiconductor heat dissipators on the hot side of the stack.
         </p>
         <p>
-          The Cryo-Optic includes a vacuum-compatible Zeiss LD EC
-          Epiplan-Neofluar 100x/0.90 objective with a 1.0&nbsp;mm working
-          distance. The objective sits inside the evacuated sample space and we
-          position the diamond at the objective&rsquo;s nominal ~1&nbsp;mm
-          working distance.
+          The diamond-and-ASIC assembly is mounted on the cold plate. The magnet
+          and electrical connections remain accessible around the stack. Exact
+          TEC modules, ΔT and dissipator sizing are fixed after a thermal budget
+          for the ASIC, the photonic load and the 515&nbsp;nm diode.
         </p>
         <p>
-          Sample positioning is handled by Montana&rsquo;s Rook three-axis
-          cryogenic nanopositioner. The packaged diamond is mounted onto the
-          Rook inside the CryoAdvance and this allows XYZ motion of the diamond
-          relative to the fixed Cryo-Optic objective. Note that the NV must
-          first be located and placed directly underneath the objective, and
-          also that the Rook is directly compatible with the CryoAdvance 50.
+          Excitation and collection go through the on-chip photonic circuit. A
+          free-space objective is not required to run the machine. A microscope
+          can still be used to find the NV before bonding.
         </p>
         <p>
-          For the sample electrical interface, we use Montana&rsquo;s Dual RF
-          Sample Mount / Dual RF feedthrough configuration. One RF line carries
-          the combined microwave and nuclear-spin RF signal from the external
-          diplexer to the on-diamond Ti/Au stripline; the second line is
-          retained as a spare/debug channel. Montana lists both Dual RF
-          interfacing and the Dual RF Sample Mount as standard CryoAdvance 50
-          options.
-        </p>
-        <p>
-          The cryostat housing will be ordered using Montana&rsquo;s Diamond NV
-          Center Housing configuration. This modifies the vacuum housing and
-          radiation shield specifically to allow an external permanent magnet to
-          approach the sample at a requested angle relative to the Cryo-Optic
-          while retaining the cryogenic nanopositioner and RF/DC feedthroughs.
-          This removes the need for us to design the magnet/cryostat mechanical
-          interface ourselves.
-        </p>
-        <p>
-          The CryoAdvance 50, H05 Cryo-Optic, Rook, Diamond NV Center Housing
-          and Dual RF hardware should be purchased as one configured Montana
-          system, rather than sourcing and integrating those cryogenic
-          subsystems independently. Montana does not publish pricing or delivery
-          times for this configuration, so both are TBD for the time being.
+          One RF line carries the combined microwave and nuclear-spin RF signal
+          from the external diplexer to the ASIC; a second line is retained as a
+          spare/debug channel. The 515&nbsp;nm diode is coupled into the chip;
+          collected fluorescence leaves the chip to the SPAD.
         </p>
       </section>
 
@@ -298,8 +280,11 @@ export default function DiamondQpu() {
         <p>
           The control stack coordinates the complete experimental sequence from
           microwave and RF frequency, phase, amplitude, pulse shape and
-          duration; delays between pulses; AOM timing; photon-counting windows;
-          and the number and timing of repeated experimental shots.
+          duration; delays between pulses; 515&nbsp;nm diode gating;
+          photon-counting windows;
+          and the number and timing of repeated experimental shots. That stack
+          exists to put Pauli X, Y, Z and entangling gates onto the electron and
+          nuclear spins as timed pulses.
         </p>
       </section>
 
@@ -307,14 +292,16 @@ export default function DiamondQpu() {
         <h2>7. Microwave and RF chain</h2>
         <p>
           The two electrical control paths begin separately, before being merged
-          at the diplexer and addressed together.
+          at the diplexer and addressed together. Microwave pulses rotate the
+          electron; RF pulses rotate the nuclei. Together they are the Pauli
+          gates and the entangling gates.
         </p>
 
         <h3>Microwave path</h3>
         <figure className="figure figure-center spec-figure">
           <img
             src="/images/mw-flow.png"
-            alt="Microwave path from the RFSoC 4x2 through the amplifier, switch and diplexer to the cryostat RF feedthrough."
+            alt="Microwave path from the RFSoC 4x2 through the amplifier, switch and diplexer to the sample RF interface."
           />
         </figure>
         <p>
@@ -343,7 +330,7 @@ export default function DiamondQpu() {
           until the NV reaches our target ~5–10&nbsp;MHz electron Rabi
           frequency. The required amplifier output therefore depends on the
           measured losses through the downstream switch, diplexer, coax and
-          on-diamond stripline.
+          ASIC interconnect.
         </p>
         <p>
           After amplification, the signal passes through a microwave switch
@@ -368,7 +355,7 @@ export default function DiamondQpu() {
         <figure className="figure figure-center spec-figure">
           <img
             src="/images/rf-flow.png"
-            alt="RF path from the RFSoC 4x2 through the switch, amplifier, low-pass filter and diplexer to the cryostat feedthrough."
+            alt="RF path from the RFSoC 4x2 through the switch, amplifier, low-pass filter and diplexer to the sample RF interface."
           />
         </figure>
         <p>
@@ -385,11 +372,11 @@ export default function DiamondQpu() {
         </p>
         <p>
           The switched signal is then passed through an RF amplifier; the exact
-          amplifier remains TBD until we simulate the stripline and measure the
-          RF field required at the NV. The selection criterion is the power
+          amplifier remains TBD until we simulate the ASIC traces and measure
+          the RF field required at the NV. The selection criterion is the power
           required to reach our target nuclear Rabi rates without exceeding the
-          thermal or power-handling limits of the diplexer, feedthrough or
-          stripline.
+          thermal or power-handling limits of the diplexer or the flip-chip
+          interconnect.
         </p>
         <p>
           After amplification, the signal also passes through a low-pass filter
@@ -416,226 +403,84 @@ export default function DiamondQpu() {
       <section>
         <h2>8. Optical Excitation</h2>
         <p>
-          532&nbsp;nm excitation provides charge repumping; independently gated,
-          frequency-stabilized 637&nbsp;nm excitation provides resonant spin
-          preparation and readout.
-        </p>
-
-        <h3>532 nm path</h3>
-        <p>
-          The 532&nbsp;nm light comes from a Novanta GEM 532 laser in the
-          100&nbsp;mW configuration, driven by an SMD12 controller. The GEM
-          produces a ~0.9&nbsp;mm diameter TEM<sub>00</sub> beam with M² &lt;
-          1.1.
+          A 515&nbsp;nm diode laser drives the NV through the on-chip photonic
+          circuit. Charge repump, electron initialization and fluorescence
+          readout all use this beam. A 637&nbsp;nm laser is not required. An AOM
+          is not required: the diode is gated electrically by the RFSoC.
         </p>
         <p>
-          The beam first passes through a Thorlabs NDC-25C-4M variable
-          neutral-density filter for 0–4 OD of attenuation so that the optical
-          power reaching the diamond can be calibrated without changing the rest
-          of the beam path.
+          The diode model and the coupler onto the chip remain TBD. Drive
+          current and electrical gating must be fast enough for the
+          initialization and readout windows we use in experiment. Comparable NV
+          work initializes the electron with a few microseconds of ~150&nbsp;µW
+          green light; we calibrate power at the NV rather than assuming that
+          figure.
         </p>
         <p>
-          A Thorlabs AC254-250-A, 250&nbsp;mm focal-length achromatic lens then
-          focuses the ~0.9&nbsp;mm GEM output to approximately 200&nbsp;µm
-          diameter inside the AOM. This focal length follows directly from the
-          measured GEM beam diameter and Gaussian-beam propagation rather than
-          being an arbitrary choice.
+          Before the chip, the beam passes through a Thorlabs NDC-25C-4M
+          variable neutral-density filter for 0–4 OD of attenuation so that the
+          power launched into the waveguide can be calibrated without changing
+          the rest of the path.
         </p>
         <p>
-          Optical gating is provided by a G&amp;H AOMO 3080-125 (P/N
-          97-01598-01) driven at 80&nbsp;MHz by a G&amp;H 1080AF-DINA-1.0 (P/N
-          97-02910-08). At a 200&nbsp;µm beam diameter, the AOM provides
-          approximately 80% first-order diffraction efficiency and a 34&nbsp;ns
-          optical rise time. The RF driver itself switches in approximately
-          12&nbsp;ns, so the AOM crystal rather than the driver sets the overall
-          optical switching speed.
-        </p>
-        <p>
-          The 200&nbsp;µm waist therefore corresponds to roughly 34&nbsp;ns
-          optical switching. In practice we can generate clean optical pulses on
-          the ~50&nbsp;ns scale or longer. The same green path also supports
-          electron initialization and averaged fluorescence readout during
-          initial experiments: comparable NV experiments use 2–4&nbsp;µs,
-          ~150&nbsp;µW 532&nbsp;nm pulses for electron initialization.
-        </p>
-        <p>
-          After the AOM, the first diffracted order is selected using a Thorlabs
-          SM1D12C iris, while the zero-order beam terminates in a Thorlabs
-          LB1/M beam block.
-        </p>
-        <p>
-          A second AC254-250-A recollimates the first-order beam, after which a
-          Thorlabs BE05-532 5x beam expander increases the beam diameter to
-          approximately 4–5&nbsp;mm before the objective. The BE05-532 has
-          &gt;98% specified transmission at 532&nbsp;nm.
-        </p>
-        <p>
-          A Thorlabs DMLP605R dichroic reflects the 532&nbsp;nm excitation
-          toward the cryostat while transmitting the 650–800&nbsp;nm NV
-          fluorescence on the return path. Its specified average reflectance is
-          &gt;95% across 470–590&nbsp;nm and average transmission &gt;90% across
-          620–800&nbsp;nm.
-        </p>
-        <p>
-          Additional beam-combining optics introduce the independently
-          controlled 637&nbsp;nm beam into the common path before the Montana
-          H05 Cryo-Optic and Zeiss EC Epiplan-Neofluar 100x/0.90 objective. Both
-          beams are aligned onto the selected NV. The beam-combining components
-          remain TBD and must preserve the fluorescence collection path. The
-          DMLP605R alone does not reject the 637&nbsp;nm excitation from the
-          detector arm; that rejection is specified in the optical readout
-          section.
-        </p>
-        <p>
-          The existing 532&nbsp;nm throughput estimate, before accounting for
-          the additional beam-combining optics, is:
-        </p>
-        <table>
-          <thead>
-            <tr>
-              <th>Stage</th>
-              <th>Approx. Throughput</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Focusing lens</td>
-              <td>~99%</td>
-            </tr>
-            <tr>
-              <td>AOM insertion + first-order diffraction</td>
-              <td>~76%</td>
-            </tr>
-            <tr>
-              <td>Iris/alignment allowance</td>
-              <td>~95%</td>
-            </tr>
-            <tr>
-              <td>Recollimation lens</td>
-              <td>~99%</td>
-            </tr>
-            <tr>
-              <td>BE05-532</td>
-              <td>&gt;98%</td>
-            </tr>
-            <tr>
-              <td>DMLP605R at 532 nm</td>
-              <td>&gt;95%</td>
-            </tr>
-            <tr>
-              <td>Cryostat window + objective allowance</td>
-              <td>~90%</td>
-            </tr>
-            <tr>
-              <td>Total</td>
-              <td>~55–60%</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          The final throughput is recalculated after the beam-combining optics
-          are selected.
-        </p>
-
-        <h3>Focusing lens</h3>
-        <p>
-          The focusing lens takes the approximately collimated laser output and
-          produces the required approximately 200&nbsp;µm beam waist inside the
-          AOM interaction region.
-        </p>
-
-        <h3>637 nm resonant path</h3>
-        <p>
-          Tunable, frequency-stabilized 637&nbsp;nm excitation addresses the
-          selected NV&rsquo;s spin-pumping and readout transitions. These
-          optical operations are gated independently of the 532&nbsp;nm
-          charge-repump pulses and synchronized by the RFSoC.
-        </p>
-        <p>
-          The red path includes laser-frequency stabilization, fast optical
-          gating and beam shaping before entering the common objective path. The
-          laser, stabilization hardware, gate and combining optics remain TBD.
-          Optical frequencies, polarization and pulse settings are calibrated
-          for the selected NV.
+          On-chip waveguides deliver 515&nbsp;nm to the selected NV. There is no
+          free-space objective in the operating excitation path. Throughput is
+          set by diode-to-chip coupling and waveguide loss to the NV, and is
+          measured after the photonic circuit is fabricated.
         </p>
       </section>
 
       <section>
         <h2>9. Optical readout</h2>
         <p>
-          The same Montana H05 Cryo-Optic with the Zeiss 100x / 0.90 NA
-          objective collects the NV fluorescence.
+          Fluorescence is collected on-chip and routed off the ASIC to the
+          detector. A free-space objective is not required for readout.
         </p>
         <p>
           The readout does not require spectrally indistinguishable photons; it
           only requires enough spin-dependent fluorescence to distinguish the NV
           electron state. We therefore collect the broad ~650–800&nbsp;nm phonon
           sideband, which contains most of the NV emission, rather than
-          isolating the 637&nbsp;nm zero-phonon line.
+          isolating the 637&nbsp;nm zero-phonon line. No 637&nbsp;nm laser is
+          used.
         </p>
         <p>
-          Returning fluorescence passes back through the collection optics and
-          dichroic, which has an average transmit rate of &gt;90% from
-          620–800&nbsp;nm while continuing to reject the 532&nbsp;nm excitation
-          path. The detector arm must reject both the 532&nbsp;nm and 637&nbsp;nm
-          excitation wavelengths while transmitting the selected phonon-sideband
-          band.
+          Residual 515&nbsp;nm in the collection waveguide must be rejected
+          before the detector while the phonon sideband is transmitted. A
+          Semrock BLP01-647R-25 long-pass filter sits on that path. At
+          515&nbsp;nm it provides OD &gt; 6, while transmitting &gt;93% of the
+          fluorescence above 665&nbsp;nm.
         </p>
         <p>
-          For initial measurements using ~150&nbsp;µW of 532&nbsp;nm excitation,
-          Fresnel reflection from the diamond surface can return on the order of
-          25&nbsp;µW of 532&nbsp;nm light toward the objective. After the
-          dichroic, a conservative upper bound is still roughly 2.5&nbsp;µW
-          reaching the detector arm. That is far too high for single-photon
-          readout: it corresponds to roughly 7 trillion green photons per
-          second, while the useful fluorescence signal from a single NV is
-          typically only around 100,000 detected counts per second.
-        </p>
-        <p>
-          To suppress this residual excitation, we place a Semrock BLP01-647R-25
-          long-pass filter before the detector. At 532&nbsp;nm it provides OD
-          &gt; 6, reducing the residual green power by at least 1,000,000x, from
-          the conservative ~2.5&nbsp;µW upper bound to &lt;2.5&nbsp;pW, while
-          transmitting &gt;93% of the fluorescence above 665&nbsp;nm.
-        </p>
-        <p>
-          For resonant readout, the filter stack must also provide sufficient
-          rejection of scattered 637&nbsp;nm laser light. Rejection at both
-          laser wavelengths is verified under the intended pulse conditions;
-          additional filtering is included if required. The detector records
-          phonon-sideband fluorescence during the resonant readout pulse.
-        </p>
-        <p>
-          A Thorlabs AC254-050-B-ML, 50&nbsp;mm achromatic doublet then focuses
-          the filtered fluorescence onto an Excelitas SPCM-AQRH-10 silicon SPAD.
-          The detector covers 400–1060&nbsp;nm, has ~65% photon-detection
-          efficiency at 650&nbsp;nm, a 24&nbsp;ns dead time and a maximum
-          specified dark-count rate of 1500 counts per second.
+          A Thorlabs AC254-050-B-ML, 50&nbsp;mm achromatic doublet focuses the
+          filtered light onto an Excelitas SPCM-AQRH-10 silicon SPAD. The
+          detector covers 400–1060&nbsp;nm, has ~65% photon-detection efficiency
+          at 650&nbsp;nm, a 24&nbsp;ns dead time and a maximum specified
+          dark-count rate of 1500 counts per second.
         </p>
         <p>
           Each detected photon produces a TTL pulse. Rather than adding a
           separate photon counter, that output is connected directly to an
           RFSoC4x2 ADC input, which QICK-DAWG already supports in
           photon-counting mode. The RFSoC opens a defined readout window
-          synchronized with each readout pulse and counts the arriving detector
-          pulses during that interval.
+          synchronized with each 515&nbsp;nm pulse and counts the arriving
+          detector pulses during that interval.
         </p>
         <p>
           Bright- and dark-state reference measurements establish the
-          photon-count distributions and calibrate state assignment. Initial
-          experiments using 532&nbsp;nm excitation average counts over repeated
-          preparations to estimate spin observables. Resonant single-shot
-          measurements use the calibrated count distributions to assign
-          individual electron outcomes.
+          photon-count distributions and calibrate state assignment. Experiments
+          average counts over repeated 515&nbsp;nm preparations to estimate spin
+          observables.
         </p>
       </section>
 
       <section>
         <h2>10. Preparation and readout</h2>
         <p>
-          The 532&nbsp;nm laser restores the NV&rsquo;s negative charge state.
-          Tunable, frequency-stabilized 637&nbsp;nm excitation addresses the
-          optical transitions used for electron-spin preparation and readout.
+          The 515&nbsp;nm diode, delivered through the on-chip photonic circuit,
+          restores the NV&rsquo;s negative charge state and is used for
+          electron-spin preparation and fluorescence readout. A 637&nbsp;nm
+          laser is not required.
         </p>
         <p>
           The electron is prepared in m<sub>s</sub> = 0. Each <sup>13</sup>C
@@ -654,19 +499,18 @@ export default function DiamondQpu() {
         </p>
         <p>
           For measurement, basis-rotation pulses and a conditional gate map the
-          selected nuclear observable onto the electron. Resonant 637&nbsp;nm
-          excitation produces spin-dependent fluorescence, collected by the
-          objective and counted by the SPAD. Bright- and dark-state reference
-          measurements calibrate the readout.
+          selected nuclear observable onto the electron. 515&nbsp;nm excitation
+          produces spin-dependent fluorescence, collected on-chip and counted by
+          the SPAD. Bright- and dark-state reference measurements calibrate the
+          readout.
         </p>
         <p>
           Full-register measurements require a calibrated readout order and
           protection of nuclei awaiting measurement. Initial two-qubit
-          experiments can instead use averaged fluorescence under 532&nbsp;nm
-          excitation.
+          experiments use averaged fluorescence under 515&nbsp;nm excitation.
         </p>
         <p>
-          The preparation and resonant-readout baseline follows the{' '}
+          The microwave and RF preparation sequence follows the{' '}
           <a
             href="https://arxiv.org/html/1905.02094v2"
             target="_blank"
@@ -792,7 +636,9 @@ result = job.result()`}</code>
         <p>
           The Pathfinder backend exposes its native gate set, available qubits,
           connectivity, timing constraints and current calibration data to the
-          transpiler.
+          transpiler. The native gates are the same operations as everywhere
+          else in this document: Pauli X, Y, Z and entangling pulses on the
+          spins.
         </p>
       </section>
         </div>

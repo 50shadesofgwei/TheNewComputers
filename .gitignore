@@ -2,6 +2,9 @@
 node_modules/
 dist/
 *.local
+*.local.ts
+*.local.tsx
+*.local.css
 
 # OS / editor
 .DS_Store
