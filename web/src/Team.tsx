@@ -3,11 +3,6 @@ import './Home.css'
 
 const POSTERS = [
   {
-    src: '/images/team/kitchener.jpg',
-    alt: 'Lord Kitchener pointing. Wants you — Alfred Leete, 1914',
-    className: 'team-p team-p-kitchener',
-  },
-  {
     src: '/images/team/uncle-sam.jpg',
     alt: 'Uncle Sam pointing. I want you for U.S. Army — James Montgomery Flagg, 1917',
     className: 'team-p team-p-sam',
