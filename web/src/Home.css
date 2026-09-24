@@ -182,19 +182,11 @@ a.gate-list-name:hover {
   height: 100%;
   min-width: 0;
   min-height: 0;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
+  object-position: center;
   display: block;
   user-select: none;
   pointer-events: none;
-}
-
-.team-p-navy {
-  object-position: center 38%;
-}
-
-.team-p-finger {
-  object-position: center 12%;
 }
 
 .team-home {
