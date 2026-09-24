@@ -124,3 +124,22 @@
 .spec code {
   font-family: inherit;
 }
+
+.spec-py {
+  background: var(--bg-black);
+  color: #e6e4dc;
+  border: 0;
+  padding: 1.25rem 1.3rem;
+}
+
+.spec-py .py-kw {
+  color: #d4a05a;
+}
+
+.spec-py .py-str {
+  color: #8fbf6a;
+}
+
+.spec-py .py-num {
+  color: #7eb8da;
+}

@@ -115,8 +115,8 @@ export default function DiamondQpu() {
         </p>
         <p>The diamond is then characterized to identify an NV with:</p>
         <p>
-          <strong>Stable fluorescence:</strong> the NV must remain predominantly
-          in the NV<sup>−</sup> charge state and produce a repeatable
+          <strong>Stable fluorescence:</strong> We prepare the NV into the
+          NV<sup>−</sup> charge state. It must produce a repeatable
           fluorescence count rate under repeated 515&nbsp;nm excitation, without
           significant blinking or charge-state switching. The acceptance
           threshold will be set from measured photon-count statistics during
@@ -140,7 +140,7 @@ export default function DiamondQpu() {
       </section>
 
       <section>
-        <h2>3. ASIC and flip-chip</h2>
+        <h2>3. ASIC antenna and flip-chip bonding</h2>
         <p>
           On-diamond metallisation is replaced by an ASIC. The ASIC is flip-chip
           bonded onto the diamond plate. It carries microwave and RF delivery to
@@ -158,7 +158,7 @@ export default function DiamondQpu() {
           and every entangling gate is a pulse sent through this ASIC into those
           spins. Bump geometry, trace layout, waveguide alignment and the
           required field at the NV are fixed after simulation and bonding
-          trials; we do not pattern Ti/Au rails directly onto the diamond.
+          trials.
         </p>
       </section>
 
@@ -203,7 +203,8 @@ export default function DiamondQpu() {
       <section>
         <h2>5. Cooling and optical environment</h2>
         <p>
-          The cryostat is replaced by a triple Peltier stack. Three
+          In place of a bulky cryostat, the diamond QPU uses a triple Peltier
+          stack for heat dissipation. Three
           thermoelectric stages cool the diamond package; heat is dumped through
           semiconductor heat dissipators on the hot side of the stack.
         </p>
@@ -214,9 +215,10 @@ export default function DiamondQpu() {
           for the ASIC, the photonic load and the 515&nbsp;nm diode.
         </p>
         <p>
-          Excitation and collection go through the on-chip photonic circuit. A
-          free-space objective is not required to run the machine. A microscope
-          can still be used to find the NV before bonding.
+          <strong>
+            All excitation and collection goes through the on-chip silicon
+            photonic circuit.
+          </strong>
         </p>
         <p>
           One RF line carries the combined microwave and nuclear-spin RF signal
@@ -622,17 +624,23 @@ export default function DiamondQpu() {
           <li>Run the circuits.</li>
         </ul>
         <p>The intended workflow is approximately:</p>
-        <pre>
-          <code>{`from pathfinder import PathfinderProvider
-from qiskit import transpile
-
-provider = PathfinderProvider()
-backend = provider.get_backend("diamond_qpu")
-
-circuit = transpile(circuit, backend)
-job = backend.run(circuit, shots=1000)
-
-result = job.result()`}</code>
+        <pre className="spec-py" tabIndex={0}>
+          <code>
+            <span className="py-kw">from</span> pathfinder{' '}
+            <span className="py-kw">import</span> PathfinderProvider{'\n'}
+            <span className="py-kw">from</span> qiskit{' '}
+            <span className="py-kw">import</span> transpile{'\n'}
+            {'\n'}
+            provider = PathfinderProvider(){'\n'}
+            backend = provider.get_backend(
+            <span className="py-str">&quot;diamond_qpu&quot;</span>){'\n'}
+            {'\n'}
+            circuit = transpile(circuit, backend){'\n'}
+            job = backend.run(circuit, shots=
+            <span className="py-num">1000</span>){'\n'}
+            {'\n'}
+            result = job.result()
+          </code>
         </pre>
         <p>
           The Pathfinder backend exposes its native gate set, available qubits,
