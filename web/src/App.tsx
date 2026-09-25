@@ -200,7 +200,7 @@ function App() {
             </a>
             ,{' '}
             <a
-              href="https://www.uva.nl/en/profile/s/c/f.e.schreck/f.e.schreck.html"
+              href="https://www.strontiumbec.com/"
               target="_blank"
               rel="noreferrer"
             >
@@ -214,7 +214,7 @@ function App() {
             >
               Dylan Sabulsky
             </a>
-            , from whose detailed correspondence has this vision been formed.
+            , out of whose detailed correspondence has this vision been formed.
           </p>
           <h2 className="prose-display">
             1. Introduction
