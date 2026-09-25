@@ -192,7 +192,7 @@ function App() {
           <p className="mission-thanks">
             Special thanks to{' '}
             <a
-              href="https://www.physics.ucsb.edu/people/john-martinis"
+              href="https://www.nobelprize.org/prizes/physics/2025/martinis/facts/"
               target="_blank"
               rel="noreferrer"
             >
@@ -208,7 +208,7 @@ function App() {
             </a>
             , and{' '}
             <a
-              href="https://artemis.oca.eu/fr/metroquant-people"
+              href="https://scholar.google.co.uk/citations?user=5faRM7kAAAAJ&hl=en&oi=ao"
               target="_blank"
               rel="noreferrer"
             >
