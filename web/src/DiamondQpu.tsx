@@ -54,6 +54,33 @@ export default function DiamondQpu() {
 
       <article className="prose prose-layout-start spec" id="spec-body">
         <div className="prose-inner">
+          <p className="spec-thanks">
+            Thanks to{' '}
+            <a
+              href="https://www.materials.ox.ac.uk/peoplepages/smithj.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Dr. Jason Smith
+            </a>
+            ,{' '}
+            <a
+              href="https://www.sheffield.ac.uk/eee/people/academic-staff/joe-smith"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Dr. Joe A. Smith
+            </a>
+            , and{' '}
+            <a
+              href="https://artsci.washu.edu/faculty-staff/chong-zu"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Dr. Chong Zu
+            </a>
+            .
+          </p>
           <p>
             Designed as a compact tabletop system for a conventional lab without
             extensive infrastructure.{' '}
