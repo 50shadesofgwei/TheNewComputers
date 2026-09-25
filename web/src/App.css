@@ -324,6 +324,27 @@
   justify-items: start;
 }
 
+.prose p.mission-thanks {
+  max-width: 36rem;
+  margin: 0 0 clamp(2rem, 5vw, 3rem);
+  font-family: var(--font-meta);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1.45;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--text) 45%, transparent);
+}
+
+.mission-thanks a {
+  color: inherit;
+  text-underline-offset: 0.18em;
+}
+
+.mission-thanks a:hover {
+  color: var(--text);
+}
+
 /* Giant section title — breaks the “blog post” feel */
 .prose-display {
   margin: 0 0 clamp(3rem, 9vw, 6.5rem);

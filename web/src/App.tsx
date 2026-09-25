@@ -189,6 +189,33 @@ function App() {
 
       <article className="prose prose-layout-center">
         <div className="prose-inner">
+          <p className="mission-thanks">
+            Special thanks to{' '}
+            <a
+              href="https://www.physics.ucsb.edu/people/john-martinis"
+              target="_blank"
+              rel="noreferrer"
+            >
+              John Martinis
+            </a>
+            ,{' '}
+            <a
+              href="https://www.uva.nl/en/profile/s/c/f.e.schreck/f.e.schreck.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Florian Schreck
+            </a>
+            , and{' '}
+            <a
+              href="https://artemis.oca.eu/fr/metroquant-people"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Dylan Sabulsky
+            </a>
+            , from whose detailed correspondence has this vision been formed.
+          </p>
           <h2 className="prose-display">
             1. Introduction
           </h2>
