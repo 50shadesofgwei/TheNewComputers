@@ -41,13 +41,6 @@ export default function DiamondQpu() {
         </p>
         <div className="hero-main">
           <h1>Diamond QPU</h1>
-          <div className="hero-lede">
-            <p>
-              Optically detected magnetic resonance. A complete, small-scale
-              quantum computer built on an NV-centre electron and nearby nuclear
-              qubits in diamond.
-            </p>
-          </div>
         </div>
         <a className="scroll-cue" href="#spec-body" aria-label="Scroll down" />
       </section>
