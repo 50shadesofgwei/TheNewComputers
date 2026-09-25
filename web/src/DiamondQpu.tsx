@@ -71,8 +71,8 @@ export default function DiamondQpu() {
               rel="noreferrer"
             >
               Dr. Chong Zu
-            </a>
-            .
+            </a>{' '}
+            for their review and continued correspondence.
           </p>
           <p>
             Designed as a compact tabletop system for a conventional lab without
