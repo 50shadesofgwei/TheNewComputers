@@ -258,12 +258,10 @@ export default function DiamondQpu() {
           the optical system.
         </p>
         <p>
-          The RFSoC4x2 generates the microwave waveform and controls experiment
-          timing. A separate DC-coupled arbitrary waveform generator (AWG),
-          specified across 0.1–10&nbsp;MHz, generates the nuclear-control
-          waveforms. The instruments share a compatible frequency reference, and
-          an RFSoC hardware trigger starts the preloaded AWG sequence with
-          repeatable timing and phase. The AWG model remains TBD.
+          The RFSoC4x2 generates the microwave waveform, the nuclear-control
+          waveforms, and the experiment timing. Nuclear-control tones sit in the
+          0.1–10&nbsp;MHz band. Both paths share the board clock, so relative
+          timing and phase are native to one instrument.
         </p>
         <p>
           The software must be capable of specifying commands of the form:
@@ -387,7 +385,7 @@ export default function DiamondQpu() {
           roughly hundreds of kHz to a few MHz.
         </p>
         <p>
-          The external AWG generates the nuclear-control waveforms with
+          The RFSoC4x2 generates the nuclear-control waveforms with
           programmable frequency, phase, amplitude and envelope. Its output
           passes through the Mini-Circuits ZASWA2-50DR-FA RF switch, followed by
           the RF amplifier, low-pass filter and diplexer. The amplifier and
