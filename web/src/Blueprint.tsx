@@ -5,7 +5,10 @@ const DESIGNS = [
   {
     name: 'Diamond QPU',
     note: 'v2.1',
-    links: [{ label: 'Paper', href: '/blueprints/diamond-qpu' }],
+    links: [
+      { label: 'Paper', href: '/blueprints/diamond-qpu' },
+      { label: '3D', href: '/diamond-qpu-3d' },
+    ],
   },
   {
     name: 'On-Chip Ion Trap',
