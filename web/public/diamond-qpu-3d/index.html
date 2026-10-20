@@ -52,7 +52,7 @@ body.quantum #story{bottom:16px}
 .btn{appearance:none;border:1px solid var(--line2);background:transparent;color:var(--ink);font:500 13px var(--sans);padding:6px 13px;border-radius:999px;cursor:pointer}
 .btn:disabled{opacity:.35;cursor:default}.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink);font-weight:600}
 .btn.primary.on{background:transparent;color:var(--ink)}
-.x{appearance:none;border:1px solid var(--line);background:transparent;color:var(--muted);width:30px;height:30px;border-radius:999px;cursor:pointer;font-size:16px;line-height:1;flex:none}
+.x{appearance:none;border:1px solid var(--line);background:transparent;color:var(--muted);width:30px;height:30px;border-radius:999px;cursor:pointer;font-size:16px;line-height:1;flex:none}.x{display:inline-flex;align-items:center;justify-content:center;padding:0}.x svg{width:11px;height:11px;display:block}
 #panel{right:16px;top:16px;width:min(360px,calc(100% - 32px));max-height:calc(100% - 32px);display:flex;flex-direction:column;gap:10px;padding:12px 14px 14px;background:var(--glass);border:1px solid var(--line);border-radius:14px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:var(--shadow);overflow:auto;pointer-events:auto}
 .phead{display:flex;align-items:center;gap:8px}.phead h2{margin:0;font:600 16px var(--sans)}#qProg{flex:1;font:12px var(--mono);color:var(--muted)}
 #sheetToggle{display:none}
@@ -88,7 +88,7 @@ details.key dl{display:grid;grid-template-columns:auto 1fr;gap:6px 10px;margin:8
   }
 /* fingers: bigger targets */
 @media (pointer:coarse){
-  .x{width:40px;height:40px;font-size:19px}.btn{padding:9px 16px;font-size:14px}#storyNav{gap:8px}
+  .x{width:40px;height:40px;font-size:19px}.x svg{width:13px;height:13px}.btn{padding:9px 16px;font-size:14px}#storyNav{gap:8px}
   .pill{padding:9px 11px;min-height:40px}.hs{padding:5px 10px}
   }
 #drawer.pop{animation:pop .24s cubic-bezier(.2,.9,.3,1.15)}@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
@@ -114,7 +114,7 @@ details.key dl{display:grid;grid-template-columns:auto 1fr;gap:6px 10px;margin:8
     <div class="story-card" role="status" aria-live="polite">
       <div id="storyKicker"></div>
       <p id="storyText"></p>
-      <div id="storyNav" hidden><button class="btn" id="prev" type="button" aria-label="Previous stop">‹</button><button class="btn primary" id="next" type="button">Next</button><span class="grow"></span><button class="x" id="endTour" type="button" aria-label="End tour">×</button></div>
+      <div id="storyNav" hidden><button class="btn" id="prev" type="button" aria-label="Previous stop">‹</button><button class="btn primary" id="next" type="button">Next</button><span class="grow"></span><button class="x" id="endTour" type="button" aria-label="End tour"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></div>
     </div>
   </div>
   <nav id="bar" class="hud" aria-label="Controls">
@@ -125,7 +125,7 @@ details.key dl{display:grid;grid-template-columns:auto 1fr;gap:6px 10px;margin:8
     <span class="sep"></span>
     <button class="pill" id="apart" type="button">Take apart</button>
   </nav>
-  <aside id="drawer" class="hud" hidden aria-label="Details"><header><div><h2 id="dTitle"></h2><span id="dSub"></span></div><button class="x" id="dClose" type="button" aria-label="Close">×</button></header><div id="dBody"></div></aside>
+  <aside id="drawer" class="hud" hidden aria-label="Details"><header><div><h2 id="dTitle"></h2><span id="dSub"></span></div><button class="x" id="dClose" type="button" aria-label="Close"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button></header><div id="dBody"></div></aside>
 </div>
 <script>
 'use strict';
@@ -577,7 +577,7 @@ function buildScene(R){
     const pts=bezier(a.p,p1,p2,b.p,36);const coax=!o.mat;const p=new Part(id,{pos:[0,0,0],pick:coax,info:coax?'coax':undefined});p.add(gTube(pts,o.r||1.9,10),o.mat||MAT.coax);p.pathPts=pts;p.tubeR=o.r||1.9;cables.push(p);return add(p);};
   const cableVia=(id,pts,o={})=>{const s=catmull(pts,10);const coax=!o.mat;const p=new Part(id,{pos:[0,0,0],pick:coax,info:coax?'coax':undefined});p.add(gTube(s,o.r||1.9,10),o.mat||MAT.coax);p.pathPts=s;p.tubeR=o.r||1.9;cables.push(p);return add(p);};
 
-  /* ---- optical breadboard: Thorlabs MB3090/M, to its drawing, in mm: 900 × 300 × 12.7 black-anodised aluminium; 432 M6 taps on a
+  /* ---- optical breadboard: Thorlabs MB3090/M, to its drawing, in mm: 900 x 300 x 12.7 black-anodised aluminium; 432 M6 taps on a
      25 mm grid, 12.5 mm in from the edges; five counterbored mounting holes, four 25 mm in from the corners and one in the middle ---- */
   {const BX=-33,BZ=-87,BW=900,BD=300,BT=12.7;const p=new Part('bench',{pos:[0,0,0],pick:false,anchor:[BX+425,0,BZ-125]});   // label on the back-right mounting holep.flat=true;
     p.add(gBox(BW,BT,BD,BX,-BT/2,BZ),MAT.bench);
@@ -631,7 +631,7 @@ function buildScene(R){
 
 
   /* ---- MW chain ---- */
-  /* ---- ZFSWA2-63DR+ (case ZZ1322, standard), to the datasheet outline, in mm: body 31.75 × 31.75 × 19.05; four SMA female, two per face,
+  /* ---- ZFSWA2-63DR+ (case ZZ1322, standard), to the datasheet outline, in mm: body 31.75 x 31.75 x 19.05; four SMA female, two per face,
      15.24 apart, axes 9.65 below the top: RF COM (1) and CTRL (2) on one face, RF1 (4) and RF2 (3) opposite; VDD feed-thru with a solder lug
      mid-face on a third side; two lid screws on the diagonal. Turned so RF COM faces the band-pass filter and RF1 faces the amplifier ---- */
   {const pos=[-140,0,-177.62];const p=new Part('mwswitch',{pos,anchor:[0,28,0]});const HW=15.875,HT=19.05,AX=HT-9.65;
@@ -669,7 +669,7 @@ function buildScene(R){
     gCyl(3.05,3.05,0.1,24,x(48.53),AY,0,'x',hole);gCyl(2.0,2.0,0.1,20,x(48.56),AY,0,'x',ptfe);gCyl(0.45,0.45,0.9,8,x(48.6),AY,0,'x',gold); // male face
     p.add(gold,BF.gold).add(ptfe,BF.ptfe).add(hole,BF.hole);
     p.ports={in:{p:V.add(pos,[x(0),AY,0]),n:[-1,0,0]},out:{p:V.add(pos,[x(48.51)-4,AY,0]),n:[1,0,0]}};add(p);}
-  /* ---- ZHL-1724HLN+ (case NN92, with heat sink), to the datasheet outline, in mm: base plate 92.96 × 82.55 × 3.18; silver body 80.26 wide,
+  /* ---- ZHL-1724HLN+ (case NN92, with heat sink), to the datasheet outline, in mm: base plate 92.96 x 82.55 x 3.18; silver body 80.26 wide,
      28.7 tall from the plate's underside; black finned heat sink on top to 54.10 overall. SMA female RF IN and RF OUT on opposite sides,
      16.26 up and 18.80 from one edge; +15 V feed-thru and GND post on the OUT side, 18.29 up, 45.21 and 58.42 from that edge ---- */
   {const HZ=41.275,ZS=HZ-18.80;const pos=[-50,0,-170-ZS];const p=new Part('mwamp',{pos,anchor:[0,62,0]});const HX=40.13,PT=3.18,BT=28.7,TOP=54.10;
@@ -728,7 +728,7 @@ function buildScene(R){
 
   /* ---- RF chain ---- */
   /* ---- ZASWA2-50DR-FA+ (case CY1481), to the datasheet outline, in mm:
-     base plate 82.30 × 38.10 × 2.54 with two Ø6.35 holes 66.55 apart; body 50.80 long, 38.10 wide, 17.53 tall overall;
+     base plate 82.30 x 38.10 x 2.54 with two Ø6.35 holes 66.55 apart; body 50.80 long, 38.10 wide, 17.53 tall overall;
      RF IN (1) and +V (2) on one long face, RF1 (3), CTRL (4), −V (5), RF2 (6) on the other, 12.70 apart; coax axes 7.87 up; a ground lug mid-face at 13.21 ---- */
   {const pos=[-180,0,-117];const p=new Part('rfswitch',{pos,group:'bench',anchor:[0,26,0]});const HX=19.05,Q=2.54,TOP=17.53,AX=7.87;
     const SW={nickel:mat({color:hex('#bcb8ae'),metal:0.85,rough:0.36}),plate:mat({color:hex('#cbc7bf'),metal:0.85,rough:0.28}),
@@ -750,7 +750,7 @@ function buildScene(R){
     const t1=jack(1,19.05);feed(1,6.35);feed(1,-6.35);jack(1,-19.05);lug(1); // RF1, CTRL, −V, RF2
     p.add(jn,SW.nut).add(jb,SW.steel).add(jt,SW.ptfe).add(js,SW.gold).add(fg,SW.gold).add(fp,SW.steel).add(gl,SW.nut);
     p.ports.in={p:V.add(pos,tin),n:[-1,0,0]};p.ports.out={p:V.add(pos,t1),n:[1,0,0]};add(p);}
-  /* ---- ZFL-500LN+ (case Y460, standard), to the datasheet outline, in mm: body 31.75 × 31.75 × 19.05; SMA female IN/OUT on opposite
+  /* ---- ZFL-500LN+ (case Y460, standard), to the datasheet outline, in mm: body 31.75 x 31.75 x 19.05; SMA female IN/OUT on opposite
      sides, axes 9.14 up and 16.00 from the back, 55.37 tip to tip; DC feed-thru (red) 19.05 from the left, 7.37 below the top, and a GND
      post 11.43 from the left, 11.43 below the top, both on the front; two Ø3.18 through-holes on a diagonal, 25.40 apart ---- */
   {const pos=[-110,0,-100];const p=new Part('rfamp',{pos,anchor:[0,28,0]});const HW=15.875,HT=19.05,AX=9.14,ZC=-HW+16.0;
@@ -819,11 +819,11 @@ function buildScene(R){
   {const p=pkPart('b0',{explode:[0,49,0],explodeChip:[0,2.5,0],group:'chip',pick:false,anchor:[0,37.3,0],info:'field'});const g=G();gCyl(0.05,0.05,1.6,8,0,35.7,0,'y',g);gCyl(0,0.18,0.5,10,0,36.75,0,'y',g);p.add(g,MAT.arrow);add(p);}
 
   /* ---- magnet on its translation stage, to the makers' drawings, in mm ----
-     K&J DX0X0-N52: Ø25.4 × 25.4 N52 cylinder, axially magnetised, Ni-Cu-Ni. Loop-current model, Br 1.45 T: 40 mT on its mid-plane
+     K&J DX0X0-N52: Ø25.4 x 25.4 N52 cylinder, axially magnetised, Ni-Cu-Ni. Loop-current model, Br 1.45 T: 40 mT on its mid-plane
      32.31 from its axis (32.1–32.6 across the grade). Axis vertical and mid-plane at the NV's height, so B is vertical at the NV.
-     Thorlabs PT1/M: black anodised, 101.6 × 76.2 × 20.3 on a 61.0 × 52.8 foot; 3.7 top plate with 16 M6 taps on a 12.5 grid, two
+     Thorlabs PT1/M: black anodised, 101.6 x 76.2 x 20.3 on a 61.0 x 52.8 foot; 3.7 top plate with 16 M6 taps on a 12.5 grid, two
      access holes over the base's M6 counterbores (25.4 apart), two Ø1/8" pin holes; end plates with four cap screws each; a
-     10.4 × 25.3 micrometer bracket; 150-801ME micrometer (Ø18.3, 25 mm travel) on an axis 9.7 up, 176.7 long overall.
+     10.4 x 25.3 micrometer bracket; 150-801ME micrometer (Ø18.3, 25 mm travel) on an axis 9.7 up, 176.7 long overall.
      The carriage sits 0.5 short of its travel end towards the chip, 1 clear of the heatsink: 40 mT here, ≈8 mT at the other end.
      Machined aluminium holder: Ø25.5 pocket with a 1.1 floor (magnet mid-plane at the NV), open towards the chip; silicone heater
      pad on its back side, thermocouple in its far end, two M6 cap screws into the carriage ---- */
@@ -883,7 +883,7 @@ function buildScene(R){
     const TX=XB+SOFF+PTL/2;for(const[tx,tz]of[[-12.5,25],[0,12.5]]){const x=TX+tx-XM,z=ZS+tz-ZM;dsk(5.6,24,x,FT+0.01,z,up,dk);dsk(4.9,24,x,FT+0.02,z,up,sc);dsk(2.5,6,x,FT+0.04,z,up,dk);}   // M6 cap screws in counterbores
     p.add(st,MAT.steel).add(sc,PT.screw).add(dk,PT.seam);
     p.ports={heat:{p:[XM+XR,22.1,ZM-HZ-2.0]},heatA:{p:[XM+XR+2.54,22.1,ZM-HZ-2.0]},heatB:{p:[XM+XR-2.54,22.1,ZM-HZ-2.0]},therm:{p:[XM+HX1+0.1,MY,ZM]}};add(p);}
-  /* ---- power box: Hammond 1455N1601 (160 × 103 × 53 extruded aluminium with two end panels), fed by one MEAN WELL GST220A12-R7B
+  /* ---- power box: Hammond 1455N1601 (160 x 103 x 53 extruded aluminium with two end panels), fed by one MEAN WELL GST220A12-R7B
      adapter (12 V, 180 W, 4-pin DIN plug; it lies off the bench on its mains lead). Inside, on a carrier board: NSD15-12S15 (15 V for
      both amplifiers), two NSD15-12S5 (5 V: the detector on its own; the laser's fan and the microwave switch) and DKE10A-05 (±5 V, radio switch); 12 V goes
      straight to the control computer and the temperature controllers. Input socket, fuse and switch on the right-hand panel, six
@@ -908,7 +908,7 @@ function buildScene(R){
     p.add(al,PB.al).add(en,PB.end).add(bk,PB.blk).add(nt,PB.nut).add(hl,PB.hole).add(ld,PB.led);
     p.ports={dc:{p:[PBX+L/2+2+31,DY,PBZ+DZ],n:[1,0,0]}};add(p);}
   /* ---- temperature controller: two Wavelength Electronics PTC2.5K-CH (linear, ±2.5 A from 5–30 V, 0.0012 °C over an hour with a 10 kΩ
-     thermistor; no switching ripple next to the qubits), to their drawing, in mm: 73.66 × 63.5 × 24.38 black case on a 4.57 base,
+     thermistor; no switching ripple next to the qubits), to their drawing, in mm: 73.66 x 63.5 x 24.38 black case on a 4.57 base,
      two Ø3.18 mounting tabs (76.2 over the tabs), a 4-way 5.08 terminal block (V+, GND, TEC+, TEC−) 28.19 high, the sensor header,
      the monitor and booster connectors in a notch at the far end, TEMP SET trimmer, PGAIN switch, output light. Left: the Peltier
      stack; right: the magnet heater, whose set point the control computer can trim ---- */
@@ -943,8 +943,8 @@ function buildScene(R){
 
   /* ---- optics ---- */
   const AY=16,OZ=20;
-  /* ---- green laser: Integrated Optics MatchBox 0520L-11A (520 nm diode, 30 × 50 × 18 mm, beam 10.4 mm above its base) with its
-     AM-C8 break-out box (30 × 17 × 18) on the rear pins, lying on its side on an AM-H3 fan cooler: 60 × 60 plate on a 10 mm foot
+  /* ---- green laser: Integrated Optics MatchBox 0520L-11A (520 nm diode, 30 x 50 x 18 mm, beam 10.4 mm above its base) with its
+     AM-C8 break-out box (30 x 17 x 18) on the rear pins, lying on its side on an AM-H3 fan cooler: 60 x 60 plate on a 10 mm foot
      with M6 ears 75 apart (86 overall), fins and a 60 mm fan behind. That mounting puts the beam 32 mm above the breadboard ---- */
   const PY=32;
   const FY=21.29;   // collection row: the SPCM's detector sits 21.29 mm above its base
@@ -987,7 +987,7 @@ function buildScene(R){
     const radial=(sgn)=>(A,B,C)=>{const m=V.mul(V.add(V.add(A,B),C),1/3);return V.mul([0,m[1]-cy,m[2]-cz],sgn);};
     strip(oA,oB,radial(1));strip(iA,iB,radial(-1));strip(fA,fA2,()=>[-1,0,0]);strip(fB,fB2,()=>[1,0,0]);return g;};
   /* ---- Thorlabs NDC-25C-4M, to its drawing, in mm: Ø25 continuously variable ND disc (Inconel, OD 0.04–4.0 over 270° of an annulus
-     Ø9.5–Ø22) in a Ø33 black scalloped ring 4.1 thick, on a Ø13.4 × 18.9 hub with an M4 tap for a post; 35.7 long overall.
+     Ø9.5–Ø22) in a Ø33 black scalloped ring 4.1 thick, on a Ø13.4 x 18.9 hub with an M4 tap for a post; 35.7 long overall.
      The beam passes 8 mm above the hub axis, through the middle of the coated annulus ---- */
   {const XD=-290,AXY=PY-8;const p=new Part('nd',{pos:[XD,0,OZ],anchor:[0,AXY+17.8,0],info:'nd'});
     const ND={black:mat({color:hex('#16171a'),metal:0.3,rough:0.45}),silver:mat({color:hex('#c8cacd'),metal:0.85,rough:0.28}),hole:mat({color:hex('#070708'),rough:0.9})};
@@ -1003,8 +1003,8 @@ function buildScene(R){
     gCyl(4.9,4.9,1.8,20,20.95+0.9,AXY,0,'x',sil);gCyl(4.75,4.75,3.2,24,22.75+1.6,AXY,0,'x',sil);           // end rings
     p.add(blk,ND.black).add(sil,ND.silver).add(hole,ND.hole);
     const g=G();gBox(16,3,16,11.5,1.5,0,g);gCyl(6,6,AXY-6.7-3,16,11.5,3+(AXY-6.7-3)/2,0,'y',g);p.add(g,MAT.black);add(p);}  // post on its base
-  /* ---- fibre coupler: Edmund #64-769 fibre collimator (LightPath 355110: f = 6.24 mm asphere, NA 0.40, stainless housing Ø11 × 13 with
-     M11 × 0.5 thread, FC/PC receptacle) in a Thorlabs AD11F adapter, in a KM100T kinematic mount (48.6 square front plate, SM1 bore,
+  /* ---- fibre coupler: Edmund #64-769 fibre collimator (LightPath 355110: f = 6.24 mm asphere, NA 0.40, stainless housing Ø11 x 13 with
+     M11 x 0.5 thread, FC/PC receptacle) in a Thorlabs AD11F adapter, in a KM100T kinematic mount (48.6 square front plate, SM1 bore,
      two 1/4-80 adjusters at the back, 44.9 deep with knobs). The fibre's FC/PC plug leaves through the back ---- */
   {const XF=-252;const p=new Part('coupler',{pos:[XF,0,OZ],anchor:[12,62,0],info:'coupler'});const Y0=PY-24.3;
     const KM={black:mat({color:hex('#17181b'),metal:0.3,rough:0.45}),steel:mat({color:hex('#c3c5c8'),metal:0.85,rough:0.28}),nut:mat({color:hex('#d2d4d6'),metal:0.9,rough:0.25}),boot:mat({color:hex('#1c1d20'),rough:0.7}),hole:mat({color:hex('#070708'),rough:0.9})};
@@ -1021,9 +1021,9 @@ function buildScene(R){
     const g=G();gBox(16,3,16,14,1.5,0,g);gCyl(6,6,Y0-1.3-3,16,14,3+(Y0-1.3-3)/2,0,'y',g);p.add(g,MAT.black);   // post on its base
     p.ports={lens:{p:[XF-2.4,PY,OZ],n:[-1,0,0]},fibre:{p:[XF+40,PY,OZ],n:[1,0,0]}};add(p);}
   /* ---- collection row (the glow leaves its fibre and is refocused onto the SPCM), to the makers' drawings, in mm ----
-     Thorlabs F810SMA-780: stainless, Ø24 × 15.5 lens end, taper, Ø15 barrel, SMA905 adapter, 49 long; f = 36.01 mm, NA 0.25.
-     Semrock BLP01-647R-25: Ø25 × 3.5 black-ringed long-pass, edge 659.5 nm, OD > 6 at 518–647 nm.
-     Thorlabs AC254-050-B-ML: f = 50 mm Ø1" achromat in a Ø30.5 × 15.6 black SM1 mount; working distance 41.8 mm, so the
+     Thorlabs F810SMA-780: stainless, Ø24 x 15.5 lens end, taper, Ø15 barrel, SMA905 adapter, 49 long; f = 36.01 mm, NA 0.25.
+     Semrock BLP01-647R-25: Ø25 x 3.5 black-ringed long-pass, edge 659.5 nm, OD > 6 at 518–647 nm.
+     Thorlabs AC254-050-B-ML: f = 50 mm Ø1" achromat in a Ø30.5 x 15.6 black SM1 mount; working distance 41.8 mm, so the
      detector sits 57.4 mm after the mount's front. Generic post holders under all three */
   const discX=(r,h,sg,x,y,z,g)=>{const t=gXform(gCyl(r,r,h,sg,0,0,0,'y'),M.mul(M.trans(x,y,z),M.rotZ(-Math.PI/2)));const o=g.p.length/3;g.p.push(...t.p);g.n.push(...t.n);g.i.push(...t.i.map(i=>i+o));return g;};   // faces +x
   const XCF=166,XFL=172,XL0=180;
@@ -1138,17 +1138,17 @@ const INFO={
   carrier:{t:'Chip carrier',s:'one signal line and one spare',plain:'Where the cable from the diplexer and the two optical fibres meet the chip.',specs:[]},
   asic:{t:'Control chip',s:'microwave and radio ASIC, flip-chip bonded',plain:'Bonded face-down on the diamond, it carries every gate pulse to within about 100 nm of the qubits.',specs:[]},
   bumps:{t:'Solder bumps',s:'flip-chip bond',plain:'Hold the diamond face-down on the control chip, lined up with its wiring and waveguides.',specs:[]},
-  diamond:{t:'Diamond',s:'4 × 4 × 0.5 mm ⟨111⟩ plate · Diatope',plain:'The processor: one nitrogen-vacancy centre and the nuclear spins around it, 100 nm below the surface.',specs:[['Qubits','10 spins'],['Coherence target','T₂ ≳ 1 ms']]},
+  diamond:{t:'Diamond',s:'4 x 4 x 0.5 mm ⟨111⟩ plate · Diatope',plain:'The processor: one nitrogen-vacancy centre and the nuclear spins around it, 100 nm below the surface.',specs:[['Qubits','10 spins'],['Coherence target','T₂ ≳ 1 ms']]},
   nv:{t:'NV centre',s:'electron spin · qubit e',plain:'A missing carbon beside a nitrogen traps an electron. Green light sets its spin and its red glow reads it.',specs:[]},
   n14:{t:'Nitrogen-14',s:'nuclear spin · qubit n',plain:'The nitrogen of the NV centre. Its nucleus is a qubit too.',specs:[]},
   c13:{t:'Carbon-13',s:'nuclear spins · qubits c1–c8',plain:'Eight carbon-13 nuclei near the NV hold quantum information for a long time.',specs:[]},
   pic:{t:'Photonic chip',s:'silicon nitride',plain:'Guides green light to the NV and its red glow back out. No lenses, no microscope.',specs:[]},
   field:{t:'Magnetic field',s:'≈40 mT along the NV axis',plain:'Separates the spin states so each qubit answers to its own frequency.',specs:[]},
-  magnet:{t:'Magnet',s:'N52 1 × 1 inch cylinder on a Thorlabs PT1/M stage',plain:'Sets the 40 mT field. It is held at a fixed temperature so the field, and every qubit frequency, stays put.',specs:[['Field at the NV','≈40 mT'],['Axis to NV','32.3 mm'],['Stage travel','25 mm, 40 to 8 mT']]},
-  pid:{t:'Temperature controller',s:'2 × Wavelength PTC2.5K-CH · Peltier and magnet',plain:'Holds the diamond and the magnet at fixed temperatures, to about a thousandth of a degree. Its currents are steady, not switched, so it adds no noise next to the qubits. The control computer can trim the magnet’s set point to hold the qubit frequencies still.',specs:[['Stability','0.0012 °C over an hour'],['Output','linear, up to ±2.5 A'],['Sensors','10 kΩ thermistors']]},
+  magnet:{t:'Magnet',s:'N52 1 x 1 inch cylinder on a Thorlabs PT1/M stage',plain:'Sets the 40 mT field. It is held at a fixed temperature so the field, and every qubit frequency, stays put.',specs:[['Field at the NV','≈40 mT'],['Axis to NV','32.3 mm'],['Stage travel','25 mm, 40 to 8 mT']]},
+  pid:{t:'Temperature controller',s:'2 x Wavelength PTC2.5K-CH · Peltier and magnet',plain:'Holds the diamond and the magnet at fixed temperatures, to about a thousandth of a degree. Its currents are steady, not switched, so it adds no noise next to the qubits. The control computer can trim the magnet’s set point to hold the qubit frequencies still.',specs:[['Stability','0.0012 °C over an hour'],['Output','linear, up to ±2.5 A'],['Sensors','10 kΩ thermistors']]},
   psu:{t:'Power box',s:'one 12 V adapter · 15, 5 and ±5 V inside',plain:'The one wall plug. A 12 V adapter feeds this box, and the box powers the bench.',specs:[['Adapter','12 V, 180 W'],['Rails','12, 15, 5 and ±5 V'],['Load','about 60–100 W']]},
   diode:{t:'Green laser',s:'Integrated Optics MatchBox 0520L-11A · 520 nm diode',plain:'One laser does all the optics: it resets the electron and reads it out, switched directly by the control computer.',specs:[['Power','130 mW'],['Switching','TTL, up to 10 MHz']]},
-  bench:{t:'Optical breadboard',s:'Thorlabs MB3090/M',plain:'Everything bolts to it: black-anodised aluminium with M6 threaded holes every 25 mm.',specs:[['Size','900 × 300 × 12.7 mm']]},
+  bench:{t:'Optical breadboard',s:'Thorlabs MB3090/M',plain:'Everything bolts to it: black-anodised aluminium with M6 threaded holes every 25 mm.',specs:[['Size','900 x 300 x 12.7 mm']]},
   nd:{t:'Power filter',s:'Thorlabs NDC-25C-4M',plain:'Sets how much green light reaches the chip: turning the disc changes how much it blocks.',specs:[['Optical density','0.04–4.0']]},
   coupler:{t:'Fibre coupler',s:'Edmund #64-769 collimator · Thorlabs KM100T mount',plain:'Focuses the green beam into the fibre to the chip; the mount’s two screws tilt it into line.',specs:[['Focal length','6.24 mm'],['Connector','FC/PC']]},
   collimator:{t:'Collection output',s:'Thorlabs F810SMA-780 fibre collimator',plain:'Where the NV’s red glow leaves its fibre and becomes a parallel beam.',specs:[['Focal length','36.01 mm'],['Connector','SMA905']]},
@@ -1172,7 +1172,7 @@ const BUY={
   lpf:[{p:52.10,c:'USD',v:'Mini-Circuits',u:MC+'SLP-5%2B'}],
   peltier:[{n:'Custom Thermoelectric 07603-9U30-10RU4A',p:178.80,c:'USD',v:'Custom Thermoelectric',u:'https://customthermoelectric.com/07603-9u30-10ru4a-3-stage-mini-thermoelectric-module.html',sug:1}],
   diamond:[{p:null,v:'Diatope',u:'https://diatope.com/product/quantum-grade-diamond',quote:1}],
-  magnet:[{n:'K&J DX0X0-N52, 1 × 1 inch',p:33,c:'USD',v:'K&J Magnetics',u:'https://www.kjmagnetics.com/dx0x0-n52-neodymium-cylinder-magnet',sug:1},
+  magnet:[{n:'K&J DX0X0-N52, 1 x 1 inch',p:33,c:'USD',v:'K&J Magnetics',u:'https://www.kjmagnetics.com/dx0x0-n52-neodymium-cylinder-magnet',sug:1},
           {n:'Thorlabs PT1/M stage',p:282.70,c:'GBP',v:'Thorlabs',u:'https://www.thorlabs.com/item/PT1_M',sug:1,note:'Thorlabs price excludes VAT.'}],
   bench:[{p:319.02,c:'GBP',v:'Thorlabs',u:'https://www.thorlabs.com/item/MB3090_M',note:'Excludes VAT.'}],
   pid:[{n:'Wavelength PTC2.5K-CH',p:345,c:'USD',q:2,v:'Wavelength Electronics',u:'https://www.teamwavelength.com/product/ptc2-5k-ch-2-5-a-temperature-controller-chassis-mount/',sug:1},
@@ -1354,7 +1354,7 @@ function openInfo(id,part){const c=INFO[id];if(!c)return;drawerQ=null;$('#dTitle
 const SYM={USD:'$',EUR:'€',GBP:'£'};const money=(p,c)=>(SYM[c]||c+' ')+p.toLocaleString('en-US',{minimumFractionDigits:Number.isInteger(p)?0:2,maximumFractionDigits:2});
 const esc=(x)=>String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
 function buyHTML(id){const L=BUY[id];if(!L)return'';const sug=L.some(b=>b.sug);
-  const rows=L.map(b=>`<a class="buyrow" href="${esc(b.u)}" target="_blank" rel="noopener" title="Listed ${BUY_DATE}"><span class="tag">${b.p!=null?money(b.p,b.c):b.quote?'Quote':'See price'}${b.q>1?` <small>× ${b.q}</small>`:''}</span><span class="bv">${b.n?`<b>${esc(b.n)}</b> `:''}${esc(b.v)}</span><span class="arr" aria-hidden="true">↗</span></a>`).join('');
+  const rows=L.map(b=>`<a class="buyrow" href="${esc(b.u)}" target="_blank" rel="noopener" title="Listed ${BUY_DATE}"><span class="tag">${b.p!=null?money(b.p,b.c):b.quote?'Quote':'See price'}${b.q>1?` <small>x ${b.q}</small>`:''}</span><span class="bv">${b.n?`<b>${esc(b.n)}</b> `:''}${esc(b.v)}</span><span class="arr" aria-hidden="true">↗</span></a>`).join('');
   const notes=L.filter(b=>b.note).map(b=>`<p class="bnote">${esc(b.note)}</p>`).join('');
   return `<div class="buy">${sug?'<p class="bk">Suggested</p>':''}${rows}${notes}</div>`;}
 function bomTotal(){const sum={};let quote=0,unlisted=0;for(const L of Object.values(BUY))for(const b of L){if(b.p==null){if(b.quote)quote++;else unlisted++;continue;}sum[b.c]=(sum[b.c]||0)+b.p*(b.q||1);}
