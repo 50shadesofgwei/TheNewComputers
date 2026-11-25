@@ -10,7 +10,7 @@ Designed as a compact tabletop system for a conventional lab without extensive i
 
 ## System architecture
 
-![Pathfinder Diamond QPU: diamond NV chiplet flip-chip bonded to a microwave and RF ASIC, optically coupled to a silicon nitride photonic circuit for 515 nm excitation and fluorescence collection.](https://thenewcomputers.com/images/diamond-qpu-architecture.png)
+![Pathfinder Diamond QPU: diamond NV chiplet flip-chip bonded to a microwave and RF ASIC, optically coupled to a silicon nitride photonic circuit for 515 nm excitation and fluorescence collection.](https://www.thenewcomputers.com/images/diamond-qpu-architecture.png)
 
 Qubits are housed in a 4x4x0.5 mm ⟨111⟩ diamond plate, with an NV depth ~100 nanometers. An ASIC flip-chip bonded to the diamond delivers microwave and RF and carries silicon photonics for 515 nm excitation and fluorescence collection. Pauli X, Y, Z and entangling gates are driven by pulses applied to the various spins. The diamond is cooled by a triple Peltier stack.
 
@@ -93,7 +93,7 @@ The two electrical control paths begin separately, before being merged at the di
 
 ### Microwave path
 
-![Microwave path from the RFSoC 4x2 through the amplifier, switch and diplexer to the sample RF interface.](https://thenewcomputers.com/images/mw-flow.png)
+![Microwave path from the RFSoC 4x2 through the amplifier, switch and diplexer to the sample RF interface.](https://www.thenewcomputers.com/images/mw-flow.png)
 
 The microwave path controls the NV electron spin. At zero magnetic field the NV electron transition sits at approximately 2.87 GHz, but with the ~40 mT bias field the lower Zeeman branch moves to approximately 1.75 GHz. Therefore, this is the transition we drive.
 
@@ -111,7 +111,7 @@ The combined signal then passes through a DC block (Mini-Circuits BLK-89-S+) to 
 
 ### RF path
 
-![RF path from the RFSoC 4x2 through the switch, amplifier, low-pass filter and diplexer to the sample RF interface.](https://thenewcomputers.com/images/rf-flow.png)
+![RF path from the RFSoC 4x2 through the switch, amplifier, low-pass filter and diplexer to the sample RF interface.](https://www.thenewcomputers.com/images/rf-flow.png)
 
 The RF path controls the intrinsic ^14N spin and the nearby ^13C nuclear spins. We expect to operate primarily from roughly hundreds of kHz to a few MHz.
 

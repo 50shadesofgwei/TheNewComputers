@@ -6,7 +6,7 @@ PT—00/ 05
 
 The New Computers, and the Mission for Quantum Hardware
 
-![Fifth Solvay Conference on Physics, 1927](https://thenewcomputers.com/images/fig-000.jpg)
+![Fifth Solvay Conference on Physics, 1927](https://www.thenewcomputers.com/images/fig-000.jpg)
 
  PT—1
 
@@ -24,7 +24,7 @@ Quantum computing is at risk of becoming an embarrassing footnote in the history
 
 If you've spent time around the field, you know the elephant in the room; on the one hand, futuristic looking computers the size of entire rooms, and on the other, fuzzy and opaque explanations of their supposed practical utility. Shor's algorithm
 
-![Peter Shor at the Dirac Medal Award Ceremony, 2017](https://thenewcomputers.com/images/fig-peter-shor.jpg)
+![Peter Shor at the Dirac Medal Award Ceremony, 2017](https://www.thenewcomputers.com/images/fig-peter-shor.jpg)
 
  **Shor's algorithm, 1994** An algorithm native to quantum computers that finds the largest prime factors of a given number exponentially faster than classical computers. Discovered and proposed by American mathematician Peter Shor. (famous for the threat it poses to modern day encryption systems) has been known since 1994, yet over 3 decades later the largest number it has ever factored is 35. And that was 7 years ago^[1](https://juser.fz-juelich.de/record/1042431/files/NIC_2025_Willsch.pdf).
 
@@ -38,7 +38,7 @@ To say that quantum computing has made *no* progress would be too harsh; some of
 
 Those allocating capital are left with no choice but to let companies mark their own homework.
 
-![Theodore Maiman with the first working laser](https://thenewcomputers.com/images/fig-laser.jpg)
+![Theodore Maiman with the first working laser](https://www.thenewcomputers.com/images/fig-laser.jpg)
 
 **[FIG.2]** Theodore Maiman First working laser — 1960
 
@@ -66,7 +66,7 @@ Quantum Computing inherited an institutional model designed to produce demonstra
 
 ## How Did We Get Here?
 
-![Atomic physics experiment — University of Amsterdam](https://thenewcomputers.com/images/uva-atomic-01.jpg)
+![Atomic physics experiment — University of Amsterdam](https://www.thenewcomputers.com/images/uva-atomic-01.jpg)
 
  PT—2
 
@@ -74,7 +74,7 @@ Quantum Computing inherited an institutional model designed to produce demonstra
 
 Quantum Computing inherited an institutional model designed to produce demonstrations over products.
 
-![Crowded optical bench with lasers, mirrors, and cabling](https://thenewcomputers.com/images/fig-optical-bench.jpg)
+![Crowded optical bench with lasers, mirrors, and cabling](https://www.thenewcomputers.com/images/fig-optical-bench.jpg)
 
 **[FIG.3]** Ultracold-atom optical table — UQUAM / MPQ © Immanuel Bloch — European Commission
 
@@ -86,7 +86,7 @@ These first computers were not products in the way one may think of an iPhone or
 
 Take the NIST experiment described above. The first quantum logic gate was reported in a four-page paper
 
-![First page of Monroe et al., Demonstration of a Fundamental Quantum Logic Gate, Physical Review Letters, 1995](https://thenewcomputers.com/images/fig-nist-paper.jpg)
+![First page of Monroe et al., Demonstration of a Fundamental Quantum Logic Gate, Physical Review Letters, 1995](https://www.thenewcomputers.com/images/fig-nist-paper.jpg)
 
  **Monroe et al., 1995** Phys. Rev. Lett. 75, 4714 — the NIST demonstration of a controlled-NOT gate on a single trapped beryllium ion. Four pages of states, pulses, results and error sources. containing the atomic states used, the laser-pulse sequence, the measured result and the sources of error.
 
@@ -112,11 +112,11 @@ Assembly time and fabrication yield appear nowhere in the scorecard.
 
 Before the question of mass-manufacturing a quantum computer made any sense to ask, Wolfgang Paul
 
-![Portrait of Wolfgang Paul](https://thenewcomputers.com/images/fig-wolfgang-paul.jpg)
+![Portrait of Wolfgang Paul](https://www.thenewcomputers.com/images/fig-wolfgang-paul.jpg)
 
  **Wolfgang Paul, 1913–1993** German physicist who invented the Paul trap — using oscillating electric fields to confine charged particles in free space. Shared the 1989 Nobel Prize in Physics for this work, which became the foundation of trapped-ion quantum computing. first had to discover that oscillating electric fields could confine ions in free space. David Wineland
 
-![Portrait of David Wineland](https://thenewcomputers.com/images/fig-david-wineland.jpg)
+![Portrait of David Wineland](https://www.thenewcomputers.com/images/fig-david-wineland.jpg)
 
  **David Wineland, b. 1944** American physicist at NIST whose group showed that trapped ions could be laser-cooled nearly to rest. Shared the 2012 Nobel Prize in Physics; his laboratory later demonstrated the first quantum logic gate on a single ion. ’s 1978 group in Colorado had to prove that trapped ions could be cooled using laser light. Only after another seventeen years of work did the first quantum logic gate follow.
 
@@ -138,7 +138,7 @@ PT—03/ 05
 
 ## The Industry Today
 
-![Optical table atomic physics experiment — University of Amsterdam](https://thenewcomputers.com/images/uva-atomic-02.jpg)
+![Optical table atomic physics experiment — University of Amsterdam](https://www.thenewcomputers.com/images/uva-atomic-02.jpg)
 
  PT—3
 
@@ -162,7 +162,7 @@ Fragment the demand that way and economies of scale never appear. A manufacturer
 
 More money thrown around in grants is unlikely to solve the problem. It would be foolish to assume that the difficulty is one of being insufficiently clever to use the toolkit we have; the sharper question is whether the toolkit itself is up to the task.
 
-![Drone photo of Intel Fab 9 under construction in Rio Rancho, New Mexico, January 2024](https://thenewcomputers.com/images/fig-gordian-v2.jpg)
+![Drone photo of Intel Fab 9 under construction in Rio Rancho, New Mexico, January 2024](https://www.thenewcomputers.com/images/fig-gordian-v2.jpg)
 
  PT—4
 
@@ -196,7 +196,7 @@ It's the same problem, and it has been solved before.
 
 Quantum hardware comes with its own constraints: unsettled architectures, extreme tolerances and components produced in tiny volumes. So is the resemblance merely superficial, or does quantum computing face the same underlying supply-chain problem that SpaceX confronted? If it does, what were the specific practices, manufacturing strategy and organisational principles that allowed SpaceX to break the cycle, and which of them could work here?
 
-![Engineers examining hardware wreckage](https://thenewcomputers.com/images/fig-002.jpg)
+![Engineers examining hardware wreckage](https://www.thenewcomputers.com/images/fig-002.jpg)
 
 **[FIG.6]** Early SpaceX Launch site, 2006 Debris of the Falcon 1 launch
 
@@ -210,7 +210,7 @@ A classical computer is constructed from specific component parts: GPUs, CPUs, c
 
 Each of these component parts can be assigned it’s own idiot index; a high value is a flashing light pointing to a poorly optimised manufacturing process. Values for ultra-precision components will be higher than those for parts with lower precision requirements, but this only indicates a higher cost floor; it says nothing about how far the current machinery is above it.
 
-![Idiot index estimates for eight quantum computing components: vacuum chamber 25×, dilution fridge 7×, ECDL 30×, optical mount 50×, SPAD module 60×, acousto-optic modulator 45×, RF control system 50×, MOCVD reactor 20×](https://thenewcomputers.com/images/fig-idiot-index.jpg)
+![Idiot index estimates for eight quantum computing components: vacuum chamber 25×, dilution fridge 7×, ECDL 30×, optical mount 50×, SPAD module 60×, acousto-optic modulator 45×, RF control system 50×, MOCVD reactor 20×](https://www.thenewcomputers.com/images/fig-idiot-index.jpg)
 
 ### 2. Question Every Requirement
 
@@ -222,7 +222,7 @@ A high idiot index identifies an expensive component; the knee-jerk response is 
 
 The same exercise can be carried into the quantum supply chain. Commercial MOCVD reactors
 
-![Commercial MOCVD reactor used for epitaxial semiconductor growth](https://thenewcomputers.com/images/fig-mocvd.jpg)
+![Commercial MOCVD reactor used for epitaxial semiconductor growth](https://www.thenewcomputers.com/images/fig-mocvd.jpg)
 
  **MOCVD Reactor** Metal-organic chemical vapour deposition — a machine that grows thin semiconductor layers by flowing precursor gases over a heated wafer. are designed to grow semiconductor layers of all different chemical makeups and sizes, all with fully automated handling.
 
@@ -234,7 +234,7 @@ The existing approach was bespoke vehicles per mission. **SpaceX bet the opposit
 
 Go to any quantum hardware supplier right now, be it lasers, vacuum chambers or semiconductor fabs, and you will inevitably see the words ‘request a quotation’ in place of a price tag. Why is this? Are suppliers being secretive, or do they genuinely not know?
 
-![Two ways to buy the same laser: a long request-a-quotation specification form, or a listed price with a five-day delivery and a buy button](https://thenewcomputers.com/images/fig-laser-quote.jpg)
+![Two ways to buy the same laser: a long request-a-quotation specification form, or a listed price with a five-day delivery and a buy button](https://www.thenewcomputers.com/images/fig-laser-quote.jpg)
 
 It’s the latter, of course: it’s the same low-volume-differing-requirements problem again. **Economies of scale only emerge from making the same design in bulk; fragmented demand denies suppliers the opportunity to do so.**
 
@@ -254,7 +254,7 @@ The idiot index identifies where manufacturing optimisations can be made, vertic
 
 But internalising all these manufacturing processes internalises the maintenance costs, not to mention the price of the machines themselves. The factory loses money every second that these machines aren’t producing something valuable. Iteration speed is what makes the whole process profitable - new ideas can be tested cheaply, quickly, and the manufacturers needn’t be precious about whether an idea is likely to work or not. The whole design process gets flipped on its head; instead of having to meticulously plan out what ideas get to go in the new design before starting manufacture, ideas can be tested cheaply and quickly. If they don’t work, the time and financial loss is minimal.
 
-![Evolution of the Raptor engine from version 1 to 3](https://thenewcomputers.com/images/fig-003.jpg)
+![Evolution of the Raptor engine from version 1 to 3](https://www.thenewcomputers.com/images/fig-003.jpg)
 
 **[FIG.7]** Evolution of the Raptor engine, from version 1 to 3 Simplify, simplify, simplify!
 
@@ -262,7 +262,7 @@ All these parts came together in a way that was mutually reinforcing; first-prin
 
  1. The Idiot Index 2. Question Every Requirement 3. Standardised Components 4. Vertical Integration 5. Increase Iteration Speed
 
-![The Traitorous Eight at Fairchild Semiconductor, 1960](https://thenewcomputers.com/images/fig-noyce.jpg)
+![The Traitorous Eight at Fairchild Semiconductor, 1960](https://www.thenewcomputers.com/images/fig-noyce.jpg)
 
 **[FIG.8]** The Traitorous Eight Fairchild Semiconductor, 1960
 
@@ -274,7 +274,7 @@ PT—05/ 05
 
 In every new industry, there is a short window where a small handful of people decide the shape of the coming decades.
 
-![Steve Wozniak seated at an Apple II keyboard while Steve Jobs works on an open machine beside him](https://thenewcomputers.com/images/fig-jobs-woz.jpg)
+![Steve Wozniak seated at an Apple II keyboard while Steve Jobs works on an open machine beside him](https://www.thenewcomputers.com/images/fig-jobs-woz.jpg)
 
 **[FIG.9]** Steve Wozniak and Steve Jobs Apple Computer, Cupertino — 1977
 
@@ -284,7 +284,7 @@ Pathfinder is looking for a technical cofounder. An engineer with the talent and
 
 ## Join Us
 
-[Learn more](https://thenewcomputers.com/join)
+[Learn more](https://www.thenewcomputers.com/join)
 [jonathan@pathfinderquantum.com](mailto:jonathan@pathfinderquantum.com)
 
 - 1. Willsch, D., et al. “The State of Factoring on Quantum Computers.” NIC Symposium 2025. [https://juser.fz-juelich.de/record/1042431/files/NIC_2025_Willsch.pdf](https://juser.fz-juelich.de/record/1042431/files/NIC_2025_Willsch.pdf)

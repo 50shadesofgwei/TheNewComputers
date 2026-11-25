@@ -102,7 +102,7 @@
         {
           "type": "header",
           "key": "user-agent",
-          "value": "(?i)(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok)"
+          "value": "(?i).*(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|Claude-User|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok).*"
         }
       ],
       "destination": "/index.md"
@@ -113,7 +113,7 @@
         {
           "type": "header",
           "key": "user-agent",
-          "value": "(?i)(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok)"
+          "value": "(?i).*(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|Claude-User|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok).*"
         }
       ],
       "destination": "/mission.md"
@@ -124,7 +124,7 @@
         {
           "type": "header",
           "key": "user-agent",
-          "value": "(?i)(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok)"
+          "value": "(?i).*(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|Claude-User|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok).*"
         }
       ],
       "destination": "/blueprints/diamond-qpu.md"
@@ -135,7 +135,7 @@
         {
           "type": "header",
           "key": "user-agent",
-          "value": "(?i)(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok)"
+          "value": "(?i).*(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|Claude-User|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok).*"
         }
       ],
       "destination": "/blueprints/diamond-qpu.md"
@@ -146,7 +146,7 @@
         {
           "type": "header",
           "key": "user-agent",
-          "value": "(?i)(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok)"
+          "value": "(?i).*(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|Claude-User|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok).*"
         }
       ],
       "destination": "/blueprints.md"
@@ -157,7 +157,7 @@
         {
           "type": "header",
           "key": "user-agent",
-          "value": "(?i)(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok)"
+          "value": "(?i).*(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|Claude-User|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok).*"
         }
       ],
       "destination": "/team.md"
@@ -168,13 +168,37 @@
         {
           "type": "header",
           "key": "user-agent",
-          "value": "(?i)(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok)"
+          "value": "(?i).*(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|Claude-User|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok).*"
         }
       ],
       "destination": "/join.md"
     },
     {
-      "source": "/((?!llms\\.txt|llms-full\\.txt|robots\\.txt|sitemap\\.xml|.*\\.md$).*)",
+      "source": "/mission",
+      "destination": "/mission/index.html"
+    },
+    {
+      "source": "/blueprints/diamond-qpu",
+      "destination": "/blueprints/diamond-qpu/index.html"
+    },
+    {
+      "source": "/diamond-qpu",
+      "destination": "/blueprints/diamond-qpu/index.html"
+    },
+    {
+      "source": "/blueprints",
+      "destination": "/blueprints/index.html"
+    },
+    {
+      "source": "/team",
+      "destination": "/team/index.html"
+    },
+    {
+      "source": "/join",
+      "destination": "/join/index.html"
+    },
+    {
+      "source": "/((?!llms\\.txt|llms-full\\.txt|robots\\.txt|sitemap\\.xml|\\.well-known/|.*\\.md$).*)",
       "destination": "/index.html"
     }
   ]

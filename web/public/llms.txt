@@ -6,14 +6,14 @@ The human site is a client-rendered React app, so HTML routes are empty without 
 
 ## Pages
 
-- [Site overview](https://thenewcomputers.com/index.md): What this project is and where the documents live
-- [Mission](https://thenewcomputers.com/mission.md): Out of the Lab and Into the Factory — the full essay
-- [Diamond QPU](https://thenewcomputers.com/blueprints/diamond-qpu.md): Pathfinder Diamond QPU v2.1, an NV-centre tabletop quantum computer on an RFSoC4x2 with silicon photonics
-- [Blueprints](https://thenewcomputers.com/blueprints.md): Index of hardware designs
+- [Site overview](https://www.thenewcomputers.com/index.md): What this project is and where the documents live
+- [Mission](https://www.thenewcomputers.com/mission.md): Out of the Lab and Into the Factory — the full essay
+- [Diamond QPU](https://www.thenewcomputers.com/blueprints/diamond-qpu.md): Pathfinder Diamond QPU v2.1, an NV-centre tabletop quantum computer on an RFSoC4x2 with silicon photonics
+- [Blueprints](https://www.thenewcomputers.com/blueprints.md): Index of hardware designs
 
 ## Optional
 
-- [Team](https://thenewcomputers.com/team.md): Recruiting posters
-- [Join](https://thenewcomputers.com/join.md): Technical cofounder form
+- [Team](https://www.thenewcomputers.com/team.md): Recruiting posters
+- [Join](https://www.thenewcomputers.com/join.md): Technical cofounder form
 - [On-Chip Ion Trap paper](https://www.zk50.io/papers/pathfinder-pic-chip.pdf): Pathfinder PIC ion-trap design
-- [Interactive 3D Diamond QPU bench](https://thenewcomputers.com/diamond-qpu-3d): Browser viewer, not a text document
+- [Interactive 3D Diamond QPU bench](https://www.thenewcomputers.com/diamond-qpu-3d): Browser viewer, not a text document

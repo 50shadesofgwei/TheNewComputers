@@ -7,7 +7,7 @@ import { createServer } from 'vite'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const publicDir = path.join(root, 'public')
-const SITE = 'https://thenewcomputers.com'
+const SITE = 'https://www.thenewcomputers.com'
 
 const PAGES = [
   { module: '/src/Home.tsx', out: 'index.md', title: 'Cheap Quantum Computers' },
@@ -313,6 +313,7 @@ try {
       '/team',
       '/join',
       '/llms.txt',
+      '/.well-known/llms.txt',
       '/index.md',
       '/mission.md',
       '/blueprints.md',
@@ -322,6 +323,9 @@ try {
     ]),
     'utf8',
   )
+
+  await mkdir(path.join(publicDir, '.well-known'), { recursive: true })
+  await writeFile(path.join(publicDir, '.well-known/llms.txt'), LLMS, 'utf8')
 
   try {
     await unlink(path.join(publicDir, 'mission.txt'))

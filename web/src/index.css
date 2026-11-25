@@ -72,6 +72,26 @@ p {
   margin: 0;
 }
 
+#llm-fallback {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2.5rem var(--page-pad) 5rem;
+  font-family: var(--font-display);
+  line-height: 1.4;
+}
+
+#llm-fallback h1,
+#llm-fallback h2,
+#llm-fallback h3 {
+  margin: 1.5rem 0 0.75rem;
+  letter-spacing: -0.04em;
+}
+
+#llm-fallback p,
+#llm-fallback li {
+  margin: 0 0 1rem;
+}
+
 #root:not(:empty) + #llm-fallback {
   display: none;
 }

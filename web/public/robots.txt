@@ -31,4 +31,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://thenewcomputers.com/sitemap.xml
+Sitemap: https://www.thenewcomputers.com/sitemap.xml

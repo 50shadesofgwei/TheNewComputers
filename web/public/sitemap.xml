@@ -1,42 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://thenewcomputers.com/</loc>
+    <loc>https://www.thenewcomputers.com/</loc>
   </url>
   <url>
-    <loc>https://thenewcomputers.com/mission</loc>
+    <loc>https://www.thenewcomputers.com/mission</loc>
   </url>
   <url>
-    <loc>https://thenewcomputers.com/blueprints</loc>
+    <loc>https://www.thenewcomputers.com/blueprints</loc>
   </url>
   <url>
-    <loc>https://thenewcomputers.com/blueprints/diamond-qpu</loc>
+    <loc>https://www.thenewcomputers.com/blueprints/diamond-qpu</loc>
   </url>
   <url>
-    <loc>https://thenewcomputers.com/team</loc>
+    <loc>https://www.thenewcomputers.com/team</loc>
   </url>
   <url>
-    <loc>https://thenewcomputers.com/join</loc>
+    <loc>https://www.thenewcomputers.com/join</loc>
   </url>
   <url>
-    <loc>https://thenewcomputers.com/llms.txt</loc>
+    <loc>https://www.thenewcomputers.com/llms.txt</loc>
   </url>
   <url>
-    <loc>https://thenewcomputers.com/index.md</loc>
+    <loc>https://www.thenewcomputers.com/.well-known/llms.txt</loc>
   </url>
   <url>
-    <loc>https://thenewcomputers.com/mission.md</loc>
+    <loc>https://www.thenewcomputers.com/index.md</loc>
   </url>
   <url>
-    <loc>https://thenewcomputers.com/blueprints.md</loc>
+    <loc>https://www.thenewcomputers.com/mission.md</loc>
   </url>
   <url>
-    <loc>https://thenewcomputers.com/blueprints/diamond-qpu.md</loc>
+    <loc>https://www.thenewcomputers.com/blueprints.md</loc>
   </url>
   <url>
-    <loc>https://thenewcomputers.com/team.md</loc>
+    <loc>https://www.thenewcomputers.com/blueprints/diamond-qpu.md</loc>
   </url>
   <url>
-    <loc>https://thenewcomputers.com/join.md</loc>
+    <loc>https://www.thenewcomputers.com/team.md</loc>
+  </url>
+  <url>
+    <loc>https://www.thenewcomputers.com/join.md</loc>
   </url>
 </urlset>
