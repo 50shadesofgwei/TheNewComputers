@@ -6,6 +6,12 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pathfinder Quantum is building cheap, manufacturable quantum computers. Mission essay and hardware blueprints."
+    />
+    <link rel="describedby" href="/llms.txt" />
+    <link rel="alternate" type="text/markdown" title="Markdown" href="/index.md" />
     <title>Cheap Quantum Computers</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,6 +22,21 @@
   </head>
   <body>
     <div id="root"></div>
+    <div id="llm-fallback">
+      <h1>Cheap Quantum Computers</h1>
+      <p>
+        Pathfinder Quantum (The New Computers) is building cheap, manufacturable
+        quantum computers. The visual site needs JavaScript. The documents are
+        also published as markdown:
+      </p>
+      <ul>
+        <li><a href="/llms.txt">llms.txt</a> — index for language models</li>
+        <li><a href="/mission.md">Mission essay</a></li>
+        <li><a href="/blueprints/diamond-qpu.md">Diamond QPU specification</a></li>
+        <li><a href="/blueprints.md">Blueprints</a></li>
+        <li><a href="/join.md">Join</a></li>
+      </ul>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

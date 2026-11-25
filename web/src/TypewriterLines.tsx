@@ -80,7 +80,7 @@ export function TypewriterLines({
     return () => window.clearTimeout(tick)
   }, [started, reduceMotion, lineIndex, charIndex, lines, cps])
 
-  const showFull = reduceMotion || done
+  const showFull = typeof window === 'undefined' || reduceMotion || done
 
   return (
     <p

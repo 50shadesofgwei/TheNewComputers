@@ -3,5 +3,179 @@
   "installCommand": "npm install --prefix web",
   "buildCommand": "npm run build --prefix web",
   "outputDirectory": "web/dist",
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "headers": [
+    {
+      "source": "/llms.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/llms-full.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)\\.md",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</index.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        }
+      ]
+    },
+    {
+      "source": "/mission",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</mission.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        }
+      ]
+    },
+    {
+      "source": "/blueprints",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</blueprints.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        }
+      ]
+    },
+    {
+      "source": "/blueprints/diamond-qpu",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</blueprints/diamond-qpu.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        }
+      ]
+    },
+    {
+      "source": "/diamond-qpu",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</blueprints/diamond-qpu.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        }
+      ]
+    },
+    {
+      "source": "/team",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</team.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        }
+      ]
+    },
+    {
+      "source": "/join",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</join.md>; rel=\"alternate\"; type=\"text/markdown\", </llms.txt>; rel=\"describedby\""
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i)(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok)"
+        }
+      ],
+      "destination": "/index.md"
+    },
+    {
+      "source": "/mission",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i)(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok)"
+        }
+      ],
+      "destination": "/mission.md"
+    },
+    {
+      "source": "/blueprints/diamond-qpu",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i)(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok)"
+        }
+      ],
+      "destination": "/blueprints/diamond-qpu.md"
+    },
+    {
+      "source": "/diamond-qpu",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i)(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok)"
+        }
+      ],
+      "destination": "/blueprints/diamond-qpu.md"
+    },
+    {
+      "source": "/blueprints",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i)(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok)"
+        }
+      ],
+      "destination": "/blueprints.md"
+    },
+    {
+      "source": "/team",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i)(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok)"
+        }
+      ],
+      "destination": "/team.md"
+    },
+    {
+      "source": "/join",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(?i)(GPTBot|ChatGPT-User|OAI-SearchBot|ClaudeBot|anthropic-ai|Claude-Web|PerplexityBot|Perplexity-User|Google-Extended|Applebot-Extended|Amazonbot|CCBot|Bytespider|cohere-ai|meta-externalagent|YouBot|Diffbot|AI2Bot|Mistral|xAI-Grok)"
+        }
+      ],
+      "destination": "/join.md"
+    },
+    {
+      "source": "/((?!llms\\.txt|llms-full\\.txt|robots\\.txt|sitemap\\.xml|.*\\.md$).*)",
+      "destination": "/index.html"
+    }
+  ]
 }

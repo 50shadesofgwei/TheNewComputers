@@ -71,3 +71,7 @@ h4,
 p {
   margin: 0;
 }
+
+#root:not(:empty) + #llm-fallback {
+  display: none;
+}

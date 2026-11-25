@@ -166,7 +166,7 @@ export function TypewriterQuote({
     return () => window.clearTimeout(tick)
   }, [started, reduceMotion, paraIndex, charIndex, cps])
 
-  const showFull = reduceMotion || done
+  const showFull = typeof window === 'undefined' || reduceMotion || done
 
   return (
     <blockquote
